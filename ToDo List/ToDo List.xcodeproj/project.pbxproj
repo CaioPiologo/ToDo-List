@@ -14,6 +14,8 @@
 		8C3454661AC3204B0053766D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454651AC3204B0053766D /* Images.xcassets */; };
 		8C3454691AC3204B0053766D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454671AC3204B0053766D /* LaunchScreen.xib */; };
 		8C3454751AC3204B0053766D /* ToDo_ListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454741AC3204B0053766D /* ToDo_ListTests.m */; };
+		8C3454801AC326D10053766D /* Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34547F1AC326D10053766D /* Plist.m */; };
+		8C3454831AC32A2F0053766D /* Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454821AC32A2F0053766D /* Loader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		8C34546E1AC3204B0053766D /* ToDo ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ToDo ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3454731AC3204B0053766D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C3454741AC3204B0053766D /* ToDo_ListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDo_ListTests.m; sourceTree = "<group>"; };
+		8C34547E1AC326D10053766D /* Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plist.h; sourceTree = "<group>"; };
+		8C34547F1AC326D10053766D /* Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plist.m; sourceTree = "<group>"; };
+		8C3454811AC32A2F0053766D /* Loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loader.h; sourceTree = "<group>"; };
+		8C3454821AC32A2F0053766D /* Loader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Loader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,8 @@
 				8C3454621AC3204B0053766D /* Main.storyboard */,
 				8C3454651AC3204B0053766D /* Images.xcassets */,
 				8C3454671AC3204B0053766D /* LaunchScreen.xib */,
+				8C3454811AC32A2F0053766D /* Loader.h */,
+				8C3454821AC32A2F0053766D /* Loader.m */,
 				8C3454581AC3204B0053766D /* Supporting Files */,
 			);
 			path = "ToDo List";
@@ -96,6 +104,8 @@
 		8C3454581AC3204B0053766D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8C34547E1AC326D10053766D /* Plist.h */,
+				8C34547F1AC326D10053766D /* Plist.m */,
 				8C3454591AC3204B0053766D /* Info.plist */,
 				8C34545A1AC3204B0053766D /* main.m */,
 			);
@@ -221,7 +231,9 @@
 			files = (
 				8C3454611AC3204B0053766D /* ViewController.m in Sources */,
 				8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */,
+				8C3454801AC326D10053766D /* Plist.m in Sources */,
 				8C34545B1AC3204B0053766D /* main.m in Sources */,
+				8C3454831AC32A2F0053766D /* Loader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +424,7 @@
 				8C34547A1AC3204B0053766D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C34547B1AC3204B0053766D /* Build configuration list for PBXNativeTarget "ToDo ListTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +433,7 @@
 				8C34547D1AC3204B0053766D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
