@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25D3625B1AC3255B00DEF6E8 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D3625A1AC3255B00DEF6E8 /* Task.m */; };
 		8C34545B1AC3204B0053766D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34545A1AC3204B0053766D /* main.m */; };
 		8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34545D1AC3204B0053766D /* AppDelegate.m */; };
 		8C3454611AC3204B0053766D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454601AC3204B0053766D /* ViewController.m */; };
@@ -15,8 +14,11 @@
 		8C3454661AC3204B0053766D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454651AC3204B0053766D /* Images.xcassets */; };
 		8C3454691AC3204B0053766D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454671AC3204B0053766D /* LaunchScreen.xib */; };
 		8C3454751AC3204B0053766D /* ToDo_ListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454741AC3204B0053766D /* ToDo_ListTests.m */; };
-		8C3454801AC326D10053766D /* Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34547F1AC326D10053766D /* Plist.m */; };
 		8C3454831AC32A2F0053766D /* Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454821AC32A2F0053766D /* Loader.m */; };
+		8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454841AC34B300053766D /* Task.xcdatamodeld */; };
+		8CF188BF1AC5D1360027EB72 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF188BE1AC5D1360027EB72 /* Task.m */; };
+		8CF1892D1AC5E7FE0027EB72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454731AC3204B0053766D /* Info.plist */; };
+		8CF1892F1AC5E9110027EB72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CF1892E1AC5E9110027EB72 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,10 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		25D362591AC3255B00DEF6E8 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		25D3625A1AC3255B00DEF6E8 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		8C3454551AC3204B0053766D /* ToDo List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C3454591AC3204B0053766D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C34545A1AC3204B0053766D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C34545C1AC3204B0053766D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C34545D1AC3204B0053766D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,12 +42,14 @@
 		8C3454651AC3204B0053766D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8C3454681AC3204B0053766D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8C34546E1AC3204B0053766D /* ToDo ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ToDo ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C3454731AC3204B0053766D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C3454731AC3204B0053766D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "ToDo ListTests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		8C3454741AC3204B0053766D /* ToDo_ListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDo_ListTests.m; sourceTree = "<group>"; };
-		8C34547E1AC326D10053766D /* Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plist.h; sourceTree = "<group>"; };
-		8C34547F1AC326D10053766D /* Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plist.m; sourceTree = "<group>"; };
 		8C3454811AC32A2F0053766D /* Loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loader.h; sourceTree = "<group>"; };
 		8C3454821AC32A2F0053766D /* Loader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Loader.m; sourceTree = "<group>"; };
+		8C3454851AC34B300053766D /* Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task.xcdatamodel; sourceTree = "<group>"; };
+		8CF188BD1AC5D1360027EB72 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		8CF188BE1AC5D1360027EB72 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		8CF1892E1AC5E9110027EB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,12 +96,13 @@
 				8C34545F1AC3204B0053766D /* ViewController.h */,
 				8C3454601AC3204B0053766D /* ViewController.m */,
 				8C3454621AC3204B0053766D /* Main.storyboard */,
-				25D362591AC3255B00DEF6E8 /* Task.h */,
-				25D3625A1AC3255B00DEF6E8 /* Task.m */,
 				8C3454651AC3204B0053766D /* Images.xcassets */,
 				8C3454671AC3204B0053766D /* LaunchScreen.xib */,
 				8C3454811AC32A2F0053766D /* Loader.h */,
 				8C3454821AC32A2F0053766D /* Loader.m */,
+				8C3454841AC34B300053766D /* Task.xcdatamodeld */,
+				8CF188BD1AC5D1360027EB72 /* Task.h */,
+				8CF188BE1AC5D1360027EB72 /* Task.m */,
 				8C3454581AC3204B0053766D /* Supporting Files */,
 			);
 			path = "ToDo List";
@@ -109,9 +111,7 @@
 		8C3454581AC3204B0053766D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8C34547E1AC326D10053766D /* Plist.h */,
-				8C34547F1AC326D10053766D /* Plist.m */,
-				8C3454591AC3204B0053766D /* Info.plist */,
+				8CF1892E1AC5E9110027EB72 /* Info.plist */,
 				8C34545A1AC3204B0053766D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -214,8 +214,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CF1892D1AC5E7FE0027EB72 /* Info.plist in Resources */,
 				8C3454641AC3204B0053766D /* Main.storyboard in Resources */,
 				8C3454691AC3204B0053766D /* LaunchScreen.xib in Resources */,
+				8CF1892F1AC5E9110027EB72 /* Info.plist in Resources */,
 				8C3454661AC3204B0053766D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,10 +236,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25D3625B1AC3255B00DEF6E8 /* Task.m in Sources */,
 				8C3454611AC3204B0053766D /* ViewController.m in Sources */,
 				8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */,
-				8C3454801AC326D10053766D /* Plist.m in Sources */,
+				8CF188BF1AC5D1360027EB72 /* Task.m in Sources */,
+				8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */,
 				8C34545B1AC3204B0053766D /* main.m in Sources */,
 				8C3454831AC32A2F0053766D /* Loader.m in Sources */,
 			);
@@ -442,6 +444,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8C3454841AC34B300053766D /* Task.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8C3454851AC34B300053766D /* Task.xcdatamodel */,
+			);
+			currentVersion = 8C3454851AC34B300053766D /* Task.xcdatamodel */;
+			name = Task.xcdatamodeld;
+			path = ../Task.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8C34544D1AC3204B0053766D /* Project object */;
 }

@@ -7,42 +7,36 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "Task.h"
+
+@class Task;
 
 @interface Loader : NSObject
+#pragma mark Properties
+@property (nonatomic) NSDate * lastSavedDate;
+@property (readonly, nonatomic) NSManagedObjectContext *managedObjectContext;
+#pragma mark Methods
+
 /**
  This method saves the current context holded by the loader.
  **/
--(void)saveAll;
+-(void)saveTasksStates;
 
 /**
- Saves ongoing task's list
+ @return An array with all tasks saved.
  **/
--(void)saveTasksOnGoing: (NSArray*)onGoingTaskList;
+-(NSMutableArray*)loadTasksFromDataBase;
 
 /**
- Saves finished task's list
+ Creates new task. Autommaticaly saves to memory.
+ @return Return a new  nonfinished task, with the desired parameters.
  **/
--(void)saveTasksFinished: (NSArray*)FinishedTaskList;
+-(Task*)createTaskWithName:(NSString*)name  withInitialDate:(NSDate*)initialDate withConclusionDate:(NSDate*) conlusionDate withDifficulty:(NSNumber*)difficulty withFun:(NSNumber*) fun isContinuous:(NSNumber*) continuous withRepeatTime:(NSDate*) repeatTime isUrgent:(NSNumber*)urgent;
 
 /**
- Adds the correspondant list to the context for further saving
- **/
--(void)addToContextOnGoingTaskList;
-
-/**
- Adds the correspondant list to the context for further saving
- **/
--(void)addToContextFinishedTaskList;
-
-/**
- Loads the ongoing task list from memory.
- @return return a NSArray containig the list loaded from memory
- **/
--(NSArray*)loadTasksOnGoing;
-
-/**
- Loads the finished task list from memory.
- @return return a NSArray containig the list loaded from memory
- **/
--(NSArray*)loadTasksFinished;
+ Destroy task passed as argument and saves it to memory.
+ */
+-(void)destroyTask:(Task*)task;
 @end
