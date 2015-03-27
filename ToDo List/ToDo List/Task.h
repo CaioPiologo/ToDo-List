@@ -16,20 +16,27 @@
 @property NSNumber *fun;
 @property NSDate *initialDate;
 @property NSDate *conclusionDate;
-@property BOOL continuous;
+@property NSNumber *continuous;
 @property NSDate *repeatTime;
-@property BOOL urgent;
-@property BOOL finished;
+@property NSNumber *urgent;
+@property NSNumber *finished;
+@property NSNumber *priority;
 
 -(id) init: (NSNumber *)identification
-    withName: (NSString *)name
-    withDifficulty: (NSNumber *)difficulty
-    withFun: (NSNumber *)fun
-    withInitialDate: (NSDate *)initialDate
-    withConclusionDate: (NSDate *)conclusionDate
-    withContinuous: (BOOL) continuous
-    withRepeat: (NSDate *)repeatTime
-    withUrgency: (BOOL) urgent
-    finish: (BOOL) finished;
-            
+  withName: (NSString *)name
+withDifficulty: (NSNumber *)difficulty
+   withFun: (NSNumber *)fun
+withInitialDate: (NSDate *)initialDate
+withConclusionDate: (NSDate *)conclusionDate
+withContinuous: (NSNumber *) continuous
+withRepeat: (NSDate *)repeatTime;
+
+- (NSString *) toString;
+
+-(int) compareTasksByPriority:(Task *) anotherTask;
+
+-(int) compareTasksByDate:(Task *) anotherTask;
+
+-(void) updatePriority;
+
 @end
