@@ -14,6 +14,8 @@
 @property NSDate *lastDateOrganized;
 @property NSMutableArray *taskList;
 
++ (id)getInstace;
+
 -(id) init;
 
 -(void) updateTasks:(int)priority;

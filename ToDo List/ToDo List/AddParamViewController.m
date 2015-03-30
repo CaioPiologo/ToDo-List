@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "AddParamViewController.h"
+#import "Organizer.h"
+#import "Task.h"
 
 @interface AddParamViewController ()
 
-    @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (nonatomic) Organizer *organizer;
 
 @end
 
@@ -20,11 +23,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _organizer = [Organizer getInstace];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)doneButton:(id)sender
+{
+    Task *task;
+    
+    [_organizer.taskWizard giveDifficult:[_difficult value] ];
+    [_organizer.taskWizard giveFun: [_funny value]];
+    
+    task = [_organizer.taskWizard finish];
+    
+    
+    
+    [self performSegueWithIdentifier:@"createTask" sender:self];
+    
+    [_organizer addTaskToList: task];
 }
 
 @end

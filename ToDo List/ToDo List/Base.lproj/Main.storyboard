@@ -138,6 +138,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ugV-jA-9aY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tyo-eE-755">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDZ-3l-dp5">
@@ -201,7 +202,7 @@
                         <outlet property="nextButton" destination="wdK-Um-ZYJ" id="iAo-0N-h4D"/>
                         <outlet property="textField" destination="q5a-94-iDZ" id="zEb-uC-e7d"/>
                         <outlet property="warningMessage" destination="eMb-6i-5yR" id="cxk-Xq-cBz"/>
-                        <segue destination="HGT-fb-m1e" kind="push" identifier="nextButton" id="ZsF-bR-DNR"/>
+                        <segue destination="HGT-fb-m1e" kind="push" identifier="toAddTask2" id="ZsF-bR-DNR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ilc-Ya-g7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -217,6 +218,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cax-L9-fcu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jKv-GO-YNY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upH-fL-G9j">
@@ -242,12 +244,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="AddTask2" id="zpZ-bY-uZY">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="8fR-Wl-joe">
-                            <connections>
-                                <segue destination="MLX-5w-hnp" kind="push" id="Lho-Yj-pxM"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="8fR-Wl-joe"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="MLX-5w-hnp" kind="push" identifier="toGetParam" id="IVw-WY-JgB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fK2-jn-fFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,6 +263,7 @@
                         <viewControllerLayoutGuide type="bottom" id="GnS-Iu-n61"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BSh-fC-pn8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qIt-sc-rb4">
@@ -358,7 +360,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jKN-QF-0RS"/>
-        <segue reference="lfw-kJ-6ql"/>
+        <segue reference="9fX-ZH-2iz"/>
         <segue reference="bPy-xa-Bdy"/>
     </inferredMetricsTieBreakers>
 </document>

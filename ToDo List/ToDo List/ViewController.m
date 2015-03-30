@@ -10,11 +10,13 @@
 #import "Loader.h"
 #import "Task.h"
 #import "Foundation/Foundation.h"
+#import "Organizer.h"
 
 
 @interface ViewController ()
 
 @property (strong, nonatomic) NSString *name;
+@property (nonatomic) Organizer *organizer;
 
 @end
 
@@ -27,7 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    data = [[NSMutableArray alloc] initWithObjects: @"Dog", nil];
+    _organizer = [Organizer getInstace];
+    data = [[NSMutableArray alloc] initWithObjects: [_organizer getListByPriority], nil];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
@@ -58,22 +61,5 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)doneButton:(id)sender{
-    
-    ViewController *viewController = [[ViewController alloc]init];
-    
-    AddName *addName = [[AddName alloc] init];
-    NSString *text = addName.textField.text;
-    
-    [viewController.data insertObject: text atIndex: 0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow: 0 inSection:0];
-    
-    [viewController.tableView beginUpdates];
-    [viewController.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [viewController.tableView endUpdates];
-    
-    [self performSegueWithIdentifier:@"createTask" sender:self];
-    
-}
 
 @end

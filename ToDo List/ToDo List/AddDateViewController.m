@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "AddDateViewController.h"
+#import "Organizer.h"
+#import "Task.h"
 
 @interface AddDateViewController ()
+
+@property (nonatomic) Organizer *organizer;
 
 @end
 
@@ -18,6 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _organizer = [Organizer getInstace];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,11 +33,7 @@
 
 - (IBAction)nextButton: (UIStoryboardSegue*)sender
 {
-    AddName * addName = (AddName *)sender.sourceViewController;
-    if([_textField.text isEqualToString:@""]) {
-        [_warningMessage setHidden:NO];
-    }else{
-        [self performSegueWithIdentifier:@"nextButton" sender:self];
-    }
+    
+    [self performSegueWithIdentifier:@"toGetParam" sender:self];
 }
 @end
