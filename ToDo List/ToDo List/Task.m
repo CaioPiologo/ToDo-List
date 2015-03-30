@@ -74,10 +74,8 @@
 /**
  Compare tasks IDs
  */
--(int) compareTaskByID:(Task *) anotherTask{
-    if(self.identification.intValue < anotherTask.identification.intValue)
-        return -1;
-    else if(self.identification.intValue > anotherTask.identification.intValue)
+-(int) findID:(NSNumber *) identification{
+    if(self.identification.intValue == identification)
         return 1;
     return 0;
 }

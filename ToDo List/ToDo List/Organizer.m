@@ -72,9 +72,8 @@
  Finds and returns task by ID
  */
 -(Task *)getTask:(NSNumber*)identification{
-    Task *searched = [[Task alloc] init:identification withName:nil withDifficulty:nil withFun:nil withInitialDate:nil withConclusionDate:nil withContinuous:nil withRepeat:nil];
     for(Task *task in _taskList)
-        if([task compareTaskByID:searched] == 0){
+        if([task findID:identification] == 1){
             return task;
         }
     return nil;

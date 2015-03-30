@@ -28,7 +28,7 @@
 
 - (NSComparisonResult)compareByDate:(Task *)otherObject;
 
--(int) compareTaskByID:(Task *) anotherTask;
+-(int) findID:(NSNumber *) identification;
 
 -(void) updatePriority;
 
