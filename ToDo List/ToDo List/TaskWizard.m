@@ -9,7 +9,6 @@
 #import "TaskWizard.h"
 #import "Loader.h"
 @interface TaskWizard()
-@property(nonatomic) Task *newtask;
 @property (nonatomic) Loader *loader;
 @end
 @implementation TaskWizard
@@ -29,42 +28,64 @@
 -(void) begin{
     self.newtask = [self.loader createTaskWithName:nil withInitialDate:nil withConclusionDate:nil withDifficulty:nil withFun:nil isContinuous:nil withRepeatTime:nil isUrgent:@0];
 }
-
+/**
+ Begins wizard with a task (edit mode)
+ */
+-(void) beginWithTask:(Task *)task{
+    _newtask = task;
+}
+/**
+ Cancels task creation
+ */
 -(void) cancel{
     [self.loader deleteTask:self.newtask];
     self.newtask = nil;
 }
-
+/**
+ Finish creating task
+ */
 -(Task *) finish{
     return _newtask;
 }
-
+/**
+ Adds name to task
+ */
 -(void) giveName:(NSString *)name{
     [_newtask setName:name];
 }
-
+/**
+ Adds initial date to task
+ */
 -(void) giveInitialDate:(NSDate *)time{
     if(time == nil)
         [_newtask setInitialDate:[NSDate date]];
     else
         [_newtask setInitialDate:time];
 }
-
+/**
+ Adds conclusion date to task
+ */
 -(void) giveConclusionDate:(NSDate *)time{
     if(time == nil)
         [_newtask setConclusionDate:[NSDate date]];
     else
         [_newtask setConclusionDate:time];
 }
-
+/**
+ Adds difficulty to task
+ */
 -(void) giveDifficulty:(NSNumber *)difficulty{
     [_newtask setDifficulty:difficulty];
 }
-
+/**
+ Adds fun to task
+ */
 -(void) giveFun:(NSNumber *)fun{
     [_newtask setFun:fun];
 }
-
+/**
+ Determines wether a task is being created or not
+ */
 -(BOOL) hasAlreadyBegun
 {
     if(self.newtask ==nil)
