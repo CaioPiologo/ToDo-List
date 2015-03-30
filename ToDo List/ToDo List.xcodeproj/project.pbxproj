@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1A0FD3A06B4DB48A61783AEB /* libPods-ToDo List.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 818E6EF70CAFFD380223E560 /* libPods-ToDo List.a */; };
-		25E0122A1AC9AACA004370E1 /* Organizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E012291AC9AACA004370E1 /* Organizer.m */; };
-		25E0122D1AC9B621004370E1 /* TaskWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E0122C1AC9B621004370E1 /* TaskWizard.m */; };
+		25E012401AC9CF01004370E1 /* AddDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E0122F1AC9CF01004370E1 /* AddDateViewController.m */; };
+		25E012411AC9CF01004370E1 /* AddName.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E012311AC9CF01004370E1 /* AddName.m */; };
+		25E012421AC9CF01004370E1 /* AddParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E012331AC9CF01004370E1 /* AddParamViewController.m */; };
+		25E012431AC9CF01004370E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E012351AC9CF01004370E1 /* LaunchScreen.xib */; };
+		25E012441AC9CF01004370E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E012371AC9CF01004370E1 /* Main.storyboard */; };
+		25E012451AC9CF01004370E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E012391AC9CF01004370E1 /* Images.xcassets */; };
+		25E012461AC9CF01004370E1 /* Organizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E0123B1AC9CF01004370E1 /* Organizer.m */; };
+		25E012471AC9CF01004370E1 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E0123D1AC9CF01004370E1 /* Task.m */; };
+		25E012481AC9CF01004370E1 /* TaskWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E0123F1AC9CF01004370E1 /* TaskWizard.m */; };
 		2974DB02776E61BBE6240EF4 /* libPods-ToDo ListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B4F7A0251AE05CA6CF8A /* libPods-ToDo ListTests.a */; };
 		8C2B93F31AC9CD3700D3AE64 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B93F21AC9CD3700D3AE64 /* Podfile */; };
 		8C34545B1AC3204B0053766D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34545A1AC3204B0053766D /* main.m */; };
@@ -37,10 +44,21 @@
 /* Begin PBXFileReference section */
 		16243566A8367556BBE6B0ED /* Pods-ToDo ListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo ListTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo ListTests/Pods-ToDo ListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		19C5060A570E506C205F64DC /* Pods-ToDo List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo List.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo List/Pods-ToDo List.release.xcconfig"; sourceTree = "<group>"; };
-		25E012281AC9AACA004370E1 /* Organizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organizer.h; sourceTree = "<group>"; };
-		25E012291AC9AACA004370E1 /* Organizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organizer.m; sourceTree = "<group>"; };
-		25E0122B1AC9B621004370E1 /* TaskWizard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskWizard.h; sourceTree = "<group>"; };
-		25E0122C1AC9B621004370E1 /* TaskWizard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskWizard.m; sourceTree = "<group>"; };
+		25E0122E1AC9CF01004370E1 /* AddDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDateViewController.h; sourceTree = "<group>"; };
+		25E0122F1AC9CF01004370E1 /* AddDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDateViewController.m; sourceTree = "<group>"; };
+		25E012301AC9CF01004370E1 /* AddName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddName.h; sourceTree = "<group>"; };
+		25E012311AC9CF01004370E1 /* AddName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddName.m; sourceTree = "<group>"; };
+		25E012321AC9CF01004370E1 /* AddParamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddParamViewController.h; sourceTree = "<group>"; };
+		25E012331AC9CF01004370E1 /* AddParamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddParamViewController.m; sourceTree = "<group>"; };
+		25E012361AC9CF01004370E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		25E012381AC9CF01004370E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		25E012391AC9CF01004370E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		25E0123A1AC9CF01004370E1 /* Organizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organizer.h; sourceTree = "<group>"; };
+		25E0123B1AC9CF01004370E1 /* Organizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organizer.m; sourceTree = "<group>"; };
+		25E0123C1AC9CF01004370E1 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		25E0123D1AC9CF01004370E1 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		25E0123E1AC9CF01004370E1 /* TaskWizard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskWizard.h; sourceTree = "<group>"; };
+		25E0123F1AC9CF01004370E1 /* TaskWizard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskWizard.m; sourceTree = "<group>"; };
 		2ABA61AC30BD6171421D6F6D /* Pods-ToDo ListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo ListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo ListTests/Pods-ToDo ListTests.release.xcconfig"; sourceTree = "<group>"; };
 		818E6EF70CAFFD380223E560 /* libPods-ToDo List.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDo List.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2B93F21AC9CD3700D3AE64 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -93,6 +111,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		25E012341AC9CF01004370E1 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				25E012351AC9CF01004370E1 /* LaunchScreen.xib */,
+				25E012371AC9CF01004370E1 /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
 		341D9433460B3EE82C4B4931 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,23 +154,25 @@
 		8C3454571AC3204B0053766D /* ToDo List */ = {
 			isa = PBXGroup;
 			children = (
-				1CAB49081AC9B8FC0040E8D8 /* Organizer.h */,
-				1CAB49091AC9B8FC0040E8D8 /* Organizer.m */,
-				1CAB490B1AC9C52F0040E8D8 /* TaskWizard.h */,
-				1CAB490C1AC9C52F0040E8D8 /* TaskWizard.m */,
+				25E0122E1AC9CF01004370E1 /* AddDateViewController.h */,
+				25E0122F1AC9CF01004370E1 /* AddDateViewController.m */,
+				25E012301AC9CF01004370E1 /* AddName.h */,
+				25E012311AC9CF01004370E1 /* AddName.m */,
+				25E012321AC9CF01004370E1 /* AddParamViewController.h */,
+				25E012331AC9CF01004370E1 /* AddParamViewController.m */,
+				25E012341AC9CF01004370E1 /* Base.lproj */,
+				25E012391AC9CF01004370E1 /* Images.xcassets */,
+				25E0123A1AC9CF01004370E1 /* Organizer.h */,
+				25E0123B1AC9CF01004370E1 /* Organizer.m */,
+				25E0123C1AC9CF01004370E1 /* Task.h */,
+				25E0123D1AC9CF01004370E1 /* Task.m */,
+				25E0123E1AC9CF01004370E1 /* TaskWizard.h */,
+				25E0123F1AC9CF01004370E1 /* TaskWizard.m */,
 				8C34545C1AC3204B0053766D /* AppDelegate.h */,
 				8C34545D1AC3204B0053766D /* AppDelegate.m */,
-				1CAB48F91AC9932E0040E8D8 /* AddName.h */,
-				1CAB48FA1AC9938F0040E8D8 /* AddName.m */,
-				1CAB49021AC9AEC50040E8D8 /* AddDateViewController.h */,
-				1CAB49031AC9AEFB0040E8D8 /* AddDateViewController.m */,
 				8C34545F1AC3204B0053766D /* ViewController.h */,
 				8C3454601AC3204B0053766D /* ViewController.m */,
 				8C3454621AC3204B0053766D /* Main.storyboard */,
-				1CAB48FF1AC998070040E8D8 /* AddParamViewController.h */,
-				1CAB49001AC998350040E8D8 /* AddParamViewController.m */,
-				25D362591AC3255B00DEF6E8 /* Task.h */,
-				25D3625A1AC3255B00DEF6E8 /* Task.m */,
 				8C3454651AC3204B0053766D /* Images.xcassets */,
 				8C3454671AC3204B0053766D /* LaunchScreen.xib */,
 				8C3454811AC32A2F0053766D /* Loader.h */,
@@ -265,9 +294,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E012451AC9CF01004370E1 /* Images.xcassets in Resources */,
 				8C2B93F31AC9CD3700D3AE64 /* Podfile in Resources */,
 				8CF1892D1AC5E7FE0027EB72 /* Info.plist in Resources */,
 				8C3454641AC3204B0053766D /* Main.storyboard in Resources */,
+				25E012441AC9CF01004370E1 /* Main.storyboard in Resources */,
+				25E012431AC9CF01004370E1 /* LaunchScreen.xib in Resources */,
 				8C3454691AC3204B0053766D /* LaunchScreen.xib in Resources */,
 				8CF1892F1AC5E9110027EB72 /* Info.plist in Resources */,
 				8C3454661AC3204B0053766D /* Images.xcassets in Resources */,
@@ -351,15 +383,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E012411AC9CF01004370E1 /* AddName.m in Sources */,
 				8C3454611AC3204B0053766D /* ViewController.m in Sources */,
 				8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */,
 				8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */,
-				1CAB490A1AC9B8FC0040E8D8 /* Organizer.m in Sources */,
-				1CAB490D1AC9C52F0040E8D8 /* TaskWizard.m in Sources */,
 				8C34545B1AC3204B0053766D /* main.m in Sources */,
-				1CAB48FB1AC9938F0040E8D8 /* AddName.m in Sources */,
-				1CAB49041AC9AEFB0040E8D8 /* AddDateViewController.m in Sources */,
-				1CAB49011AC998350040E8D8 /* AddParamViewController.m in Sources */,
+				25E012481AC9CF01004370E1 /* TaskWizard.m in Sources */,
+				25E012401AC9CF01004370E1 /* AddDateViewController.m in Sources */,
+				25E012421AC9CF01004370E1 /* AddParamViewController.m in Sources */,
+				25E012471AC9CF01004370E1 /* Task.m in Sources */,
+				25E012461AC9CF01004370E1 /* Organizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +415,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		25E012351AC9CF01004370E1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25E012361AC9CF01004370E1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		25E012371AC9CF01004370E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25E012381AC9CF01004370E1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		8C3454621AC3204B0053766D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
