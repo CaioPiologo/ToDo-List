@@ -29,7 +29,7 @@
 
 - (NSComparisonResult)compareByDate:(Task *)otherObject;
 
--(int) findID:(NSNumber *) identification;
+-(int) isID:(NSNumber *) identification;
 
 -(void) updatePriority;
 

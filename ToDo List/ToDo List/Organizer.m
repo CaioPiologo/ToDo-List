@@ -71,9 +71,9 @@
 /**
  Finds and returns task by ID
  */
--(Task *)getTask:(NSNumber*)identification{
+-(Task *)getTask:(NSManagedObjectID *)identification{
     for(Task *task in _taskList)
-        if([task findID:identification] == 1){
+        if([task isID:identification] == 1){
             return task;
         }
     return nil;
@@ -82,11 +82,11 @@
 /**
  Removes a task from the list
  */
--(void) removeTask:(NSNumber *) identification{
+-(void) removeTask:(NSManagedObjectID *) identification{
     [_taskList removeObject:[self getTask:identification]];
 }
 
--(Task *)editTask:(NSNumber *) identification{
+-(Task *)editTask:(NSManagedObjectID *) identification{
     Task *task = [self getTask:identification];
     
 }

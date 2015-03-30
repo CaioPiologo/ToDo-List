@@ -24,14 +24,14 @@
 
 -(void) addTaskToList:(Task *) task;
 
--(void) removeTask:(NSNumber *) identification;
+-(void) removeTask:(NSManagedObjectID *) identification;
 
 -(void) saveEnviroment;
 
 -(void) finishTask:(Task *)task;
 
--(Task *)editTask:(NSNumber*)identification;
+-(Task *)editTask:(NSManagedObjectID *)identification;
 
--(Task *)getTask:(NSNumber*)identification;
+-(Task *)getTask:(NSManagedObjectID *)identification;
 
 @end
