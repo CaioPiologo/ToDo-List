@@ -11,6 +11,9 @@
 #import "TaskWizard.h"
 
 @interface Organizer : NSObject
+@property (nonatomic) TaskWizard * taskWizard;
+@property (nonatomic)NSDate *lastDateOrganized;
+@property (nonatomic)NSMutableArray *taskList;
 
 @property NSDate *lastDateOrganized;
 @property NSMutableArray *taskList;

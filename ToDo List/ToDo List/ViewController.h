@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
+#import "AddParamViewController.h"
+#import "AddName.h"
 
 @interface ViewController : UIViewController
 
+@property(strong, nonatomic) NSMutableArray *data;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
