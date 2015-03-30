@@ -92,6 +92,12 @@
     }
 }
 
+-(void)deleteTask:(Task*) task
+{
+    [self.managedObjectContext deleteObject:task];
+}
+
+
 #pragma mark - Core Data stack
 
 @synthesize managedObjectContext = _managedObjectContext;

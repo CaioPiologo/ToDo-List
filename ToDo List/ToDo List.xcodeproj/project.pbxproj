@@ -262,6 +262,7 @@
 				8C3454611AC3204B0053766D /* ViewController.m in Sources */,
 				8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */,
 				8CF188BF1AC5D1360027EB72 /* Task.m in Sources */,
+				25E0122D1AC9B621004370E1 /* TaskWizard.m in Sources */,
 				8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */,
 				1CAB490A1AC9B8FC0040E8D8 /* Organizer.m in Sources */,
 				8C34545B1AC3204B0053766D /* main.m in Sources */,

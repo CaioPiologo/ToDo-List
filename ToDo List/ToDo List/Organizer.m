@@ -8,19 +8,23 @@
 
 #import "Organizer.h"
 #import "Loader.h"
+#import "TaskWizard.h"
+#import "Task.h"
+
 @interface Organizer()
 @property (nonatomic) Loader* loader;
+@property (nonatomic) TaskWizard * taskWizard;
 @end
 @implementation Organizer
 
 #pragma mark Singleton Method(Static)
 + (id)getInstace {
-    static Organizer *_organizerInstace = nil;
+    static Organizer *_organizerInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _organizerInstace = [[self alloc] init];
+        _organizerInstance = [[self alloc] init];
     });
-    return _organizerInstace;
+    return _organizerInstance;
 }
 
 #pragma mark Other Methods(instance)
@@ -35,6 +39,7 @@
         self.lastDateOrganized = [[NSDate alloc] init];
         self.taskList = [[NSMutableArray alloc] init];
         self.loader = [[Loader alloc] init];
+        self.taskWizard = [[TaskWizard alloc] init:self.loader];
     }
     return self;
 }
@@ -50,7 +55,6 @@
         _taskList = self.getListByPriority;
     else
         _taskList = self.getListByDate;
-    [self performSelector:@selector(updateTasks:) withObject:self afterDelay:3600];
 }
 
 /**
@@ -61,6 +65,7 @@
     array = [_taskList sortedArrayUsingSelector:@selector(compareByPriority:)];
     return array;
 }
+
 /**
  Sorts list by date
  */
@@ -80,8 +85,9 @@
 /**
  Marks a task as completed by the user
  */
--(void) finishTask:(Task *) task{
-    task.finished = [NSNumber numberWithInt:1];
+-(void) finishTask:(NSManagedObjectID *) ID{
+    Task *task = [self getTask:ID];
+    task.finished = @1;
 }
 
 /**
@@ -102,10 +108,14 @@
     [_taskList removeObject:[self getTask:identification]];
 }
 
-
+/**
+ Saves list configuration
+ */
 -(void) saveEnviroment
 {
     [self.loader saveTasksStates];
 }
+
+
 
 @end
