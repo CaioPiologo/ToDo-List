@@ -30,8 +30,6 @@
 
 -(void) finishTask:(Task *)task;
 
--(Task *)editTask:(NSManagedObjectID *)identification;
-
 -(Task *)getTask:(NSManagedObjectID *)identification;
 
 @end

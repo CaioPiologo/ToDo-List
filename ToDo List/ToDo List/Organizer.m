@@ -7,8 +7,23 @@
 //
 
 #import "Organizer.h"
-
+#import "Loader.h"
+@interface Organizer()
+@property (nonatomic) Loader* loader;
+@end
 @implementation Organizer
+
+#pragma mark Singleton Method(Static)
++ (id)getInstace {
+    static Organizer *_organizerInstace = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _organizerInstace = [[self alloc] init];
+    });
+    return _organizerInstace;
+}
+
+#pragma mark Other Methods(instance)
 
 /**
  Initializes class properties
@@ -19,6 +34,7 @@
     if(self){
         self.lastDateOrganized = [[NSDate alloc] init];
         self.taskList = [[NSMutableArray alloc] init];
+        self.loader = [[Loader alloc] init];
     }
     return self;
 }
@@ -86,13 +102,10 @@
     [_taskList removeObject:[self getTask:identification]];
 }
 
--(Task *)editTask:(NSManagedObjectID *) identification{
-    Task *task = [self getTask:identification];
-    //TODO
-    return nil;
+
+-(void) saveEnviroment
+{
+    [self.loader saveTasksStates];
 }
-
-
-//-(void) saveEnviroment;
 
 @end
