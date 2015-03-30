@@ -1,43 +1,28 @@
 //
-//  Task.m
+//  TaskModel.m
 //  ToDo List
 //
-//  Created by Caio Vinícius Piologo Véras Fernandes on 3/25/15.
+//  Created by Ricardo Z Charf on 3/27/15.
 //  Copyright (c) 2015 Ricardo Z Charf. All rights reserved.
 //
 
 #import "Task.h"
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "Loader.h"
 
 @implementation Task
-/**
- initializes class properties
- */
--(id) init: (NSNumber *)identification
-  withName: (NSString *)name
-withDifficulty: (NSNumber *)difficulty
-   withFun: (NSNumber *)fun
-withInitialDate: (NSDate *)initialDate
-withConclusionDate: (NSDate *)conclusionDate
-withContinuous: (NSNumber*) continuous
-withRepeat: (NSDate *)repeatTime
-withUrgency: (NSNumber*) urgency{
-    
-    self = [super init];
-    if (self) {
-        self.name = name;
-        self.identification = identification;
-        self.difficulty = difficulty;
-        self.fun = fun;
-        self.initialDate = initialDate;
-        self.conclusionDate = conclusionDate;
-        self.continuous = continuous;
-        self.repeatTime = repeatTime;
-        self.urgent = urgency;
-        self.finished = [NSNumber numberWithInt:0];
-        [self updatePriority];
-    }
-    return self;
-}
+
+@dynamic conclusionDate;
+@dynamic continuous;
+@dynamic difficulty;
+@dynamic finished;
+@dynamic fun;
+@dynamic initialDate;
+@dynamic name;
+@dynamic repeatTime;
+@dynamic urgent;
+
 /**
  Updates priority through an algorithm
  */

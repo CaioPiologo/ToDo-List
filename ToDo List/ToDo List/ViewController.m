@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "Loader.h"
+#import "Task.h"
+#import "Foundation/Foundation.h"
 
 @interface ViewController ()
 
@@ -16,7 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    Loader * loader = [[Loader alloc] init];
+    Task * t = [loader createTaskWithName:@"Uma task" withInitialDate:[NSDate date] withConclusionDate:[NSDate date] withDifficulty:@5 withFun:@2 isContinuous:@0 withRepeatTime:[NSDate date] isUrgent:@0];
+    NSArray * vec = [loader loadTasksFromDataBase];
+    NSLog(@"%@", [vec[0] objectID]);
+                  NSLog(@"%@", [vec[1] objectID]);
+
 }
 
 - (void)didReceiveMemoryWarning {

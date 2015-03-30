@@ -1,37 +1,28 @@
 //
-//  Task.h
+//  TaskModel.h
 //  ToDo List
 //
-//  Created by Caio Vinícius Piologo Véras Fernandes on 3/25/15.
+//  Created by Ricardo Z Charf on 3/27/15.
 //  Copyright (c) 2015 Ricardo Z Charf. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#import "Loader.h"
 
-@interface Task : NSObject
+@interface Task : NSManagedObject
 
-@property NSNumber *identification;
-@property NSString *name;
-@property NSNumber *difficulty;
-@property NSNumber *fun;
-@property NSDate *initialDate;
-@property NSDate *conclusionDate;
-@property NSNumber *continuous;
-@property NSDate *repeatTime;
-@property NSNumber *urgent;
-@property NSNumber *finished;
-@property NSNumber *priority;
+@property (nonatomic, retain) NSDate * conclusionDate;
+@property (nonatomic, retain) NSNumber * continuous;
+@property (nonatomic, retain) NSNumber * difficulty;
+@property (nonatomic, retain) NSNumber * finished;
+@property (nonatomic, retain) NSNumber * fun;
+@property (nonatomic, retain) NSDate * initialDate;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSDate * repeatTime;
+@property (nonatomic, retain) NSNumber * urgent;
 
--(id) init: (NSNumber *)identification
-  withName: (NSString *)name
-withDifficulty: (NSNumber *)difficulty
-   withFun: (NSNumber *)fun
-withInitialDate: (NSDate *)initialDate
-withConclusionDate: (NSDate *)conclusionDate
-withContinuous: (NSNumber *) continuous
-withRepeat: (NSDate *)repeatTime;
-
-- (NSString *) toString;
+- (NSString *) description;
 
 - (NSComparisonResult)compareByPriority:(Task *)otherObject;
 
