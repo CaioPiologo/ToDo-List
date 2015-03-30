@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "Loader.h"
+#import "Task.h"
+#import "Foundation/Foundation.h"
 
 
 @interface ViewController ()
