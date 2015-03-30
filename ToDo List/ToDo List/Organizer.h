@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Task.h"
+#import "TaskWizard.h"
 
 @interface Organizer : NSObject
 
 @property NSDate *lastDateOrganized;
 @property NSMutableArray *taskList;
+@property (nonatomic) TaskWizard * taskWizard;
 
 -(id) init;
 

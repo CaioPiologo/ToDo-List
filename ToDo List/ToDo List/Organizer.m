@@ -8,12 +8,10 @@
 
 #import "Organizer.h"
 #import "Loader.h"
-#import "TaskWizard.h"
 #import "Task.h"
 
 @interface Organizer()
 @property (nonatomic) Loader* loader;
-@property (nonatomic) TaskWizard * taskWizard;
 @end
 @implementation Organizer
 
