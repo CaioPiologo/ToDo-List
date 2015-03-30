@@ -71,11 +71,12 @@
 - (NSComparisonResult)compareByDate:(Task *)otherObject {
     return [self.conclusionDate compare:otherObject.conclusionDate];
 }
+
 /**
  Compare tasks IDs
  */
--(int) findID:(NSNumber *) identification{
-    if(self.identification.intValue == identification)
+-(int) isID:( NSManagedObjectID*) identification{
+    if([self objectID] == identification)
         return 1;
     return 0;
 }
