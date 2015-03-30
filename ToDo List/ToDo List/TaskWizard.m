@@ -31,7 +31,6 @@
 }
 
 -(void) cancel{
-    //TODO
     [self.loader deleteTask:self.newtask];
     self.newtask = nil;
 }
@@ -66,6 +65,13 @@
     [_newtask setFun:fun];
 }
 
-//-(void) hasAlreadyBegun;
+-(BOOL) hasAlreadyBegun
+{
+    if(self.newtask ==nil)
+    {
+        return NO;
+    }
+    return YES;
+}
 
 @end

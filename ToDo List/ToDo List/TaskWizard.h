@@ -28,5 +28,5 @@
 
 -(void) giveFun:(NSNumber*)fun;
 
--(void) hasAlreadyBegun;
+-(BOOL) hasAlreadyBegun;
 @end

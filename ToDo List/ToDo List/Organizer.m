@@ -9,6 +9,7 @@
 #import "Organizer.h"
 #import "Loader.h"
 #import "TaskWizard.h"
+#import "Task.h"
 
 @interface Organizer()
 @property (nonatomic) Loader* loader;
@@ -22,8 +23,6 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _organizerInstance = [[self alloc] init];
-        _organizerInstance.loader = [[Loader alloc]init];
-        _organizerInstance.taskWizard =[[TaskWizard alloc] init:_organizerInstance.loader];
     });
     return _organizerInstance;
 }
@@ -40,7 +39,7 @@
         self.lastDateOrganized = [[NSDate alloc] init];
         self.taskList = [[NSMutableArray alloc] init];
         self.loader = [[Loader alloc] init];
-        
+        self.taskWizard = [[TaskWizard alloc] init:self.loader];
     }
     return self;
 }
@@ -66,6 +65,7 @@
     array = [_taskList sortedArrayUsingSelector:@selector(compareByPriority:)];
     return array;
 }
+
 /**
  Sorts list by date
  */
@@ -86,7 +86,7 @@
  Marks a task as completed by the user
  */
 -(void) finishTask:(Task *) task{
-    task.finished = [NSNumber numberWithInt:1];
+    task.finished = @1;
 }
 
 /**
