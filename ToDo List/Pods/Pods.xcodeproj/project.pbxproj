@@ -1,0 +1,758 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		013EA670C1B5AE7AF96ABBA7 /* JTCalendarMenuMonthView.h in Headers */ = {isa = PBXBuildFile; fileRef = A8491AEFB773CC78BE448FED /* JTCalendarMenuMonthView.h */; };
+		0147B07E613102761EE40689 /* JTCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FEB0601F0563BDD6467570 /* JTCalendarWeekView.m */; };
+		08EE332C8B0394724BF0D4AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C42DF11878AEF64929EC5 /* Foundation.framework */; };
+		0A44F889F79A0C9547A7867E /* JTCalendarAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = C2BA83E067C15A67FDC425C3 /* JTCalendarAppearance.h */; };
+		0B9D6C3999A9F3FB9BF43920 /* JTCalendarContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBA23FDB801263895A61E1F /* JTCalendarContentView.m */; };
+		1276CA03F735CA69FA5DB19B /* JTCalendarMonthView.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA3861761F6F0A6449144CE /* JTCalendarMonthView.h */; };
+		12A4AC44B33E99B16A35E155 /* JTCalendarContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE971920D4651C67FCCD1F5 /* JTCalendarContentView.h */; };
+		1BE5D42BED7082F3127AE088 /* JTCalendarMenuMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2559D103BE0C2BFCF77382 /* JTCalendarMenuMonthView.m */; };
+		1C5656228A23F5C1A24D0E98 /* JTCalendarViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F029F64DFFFFCD2ECBC94BF3 /* JTCalendarViewDataSource.h */; };
+		1E92C36E1125F46E7E8F1455 /* JTCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1F4CFDB2E21615ACF8709 /* JTCalendarAppearance.m */; };
+		24B04BE0D568115C78AFA1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C42DF11878AEF64929EC5 /* Foundation.framework */; };
+		26A4C8E7EDE1537D98526962 /* JTCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CBA6CE68D078256B0059FFB /* JTCalendar.h */; };
+		2A8F63F244D9F7673666D7BD /* JTCalendarMonthWeekDaysView.h in Headers */ = {isa = PBXBuildFile; fileRef = ECDDDC78E453D5EF6C8E39F9 /* JTCalendarMonthWeekDaysView.h */; };
+		2FF0C4F45D53D26A5F966E8E /* JTCalendarWeekView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B6315B5808F87A939A493A9 /* JTCalendarWeekView.h */; };
+		307D79C2298AA8546ADED621 /* JTCalendarMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1CB45258900B91BCAD9AA /* JTCalendarMenuView.m */; };
+		324D681A7085C69D05D38F68 /* Pods-ToDo List-JTCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 353BF7B5631630366E1C2AC0 /* Pods-ToDo List-JTCalendar-dummy.m */; };
+		3F19E606FCFE2C086CA144BB /* Pods-ToDo ListTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9383A8D17E6778B056B2E5E /* Pods-ToDo ListTests-dummy.m */; };
+		4233D77AF8BCCEC6C856D52D /* JTCalendarContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE971920D4651C67FCCD1F5 /* JTCalendarContentView.h */; };
+		522F93F692059A6AB5E80FB3 /* JTCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 063F7BD19513A0A2EFE93F16 /* JTCalendarDayView.m */; };
+		5E42E8884535385A271C2A8F /* JTCalendarMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = D37DFAE9D16B84F24351D27D /* JTCalendarMenuView.h */; };
+		63A93DB354138FAA7C10BB7B /* JTCalendarMenuMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2559D103BE0C2BFCF77382 /* JTCalendarMenuMonthView.m */; };
+		651392821460CF99DA84B255 /* JTCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 063F7BD19513A0A2EFE93F16 /* JTCalendarDayView.m */; };
+		66962E912CE6FC50BB572BD3 /* JTCalendarMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A8CD7ACD208A82A7D0A829 /* JTCalendarMonthView.m */; };
+		6AF491377E6CA8D5F65772F4 /* JTCalendarMonthWeekDaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6CEA7FAE9C6A1176E57F70 /* JTCalendarMonthWeekDaysView.m */; };
+		7073DD76864BA1A24A74CA7A /* JTCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B954F345541CF330E6DDA48 /* JTCircleView.m */; };
+		71DBDEB9BED366B32F1DE11C /* JTCalendarAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = C2BA83E067C15A67FDC425C3 /* JTCalendarAppearance.h */; };
+		79EA62357DC149DFFC750EA2 /* JTCalendarViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F029F64DFFFFCD2ECBC94BF3 /* JTCalendarViewDataSource.h */; };
+		7A63CE4835EF6762276D0EDA /* JTCircleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BB0150EA7E823FAA05209F /* JTCircleView.h */; };
+		7A63DA63ACE7BA70132E3FE1 /* JTCalendarDayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D69F371474DABC4A8C87E9C /* JTCalendarDayView.h */; };
+		7AF2653EF532FDF246598C28 /* JTCalendarMonthView.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA3861761F6F0A6449144CE /* JTCalendarMonthView.h */; };
+		7AF604EE08DBF0E17155FF61 /* JTCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FEB0601F0563BDD6467570 /* JTCalendarWeekView.m */; };
+		81D539B1562E32D5A43698A9 /* JTCalendarMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1CB45258900B91BCAD9AA /* JTCalendarMenuView.m */; };
+		8F53F25172EF07516B8083F6 /* JTCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1F4CFDB2E21615ACF8709 /* JTCalendarAppearance.m */; };
+		914F54AF71CF669D83FE47C7 /* JTCalendarWeekView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B6315B5808F87A939A493A9 /* JTCalendarWeekView.h */; };
+		98D0D50558297CFB2C6150F3 /* JTCalendarDayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D69F371474DABC4A8C87E9C /* JTCalendarDayView.h */; };
+		9954F247B2469D908F019B0F /* JTCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B954F345541CF330E6DDA48 /* JTCircleView.m */; };
+		AA4A2E6CCD508922204E0B1F /* JTCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF70AE882FDFDF5737885A /* JTCalendar.m */; };
+		AAA4A963473980EF09551DBB /* Pods-ToDo List-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36509B351BE04EA746C994BC /* Pods-ToDo List-dummy.m */; };
+		ADC64D17CEE2310004BC7FA0 /* JTCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CBA6CE68D078256B0059FFB /* JTCalendar.h */; };
+		AE3F2D2089FA5489F3BC3917 /* JTCalendarMonthWeekDaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6CEA7FAE9C6A1176E57F70 /* JTCalendarMonthWeekDaysView.m */; };
+		B2FA825CD3E71F63F438C43F /* JTCalendarMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = D37DFAE9D16B84F24351D27D /* JTCalendarMenuView.h */; };
+		B3F69EBFD8129EC09B78DD93 /* JTCalendarMonthWeekDaysView.h in Headers */ = {isa = PBXBuildFile; fileRef = ECDDDC78E453D5EF6C8E39F9 /* JTCalendarMonthWeekDaysView.h */; };
+		BA966A4E7DA568E8E48BB109 /* Pods-ToDo ListTests-JTCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B10B101E81BD0E4CCF7609 /* Pods-ToDo ListTests-JTCalendar-dummy.m */; };
+		BC1C2580BABB2DC3724931AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C42DF11878AEF64929EC5 /* Foundation.framework */; };
+		C2B5644877B5FEDE472C4641 /* JTCalendarMenuMonthView.h in Headers */ = {isa = PBXBuildFile; fileRef = A8491AEFB773CC78BE448FED /* JTCalendarMenuMonthView.h */; };
+		C2BFD48F7BE918C2B14500A5 /* JTCalendarContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBA23FDB801263895A61E1F /* JTCalendarContentView.m */; };
+		C6DF23E9BA388EA25E0B83CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C42DF11878AEF64929EC5 /* Foundation.framework */; };
+		DD5552D854E48C9E33A7F908 /* JTCircleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BB0150EA7E823FAA05209F /* JTCircleView.h */; };
+		F72BE07CE66F4986822526AA /* JTCalendarMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A8CD7ACD208A82A7D0A829 /* JTCalendarMonthView.m */; };
+		FEB52F2667939F01E2E5F350 /* JTCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF70AE882FDFDF5737885A /* JTCalendar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24D467FE989DE0AA1DC06C33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A777AD4A2ABB8E63313BF6C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15076E6F5E300948B930EFFB;
+			remoteInfo = "Pods-ToDo List-JTCalendar";
+		};
+		78CA6885F58D2398D4D76CAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A777AD4A2ABB8E63313BF6C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F93A93627C9DE9CDF3C1853B;
+			remoteInfo = "Pods-ToDo ListTests-JTCalendar";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		063F7BD19513A0A2EFE93F16 /* JTCalendarDayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarDayView.m; path = JTCalendar/JTCalendarDayView.m; sourceTree = "<group>"; };
+		0A32F0B05CB6507D58D8E45B /* Pods-ToDo List-JTCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToDo List-JTCalendar-prefix.pch"; sourceTree = "<group>"; };
+		0B118334A7C82E75C825E600 /* Pods-ToDo List-JTCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToDo List-JTCalendar.xcconfig"; sourceTree = "<group>"; };
+		0B954F345541CF330E6DDA48 /* JTCircleView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCircleView.m; path = JTCalendar/JTCircleView.m; sourceTree = "<group>"; };
+		0C2559D103BE0C2BFCF77382 /* JTCalendarMenuMonthView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarMenuMonthView.m; path = JTCalendar/JTCalendarMenuMonthView.m; sourceTree = "<group>"; };
+		153F7B50984595A85409936D /* Pods-ToDo ListTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ToDo ListTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		292A1681C5B0BD93069C0087 /* Pods-ToDo List-JTCalendar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToDo List-JTCalendar-Private.xcconfig"; sourceTree = "<group>"; };
+		2D69F371474DABC4A8C87E9C /* JTCalendarDayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarDayView.h; path = JTCalendar/JTCalendarDayView.h; sourceTree = "<group>"; };
+		2F2E088444BB94442E80F501 /* libPods-ToDo List.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDo List.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31F35AE97EAF923E758DAFC6 /* Pods-ToDo ListTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToDo ListTests-environment.h"; sourceTree = "<group>"; };
+		353BF7B5631630366E1C2AC0 /* Pods-ToDo List-JTCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ToDo List-JTCalendar-dummy.m"; sourceTree = "<group>"; };
+		36509B351BE04EA746C994BC /* Pods-ToDo List-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ToDo List-dummy.m"; sourceTree = "<group>"; };
+		3AE971920D4651C67FCCD1F5 /* JTCalendarContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarContentView.h; path = JTCalendar/JTCalendarContentView.h; sourceTree = "<group>"; };
+		3C5BF0EF6AA679F1EC94A696 /* Pods-ToDo ListTests-JTCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo ListTests-JTCalendar.xcconfig"; path = "../Pods-ToDo ListTests-JTCalendar/Pods-ToDo ListTests-JTCalendar.xcconfig"; sourceTree = "<group>"; };
+		3CBA6CE68D078256B0059FFB /* JTCalendar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendar.h; path = JTCalendar/JTCalendar.h; sourceTree = "<group>"; };
+		3CDC62579AB70C96A358DEDC /* Pods-ToDo List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToDo List.release.xcconfig"; sourceTree = "<group>"; };
+		41BB0150EA7E823FAA05209F /* JTCircleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCircleView.h; path = JTCalendar/JTCircleView.h; sourceTree = "<group>"; };
+		442A2F61AD40950E975B337B /* Pods-ToDo List-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToDo List-environment.h"; sourceTree = "<group>"; };
+		57CB018D60039D0887900AD5 /* Pods-ToDo ListTests-JTCalendar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo ListTests-JTCalendar-Private.xcconfig"; path = "../Pods-ToDo ListTests-JTCalendar/Pods-ToDo ListTests-JTCalendar-Private.xcconfig"; sourceTree = "<group>"; };
+		5D8BB66AFFBF7FB9347A9DB8 /* Pods-ToDo ListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToDo ListTests.debug.xcconfig"; sourceTree = "<group>"; };
+		66F8E4FA05D8F7A716BFED87 /* libPods-ToDo ListTests-JTCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDo ListTests-JTCalendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E6CEA7FAE9C6A1176E57F70 /* JTCalendarMonthWeekDaysView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarMonthWeekDaysView.m; path = JTCalendar/JTCalendarMonthWeekDaysView.m; sourceTree = "<group>"; };
+		7B6315B5808F87A939A493A9 /* JTCalendarWeekView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarWeekView.h; path = JTCalendar/JTCalendarWeekView.h; sourceTree = "<group>"; };
+		7DFF70AE882FDFDF5737885A /* JTCalendar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendar.m; path = JTCalendar/JTCalendar.m; sourceTree = "<group>"; };
+		83B10B101E81BD0E4CCF7609 /* Pods-ToDo ListTests-JTCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-ToDo ListTests-JTCalendar-dummy.m"; path = "../Pods-ToDo ListTests-JTCalendar/Pods-ToDo ListTests-JTCalendar-dummy.m"; sourceTree = "<group>"; };
+		88B7E4DCC131A33D543A40F6 /* Pods-ToDo List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToDo List.debug.xcconfig"; sourceTree = "<group>"; };
+		8C24F895437032D499075D6E /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		91451938F16CAAF7D944AA9C /* Pods-ToDo List-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToDo List-resources.sh"; sourceTree = "<group>"; };
+		96C13E83005B059C5E99D408 /* Pods-ToDo List-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ToDo List-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A8491AEFB773CC78BE448FED /* JTCalendarMenuMonthView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarMenuMonthView.h; path = JTCalendar/JTCalendarMenuMonthView.h; sourceTree = "<group>"; };
+		AD7AFC74E8C4C359352444FA /* libPods-ToDo ListTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDo ListTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B44942DDA5A54FC17AEE4E1E /* Pods-ToDo ListTests-JTCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-ToDo ListTests-JTCalendar-prefix.pch"; path = "../Pods-ToDo ListTests-JTCalendar/Pods-ToDo ListTests-JTCalendar-prefix.pch"; sourceTree = "<group>"; };
+		BBBA23FDB801263895A61E1F /* JTCalendarContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarContentView.m; path = JTCalendar/JTCalendarContentView.m; sourceTree = "<group>"; };
+		BD7E6FCA3B83191DB1EFF49F /* Pods-ToDo ListTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ToDo ListTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C2BA83E067C15A67FDC425C3 /* JTCalendarAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarAppearance.h; path = JTCalendar/JTCalendarAppearance.h; sourceTree = "<group>"; };
+		C7F1CB45258900B91BCAD9AA /* JTCalendarMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarMenuView.m; path = JTCalendar/JTCalendarMenuView.m; sourceTree = "<group>"; };
+		C9FBA66189EB872BBE021ECA /* Pods-ToDo List-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ToDo List-acknowledgements.plist"; sourceTree = "<group>"; };
+		CE4C42DF11878AEF64929EC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D37DFAE9D16B84F24351D27D /* JTCalendarMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarMenuView.h; path = JTCalendar/JTCalendarMenuView.h; sourceTree = "<group>"; };
+		D8FEB0601F0563BDD6467570 /* JTCalendarWeekView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarWeekView.m; path = JTCalendar/JTCalendarWeekView.m; sourceTree = "<group>"; };
+		E8396749F705B66A15BD3DF0 /* libPods-ToDo List-JTCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDo List-JTCalendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9383A8D17E6778B056B2E5E /* Pods-ToDo ListTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ToDo ListTests-dummy.m"; sourceTree = "<group>"; };
+		ECDDDC78E453D5EF6C8E39F9 /* JTCalendarMonthWeekDaysView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarMonthWeekDaysView.h; path = JTCalendar/JTCalendarMonthWeekDaysView.h; sourceTree = "<group>"; };
+		F029F64DFFFFCD2ECBC94BF3 /* JTCalendarViewDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarViewDataSource.h; path = JTCalendar/JTCalendarViewDataSource.h; sourceTree = "<group>"; };
+		F1A8CD7ACD208A82A7D0A829 /* JTCalendarMonthView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarMonthView.m; path = JTCalendar/JTCalendarMonthView.m; sourceTree = "<group>"; };
+		F5D1F4CFDB2E21615ACF8709 /* JTCalendarAppearance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarAppearance.m; path = JTCalendar/JTCalendarAppearance.m; sourceTree = "<group>"; };
+		F9F73A24E34D8A641E0D427C /* Pods-ToDo ListTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToDo ListTests-resources.sh"; sourceTree = "<group>"; };
+		FE40868DD0B64C765B7B5BFB /* Pods-ToDo ListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToDo ListTests.release.xcconfig"; sourceTree = "<group>"; };
+		FFA3861761F6F0A6449144CE /* JTCalendarMonthView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarMonthView.h; path = JTCalendar/JTCalendarMonthView.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		08FEDD9244CCFD9C85C51ED0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC1C2580BABB2DC3724931AE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		152969159F9EF085EC0CFBE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08EE332C8B0394724BF0D4AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A4C3B511AE58ECC3D830FF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B04BE0D568115C78AFA1DD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0A2F8EE778658DA672E6FD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6DF23E9BA388EA25E0B83CF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		059F7142964B67E66B765B37 /* Pods-ToDo List */ = {
+			isa = PBXGroup;
+			children = (
+				96C13E83005B059C5E99D408 /* Pods-ToDo List-acknowledgements.markdown */,
+				C9FBA66189EB872BBE021ECA /* Pods-ToDo List-acknowledgements.plist */,
+				36509B351BE04EA746C994BC /* Pods-ToDo List-dummy.m */,
+				442A2F61AD40950E975B337B /* Pods-ToDo List-environment.h */,
+				91451938F16CAAF7D944AA9C /* Pods-ToDo List-resources.sh */,
+				88B7E4DCC131A33D543A40F6 /* Pods-ToDo List.debug.xcconfig */,
+				3CDC62579AB70C96A358DEDC /* Pods-ToDo List.release.xcconfig */,
+			);
+			name = "Pods-ToDo List";
+			path = "Target Support Files/Pods-ToDo List";
+			sourceTree = "<group>";
+		};
+		06151F7A49069D6C2F98652D /* JTCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				3CBA6CE68D078256B0059FFB /* JTCalendar.h */,
+				7DFF70AE882FDFDF5737885A /* JTCalendar.m */,
+				C2BA83E067C15A67FDC425C3 /* JTCalendarAppearance.h */,
+				F5D1F4CFDB2E21615ACF8709 /* JTCalendarAppearance.m */,
+				3AE971920D4651C67FCCD1F5 /* JTCalendarContentView.h */,
+				BBBA23FDB801263895A61E1F /* JTCalendarContentView.m */,
+				2D69F371474DABC4A8C87E9C /* JTCalendarDayView.h */,
+				063F7BD19513A0A2EFE93F16 /* JTCalendarDayView.m */,
+				A8491AEFB773CC78BE448FED /* JTCalendarMenuMonthView.h */,
+				0C2559D103BE0C2BFCF77382 /* JTCalendarMenuMonthView.m */,
+				D37DFAE9D16B84F24351D27D /* JTCalendarMenuView.h */,
+				C7F1CB45258900B91BCAD9AA /* JTCalendarMenuView.m */,
+				FFA3861761F6F0A6449144CE /* JTCalendarMonthView.h */,
+				F1A8CD7ACD208A82A7D0A829 /* JTCalendarMonthView.m */,
+				ECDDDC78E453D5EF6C8E39F9 /* JTCalendarMonthWeekDaysView.h */,
+				6E6CEA7FAE9C6A1176E57F70 /* JTCalendarMonthWeekDaysView.m */,
+				F029F64DFFFFCD2ECBC94BF3 /* JTCalendarViewDataSource.h */,
+				7B6315B5808F87A939A493A9 /* JTCalendarWeekView.h */,
+				D8FEB0601F0563BDD6467570 /* JTCalendarWeekView.m */,
+				41BB0150EA7E823FAA05209F /* JTCircleView.h */,
+				0B954F345541CF330E6DDA48 /* JTCircleView.m */,
+				D8B949163390DED0EE8D57E1 /* Support Files */,
+			);
+			path = JTCalendar;
+			sourceTree = "<group>";
+		};
+		299CB000F0CACFA1F6D9C163 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				356DC7205803FB399F9065FA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CC6DCE51720257A5A9B3246 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				059F7142964B67E66B765B37 /* Pods-ToDo List */,
+				8D2E0C93C4BCB38F95B0C7C5 /* Pods-ToDo ListTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		356DC7205803FB399F9065FA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C42DF11878AEF64929EC5 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4EE47F59483436E680544655 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E088444BB94442E80F501 /* libPods-ToDo List.a */,
+				E8396749F705B66A15BD3DF0 /* libPods-ToDo List-JTCalendar.a */,
+				AD7AFC74E8C4C359352444FA /* libPods-ToDo ListTests.a */,
+				66F8E4FA05D8F7A716BFED87 /* libPods-ToDo ListTests-JTCalendar.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DC6257C81E344D2FA87E67A = {
+			isa = PBXGroup;
+			children = (
+				8C24F895437032D499075D6E /* Podfile */,
+				299CB000F0CACFA1F6D9C163 /* Frameworks */,
+				9D99725E690C9FD0A7EE219A /* Pods */,
+				4EE47F59483436E680544655 /* Products */,
+				2CC6DCE51720257A5A9B3246 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8D2E0C93C4BCB38F95B0C7C5 /* Pods-ToDo ListTests */ = {
+			isa = PBXGroup;
+			children = (
+				153F7B50984595A85409936D /* Pods-ToDo ListTests-acknowledgements.markdown */,
+				BD7E6FCA3B83191DB1EFF49F /* Pods-ToDo ListTests-acknowledgements.plist */,
+				E9383A8D17E6778B056B2E5E /* Pods-ToDo ListTests-dummy.m */,
+				31F35AE97EAF923E758DAFC6 /* Pods-ToDo ListTests-environment.h */,
+				F9F73A24E34D8A641E0D427C /* Pods-ToDo ListTests-resources.sh */,
+				5D8BB66AFFBF7FB9347A9DB8 /* Pods-ToDo ListTests.debug.xcconfig */,
+				FE40868DD0B64C765B7B5BFB /* Pods-ToDo ListTests.release.xcconfig */,
+			);
+			name = "Pods-ToDo ListTests";
+			path = "Target Support Files/Pods-ToDo ListTests";
+			sourceTree = "<group>";
+		};
+		9D99725E690C9FD0A7EE219A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06151F7A49069D6C2F98652D /* JTCalendar */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D8B949163390DED0EE8D57E1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B118334A7C82E75C825E600 /* Pods-ToDo List-JTCalendar.xcconfig */,
+				292A1681C5B0BD93069C0087 /* Pods-ToDo List-JTCalendar-Private.xcconfig */,
+				353BF7B5631630366E1C2AC0 /* Pods-ToDo List-JTCalendar-dummy.m */,
+				0A32F0B05CB6507D58D8E45B /* Pods-ToDo List-JTCalendar-prefix.pch */,
+				3C5BF0EF6AA679F1EC94A696 /* Pods-ToDo ListTests-JTCalendar.xcconfig */,
+				57CB018D60039D0887900AD5 /* Pods-ToDo ListTests-JTCalendar-Private.xcconfig */,
+				83B10B101E81BD0E4CCF7609 /* Pods-ToDo ListTests-JTCalendar-dummy.m */,
+				B44942DDA5A54FC17AEE4E1E /* Pods-ToDo ListTests-JTCalendar-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-ToDo List-JTCalendar";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		73E5230932D3E338526CEF94 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADC64D17CEE2310004BC7FA0 /* JTCalendar.h in Headers */,
+				0A44F889F79A0C9547A7867E /* JTCalendarAppearance.h in Headers */,
+				12A4AC44B33E99B16A35E155 /* JTCalendarContentView.h in Headers */,
+				7A63DA63ACE7BA70132E3FE1 /* JTCalendarDayView.h in Headers */,
+				013EA670C1B5AE7AF96ABBA7 /* JTCalendarMenuMonthView.h in Headers */,
+				B2FA825CD3E71F63F438C43F /* JTCalendarMenuView.h in Headers */,
+				1276CA03F735CA69FA5DB19B /* JTCalendarMonthView.h in Headers */,
+				2A8F63F244D9F7673666D7BD /* JTCalendarMonthWeekDaysView.h in Headers */,
+				1C5656228A23F5C1A24D0E98 /* JTCalendarViewDataSource.h in Headers */,
+				2FF0C4F45D53D26A5F966E8E /* JTCalendarWeekView.h in Headers */,
+				7A63CE4835EF6762276D0EDA /* JTCircleView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F645D911656327BCA305D9E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A4C8E7EDE1537D98526962 /* JTCalendar.h in Headers */,
+				71DBDEB9BED366B32F1DE11C /* JTCalendarAppearance.h in Headers */,
+				4233D77AF8BCCEC6C856D52D /* JTCalendarContentView.h in Headers */,
+				98D0D50558297CFB2C6150F3 /* JTCalendarDayView.h in Headers */,
+				C2B5644877B5FEDE472C4641 /* JTCalendarMenuMonthView.h in Headers */,
+				5E42E8884535385A271C2A8F /* JTCalendarMenuView.h in Headers */,
+				7AF2653EF532FDF246598C28 /* JTCalendarMonthView.h in Headers */,
+				B3F69EBFD8129EC09B78DD93 /* JTCalendarMonthWeekDaysView.h in Headers */,
+				79EA62357DC149DFFC750EA2 /* JTCalendarViewDataSource.h in Headers */,
+				914F54AF71CF669D83FE47C7 /* JTCalendarWeekView.h in Headers */,
+				DD5552D854E48C9E33A7F908 /* JTCircleView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		15076E6F5E300948B930EFFB /* Pods-ToDo List-JTCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41F17B2E6B0E57F9D631D539 /* Build configuration list for PBXNativeTarget "Pods-ToDo List-JTCalendar" */;
+			buildPhases = (
+				B6625E77C520B54C2DBB8CD6 /* Sources */,
+				6A4C3B511AE58ECC3D830FF4 /* Frameworks */,
+				8F645D911656327BCA305D9E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ToDo List-JTCalendar";
+			productName = "Pods-ToDo List-JTCalendar";
+			productReference = E8396749F705B66A15BD3DF0 /* libPods-ToDo List-JTCalendar.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6FEA715DE31A2AC918FE2197 /* Pods-ToDo ListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38861E3C7983851AF828D1CF /* Build configuration list for PBXNativeTarget "Pods-ToDo ListTests" */;
+			buildPhases = (
+				C4FFF350CBC6CFBB0660CF36 /* Sources */,
+				152969159F9EF085EC0CFBE1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61ED120B3F51C11040218894 /* PBXTargetDependency */,
+			);
+			name = "Pods-ToDo ListTests";
+			productName = "Pods-ToDo ListTests";
+			productReference = AD7AFC74E8C4C359352444FA /* libPods-ToDo ListTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BA26D06ED2E2F6900B676ECF /* Pods-ToDo List */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3455DC9370825FD95B56B878 /* Build configuration list for PBXNativeTarget "Pods-ToDo List" */;
+			buildPhases = (
+				953CA8E75F4273874DD9CC1A /* Sources */,
+				08FEDD9244CCFD9C85C51ED0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFA08D6329BE0BD0FF33AE6B /* PBXTargetDependency */,
+			);
+			name = "Pods-ToDo List";
+			productName = "Pods-ToDo List";
+			productReference = 2F2E088444BB94442E80F501 /* libPods-ToDo List.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F93A93627C9DE9CDF3C1853B /* Pods-ToDo ListTests-JTCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE7BE4CEE723B3EC286DE38F /* Build configuration list for PBXNativeTarget "Pods-ToDo ListTests-JTCalendar" */;
+			buildPhases = (
+				76DBF7773BA349F96608F983 /* Sources */,
+				F0A2F8EE778658DA672E6FD8 /* Frameworks */,
+				73E5230932D3E338526CEF94 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ToDo ListTests-JTCalendar";
+			productName = "Pods-ToDo ListTests-JTCalendar";
+			productReference = 66F8E4FA05D8F7A716BFED87 /* libPods-ToDo ListTests-JTCalendar.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A777AD4A2ABB8E63313BF6C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 48DA5AFD3AC1A68BFA307D28 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6DC6257C81E344D2FA87E67A;
+			productRefGroup = 4EE47F59483436E680544655 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA26D06ED2E2F6900B676ECF /* Pods-ToDo List */,
+				15076E6F5E300948B930EFFB /* Pods-ToDo List-JTCalendar */,
+				6FEA715DE31A2AC918FE2197 /* Pods-ToDo ListTests */,
+				F93A93627C9DE9CDF3C1853B /* Pods-ToDo ListTests-JTCalendar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76DBF7773BA349F96608F983 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEB52F2667939F01E2E5F350 /* JTCalendar.m in Sources */,
+				8F53F25172EF07516B8083F6 /* JTCalendarAppearance.m in Sources */,
+				0B9D6C3999A9F3FB9BF43920 /* JTCalendarContentView.m in Sources */,
+				651392821460CF99DA84B255 /* JTCalendarDayView.m in Sources */,
+				63A93DB354138FAA7C10BB7B /* JTCalendarMenuMonthView.m in Sources */,
+				307D79C2298AA8546ADED621 /* JTCalendarMenuView.m in Sources */,
+				F72BE07CE66F4986822526AA /* JTCalendarMonthView.m in Sources */,
+				6AF491377E6CA8D5F65772F4 /* JTCalendarMonthWeekDaysView.m in Sources */,
+				7AF604EE08DBF0E17155FF61 /* JTCalendarWeekView.m in Sources */,
+				7073DD76864BA1A24A74CA7A /* JTCircleView.m in Sources */,
+				BA966A4E7DA568E8E48BB109 /* Pods-ToDo ListTests-JTCalendar-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953CA8E75F4273874DD9CC1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA4A963473980EF09551DBB /* Pods-ToDo List-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6625E77C520B54C2DBB8CD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4A2E6CCD508922204E0B1F /* JTCalendar.m in Sources */,
+				1E92C36E1125F46E7E8F1455 /* JTCalendarAppearance.m in Sources */,
+				C2BFD48F7BE918C2B14500A5 /* JTCalendarContentView.m in Sources */,
+				522F93F692059A6AB5E80FB3 /* JTCalendarDayView.m in Sources */,
+				1BE5D42BED7082F3127AE088 /* JTCalendarMenuMonthView.m in Sources */,
+				81D539B1562E32D5A43698A9 /* JTCalendarMenuView.m in Sources */,
+				66962E912CE6FC50BB572BD3 /* JTCalendarMonthView.m in Sources */,
+				AE3F2D2089FA5489F3BC3917 /* JTCalendarMonthWeekDaysView.m in Sources */,
+				0147B07E613102761EE40689 /* JTCalendarWeekView.m in Sources */,
+				9954F247B2469D908F019B0F /* JTCircleView.m in Sources */,
+				324D681A7085C69D05D38F68 /* Pods-ToDo List-JTCalendar-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4FFF350CBC6CFBB0660CF36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F19E606FCFE2C086CA144BB /* Pods-ToDo ListTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61ED120B3F51C11040218894 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ToDo ListTests-JTCalendar";
+			target = F93A93627C9DE9CDF3C1853B /* Pods-ToDo ListTests-JTCalendar */;
+			targetProxy = 78CA6885F58D2398D4D76CAB /* PBXContainerItemProxy */;
+		};
+		CFA08D6329BE0BD0FF33AE6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ToDo List-JTCalendar";
+			target = 15076E6F5E300948B930EFFB /* Pods-ToDo List-JTCalendar */;
+			targetProxy = 24D467FE989DE0AA1DC06C33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2C3D1D9AA40A3F0D2E13B481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 292A1681C5B0BD93069C0087 /* Pods-ToDo List-JTCalendar-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ToDo List-JTCalendar/Pods-ToDo List-JTCalendar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4DFC345FB827EF6E25CA6DFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57CB018D60039D0887900AD5 /* Pods-ToDo ListTests-JTCalendar-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ToDo ListTests-JTCalendar/Pods-ToDo ListTests-JTCalendar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		51062C4F2E35E2FC4535D888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 292A1681C5B0BD93069C0087 /* Pods-ToDo List-JTCalendar-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ToDo List-JTCalendar/Pods-ToDo List-JTCalendar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		54FD6D11D43F8EDAFD2B10B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59941F7B7F34C397AD9D143E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D8BB66AFFBF7FB9347A9DB8 /* Pods-ToDo ListTests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		986A054E4D5F23C6455F66E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A233D52DF72EA3FC1A7C65EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B7E4DCC131A33D543A40F6 /* Pods-ToDo List.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A6EE436D747A0EFC1724EF6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57CB018D60039D0887900AD5 /* Pods-ToDo ListTests-JTCalendar-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ToDo ListTests-JTCalendar/Pods-ToDo ListTests-JTCalendar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E6A7F027ADE177577953DC4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE40868DD0B64C765B7B5BFB /* Pods-ToDo ListTests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EB86F76B6F6E76F5F93FD47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CDC62579AB70C96A358DEDC /* Pods-ToDo List.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3455DC9370825FD95B56B878 /* Build configuration list for PBXNativeTarget "Pods-ToDo List" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A233D52DF72EA3FC1A7C65EF /* Debug */,
+				EB86F76B6F6E76F5F93FD47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38861E3C7983851AF828D1CF /* Build configuration list for PBXNativeTarget "Pods-ToDo ListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59941F7B7F34C397AD9D143E /* Debug */,
+				E6A7F027ADE177577953DC4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41F17B2E6B0E57F9D631D539 /* Build configuration list for PBXNativeTarget "Pods-ToDo List-JTCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51062C4F2E35E2FC4535D888 /* Debug */,
+				2C3D1D9AA40A3F0D2E13B481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48DA5AFD3AC1A68BFA307D28 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				986A054E4D5F23C6455F66E9 /* Debug */,
+				54FD6D11D43F8EDAFD2B10B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7BE4CEE723B3EC286DE38F /* Build configuration list for PBXNativeTarget "Pods-ToDo ListTests-JTCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DFC345FB827EF6E25CA6DFD /* Debug */,
+				A6EE436D747A0EFC1724EF6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A777AD4A2ABB8E63313BF6C5 /* Project object */;
+}
