@@ -13,7 +13,7 @@
 
 @interface Organizer()
 @property (nonatomic) Loader* loader;
-@property (nonatomic) TaskWizard * taskWizard;
+
 @end
 @implementation Organizer
 
