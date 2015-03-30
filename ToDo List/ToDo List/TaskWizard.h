@@ -15,6 +15,8 @@
 
 -(id)init:(Loader *) loader;
 
+-(void) beginWithTask:(Task*)task;
+
 -(void) begin;
 
 -(void) cancel;
