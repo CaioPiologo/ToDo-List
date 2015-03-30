@@ -89,7 +89,7 @@
     NSMutableArray *priorities = [[NSMutableArray alloc] init];
     NSArray *array;
     for(Task *task in _taskList)
-        [priorities addObject:task.priority];
+        [priorities addObject:task];
     array = [self mergeSort:priorities withPriority:1];
     return array;
 }
@@ -100,7 +100,7 @@
     NSMutableArray *priorities = [[NSMutableArray alloc] init];
     NSArray *array;
     for(Task *task in _taskList)
-        [priorities addObject:task.priority];
+        [priorities addObject:task];
     array = [self mergeSort:priorities withPriority:0];
     return array;
 }
