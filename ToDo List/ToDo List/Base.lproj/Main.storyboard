@@ -188,6 +188,7 @@
                     <navigationItem key="navigationItem" title="AddTask" id="SBy-7S-9JI">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="UkO-Iu-J5p">
                             <connections>
+                                <action selector="cancelButton:" destination="nVW-4Y-Gls" id="vnF-pC-fkV"/>
                                 <segue destination="Rb3-DV-MtK" kind="modal" id="lfw-kJ-6ql"/>
                             </connections>
                         </barButtonItem>
@@ -244,7 +245,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="AddTask2" id="zpZ-bY-uZY">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="8fR-Wl-joe"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="8fR-Wl-joe">
+                            <connections>
+                                <action selector="nextButton:" destination="HGT-fb-m1e" id="WdU-ix-FAS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="MLX-5w-hnp" kind="push" identifier="toGetParam" id="IVw-WY-JgB"/>
@@ -360,7 +365,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jKN-QF-0RS"/>
-        <segue reference="9fX-ZH-2iz"/>
+        <segue reference="lfw-kJ-6ql"/>
         <segue reference="bPy-xa-Bdy"/>
     </inferredMetricsTieBreakers>
 </document>

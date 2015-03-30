@@ -36,15 +36,14 @@
 {
     Task *task;
     
-    [_organizer.taskWizard giveDifficulty:NSInteger  _difficult.value];
+    [_organizer.taskWizard giveDifficulty:[NSNumber numberWithFloat:_difficult.value]];
+    [_organizer.taskWizard giveFun:[NSNumber numberWithFloat:_funny.value]];
     
     task = [_organizer.taskWizard finish];
     
-    
+    [_organizer addTaskToList: task];
     
     [self performSegueWithIdentifier:@"createTask" sender:self];
-    
-    [_organizer addTaskToList: task];
 }
 
 @end

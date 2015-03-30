@@ -31,7 +31,7 @@
 }
 
 
-- (IBAction)nextButton: (UIStoryboardSegue*)sender
+- (IBAction)nextButton: (id)sender
 {
     
     [self performSegueWithIdentifier:@"toGetParam" sender:self];
