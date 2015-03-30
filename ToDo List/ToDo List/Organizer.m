@@ -88,7 +88,8 @@
 
 -(Task *)editTask:(NSManagedObjectID *) identification{
     Task *task = [self getTask:identification];
-    
+    //TODO
+    return nil;
 }
 
 
