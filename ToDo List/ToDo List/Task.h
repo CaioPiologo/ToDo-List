@@ -33,9 +33,11 @@ withRepeat: (NSDate *)repeatTime;
 
 - (NSString *) toString;
 
--(int) compareTasksByPriority:(Task *) anotherTask;
+- (NSComparisonResult)compareByPriority:(Task *)otherObject;
 
--(int) compareTasksByDate:(Task *) anotherTask;
+- (NSComparisonResult)compareByDate:(Task *)otherObject;
+
+-(int) compareTaskByID:(Task *) anotherTask;
 
 -(void) updatePriority;
 

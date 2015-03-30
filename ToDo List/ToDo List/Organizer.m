@@ -8,7 +8,7 @@
 
 #import "Organizer.h"
 
-@implementation Hermes
+@implementation Organizer
 
 /**
  Initializes class properties
@@ -26,8 +26,10 @@
  Keeps list updated constantly
  */
 -(void) updateTasks:(int)priority{
+    //updates each task priority
     for (Task *task in _taskList)
         [task updatePriority];
+    //returns the list organized by priorities or dates
     if(priority == 1)
         _taskList = self.getListByPriority;
     else
@@ -36,72 +38,19 @@
 }
 
 /**
- Sorts array by priority or date
- */
--(NSArray *)mergeSort:(NSArray *)unsortedArray withPriority: (int)priority
-{
-    if ([unsortedArray count] < 2)
-    {
-        return unsortedArray;
-    }
-    long middle = ([unsortedArray count]/2);
-    NSRange left = NSMakeRange(0, middle);
-    NSRange right = NSMakeRange(middle, ([unsortedArray count] - middle));
-    NSArray *rightArr = [unsortedArray subarrayWithRange:right];
-    NSArray *leftArr = [unsortedArray subarrayWithRange:left];
-    //Or iterate through the unsortedArray and create your left and right array
-    //for left array iteration starts at index =0 and stops at middle, for right array iteration starts at midde and end at the end of the unsorted array
-    NSArray *resultArray =[self merge:[self mergeSort:leftArr withPriority:priority] andRight:[self mergeSort:rightArr withPriority:priority] withPriority:priority];
-    return resultArray;
-}
--(NSArray *)merge:(NSArray *)leftArr andRight:(NSArray *)rightArr withPriority: (int) priority
-{
-    NSMutableArray *result = [[NSMutableArray alloc] init];
-    int right = 0;
-    int left = 0;
-    while (left < [leftArr count] && right < [rightArr count])
-    {
-        //chooses type of ordering
-        if(priority == 1){
-            if ([[leftArr objectAtIndex:left] compareTasksByPriority:[rightArr objectAtIndex:right]] == -1)
-                [result addObject:[leftArr objectAtIndex:left++]];
-            else
-                [result addObject:[rightArr objectAtIndex:right++]];
-        } else {
-            if ([[leftArr objectAtIndex:left] compareTasksByDate:[rightArr objectAtIndex:right]] == -1)
-                [result addObject:[leftArr objectAtIndex:left++]];
-            else
-                [result addObject:[rightArr objectAtIndex:right++]];
-        }
-        
-    }
-    NSRange leftRange = NSMakeRange(left, ([leftArr count] - left));
-    NSRange rightRange = NSMakeRange(right, ([rightArr count] - right));
-    NSArray *newRight = [rightArr subarrayWithRange:rightRange];
-    NSArray *newLeft = [leftArr subarrayWithRange:leftRange];
-    newLeft = [result arrayByAddingObjectsFromArray:newLeft];
-    return [newLeft arrayByAddingObjectsFromArray:newRight];
-}
-/**
  Sorts list by priority
  */
 -(NSArray *) getListByPriority{
-    NSMutableArray *priorities = [[NSMutableArray alloc] init];
-    NSArray *array;
-    for(Task *task in _taskList)
-        [priorities addObject:task];
-    array = [self mergeSort:priorities withPriority:1];
+    NSArray *array = [[NSArray alloc] init];
+    array = [_taskList sortedArrayUsingSelector:@selector(compareByPriority:)];
     return array;
 }
 /**
  Sorts list by date
  */
 -(NSArray *) getListByDate{
-    NSMutableArray *priorities = [[NSMutableArray alloc] init];
-    NSArray *array;
-    for(Task *task in _taskList)
-        [priorities addObject:task];
-    array = [self mergeSort:priorities withPriority:0];
+    NSArray *array = [[NSArray alloc] init];
+    array = [_taskList sortedArrayUsingSelector:@selector(compareByDate:)];
     return array;
 }
 
@@ -119,7 +68,30 @@
     task.finished = [NSNumber numberWithInt:1];
 }
 
-//-(void) removeTask:(NSNumber *) identification;
+/**
+ Finds and returns task by ID
+ */
+-(Task *)getTask:(NSNumber*)identification{
+    Task *searched = [[Task alloc] init:identification withName:nil withDifficulty:nil withFun:nil withInitialDate:nil withConclusionDate:nil withContinuous:nil withRepeat:nil];
+    for(Task *task in _taskList)
+        if([task compareTaskByID:searched] == 0){
+            return task;
+        }
+    return nil;
+}
+
+/**
+ Removes a task from the list
+ */
+-(void) removeTask:(NSNumber *) identification{
+    [_taskList removeObject:[self getTask:identification]];
+}
+
+-(Task *)editTask:(NSNumber *) identification{
+    Task *task = [self getTask:identification];
+    
+}
+
 
 //-(void) saveEnviroment;
 
