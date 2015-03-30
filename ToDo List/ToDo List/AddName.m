@@ -10,6 +10,7 @@
 #import "AddName.h"
 #import "Organizer.h"
 #import "Task.h"
+#import "TaskWizard.h"
 
 @interface AddName ()
 
@@ -38,8 +39,7 @@
     if([_textField.text isEqualToString:@""]) {
         [_warningMessage setHidden:NO];
     }else{
-        [_organizer taskWizard];
-        [_organizer.taskWizard begin];
+        [self.organizer.taskWizard begin];
         [_organizer.taskWizard giveName: _textField.text];
         [self performSegueWithIdentifier:@"toGetDate" sender:self];
     }

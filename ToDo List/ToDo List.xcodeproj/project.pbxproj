@@ -20,7 +20,6 @@
 		8C3454691AC3204B0053766D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454671AC3204B0053766D /* LaunchScreen.xib */; };
 		8C3454751AC3204B0053766D /* ToDo_ListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454741AC3204B0053766D /* ToDo_ListTests.m */; };
 		8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454841AC34B300053766D /* Task.xcdatamodeld */; };
-		8CF188BF1AC5D1360027EB72 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF188BE1AC5D1360027EB72 /* Task.m */; };
 		8CF1892D1AC5E7FE0027EB72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454731AC3204B0053766D /* Info.plist */; };
 		8CF1892F1AC5E9110027EB72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CF1892E1AC5E9110027EB72 /* Info.plist */; };
 /* End PBXBuildFile section */
@@ -63,8 +62,6 @@
 		8C3454811AC32A2F0053766D /* Loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loader.h; sourceTree = "<group>"; };
 		8C3454821AC32A2F0053766D /* Loader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Loader.m; sourceTree = "<group>"; };
 		8C3454851AC34B300053766D /* Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task.xcdatamodel; sourceTree = "<group>"; };
-		8CF188BD1AC5D1360027EB72 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		8CF188BE1AC5D1360027EB72 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		8CF1892E1AC5E9110027EB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,8 +126,6 @@
 				8C3454811AC32A2F0053766D /* Loader.h */,
 				8C3454821AC32A2F0053766D /* Loader.m */,
 				8C3454841AC34B300053766D /* Task.xcdatamodeld */,
-				8CF188BD1AC5D1360027EB72 /* Task.h */,
-				8CF188BE1AC5D1360027EB72 /* Task.m */,
 				8C3454581AC3204B0053766D /* Supporting Files */,
 			);
 			path = "ToDo List";
@@ -266,7 +261,6 @@
 			files = (
 				8C3454611AC3204B0053766D /* ViewController.m in Sources */,
 				8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */,
-				8CF188BF1AC5D1360027EB72 /* Task.m in Sources */,
 				8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */,
 				1CAB490A1AC9B8FC0040E8D8 /* Organizer.m in Sources */,
 				1CAB490D1AC9C52F0040E8D8 /* TaskWizard.m in Sources */,

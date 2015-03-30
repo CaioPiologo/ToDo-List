@@ -10,6 +10,7 @@
 #import "AddParamViewController.h"
 #import "Organizer.h"
 #import "Task.h"
+#import "TaskWizard.h"
 
 @interface AddParamViewController ()
 
@@ -35,8 +36,7 @@
 {
     Task *task;
     
-    [_organizer.taskWizard giveDifficult:[_difficult value] ];
-    [_organizer.taskWizard giveFun: [_funny value]];
+    [_organizer.taskWizard giveDifficulty:NSInteger  _difficult.value];
     
     task = [_organizer.taskWizard finish];
     
