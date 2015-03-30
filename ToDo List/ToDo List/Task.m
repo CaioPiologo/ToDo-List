@@ -64,7 +64,12 @@
 - (NSComparisonResult)compareByPriority:(Task *)otherObject {
     if([self.priority compare:otherObject.priority]== NSOrderedAscending)
         return NSOrderedDescending;
-    return NSOrderedAscending; }
+    else if([self.priority compare:otherObject.priority] == NSOrderedDescending)
+        return NSOrderedAscending;
+    else if([self.fun compare:otherObject.fun] == NSOrderedAscending)
+        return NSOrderedDescending;
+    return NSOrderedAscending;
+}
 /**
  Compares tasks dates
  */

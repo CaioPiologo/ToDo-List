@@ -45,9 +45,14 @@
  Keeps list updated constantly
  */
 -(void) updateTasks:(int)priority{
-    //updates each task priority
-    for (Task *task in _taskList)
+    //updates each task priority and urgency if it has passed its conclusion date
+    for (Task *task in _taskList){
         [task updatePriority];
+        if([task.conclusionDate compare:[NSDate date]] == NSOrderedDescending)
+            task.urgent = @1;
+        if([task.finished  isEqual: @1])
+            [self removeTask:[task objectID]];
+    }
     //returns the list organized by priorities or dates
     if(priority == 1)
         _taskList = self.getListByPriority;
@@ -103,7 +108,10 @@
  Removes a task from the list
  */
 -(void) removeTask:(NSManagedObjectID *) identification{
-    [_taskList removeObject:[self getTask:identification]];
+    Task *taskToBeRemoved = [self getTask:identification];
+    if([taskToBeRemoved.urgent isEqual:@0])
+        [[UIApplication sharedApplication] cancelLocalNotification:taskToBeRemoved.notification];
+    [_taskList removeObject:taskToBeRemoved];
 }
 
 /**
