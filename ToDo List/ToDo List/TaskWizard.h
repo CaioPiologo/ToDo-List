@@ -10,6 +10,9 @@
 #import "Task.h"
 
 @interface TaskWizard : NSObject
+
+@property(nonatomic) Task *newtask;
+
 -(id)init:(Loader *) loader;
 
 -(void) begin;

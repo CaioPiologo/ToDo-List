@@ -9,7 +9,6 @@
 #import "TaskWizard.h"
 #import "Loader.h"
 @interface TaskWizard()
-@property(nonatomic) Task *newtask;
 @property (nonatomic) Loader *loader;
 @end
 @implementation TaskWizard

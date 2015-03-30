@@ -11,6 +11,7 @@
 		1CAB49011AC998350040E8D8 /* AddParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB49001AC998350040E8D8 /* AddParamViewController.m */; };
 		1CAB49041AC9AEFB0040E8D8 /* AddDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB49031AC9AEFB0040E8D8 /* AddDateViewController.m */; };
 		1CAB490A1AC9B8FC0040E8D8 /* Organizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB49091AC9B8FC0040E8D8 /* Organizer.m */; };
+		1CAB490D1AC9C52F0040E8D8 /* TaskWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB490C1AC9C52F0040E8D8 /* TaskWizard.m */; };
 		8C34545B1AC3204B0053766D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34545A1AC3204B0053766D /* main.m */; };
 		8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34545D1AC3204B0053766D /* AppDelegate.m */; };
 		8C3454611AC3204B0053766D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454601AC3204B0053766D /* ViewController.m */; };
@@ -43,6 +44,8 @@
 		1CAB49031AC9AEFB0040E8D8 /* AddDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDateViewController.m; sourceTree = "<group>"; };
 		1CAB49081AC9B8FC0040E8D8 /* Organizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organizer.h; sourceTree = "<group>"; };
 		1CAB49091AC9B8FC0040E8D8 /* Organizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organizer.m; sourceTree = "<group>"; };
+		1CAB490B1AC9C52F0040E8D8 /* TaskWizard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskWizard.h; sourceTree = "<group>"; };
+		1CAB490C1AC9C52F0040E8D8 /* TaskWizard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskWizard.m; sourceTree = "<group>"; };
 		25D362591AC3255B00DEF6E8 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		25D3625A1AC3255B00DEF6E8 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		8C3454551AC3204B0053766D /* ToDo List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +109,8 @@
 			children = (
 				1CAB49081AC9B8FC0040E8D8 /* Organizer.h */,
 				1CAB49091AC9B8FC0040E8D8 /* Organizer.m */,
+				1CAB490B1AC9C52F0040E8D8 /* TaskWizard.h */,
+				1CAB490C1AC9C52F0040E8D8 /* TaskWizard.m */,
 				8C34545C1AC3204B0053766D /* AppDelegate.h */,
 				8C34545D1AC3204B0053766D /* AppDelegate.m */,
 				1CAB48F91AC9932E0040E8D8 /* AddName.h */,
@@ -262,9 +267,9 @@
 				8C3454611AC3204B0053766D /* ViewController.m in Sources */,
 				8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */,
 				8CF188BF1AC5D1360027EB72 /* Task.m in Sources */,
-				25E0122D1AC9B621004370E1 /* TaskWizard.m in Sources */,
 				8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */,
 				1CAB490A1AC9B8FC0040E8D8 /* Organizer.m in Sources */,
+				1CAB490D1AC9C52F0040E8D8 /* TaskWizard.m in Sources */,
 				8C34545B1AC3204B0053766D /* main.m in Sources */,
 				1CAB48FB1AC9938F0040E8D8 /* AddName.m in Sources */,
 				1CAB49041AC9AEFB0040E8D8 /* AddDateViewController.m in Sources */,

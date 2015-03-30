@@ -10,7 +10,7 @@
 #import "Task.h"
 
 @interface Organizer : NSObject
-
+@property (nonatomic) TaskWizard * taskWizard;
 @property NSDate *lastDateOrganized;
 @property NSMutableArray *taskList;
 
