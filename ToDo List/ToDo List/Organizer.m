@@ -8,19 +8,24 @@
 
 #import "Organizer.h"
 #import "Loader.h"
+#import "TaskWizard.h"
+
 @interface Organizer()
 @property (nonatomic) Loader* loader;
+@property (nonatomic) TaskWizard * taskWizard;
 @end
 @implementation Organizer
 
 #pragma mark Singleton Method(Static)
 + (id)getInstace {
-    static Organizer *_organizerInstace = nil;
+    static Organizer *_organizerInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _organizerInstace = [[self alloc] init];
+        _organizerInstance = [[self alloc] init];
+        _organizerInstance.loader = [[Loader alloc]init];
+        _organizerInstance.taskWizard =[[TaskWizard alloc] init:_organizerInstance.loader];
     });
-    return _organizerInstace;
+    return _organizerInstance;
 }
 
 #pragma mark Other Methods(instance)
@@ -35,6 +40,7 @@
         self.lastDateOrganized = [[NSDate alloc] init];
         self.taskList = [[NSMutableArray alloc] init];
         self.loader = [[Loader alloc] init];
+        
     }
     return self;
 }
@@ -50,7 +56,6 @@
         _taskList = self.getListByPriority;
     else
         _taskList = self.getListByDate;
-    [self performSelector:@selector(updateTasks:) withObject:self afterDelay:3600];
 }
 
 /**
@@ -102,10 +107,14 @@
     [_taskList removeObject:[self getTask:identification]];
 }
 
-
+/**
+ Saves list configuration
+ */
 -(void) saveEnviroment
 {
     [self.loader saveTasksStates];
 }
+
+
 
 @end

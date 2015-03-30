@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25E0122A1AC9AACA004370E1 /* Organizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E012291AC9AACA004370E1 /* Organizer.m */; };
+		25E0122D1AC9B621004370E1 /* TaskWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E0122C1AC9B621004370E1 /* TaskWizard.m */; };
 		8C34545B1AC3204B0053766D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34545A1AC3204B0053766D /* main.m */; };
 		8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34545D1AC3204B0053766D /* AppDelegate.m */; };
 		8C3454611AC3204B0053766D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454601AC3204B0053766D /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* Begin PBXFileReference section */
 		25E012281AC9AACA004370E1 /* Organizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organizer.h; sourceTree = "<group>"; };
 		25E012291AC9AACA004370E1 /* Organizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organizer.m; sourceTree = "<group>"; };
+		25E0122B1AC9B621004370E1 /* TaskWizard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskWizard.h; sourceTree = "<group>"; };
+		25E0122C1AC9B621004370E1 /* TaskWizard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskWizard.m; sourceTree = "<group>"; };
 		8C3454551AC3204B0053766D /* ToDo List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C34545A1AC3204B0053766D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C34545C1AC3204B0053766D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 			children = (
 				25E012281AC9AACA004370E1 /* Organizer.h */,
 				25E012291AC9AACA004370E1 /* Organizer.m */,
+				25E0122B1AC9B621004370E1 /* TaskWizard.h */,
+				25E0122C1AC9B621004370E1 /* TaskWizard.m */,
 				8C34545C1AC3204B0053766D /* AppDelegate.h */,
 				8C34545D1AC3204B0053766D /* AppDelegate.m */,
 				8C34545F1AC3204B0053766D /* ViewController.h */,
@@ -244,6 +249,7 @@
 				8C3454611AC3204B0053766D /* ViewController.m in Sources */,
 				8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */,
 				8CF188BF1AC5D1360027EB72 /* Task.m in Sources */,
+				25E0122D1AC9B621004370E1 /* TaskWizard.m in Sources */,
 				8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */,
 				8C34545B1AC3204B0053766D /* main.m in Sources */,
 				25E0122A1AC9AACA004370E1 /* Organizer.m in Sources */,
