@@ -85,7 +85,8 @@
 /**
  Marks a task as completed by the user
  */
--(void) finishTask:(Task *) task{
+-(void) finishTask:(NSManagedObjectID *) ID{
+    Task *task = [self getTask:ID];
     task.finished = @1;
 }
 
