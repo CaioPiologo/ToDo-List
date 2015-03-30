@@ -15,9 +15,7 @@
 @property (nonatomic)NSDate *lastDateOrganized;
 @property (nonatomic)NSMutableArray *taskList;
 
-@property NSDate *lastDateOrganized;
-@property NSMutableArray *taskList;
-@property (nonatomic) TaskWizard * taskWizard;
++ (id)getInstace;
 
 -(id) init;
 
