@@ -46,16 +46,16 @@
 /**
  Representation of class in string format
  */
-- (NSString*) toString;{
+- (NSString*) description{
     NSMutableString *string = [[NSMutableString alloc] init];
     
-    [string appendFormat:@"\n%@", _identification];
-    [string appendFormat:@"\n%@", _name];
-    [string appendFormat:@"\n%@", _difficulty];
-    [string appendFormat:@"\n%@", _fun];
-    [string appendFormat:@"\n%@", [_initialDate description]];
-    [string appendFormat:@"\n%@", [_conclusionDate description]];
-    [string appendFormat:@"\n%@", _priority];
+    [string appendFormat:@"\n%@", [self objectID]];
+    [string appendFormat:@"\n%@", self.name];
+    [string appendFormat:@"\n%@", self.difficulty];
+    [string appendFormat:@"\n%@", self.fun];
+    [string appendFormat:@"\n%@", [self.initialDate description]];
+    [string appendFormat:@"\n%@", [self.conclusionDate description]];
+    [string appendFormat:@"\n%@", self.priority];
     return string;
 }
 /**
