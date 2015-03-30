@@ -39,4 +39,10 @@
  Destroy task passed as argument and saves it to memory.
  */
 -(void)destroyTask:(Task*)task;
+
+/**
+ Delete for ever given task as parameter frmo Data Base and memory
+ @param task task pointer of task to be erased
+ */
+-(void)deleteTask:(Task*) task;
 @end
