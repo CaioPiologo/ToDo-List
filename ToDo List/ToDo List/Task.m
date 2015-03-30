@@ -61,20 +61,23 @@
 /**
  Compares tasks priorities
  */
--(int) compareTasksByPriority:(Task *) anotherTask{
-    if(self.priority.intValue < anotherTask.priority.intValue)
-        return -1;
-    else if(self.priority.intValue > anotherTask.priority.intValue)
-        return 1;
-    return 0;
-}
+- (NSComparisonResult)compareByPriority:(Task *)otherObject {
+    if([self.priority compare:otherObject.priority]== NSOrderedAscending)
+        return NSOrderedDescending;
+    return NSOrderedAscending; }
 /**
  Compares tasks dates
  */
--(int) compareTasksByDate:(Task *) anotherTask{
-    if([self.conclusionDate earlierDate:anotherTask.conclusionDate])
+- (NSComparisonResult)compareByDate:(Task *)otherObject {
+    return [self.conclusionDate compare:otherObject.conclusionDate];
+}
+/**
+ Compare tasks IDs
+ */
+-(int) compareTaskByID:(Task *) anotherTask{
+    if(self.identification.intValue < anotherTask.identification.intValue)
         return -1;
-    else if([self.conclusionDate laterDate:anotherTask.conclusionDate])
+    else if(self.identification.intValue > anotherTask.identification.intValue)
         return 1;
     return 0;
 }

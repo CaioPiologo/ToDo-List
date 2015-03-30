@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Task.h"
 
-@interface Hermes : NSObject
+@interface Organizer : NSObject
 
 @property NSDate *lastDateOrganized;
 @property NSMutableArray *taskList;
@@ -29,5 +29,9 @@
 -(void) saveEnviroment;
 
 -(void) finishTask:(Task *)task;
+
+-(Task *)editTask:(NSNumber*)identification;
+
+-(Task *)getTask:(NSNumber*)identification;
 
 @end

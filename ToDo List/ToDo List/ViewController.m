@@ -18,12 +18,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    Loader * loader = [[Loader alloc] init];
-    Task * t = [loader createTaskWithName:@"Uma task" withInitialDate:[NSDate date] withConclusionDate:[NSDate date] withDifficulty:@5 withFun:@2 isContinuous:@0 withRepeatTime:[NSDate date] isUrgent:@0];
-    NSArray * vec = [loader loadTasksFromDataBase];
-    NSLog(@"%@", [vec[0] objectID]);
-                  NSLog(@"%@", [vec[1] objectID]);
 
 }
 
