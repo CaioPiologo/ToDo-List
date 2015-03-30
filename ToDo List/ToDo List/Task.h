@@ -22,5 +22,12 @@
 @property (nonatomic, retain) NSDate * repeatTime;
 @property (nonatomic, retain) NSNumber * urgent;
 
+- (NSString *) description;
+
+-(int) compareTasksByPriority:(Task *) anotherTask;
+
+-(int) compareTasksByDate:(Task *) anotherTask;
+
+-(void) updatePriority;
 
 @end
