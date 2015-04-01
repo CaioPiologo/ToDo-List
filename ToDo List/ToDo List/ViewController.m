@@ -11,8 +11,7 @@
 #import "Task.h"
 #import "Foundation/Foundation.h"
 #import "Organizer.h"
-#import "EditViewController.h"
-
+#import "TaskWizard.h"
 
 @interface ViewController ()
 
@@ -69,13 +68,10 @@
     //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     Task *task = [data objectAtIndex:indexPath.row];
     
-    [self performSegueWithIdentifier:@"toEdit" sender:task];
+    [self.organizer.taskWizard beginWithTask:task];
+    
+    [self performSegueWithIdentifier:@"priorityToEdit" sender:self];
 
 }
-
-- (IBAction)edit:(id)sender{
-    [self performSegueWithIdentifier:@"priorityToEdit" sender:sender];
-}
-
 
 @end
