@@ -10,7 +10,6 @@
 #import "AddDateViewController.h"
 #import "Organizer.h"
 #import "Task.h"
-#import "JTCalendar.h"
 
 @interface AddDateViewController ()
 

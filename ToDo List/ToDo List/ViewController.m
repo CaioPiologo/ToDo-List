@@ -30,7 +30,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.organizer = [Organizer getInstace];
     
-    self.data = [self.organizer updateTasksByPriority];
+    
+    self.data = [self.organizer updateTasksByDate];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView

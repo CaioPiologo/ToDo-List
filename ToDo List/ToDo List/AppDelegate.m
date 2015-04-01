@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "Organizer.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic) Organizer * organizer;
 @end
 
 @implementation AppDelegate
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Organizer getInstace];
     return YES;
 }
 
@@ -40,6 +42,8 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [self.organizer.taskWizard cancel];
+    [self.organizer saveEnviroment];
 }
 
 @end
