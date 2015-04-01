@@ -8,15 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1A0FD3A06B4DB48A61783AEB /* libPods-ToDo List.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 818E6EF70CAFFD380223E560 /* libPods-ToDo List.a */; };
-		25E0122A1AC9AACA004370E1 /* Organizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E012291AC9AACA004370E1 /* Organizer.m */; };
-		25E0122D1AC9B621004370E1 /* TaskWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E0122C1AC9B621004370E1 /* TaskWizard.m */; };
-		2974DB02776E61BBE6240EF4 /* libPods-ToDo ListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B4F7A0251AE05CA6CF8A /* libPods-ToDo ListTests.a */; };
-		8C2B93F31AC9CD3700D3AE64 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B93F21AC9CD3700D3AE64 /* Podfile */; };
 		1CAB48FB1AC9938F0040E8D8 /* AddName.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB48FA1AC9938F0040E8D8 /* AddName.m */; };
 		1CAB49011AC998350040E8D8 /* AddParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB49001AC998350040E8D8 /* AddParamViewController.m */; };
 		1CAB49041AC9AEFB0040E8D8 /* AddDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB49031AC9AEFB0040E8D8 /* AddDateViewController.m */; };
 		1CAB490A1AC9B8FC0040E8D8 /* Organizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB49091AC9B8FC0040E8D8 /* Organizer.m */; };
 		1CAB490D1AC9C52F0040E8D8 /* TaskWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB490C1AC9C52F0040E8D8 /* TaskWizard.m */; };
+		1CAB49101AC9D2840040E8D8 /* ListByDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB490F1AC9D2840040E8D8 /* ListByDateViewController.m */; };
+		1CAB49131AC9DA0C0040E8D8 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB49121AC9DA0C0040E8D8 /* EditViewController.m */; };
+		1CAB49141AC9E1D20040E8D8 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D3625A1AC3255B00DEF6E8 /* Task.m */; };
+		1CAB49151AC9E1D60040E8D8 /* Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454821AC32A2F0053766D /* Loader.m */; };
+		2974DB02776E61BBE6240EF4 /* libPods-ToDo ListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B4F7A0251AE05CA6CF8A /* libPods-ToDo ListTests.a */; };
+		8C2B93F31AC9CD3700D3AE64 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B93F21AC9CD3700D3AE64 /* Podfile */; };
 		8C34545B1AC3204B0053766D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34545A1AC3204B0053766D /* main.m */; };
 		8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34545D1AC3204B0053766D /* AppDelegate.m */; };
 		8C3454611AC3204B0053766D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454601AC3204B0053766D /* ViewController.m */; };
@@ -42,13 +44,6 @@
 /* Begin PBXFileReference section */
 		16243566A8367556BBE6B0ED /* Pods-ToDo ListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo ListTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo ListTests/Pods-ToDo ListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		19C5060A570E506C205F64DC /* Pods-ToDo List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo List.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo List/Pods-ToDo List.release.xcconfig"; sourceTree = "<group>"; };
-		25E012281AC9AACA004370E1 /* Organizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organizer.h; sourceTree = "<group>"; };
-		25E012291AC9AACA004370E1 /* Organizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organizer.m; sourceTree = "<group>"; };
-		25E0122B1AC9B621004370E1 /* TaskWizard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskWizard.h; sourceTree = "<group>"; };
-		25E0122C1AC9B621004370E1 /* TaskWizard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskWizard.m; sourceTree = "<group>"; };
-		2ABA61AC30BD6171421D6F6D /* Pods-ToDo ListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo ListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo ListTests/Pods-ToDo ListTests.release.xcconfig"; sourceTree = "<group>"; };
-		818E6EF70CAFFD380223E560 /* libPods-ToDo List.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDo List.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C2B93F21AC9CD3700D3AE64 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1CAB48F91AC9932E0040E8D8 /* AddName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddName.h; sourceTree = "<group>"; };
 		1CAB48FA1AC9938F0040E8D8 /* AddName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddName.m; sourceTree = "<group>"; };
 		1CAB48FF1AC998070040E8D8 /* AddParamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddParamViewController.h; sourceTree = "<group>"; };
@@ -59,8 +54,15 @@
 		1CAB49091AC9B8FC0040E8D8 /* Organizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organizer.m; sourceTree = "<group>"; };
 		1CAB490B1AC9C52F0040E8D8 /* TaskWizard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskWizard.h; sourceTree = "<group>"; };
 		1CAB490C1AC9C52F0040E8D8 /* TaskWizard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskWizard.m; sourceTree = "<group>"; };
+		1CAB490E1AC9D1570040E8D8 /* ListByDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListByDateViewController.h; sourceTree = "<group>"; };
+		1CAB490F1AC9D2840040E8D8 /* ListByDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListByDateViewController.m; sourceTree = "<group>"; };
+		1CAB49111AC9D9C40040E8D8 /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		1CAB49121AC9DA0C0040E8D8 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		25D362591AC3255B00DEF6E8 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		25D3625A1AC3255B00DEF6E8 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		2ABA61AC30BD6171421D6F6D /* Pods-ToDo ListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo ListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo ListTests/Pods-ToDo ListTests.release.xcconfig"; sourceTree = "<group>"; };
+		818E6EF70CAFFD380223E560 /* libPods-ToDo List.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDo List.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2B93F21AC9CD3700D3AE64 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8C3454551AC3204B0053766D /* ToDo List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C34545A1AC3204B0053766D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C34545C1AC3204B0053766D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -157,6 +159,10 @@
 				8C34545F1AC3204B0053766D /* ViewController.h */,
 				8C3454601AC3204B0053766D /* ViewController.m */,
 				8C3454621AC3204B0053766D /* Main.storyboard */,
+				1CAB49111AC9D9C40040E8D8 /* EditViewController.h */,
+				1CAB49121AC9DA0C0040E8D8 /* EditViewController.m */,
+				1CAB490E1AC9D1570040E8D8 /* ListByDateViewController.h */,
+				1CAB490F1AC9D2840040E8D8 /* ListByDateViewController.m */,
 				1CAB48FF1AC998070040E8D8 /* AddParamViewController.h */,
 				1CAB49001AC998350040E8D8 /* AddParamViewController.m */,
 				25D362591AC3255B00DEF6E8 /* Task.h */,
@@ -368,13 +374,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CAB49151AC9E1D60040E8D8 /* Loader.m in Sources */,
+				1CAB49141AC9E1D20040E8D8 /* Task.m in Sources */,
 				8C3454611AC3204B0053766D /* ViewController.m in Sources */,
 				8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */,
 				8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */,
 				1CAB490A1AC9B8FC0040E8D8 /* Organizer.m in Sources */,
 				1CAB490D1AC9C52F0040E8D8 /* TaskWizard.m in Sources */,
+				1CAB49101AC9D2840040E8D8 /* ListByDateViewController.m in Sources */,
 				8C34545B1AC3204B0053766D /* main.m in Sources */,
 				1CAB48FB1AC9938F0040E8D8 /* AddName.m in Sources */,
+				1CAB49131AC9DA0C0040E8D8 /* EditViewController.m in Sources */,
 				1CAB49041AC9AEFB0040E8D8 /* AddDateViewController.m in Sources */,
 				1CAB49011AC998350040E8D8 /* AddParamViewController.m in Sources */,
 			);

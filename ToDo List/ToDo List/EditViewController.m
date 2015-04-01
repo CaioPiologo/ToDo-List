@@ -1,5 +1,5 @@
 //
-//  AddDateViewController.m
+//  EditViewController.m
 //  ToDo List
 //
 //  Created by Andre Sakiyama on 3/30/15.
@@ -7,17 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AddDateViewController.h"
+#import "EditViewController.h"
 #import "Organizer.h"
 #import "Task.h"
+#import "TaskWizard.h"
 
-@interface AddDateViewController ()
+@interface EditViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UISlider *difficult;
+@property (weak, nonatomic) IBOutlet UISlider *funny;
 
 @property (nonatomic) Organizer *organizer;
 
 @end
 
-@implementation AddDateViewController
+@implementation EditViewController
 
 - (void)viewDidLoad
 {
@@ -30,13 +34,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (IBAction)nextButton: (id)sender
-{
-    
-    [self.organizer.taskWizard giveInitialDate:[NSDate date]];
-    [self.organizer.taskWizard giveConclusionDate:[NSDate dateWithTimeInterval:24*3600 sinceDate:[NSDate date]]];
-    
-    [self performSegueWithIdentifier:@"toGetParam" sender:self];
-}
 @end

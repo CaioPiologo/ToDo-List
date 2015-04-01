@@ -11,11 +11,11 @@
 #import "Task.h"
 #import "Foundation/Foundation.h"
 #import "Organizer.h"
+#import "EditViewController.h"
 
 
 @interface ViewController ()
 
-@property (strong, nonatomic) NSString *name;
 @property (nonatomic) Organizer *organizer;
 
 @end
@@ -29,8 +29,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _organizer = [Organizer getInstace];
-    data = [[NSMutableArray alloc] initWithObjects: [_organizer getListByPriority], nil];
+    self.organizer = [Organizer getInstace];
+    [self.organizer updateTasks:1];
+    self.data = [[NSArray alloc] initWithArray:[self.organizer getListByPriority]];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
@@ -52,13 +53,25 @@
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: CellIdentifier];
     }
     
-    cell.textLabel.text = [data objectAtIndex: indexPath.row];
+    cell.textLabel.text = [[data objectAtIndex: indexPath.row] name];
     return cell;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //check if your cell is pressed
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    //Task *task = data objectAtIndex:indexPath.row
+
+}
+
+- (IBAction)edit:(id)sender{
+    [self performSegueWithIdentifier:@"priorityToEdit" sender:sender];
 }
 
 
