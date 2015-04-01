@@ -22,7 +22,7 @@
 @property (nonatomic, retain) NSDate * repeatTime;
 @property (nonatomic, retain) NSNumber * urgent;
 @property (nonatomic) NSNumber* priority;
-@property (nonatomic) UILocalNotification *notification;
+@property (nonatomic) NSData *notification;
 
 - (NSString *) description;
 

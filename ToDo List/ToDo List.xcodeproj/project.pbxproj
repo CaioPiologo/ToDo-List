@@ -14,6 +14,10 @@
 		1CEED43D1ACC1D7100A705D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEED4331ACC1D7100A705D1 /* Main.storyboard */; };
 		1CEED43F1ACC1D7100A705D1 /* Organizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED4371ACC1D7100A705D1 /* Organizer.m */; };
 		1CEED4401ACC1D7100A705D1 /* TaskWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED4391ACC1D7100A705D1 /* TaskWizard.m */; };
+		25819A321ACC281F00E58993 /* ListByDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB490F1AC9D2840040E8D8 /* ListByDateViewController.m */; };
+		25819A331ACC281F00E58993 /* AddParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB49001AC998350040E8D8 /* AddParamViewController.m */; };
+		25819A341ACC281F00E58993 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D3625A1AC3255B00DEF6E8 /* Task.m */; };
+		25819A351ACC281F00E58993 /* Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454821AC32A2F0053766D /* Loader.m */; };
 		25E012451AC9CF01004370E1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		25E2E0301ACC1B9E00220124 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		2974DB02776E61BBE6240EF4 /* libPods-ToDo ListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B4F7A0251AE05CA6CF8A /* libPods-ToDo ListTests.a */; };
@@ -389,6 +393,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25819A321ACC281F00E58993 /* ListByDateViewController.m in Sources */,
+				25819A331ACC281F00E58993 /* AddParamViewController.m in Sources */,
+				25819A341ACC281F00E58993 /* Task.m in Sources */,
+				25819A351ACC281F00E58993 /* Loader.m in Sources */,
 				1CEED43B1ACC1D7100A705D1 /* AddName.m in Sources */,
 				8C3454611AC3204B0053766D /* ViewController.m in Sources */,
 				8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */,

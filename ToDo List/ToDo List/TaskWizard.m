@@ -99,14 +99,16 @@
  Sets task notification
  */
 -(void) setNotification{
-    self.newtask.notification = [[UILocalNotification alloc] init];
-    self.newtask.notification.fireDate = self.newtask.conclusionDate;
-    self.newtask.notification.alertBody = @"Forgot about me?";
-    self.newtask.notification.alertAction = @"Hell no";
-    self.newtask.notification.timeZone = [NSTimeZone defaultTimeZone];
-    self.newtask.notification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+    UILocalNotification* not = [[UILocalNotification alloc] init];
+    not = [[UILocalNotification alloc] init];
+    not.fireDate = self.newtask.conclusionDate;
+    not.alertBody = @"Forgot about me?";
+    not.alertAction = @"Hell no";
+    not.timeZone = [NSTimeZone defaultTimeZone];
+    not.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     
-    [[UIApplication sharedApplication] scheduleLocalNotification:self.newtask.notification];
+    [[UIApplication sharedApplication] scheduleLocalNotification:not];
+    [self.newtask setNewNotification:not];
     
 }
 
