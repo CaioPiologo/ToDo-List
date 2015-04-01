@@ -32,7 +32,7 @@
     self.organizer = [Organizer getInstace];
     
     
-    self.data = [self.organizer updateTasks:0];
+    self.data = [self.organizer updateTasksByDate];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
