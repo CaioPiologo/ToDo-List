@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     _organizer = [Organizer getInstace];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +35,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(Task *)task {
+    self.textField.text = [task name];
+    self.difficult.value = [task difficulty];
+    self.funny.value = [task funny];
+    
+    [self.organizer.TaskWizard beginWithTask:task];
+    
+}
+
+-(IBAction)saveButton:(id)sender{
+    
+    Task *task;
+    
+    [self.organizer.TaskWizard giveName: textField.text];
+    [self.organizer.TaskWizard giveDifficulty: difficult.value];
+    [self.organizer.TaskWizard giveFun:funny.value];
+    
+    task = [_organizer.taskWizard finish];
+    
+    [_organizer addTaskToList: task];
+    [_organizer saveEnviroment];
+    
+    [self performSegueWithIdentifier: @"toTableView" sender: self];
+}
+
+-(IBAction)cancelButton:(id)sender{
+    [self performSegueWithIdentifier:@"toTableView" sender:self];
+}
 @end

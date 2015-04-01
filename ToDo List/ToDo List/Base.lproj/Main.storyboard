@@ -40,6 +40,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="EKV-JR-uAx" id="p7E-cI-1fd"/>
+                        <segue destination="s9b-o1-idC" kind="modal" id="Y16-4l-6dr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -105,7 +106,7 @@
                                     <rect key="frame" x="137" y="350" width="127" height="21"/>
                                 </variation>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nyt-hZ-aqD">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nyt-hZ-aqD">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="44" y="583" width="312" height="31"/>
@@ -147,7 +148,7 @@
                                     <rect key="frame" x="335" y="560" width="29" height="21"/>
                                 </variation>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="l2T-c2-1yc">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="l2T-c2-1yc">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="44" y="467" width="312" height="31"/>
@@ -190,6 +191,7 @@
                         <outlet property="difficult" destination="l2T-c2-1yc" id="RbH-Gx-6NI"/>
                         <outlet property="funny" destination="nyt-hZ-aqD" id="lBg-Xl-kaw"/>
                         <outlet property="textField" destination="the-5h-2do" id="kq9-cF-Bem"/>
+                        <segue destination="Rb3-DV-MtK" kind="modal" identifier="toTableView" id="MnP-oh-qC2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9m-3o-cog" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,6 +253,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="6Bb-CW-095" id="jrx-RL-qMU"/>
+                        <segue destination="s9b-o1-idC" kind="modal" id="ArU-Uf-LKR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WQ-Wh-b5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -528,6 +531,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="bPy-xa-Bdy"/>
         <segue reference="2i2-Er-Vab"/>
-        <segue reference="9fX-ZH-2iz"/>
+        <segue reference="Y16-4l-6dr"/>
+        <segue reference="MnP-oh-qC2"/>
     </inferredMetricsTieBreakers>
 </document>

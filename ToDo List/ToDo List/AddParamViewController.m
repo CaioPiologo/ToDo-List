@@ -43,7 +43,6 @@
     task = [_organizer.taskWizard finish];
 
     [_organizer addTaskToList: task];
-    [_organizer updateTasks:1];
     [_organizer saveEnviroment];
 
     [self performSegueWithIdentifier:@"createTask" sender:self];

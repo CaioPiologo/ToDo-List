@@ -30,8 +30,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.organizer = [Organizer getInstace];
-    [self.organizer updateTasks:1];
-    self.data = [[NSArray alloc] initWithArray:[self.organizer getListByPriority]];
+    
+    
+    self.data = [[NSArray alloc] initWithArray:[self.organizer updateTasks:1]];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView

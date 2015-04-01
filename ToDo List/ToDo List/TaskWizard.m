@@ -45,7 +45,7 @@
  Finish creating task
  */
 -(Task *) finish{
-    [self setNotification];
+    //[self setNotification];
     return _newtask;
 }
 /**
