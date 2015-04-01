@@ -29,8 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _organizer = [Organizer getInstace];
-    data = [[NSMutableArray alloc] initWithObjects: [_organizer getListByPriority], nil];
+   // _organizer = [Organizer getInstace];
+   // data = [[NSMutableArray alloc] initWithObjects: [_organizer getListByPriority], nil];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView

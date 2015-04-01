@@ -12,10 +12,8 @@
 
 #endif
 
-#import <UIKit/UIKit.h>
-#import "AddDateViewController.h"
-#import "AddName.h"
+#import "JTCalendar.h"
 
-@interface AddDateViewController : UIViewController
+@interface AddDateViewController : UIViewController<JTCalendarDataSource>
 
 @end
