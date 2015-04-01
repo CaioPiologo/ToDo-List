@@ -15,10 +15,11 @@
 @interface AddDateViewController ()
 
 @property (nonatomic) Organizer *organizer;
-@property (nonatomic) IBOutlet JTCalendarMenuView *calendarMenuView;
-@property (nonatomic) IBOutlet JTCalendarContentView *calendarContentView;
-@property (nonatomic) JTCalendar *calendar;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *calendarContentViewHeight;
+
+@property (weak, nonatomic) IBOutlet UIDatePicker *initialDate;
+@property (weak, nonatomic) IBOutlet UIDatePicker *conclusionDate;
+@property (weak, nonatomic) IBOutlet UILabel *warningDateMessage;
+
 @end
 
 @implementation AddDateViewController
@@ -26,42 +27,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.organizer = [Organizer getInstace];
-    self.calendar = [JTCalendar new];
-    
-    
-    
-    {
-        self.calendar.calendarAppearance.calendar.firstWeekday = 1; // Sunday == 1, Saturday == 7
-        self.calendar.calendarAppearance.dayCircleRatio = 9. / 10.;
-        self.calendar.calendarAppearance.ratioContentMenu = 1.;
-    }
-    
-    
-    [self.calendar setMenuMonthsView:self.calendarMenuView];
-    
-    [self.calendar setContentView:self.calendarContentView];
-    
-    [self.calendar setDataSource:self];
+    self.initialDate.minimumDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
+    self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.calendar reloadData]; // Must be call in viewDidAppear
 }
-
-- (BOOL)calendarHaveEvent:(JTCalendar *)calendar date:(NSDate *)date
-{
-    return NO;
-}
-
-- (void)calendarDidDateSelected:(JTCalendar *)calendar date:(NSDate *)date
-{
-    [self.organizer.taskWizard giveInitialDate:[NSDate date]];
-    [self.organizer.taskWizard giveInitialDate:date];
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -71,7 +45,16 @@
 
 - (IBAction)nextButton: (id)sender
 {
+    if([self.initialDate.date compare: self.conclusionDate.date] == NSOrderedDescending){
+        self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeInterval:0 sinceDate:self.initialDate.date];
+        [self.warningDateMessage setHidden:NO];
+    }else{
     
-    [self performSegueWithIdentifier:@"toGetParam" sender:self];
+        [self.organizer.taskWizard giveInitialDate: self.initialDate.date];
+        [self.organizer.taskWizard giveConclusionDate:self.conclusionDate.date];
+    
+        [self performSegueWithIdentifier:@"toGetParam" sender:self];
+        
+    }
 }
 @end

@@ -14,6 +14,6 @@
 
 #import "JTCalendar.h"
 
-@interface AddDateViewController : UIViewController<JTCalendarDataSource>
+@interface AddDateViewController : UIViewController
 
 @end
