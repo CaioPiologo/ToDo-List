@@ -47,7 +47,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    //[super viewDidAppear:animated];
+    [super viewDidAppear:animated];
     [self.calendar reloadData]; // Must be call in viewDidAppear
 }
 
@@ -58,7 +58,8 @@
 
 - (void)calendarDidDateSelected:(JTCalendar *)calendar date:(NSDate *)date
 {
-    NSLog(@"%@", date);
+    [self.organizer.taskWizard giveInitialDate:[NSDate date]];
+    [self.organizer.taskWizard giveInitialDate:date];
 }
 
 
