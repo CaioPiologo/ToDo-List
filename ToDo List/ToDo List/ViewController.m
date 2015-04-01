@@ -30,8 +30,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.organizer = [Organizer getInstace];
     
-    
-    self.data = [self.organizer updateTasks:0];
+    self.data = [self.organizer updateTasksByPriority];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
@@ -46,7 +45,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*) indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"PriorityCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath:indexPath];
     
     if(cell == nil){
@@ -55,7 +54,7 @@
     
     Task * t = [data objectAtIndex: indexPath.row];
     NSNumber * pry = t.priority;
-    cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@", pry];
+    cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@ Priority - %@", t.name, pry];
     return cell;
 }
 

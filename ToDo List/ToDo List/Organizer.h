@@ -19,7 +19,7 @@
 
 -(id) init;
 
--(NSArray *) updateTasksByPriotiry;
+-(NSArray *) updateTasksByPriority;
 
 -(NSArray *) updateTasksByDate;
 
