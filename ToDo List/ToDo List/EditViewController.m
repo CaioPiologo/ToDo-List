@@ -14,8 +14,11 @@
 
 @interface EditViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIDatePicker *initialDate;
+@property (weak, nonatomic) IBOutlet UIDatePicker *conclusionDate;
 @property (weak, nonatomic) IBOutlet UISlider *difficult;
 @property (weak, nonatomic) IBOutlet UISlider *funny;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (nonatomic) Organizer *organizer;
 
@@ -26,8 +29,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.scrollView setScrollEnabled:YES];
+    
     self.organizer = [Organizer getInstace];
     self.textField.text = self.organizer.taskWizard.newtask.name;
+    //self.initialDate.date = self.organizer.taskWizard.newtask.initialDate;
+    //self.conclusionDate.date = self.organizer.taskWizard.newtask.conclusionDate;
     self.difficult.value = [self.organizer.taskWizard.newtask.difficulty floatValue];
     self.funny.value = [self.organizer.taskWizard.newtask.fun floatValue];
     
@@ -43,6 +51,8 @@
     Task *task;
     
     [self.organizer.taskWizard giveName: self.textField.text];
+    [self.organizer.taskWizard giveInitialDate:self.initialDate.date];
+    [self.organizer.taskWizard giveConclusionDate:self.conclusionDate.date];
     [self.organizer.taskWizard giveDifficulty: [NSNumber numberWithFloat: self.difficult.value]];
     [self.organizer.taskWizard giveFun: [NSNumber numberWithFloat: self.funny.value ]];
     

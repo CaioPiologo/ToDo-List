@@ -15,6 +15,9 @@
 
 @property (nonatomic) Organizer *organizer;
 
+@property (weak, nonatomic) IBOutlet UIDatePicker *initialDate;
+@property (weak, nonatomic) IBOutlet UIDatePicker *conclusionDate;
+@property (weak, nonatomic) IBOutlet UILabel *warningDateMessage;
 
 @end
 
@@ -23,24 +26,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.organizer = [Organizer getInstace];
-   
+    self.initialDate.minimumDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
+    self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    }
-
--(void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
 }
-
-
-    //[self.organizer.taskWizard giveInitialDate:[NSDate date]];
-    //[self.organizer.taskWizard giveInitialDate:date];
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -50,7 +44,16 @@
 
 - (IBAction)nextButton: (id)sender
 {
+    if([self.initialDate.date compare: self.conclusionDate.date] == NSOrderedDescending){
+        self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeInterval:0 sinceDate:self.initialDate.date];
+        [self.warningDateMessage setHidden:NO];
+    }else{
     
-    [self performSegueWithIdentifier:@"toGetParam" sender:self];
+        [self.organizer.taskWizard giveInitialDate: self.initialDate.date];
+        [self.organizer.taskWizard giveConclusionDate:self.conclusionDate.date];
+    
+        [self performSegueWithIdentifier:@"toGetParam" sender:self];
+        
+    }
 }
 @end
