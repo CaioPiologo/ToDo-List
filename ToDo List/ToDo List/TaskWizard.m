@@ -45,6 +45,7 @@
  Finish creating task
  */
 -(Task *) finish{
+    [self setNotification];
     return _newtask;
 }
 /**
@@ -93,6 +94,22 @@
         return NO;
     }
     return YES;
+}
+/**
+ Sets task notification
+ */
+-(void) setNotification{
+    UILocalNotification* not = [[UILocalNotification alloc] init];
+    not = [[UILocalNotification alloc] init];
+    not.fireDate = self.newtask.conclusionDate;
+    not.alertBody = @"Forgot about me?";
+    not.alertAction = @"Hell no";
+    not.timeZone = [NSTimeZone defaultTimeZone];
+    not.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:not];
+    [self.newtask setNewNotification:not];
+    
 }
 
 @end

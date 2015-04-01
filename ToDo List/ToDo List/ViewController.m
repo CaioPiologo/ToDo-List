@@ -11,11 +11,11 @@
 #import "Task.h"
 #import "Foundation/Foundation.h"
 #import "Organizer.h"
+#import "EditViewController.h"
 
 
 @interface ViewController ()
 
-@property (strong, nonatomic) NSString *name;
 @property (nonatomic) Organizer *organizer;
 
 @end
@@ -52,13 +52,27 @@
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: CellIdentifier];
     }
     
-    cell.textLabel.text = [data objectAtIndex: indexPath.row];
+    cell.textLabel.text = [[data objectAtIndex: indexPath.row] name];
     return cell;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //check if your cell is pressed
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    Task *task = [data objectAtIndex:indexPath.row];
+    
+    [self performSegueWithIdentifier:@"toEdit" sender:task];
+
+}
+
+- (IBAction)edit:(id)sender{
+    [self performSegueWithIdentifier:@"priorityToEdit" sender:sender];
 }
 
 

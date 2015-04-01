@@ -39,12 +39,12 @@
     //[_organizer.taskWizard giveDifficulty:NSInteger  _difficult.value];
     [self.organizer.taskWizard giveDifficulty:[NSNumber numberWithFloat:self.difficult.value]];
     task = [_organizer.taskWizard finish];
-    
-    
-    
-    [self performSegueWithIdentifier:@"createTask" sender:self];
-    
+
     [_organizer addTaskToList: task];
+    [_organizer updateTasks:1];
+    [_organizer saveEnviroment];
+
+    [self performSegueWithIdentifier:@"createTask" sender:self];
 }
 
 @end

@@ -23,6 +23,7 @@
 @property (nonatomic, retain) NSNumber * urgent;
 @property (nonatomic, retain) NSData * notification;
 @property (nonatomic) NSNumber* priority;
+@property (nonatomic) NSData *notification;
 
 
 - (NSString *) description;
