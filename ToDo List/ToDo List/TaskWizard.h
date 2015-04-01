@@ -34,4 +34,7 @@
 -(void) giveFun:(NSNumber*)fun;
 
 -(BOOL) hasAlreadyBegun;
+
+-(void) setNotification;
+
 @end

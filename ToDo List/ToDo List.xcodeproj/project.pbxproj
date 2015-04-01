@@ -112,6 +112,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		25E012341AC9CF01004370E1 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				25E012351AC9CF01004370E1 /* LaunchScreen.xib */,
+				25E012371AC9CF01004370E1 /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
 		341D9433460B3EE82C4B4931 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,16 +155,22 @@
 		8C3454571AC3204B0053766D /* ToDo List */ = {
 			isa = PBXGroup;
 			children = (
-				1CAB49081AC9B8FC0040E8D8 /* Organizer.h */,
-				1CAB49091AC9B8FC0040E8D8 /* Organizer.m */,
-				1CAB490B1AC9C52F0040E8D8 /* TaskWizard.h */,
-				1CAB490C1AC9C52F0040E8D8 /* TaskWizard.m */,
+				25E0122E1AC9CF01004370E1 /* AddDateViewController.h */,
+				25E0122F1AC9CF01004370E1 /* AddDateViewController.m */,
+				25E012301AC9CF01004370E1 /* AddName.h */,
+				25E012311AC9CF01004370E1 /* AddName.m */,
+				25E012321AC9CF01004370E1 /* AddParamViewController.h */,
+				25E012331AC9CF01004370E1 /* AddParamViewController.m */,
+				25E012341AC9CF01004370E1 /* Base.lproj */,
+				25E012391AC9CF01004370E1 /* Images.xcassets */,
+				25E0123A1AC9CF01004370E1 /* Organizer.h */,
+				25E0123B1AC9CF01004370E1 /* Organizer.m */,
+				25E0123C1AC9CF01004370E1 /* Task.h */,
+				25E0123D1AC9CF01004370E1 /* Task.m */,
+				25E0123E1AC9CF01004370E1 /* TaskWizard.h */,
+				25E0123F1AC9CF01004370E1 /* TaskWizard.m */,
 				8C34545C1AC3204B0053766D /* AppDelegate.h */,
 				8C34545D1AC3204B0053766D /* AppDelegate.m */,
-				1CAB48F91AC9932E0040E8D8 /* AddName.h */,
-				1CAB48FA1AC9938F0040E8D8 /* AddName.m */,
-				1CAB49021AC9AEC50040E8D8 /* AddDateViewController.h */,
-				1CAB49031AC9AEFB0040E8D8 /* AddDateViewController.m */,
 				8C34545F1AC3204B0053766D /* ViewController.h */,
 				8C3454601AC3204B0053766D /* ViewController.m */,
 				8C3454621AC3204B0053766D /* Main.storyboard */,
@@ -288,9 +303,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E012451AC9CF01004370E1 /* Images.xcassets in Resources */,
 				8C2B93F31AC9CD3700D3AE64 /* Podfile in Resources */,
 				8CF1892D1AC5E7FE0027EB72 /* Info.plist in Resources */,
 				8C3454641AC3204B0053766D /* Main.storyboard in Resources */,
+				25E012441AC9CF01004370E1 /* Main.storyboard in Resources */,
+				25E012431AC9CF01004370E1 /* LaunchScreen.xib in Resources */,
 				8C3454691AC3204B0053766D /* LaunchScreen.xib in Resources */,
 				8CF1892F1AC5E9110027EB72 /* Info.plist in Resources */,
 				8C3454661AC3204B0053766D /* Images.xcassets in Resources */,
@@ -409,6 +427,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		25E012351AC9CF01004370E1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25E012361AC9CF01004370E1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		25E012371AC9CF01004370E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25E012381AC9CF01004370E1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		8C3454621AC3204B0053766D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
