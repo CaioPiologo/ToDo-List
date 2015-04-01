@@ -21,8 +21,9 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSDate * repeatTime;
 @property (nonatomic, retain) NSNumber * urgent;
-@property (nonatomic) NSNumber* priority;
-@property (nonatomic) UILocalNotification *notification;
+@property (nonatomic, retain) NSData * notification;
+@property (nonatomic, retain) NSNumber* priority;
+
 
 - (NSString *) description;
 
@@ -33,5 +34,9 @@
 -(int) isID:(NSManagedObjectID *) identification;
 
 -(void) updatePriority;
+
+-(UILocalNotification*) getNotification;
+
+-(void) setNewNotification:(UILocalNotification*)notification;
 
 @end

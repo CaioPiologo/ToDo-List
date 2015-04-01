@@ -10,11 +10,15 @@
 #import "AddDateViewController.h"
 #import "Organizer.h"
 #import "Task.h"
+#import "JTCalendar.h"
 
 @interface AddDateViewController ()
 
 @property (nonatomic) Organizer *organizer;
-
+@property (nonatomic) IBOutlet JTCalendarMenuView *calendarMenuView;
+@property (nonatomic) IBOutlet JTCalendarContentView *calendarContentView;
+@property (nonatomic) JTCalendar *calendar;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *calendarContentViewHeight;
 @end
 
 @implementation AddDateViewController
@@ -22,8 +26,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _organizer = [Organizer getInstace];
+    self.organizer = [Organizer getInstace];
+    self.calendar = [JTCalendar new];
+    
+    
+    
+    {
+        self.calendar.calendarAppearance.calendar.firstWeekday = 1; // Sunday == 1, Saturday == 7
+        self.calendar.calendarAppearance.dayCircleRatio = 9. / 10.;
+        self.calendar.calendarAppearance.ratioContentMenu = 1.;
+    }
+    
+    
+    [self.calendar setMenuMonthsView:self.calendarMenuView];
+    
+    [self.calendar setContentView:self.calendarContentView];
+    
+    [self.calendar setDataSource:self];
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    //[super viewDidAppear:animated];
+    [self.calendar reloadData]; // Must be call in viewDidAppear
+}
+
+- (BOOL)calendarHaveEvent:(JTCalendar *)calendar date:(NSDate *)date
+{
+    return NO;
+}
+
+- (void)calendarDidDateSelected:(JTCalendar *)calendar date:(NSDate *)date
+{
+    NSLog(@"%@", date);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -33,9 +70,6 @@
 
 - (IBAction)nextButton: (id)sender
 {
-    
-    [self.organizer.taskWizard giveInitialDate:[NSDate date]];
-    [self.organizer.taskWizard giveConclusionDate:[NSDate dateWithTimeInterval:24*3600 sinceDate:[NSDate date]]];
     
     [self performSegueWithIdentifier:@"toGetParam" sender:self];
 }

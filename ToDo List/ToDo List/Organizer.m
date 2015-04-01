@@ -110,7 +110,7 @@
 -(void) removeTask:(NSManagedObjectID *) identification{
     Task *taskToBeRemoved = [self getTask:identification];
     if([taskToBeRemoved.urgent isEqual:@0])
-        [[UIApplication sharedApplication] cancelLocalNotification:taskToBeRemoved.notification];
+    [[UIApplication sharedApplication] cancelLocalNotification:[taskToBeRemoved getNotification]];
     [_taskList removeObject:taskToBeRemoved];
 }
 

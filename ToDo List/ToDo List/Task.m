@@ -22,6 +22,22 @@
 @dynamic name;
 @dynamic repeatTime;
 @dynamic urgent;
+@dynamic priority;
+
+
+#pragma mark notifiction Get and Set
+
+-(UILocalNotification*) getNotification
+{
+    UILocalNotification *notification=[NSKeyedUnarchiver unarchiveObjectWithData:self.notification];
+    return notification;
+}
+
+-(void) setNewNotification:(UILocalNotification*)notification
+{
+   self.notification=[NSKeyedArchiver archivedDataWithRootObject:notification];
+}
+
 
 /**
  Updates priority through an algorithm

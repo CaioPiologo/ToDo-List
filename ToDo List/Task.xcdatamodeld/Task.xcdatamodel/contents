@@ -8,10 +8,12 @@
         <attribute name="fun" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="initialDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notification" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="repeatTime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="urgent" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Task" positionX="45" positionY="360" width="128" height="178"/>
+        <element name="Task" positionX="45" positionY="360" width="128" height="210"/>
     </elements>
 </model>
