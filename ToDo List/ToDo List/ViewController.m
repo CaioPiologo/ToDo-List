@@ -34,7 +34,7 @@
     self.data = [self.organizer updateTasksByDate];
 }
 
--(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
+/*-(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
 {
     return 1;
 }
@@ -74,6 +74,60 @@
     
     [self performSegueWithIdentifier:@"priorityToEdit" sender:self];
 
+}*/
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 4 ;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return [[self.organizer getTodayTasks] count];
+            break;
+        case 1:
+            return [[self.organizer getTomorrowTasks] count];
+            break;
+        case 2:
+            return [[self.organizer getAfterTomorrowTasks] count];
+            break;
+        case 3:
+            return [[self.organizer getLaterTasks] count];
+            break;
+    }
+    return 0;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    if(section == 0)
+        return @"Section 1";
+    if(section == 1)
+        return @"Section 2";
+    return @"";
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString *CellIdentifier = @"Cell";
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
+    if (indexPath.section==0) {
+        Task *theCellData = [[self.organizer getListByDate] objectAtIndex:indexPath.row];
+        NSString *cellValue =theCellData.name;
+        cell.textLabel.text = cellValue;
+    }
+    else {
+        Task *theCellData = [[self.organizer getListByDate] objectAtIndex:indexPath.row];
+        NSString *cellValue =theCellData.name;
+        cell.textLabel.text = cellValue;
+    }
+    return cell;
 }
 
 @end
