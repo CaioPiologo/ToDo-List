@@ -65,8 +65,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //check if your cell is pressed
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    //Task *task = data objectAtIndex:indexPath.row
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    Task *task = [data objectAtIndex:indexPath.row];
+    
+    [self performSegueWithIdentifier:@"toEdit" sender:task];
 
 }
 
