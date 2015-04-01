@@ -155,6 +155,7 @@
 		8C3454571AC3204B0053766D /* ToDo List */ = {
 			isa = PBXGroup;
 			children = (
+				25E2E02F1ACC1B9E00220124 /* Images.xcassets */,
 				25E0122E1AC9CF01004370E1 /* AddDateViewController.h */,
 				25E0122F1AC9CF01004370E1 /* AddDateViewController.m */,
 				25E012301AC9CF01004370E1 /* AddName.h */,
@@ -304,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25E012451AC9CF01004370E1 /* Images.xcassets in Resources */,
+				25E2E0301ACC1B9E00220124 /* Images.xcassets in Resources */,
 				8C2B93F31AC9CD3700D3AE64 /* Podfile in Resources */,
 				8CF1892D1AC5E7FE0027EB72 /* Info.plist in Resources */,
 				8C3454641AC3204B0053766D /* Main.storyboard in Resources */,
