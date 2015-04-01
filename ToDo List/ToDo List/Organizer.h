@@ -19,7 +19,7 @@
 
 -(id) init;
 
--(void) updateTasks:(int)priority;
+-(NSArray *) updateTasks:(int)priority;
 
 -(NSMutableArray *) getListByPriority;
 

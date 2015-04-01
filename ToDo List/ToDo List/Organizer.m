@@ -44,7 +44,7 @@
 /**
  Keeps list updated constantly
  */
--(void) updateTasks:(int)priority{
+-(NSArray *) updateTasks:(int)priority{
     //updates each task priority and urgency if it has passed its conclusion date
     for (Task *task in _taskList){
         [task updatePriority];
@@ -55,9 +55,9 @@
     }
     //returns the list organized by priorities or dates
     if(priority == 1)
-        _taskList = self.getListByPriority;
+        return self.getListByPriority;
     else
-        _taskList = self.getListByDate;
+        return self.getListByDate;
 }
 
 /**
