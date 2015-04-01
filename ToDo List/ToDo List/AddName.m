@@ -36,14 +36,13 @@
 - (IBAction)nextButton: (id)sender
 {
     
-    /*if([_textField.text isEqualToString:@""]) {
+    if([_textField.text isEqualToString:@""]) {
         [_warningMessage setHidden:NO];
     }else{
         [self.organizer.taskWizard begin];
         [_organizer.taskWizard giveName: _textField.text];
-     
-    }*/
-    [self performSegueWithIdentifier:@"toAddTask2" sender:self];
+        [self performSegueWithIdentifier:@"toGetDate" sender:self];
+    }
 }
 
 -(IBAction)cancelButton:(id)sender
