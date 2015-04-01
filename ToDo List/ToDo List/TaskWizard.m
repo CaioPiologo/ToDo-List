@@ -38,7 +38,10 @@
  Cancels task creation
  */
 -(void) cancel{
-    [self.loader deleteTask:self.newtask];
+    if(self.newtask)
+    {
+        [self.loader deleteTask:self.newtask];
+    }
     self.newtask = nil;
 }
 /**
