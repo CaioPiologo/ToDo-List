@@ -42,9 +42,9 @@
     return self;
 }
 /**
- Keeps list updated constantly
+ Keeps list updated constantly by its priority
  */
--(NSArray *) updateTasks:(int)priority{
+-(NSArray *) updateTasksByPriority{
     //updates each task priority and urgency if it has passed its conclusion date
     for (Task *task in _taskList){
         [task updatePriority];
@@ -54,10 +54,22 @@
             [self removeTask:[task objectID]];
     }
     //returns the list organized by priorities or dates
-    if(priority == 1)
-        return self.getListByPriority;
-    else
-        return self.getListByDate;
+    return self.getListByPriority;
+}
+/**
+ Keeps list updated constantly by the date of its conclusion
+ */
+-(NSArray *) updateTasksByDate{
+    //updates each task priority and urgency if it has passed its conclusion date
+    for (Task *task in _taskList){
+        [task updatePriority];
+        if([task.conclusionDate compare:[NSDate date]] == NSOrderedDescending)
+            task.urgent = @1;
+        if([task.finished  isEqual: @1])
+            [self removeTask:[task objectID]];
+    }
+    //returns the list organized by priorities or dates
+    return self.getListByDate;
 }
 
 /**
