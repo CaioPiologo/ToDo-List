@@ -61,7 +61,8 @@
     if(time == nil)
         [_newtask setInitialDate:[NSDate date]];
     else
-        [_newtask setInitialDate:time];
+        [_newtask setInitialDate:[time copy]];
+
 }
 /**
  Adds conclusion date to task
@@ -70,7 +71,7 @@
     if(time == nil)
         [_newtask setConclusionDate:[NSDate date]];
     else
-        [_newtask setConclusionDate:time];
+        [_newtask setConclusionDate:[time copy]];
 }
 /**
  Adds difficulty to task

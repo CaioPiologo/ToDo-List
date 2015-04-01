@@ -32,7 +32,7 @@
     self.organizer = [Organizer getInstace];
     
     
-    self.data = [[NSArray alloc] initWithArray:[self.organizer updateTasks:1]];
+    self.data = [self.organizer updateTasks:0];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
@@ -54,7 +54,9 @@
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: CellIdentifier];
     }
     
-    cell.textLabel.text = [[data objectAtIndex: indexPath.row] name];
+    Task * t = [data objectAtIndex: indexPath.row];
+    NSNumber * pry = t.priority;
+    cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@", pry];
     return cell;
 }
 
