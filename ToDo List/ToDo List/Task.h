@@ -21,7 +21,9 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSDate * repeatTime;
 @property (nonatomic, retain) NSNumber * urgent;
+@property (nonatomic, retain) NSData * notification;
 @property (nonatomic) NSNumber* priority;
+
 
 - (NSString *) description;
 

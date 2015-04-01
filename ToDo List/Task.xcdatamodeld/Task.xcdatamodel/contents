@@ -8,7 +8,7 @@
         <attribute name="fun" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="initialDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="notification" optional="YES" syncable="YES"/>
+        <attribute name="notification" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="repeatTime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="urgent" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
