@@ -15,7 +15,6 @@
 @interface AddName ()
 
 @property (weak, nonatomic) IBOutlet UILabel *warningMessage;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 @property (nonatomic) Organizer *organizer;
 
 @end
@@ -26,6 +25,7 @@
 {
     [super viewDidLoad];
     _organizer = [Organizer getInstace];
+    [self.organizer.taskWizard begin];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +39,6 @@
     if([_textField.text isEqualToString:@""]) {
         [_warningMessage setHidden:NO];
     }else{
-        [self.organizer.taskWizard begin];
         [_organizer.taskWizard giveName: _textField.text];
         [self performSegueWithIdentifier:@"toGetDate" sender:self];
     }
@@ -48,7 +47,7 @@
 -(IBAction)cancelButton:(id)sender
 {
     [_organizer.taskWizard cancel];
-    [self performSegueWithIdentifier:@"cancelButton" sender:self];
+    [self performSegueWithIdentifier:@"cancelCreation" sender:self];
 }
 
 @end

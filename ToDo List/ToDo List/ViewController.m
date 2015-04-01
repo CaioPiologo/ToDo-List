@@ -11,8 +11,7 @@
 #import "Task.h"
 #import "Foundation/Foundation.h"
 #import "Organizer.h"
-#import "EditViewController.h"
-
+#import "TaskWizard.h"
 
 @interface ViewController ()
 
@@ -47,7 +46,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*) indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"PriorityCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath:indexPath];
     
     if(cell == nil){
@@ -56,7 +55,7 @@
     
     Task * t = [data objectAtIndex: indexPath.row];
     NSNumber * pry = t.priority;
-    cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@", pry];
+    cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@ Priority - %@", t.name, pry];
     return cell;
 }
 
@@ -71,13 +70,10 @@
     //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     Task *task = [data objectAtIndex:indexPath.row];
     
-    [self performSegueWithIdentifier:@"toEdit" sender:task];
+    [self.organizer.taskWizard beginWithTask:task];
+    
+    [self performSegueWithIdentifier:@"priorityToEdit" sender:self];
 
 }
-
-- (IBAction)edit:(id)sender{
-    [self performSegueWithIdentifier:@"priorityToEdit" sender:sender];
-}
-
 
 @end

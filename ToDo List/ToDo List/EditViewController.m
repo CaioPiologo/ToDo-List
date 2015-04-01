@@ -26,7 +26,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _organizer = [Organizer getInstace];
+    self.organizer = [Organizer getInstace];
+    self.textField.text = self.organizer.taskWizard.newtask.name;
+    self.difficult.value = [self.organizer.taskWizard.newtask.difficulty floatValue];
+    self.funny.value = [self.organizer.taskWizard.newtask.fun floatValue];
     
 }
 
@@ -35,26 +38,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(Task *)task {
-    self.textField.text = [task name];
-    self.difficult.value = [task difficulty];
-    self.funny.value = [task funny];
-    
-    [self.organizer.TaskWizard beginWithTask:task];
-    
-}
-
 -(IBAction)saveButton:(id)sender{
     
     Task *task;
     
-    [self.organizer.TaskWizard giveName: textField.text];
-    [self.organizer.TaskWizard giveDifficulty: difficult.value];
-    [self.organizer.TaskWizard giveFun:funny.value];
+    [self.organizer.taskWizard giveName: self.textField.text];
+    [self.organizer.taskWizard giveDifficulty: [NSNumber numberWithFloat: self.difficult.value]];
+    [self.organizer.taskWizard giveFun: [NSNumber numberWithFloat: self.funny.value ]];
     
     task = [_organizer.taskWizard finish];
-    
-    [_organizer addTaskToList: task];
+
     [_organizer saveEnviroment];
     
     [self performSegueWithIdentifier: @"toTableView" sender: self];

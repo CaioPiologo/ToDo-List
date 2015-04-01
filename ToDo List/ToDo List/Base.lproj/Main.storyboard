@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--To Do List-->
@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="XHk-Dk-fCi">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PriorityCell" id="XHk-Dk-fCi">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XHk-Dk-fCi" id="Ebu-t7-xF0">
@@ -40,163 +40,172 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="EKV-JR-uAx" id="p7E-cI-1fd"/>
-                        <segue destination="s9b-o1-idC" kind="modal" id="Y16-4l-6dr"/>
+                        <segue destination="rJa-0Y-uz6" kind="modal" identifier="priorityToEdit" id="6Jt-Cq-X8J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1393" y="289"/>
+            <point key="canvasLocation" x="1312.5" y="288.75"/>
         </scene>
         <!--Edit View Controller-->
-        <scene sceneID="3Xl-H4-dBh">
+        <scene sceneID="eh5-mw-LQb">
             <objects>
-                <viewController id="s9b-o1-idC" customClass="EditViewController" sceneMemberID="viewController">
+                <viewController id="rJa-0Y-uz6" customClass="EditViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VgW-hz-Z5p"/>
-                        <viewControllerLayoutGuide type="bottom" id="WLM-Kl-Lqt"/>
+                        <viewControllerLayoutGuide type="top" id="KXw-Y3-SGm"/>
+                        <viewControllerLayoutGuide type="bottom" id="YWw-z6-NUH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XRO-yg-GHg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="Dqh-fQ-Xge">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1v-1W-Aqd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0E-kQ-W7T">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="75" width="46" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C4n-4u-k65">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="47" y="119" width="311" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicial Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm5-jw-cjQ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="158" y="190" width="85" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conclusion Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-DP-hG1">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="137" y="269" width="127" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsf-R1-PkW">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="37" y="415" width="37" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02u-zO-06b">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="334" y="415" width="38" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Funny" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzw-E6-lKU">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="330" y="545" width="47" height="21"/>
+                                </variation>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="LbY-Mq-Muh">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="49" y="444" width="303" height="31"/>
+                                </variation>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="abJ-R8-kZn">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="49" y="567" width="303" height="31"/>
+                                </variation>
+                            </slider>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nv-ae-H0l">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="Bcs-dY-AjB">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="IPL-qx-oUJ"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Cp4-7N-s3U"/>
+                                    <navigationItem title="Title" id="KAL-Ka-LFf">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FKN-xw-kOi">
+                                            <connections>
+                                                <action selector="cancelButton:" destination="rJa-0Y-uz6" id="s8I-tP-0XD"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9YJ-U7-RlF">
+                                            <inset key="imageInsets" minX="100" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="saveButton:" destination="rJa-0Y-uz6" id="5vy-ld-FKU"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
                                 </variation>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83V-IB-Cwk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boring" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fa-mR-zRv">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="103" width="46" height="21"/>
+                                    <rect key="frame" x="30" y="545" width="51" height="21"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="the-5h-2do">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="84" y="162" width="232" height="30"/>
-                                </variation>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicial Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTr-nb-b7U">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="158" y="238" width="85" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conclusion Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvq-jP-Z89">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="137" y="350" width="127" height="21"/>
-                                </variation>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nyt-hZ-aqD">
-                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="44" y="583" width="312" height="31"/>
-                                </variation>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnB-nv-Rgf">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="25" y="438" width="37" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx7-kA-Zxq">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="337" y="438" width="38" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boring" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckX-cz-clK">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="561" width="51" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxQ-S4-tad">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="335" y="560" width="29" height="21"/>
-                                </variation>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="l2T-c2-1yc">
-                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="44" y="467" width="312" height="31"/>
-                                </variation>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="y1v-1W-Aqd"/>
-                                <exclude reference="83V-IB-Cwk"/>
-                                <exclude reference="the-5h-2do"/>
-                                <exclude reference="RTr-nb-b7U"/>
-                                <exclude reference="Nvq-jP-Z89"/>
-                                <exclude reference="nyt-hZ-aqD"/>
-                                <exclude reference="hnB-nv-Rgf"/>
-                                <exclude reference="Rx7-kA-Zxq"/>
-                                <exclude reference="ckX-cz-clK"/>
-                                <exclude reference="dxQ-S4-tad"/>
-                                <exclude reference="l2T-c2-1yc"/>
+                                <exclude reference="Q0E-kQ-W7T"/>
+                                <exclude reference="C4n-4u-k65"/>
+                                <exclude reference="Jm5-jw-cjQ"/>
+                                <exclude reference="7Zf-DP-hG1"/>
+                                <exclude reference="Bsf-R1-PkW"/>
+                                <exclude reference="02u-zO-06b"/>
+                                <exclude reference="Gzw-E6-lKU"/>
+                                <exclude reference="LbY-Mq-Muh"/>
+                                <exclude reference="abJ-R8-kZn"/>
+                                <exclude reference="1Nv-ae-H0l"/>
+                                <exclude reference="1Fa-mR-zRv"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="y1v-1W-Aqd"/>
-                                <include reference="83V-IB-Cwk"/>
-                                <include reference="the-5h-2do"/>
-                                <include reference="RTr-nb-b7U"/>
-                                <include reference="Nvq-jP-Z89"/>
-                                <include reference="nyt-hZ-aqD"/>
-                                <include reference="hnB-nv-Rgf"/>
-                                <include reference="Rx7-kA-Zxq"/>
-                                <include reference="ckX-cz-clK"/>
-                                <include reference="dxQ-S4-tad"/>
-                                <include reference="l2T-c2-1yc"/>
+                                <include reference="Q0E-kQ-W7T"/>
+                                <include reference="C4n-4u-k65"/>
+                                <include reference="Jm5-jw-cjQ"/>
+                                <include reference="7Zf-DP-hG1"/>
+                                <include reference="Bsf-R1-PkW"/>
+                                <include reference="02u-zO-06b"/>
+                                <include reference="Gzw-E6-lKU"/>
+                                <include reference="LbY-Mq-Muh"/>
+                                <include reference="abJ-R8-kZn"/>
+                                <include reference="1Nv-ae-H0l"/>
+                                <include reference="1Fa-mR-zRv"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Ehy-yK-NWB"/>
                     <connections>
-                        <outlet property="difficult" destination="l2T-c2-1yc" id="RbH-Gx-6NI"/>
-                        <outlet property="funny" destination="nyt-hZ-aqD" id="lBg-Xl-kaw"/>
-                        <outlet property="textField" destination="the-5h-2do" id="kq9-cF-Bem"/>
-                        <segue destination="Rb3-DV-MtK" kind="modal" identifier="toTableView" id="MnP-oh-qC2"/>
+                        <outlet property="difficult" destination="LbY-Mq-Muh" id="lXW-W4-V0U"/>
+                        <outlet property="funny" destination="abJ-R8-kZn" id="ZJS-Oz-zdK"/>
+                        <outlet property="textField" destination="C4n-4u-k65" id="vNF-vi-dwp"/>
+                        <segue destination="Rb3-DV-MtK" kind="modal" identifier="toTableView" id="ePp-5i-jQy"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n9m-3o-cog" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z9R-Gl-QMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1887" y="-515.25"/>
+            <point key="canvasLocation" x="1312.5" y="-470.25"/>
         </scene>
         <!--To Do List-->
         <scene sceneID="tN1-kn-9px">
@@ -214,7 +223,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ucl-n0-wth">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" id="ucl-n0-wth">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ucl-n0-wth" id="EiS-3X-vjS">
@@ -223,8 +232,12 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                                    <rect key="frame" x="0.0" y="64" width="400" height="800"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="d6l-lt-4bI" id="sIc-TI-iT4"/>
+                                    <outlet property="delegate" destination="d6l-lt-4bI" id="8VF-0d-CCO"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -253,7 +266,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="6Bb-CW-095" id="jrx-RL-qMU"/>
-                        <segue destination="s9b-o1-idC" kind="modal" id="ArU-Uf-LKR"/>
+                        <segue destination="rJa-0Y-uz6" kind="modal" identifier="dateToEdit" id="AQw-Aw-TPn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WQ-Wh-b5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -286,6 +299,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="xty-r1-A5C">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="nVW-4Y-Gls" kind="relationship" relationship="rootViewController" id="5Uw-ZR-CR8"/>
                     </connections>
@@ -350,25 +366,24 @@
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="AddTask" id="SBy-7S-9JI">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="UkO-Iu-J5p">
+                    <navigationItem key="navigationItem" title="AddTask" id="H1T-28-ILC">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="clJ-Ob-A5F">
                             <connections>
-                                <action selector="cancelButton:" destination="nVW-4Y-Gls" id="vnF-pC-fkV"/>
-                                <segue destination="Rb3-DV-MtK" kind="modal" id="lfw-kJ-6ql"/>
+                                <action selector="cancelButton:" destination="nVW-4Y-Gls" id="a7G-8V-eQ4"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="wdK-Um-ZYJ">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="lEt-CC-ew0">
                             <connections>
-                                <action selector="nextButton:" destination="nVW-4Y-Gls" id="bYX-LI-J7X"/>
+                                <action selector="nextButton:" destination="nVW-4Y-Gls" id="B5v-iU-5Dx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="nextButton" destination="wdK-Um-ZYJ" id="iAo-0N-h4D"/>
                         <outlet property="textField" destination="q5a-94-iDZ" id="zEb-uC-e7d"/>
                         <outlet property="warningMessage" destination="eMb-6i-5yR" id="cxk-Xq-cBz"/>
-                        <segue destination="HGT-fb-m1e" kind="push" identifier="toGetDate" id="ZsF-bR-DNR"/>
+                        <segue destination="HGT-fb-m1e" kind="push" identifier="toGetDate" id="hqe-1Y-h0S"/>
+                        <segue destination="Rb3-DV-MtK" kind="modal" identifier="cancelCreation" id="6F3-46-1aZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ilc-Ya-g7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -409,18 +424,21 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="AddTask2" id="zpZ-bY-uZY">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="8fR-Wl-joe">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="k87-mk-mmQ">
                             <connections>
-                                <action selector="nextButton:" destination="HGT-fb-m1e" id="WdU-ix-FAS"/>
+                                <action selector="nextButton:" destination="HGT-fb-m1e" id="1eh-j7-6iX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="MLX-5w-hnp" kind="push" identifier="toGetParam" id="IVw-WY-JgB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fK2-jn-fFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem title="Item" id="hOY-kK-JHV"/>
             </objects>
             <point key="canvasLocation" x="2928" y="1454.25"/>
         </scene>
@@ -436,20 +454,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qIt-sc-rb4">
-                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="56" y="199" width="290" height="31"/>
-                                </variation>
-                            </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="c0Z-ng-8Ch">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="56" y="421" width="290" height="31"/>
                                 </variation>
-                                <connections>
-                                    <segue destination="Rb3-DV-MtK" kind="modal" identifier="createTask" id="9fX-ZH-2iz"/>
-                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeZ-E6-ZOn">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -487,26 +496,32 @@
                                     <rect key="frame" x="322" y="389" width="29" height="21"/>
                                 </variation>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qIt-sc-rb4">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="56" y="222" width="290" height="31"/>
+                                </variation>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="qIt-sc-rb4"/>
                                 <exclude reference="c0Z-ng-8Ch"/>
                                 <exclude reference="HeZ-E6-ZOn"/>
                                 <exclude reference="oAl-Fu-HQZ"/>
                                 <exclude reference="HXE-Pg-oWh"/>
                                 <exclude reference="cNR-cg-4LU"/>
+                                <exclude reference="qIt-sc-rb4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="qIt-sc-rb4"/>
                                 <include reference="c0Z-ng-8Ch"/>
                                 <include reference="HeZ-E6-ZOn"/>
                                 <include reference="oAl-Fu-HQZ"/>
                                 <include reference="HXE-Pg-oWh"/>
                                 <include reference="cNR-cg-4LU"/>
+                                <include reference="qIt-sc-rb4"/>
                             </mask>
                         </variation>
                     </view>
@@ -521,6 +536,7 @@
                         <outlet property="difficult" destination="qIt-sc-rb4" id="Ywq-1D-wvO"/>
                         <outlet property="doneButton" destination="95t-Nv-tGt" id="zqR-6S-ait"/>
                         <outlet property="funny" destination="c0Z-ng-8Ch" id="17S-AN-KRa"/>
+                        <segue destination="Rb3-DV-MtK" kind="modal" identifier="createTask" id="8I8-MK-2EY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usk-QI-5Rv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -529,9 +545,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bPy-xa-Bdy"/>
+        <segue reference="6Jt-Cq-X8J"/>
         <segue reference="2i2-Er-Vab"/>
-        <segue reference="Y16-4l-6dr"/>
-        <segue reference="lfw-kJ-6ql"/>
+        <segue reference="bPy-xa-Bdy"/>
+        <segue reference="ePp-5i-jQy"/>
     </inferredMetricsTieBreakers>
 </document>

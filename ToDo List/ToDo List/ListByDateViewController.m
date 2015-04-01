@@ -26,7 +26,7 @@
     [super viewDidLoad];
     _organizer = [Organizer getInstace];
     
-    data = [[NSMutableArray alloc] initWithObjects: [_organizer getListByPriority], nil];
+    data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,15 +46,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*) indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"DateCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath:indexPath];
     
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: CellIdentifier];
     }
     
-    cell.textLabel.text = [data objectAtIndex: indexPath.row];
+    cell.textLabel.text = [[data objectAtIndex: indexPath.row] name];
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    Task *task = [data objectAtIndex:indexPath.row];
+    
+    [self.organizer.taskWizard beginWithTask:task];
+    
+    [self performSegueWithIdentifier:@"dateToEdit" sender:self];
+    
+}
 @end
