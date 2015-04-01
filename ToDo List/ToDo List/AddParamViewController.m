@@ -36,8 +36,10 @@
 {
     Task *task;
     
-    //[_organizer.taskWizard giveDifficulty:NSInteger  _difficult.value];
-    [self.organizer.taskWizard giveDifficulty:[NSNumber numberWithFloat:self.difficult.value]];
+    [_organizer.taskWizard giveDifficulty:[NSNumber numberWithFloat:_difficult.value]];
+
+    [_organizer.taskWizard giveFun:[NSNumber numberWithFloat:_funny.value]];
+
     task = [_organizer.taskWizard finish];
 
     [_organizer addTaskToList: task];

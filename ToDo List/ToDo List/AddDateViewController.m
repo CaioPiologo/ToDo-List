@@ -71,9 +71,6 @@
 - (IBAction)nextButton: (id)sender
 {
     
-    [self.organizer.taskWizard giveInitialDate:[NSDate date]];
-    [self.organizer.taskWizard giveConclusionDate:[NSDate dateWithTimeInterval:24*3600 sinceDate:[NSDate date]]];
-    
     [self performSegueWithIdentifier:@"toGetParam" sender:self];
 }
 @end

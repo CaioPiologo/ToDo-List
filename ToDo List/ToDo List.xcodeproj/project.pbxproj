@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1A0FD3A06B4DB48A61783AEB /* libPods-ToDo List.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 818E6EF70CAFFD380223E560 /* libPods-ToDo List.a */; };
+		1CEED43A1ACC1D7100A705D1 /* AddDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED42D1ACC1D7100A705D1 /* AddDateViewController.m */; };
+		1CEED43B1ACC1D7100A705D1 /* AddName.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED42F1ACC1D7100A705D1 /* AddName.m */; };
+		1CEED43C1ACC1D7100A705D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CEED4311ACC1D7100A705D1 /* LaunchScreen.xib */; };
+		1CEED43D1ACC1D7100A705D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEED4331ACC1D7100A705D1 /* Main.storyboard */; };
+		1CEED43F1ACC1D7100A705D1 /* Organizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED4371ACC1D7100A705D1 /* Organizer.m */; };
+		1CEED4401ACC1D7100A705D1 /* TaskWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED4391ACC1D7100A705D1 /* TaskWizard.m */; };
+		25819A321ACC281F00E58993 /* ListByDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB490F1AC9D2840040E8D8 /* ListByDateViewController.m */; };
+		25819A331ACC281F00E58993 /* AddParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB49001AC998350040E8D8 /* AddParamViewController.m */; };
+		25819A341ACC281F00E58993 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D3625A1AC3255B00DEF6E8 /* Task.m */; };
+		25819A351ACC281F00E58993 /* Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454821AC32A2F0053766D /* Loader.m */; };
+		25E012451AC9CF01004370E1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		25E2E0301ACC1B9E00220124 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		1CAB48FB1AC9938F0040E8D8 /* AddName.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB48FA1AC9938F0040E8D8 /* AddName.m */; };
 		1CAB49011AC998350040E8D8 /* AddParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB49001AC998350040E8D8 /* AddParamViewController.m */; };
 		1CAB49041AC9AEFB0040E8D8 /* AddDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB49031AC9AEFB0040E8D8 /* AddDateViewController.m */; };
