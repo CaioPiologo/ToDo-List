@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *initialDate;
 @property (weak, nonatomic) IBOutlet UIDatePicker *conclusionDate;
 @property (weak, nonatomic) IBOutlet UILabel *warningDateMessage;
+@property (weak, nonatomic) IBOutlet UISwitch *switchInitial;
+@property (weak, nonatomic) IBOutlet UISwitch *switchConclusion;
 
 @end
 
@@ -42,23 +44,42 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)switchInitialClicked:(id)sender{
+    if(self.switchInitial.isOn){
+        [self.initialDate setHidden:YES];
+    }else{
+        [self.initialDate setHidden:NO];
+    }
+}
+
+-(IBAction)switchConclusionClicked:(id)sender{
+    if(self.switchConclusion.isOn){
+        [self.conclusionDate setHidden:YES];
+    }else{
+        [self.conclusionDate setHidden:NO];
+    }
+}
 
 - (IBAction)nextButton: (id)sender
 {
-    if([self.initialDate.date compare: self.conclusionDate.date] == NSOrderedDescending){
+    if((![self.initialDate isHidden])&&(![self.conclusionDate isHidden])&&([self.initialDate.date compare: self.conclusionDate.date] == NSOrderedDescending)){
         self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeInterval:0 sinceDate:self.initialDate.date];
         [self.warningDateMessage setHidden:NO];
     }else{
-    
-        [self.organizer.taskWizard giveInitialDate: [self.initialDate.date copy]];
-        [self.organizer.taskWizard giveConclusionDate:[self.conclusionDate.date copy]];
+        if(self.switchInitial.isEnabled){
+            [self.organizer.taskWizard giveInitialDate:nil];
+        }else{
+            [self.organizer.taskWizard giveInitialDate: [self.initialDate.date copy]];
+        }
+        if(self.switchConclusion.isEnabled){
+            [self.organizer.taskWizard giveConclusionDate:nil];
+        }else{
+            [self.organizer.taskWizard giveConclusionDate:[self.conclusionDate.date copy]];
+        }
         
         [self performSegueWithIdentifier:@"toGetParam" sender:self];
         
     }
 }
 
-- (IBAction)backToName:(id)sender{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
 @end
