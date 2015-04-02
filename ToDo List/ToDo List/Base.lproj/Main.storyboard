@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -51,10 +51,10 @@
                                 <exclude reference="ihN-dt-4iR"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Xoi-Dt-yhm"/>
                                 <exclude reference="JX5-Gl-o2w"/>
                                 <exclude reference="PNR-df-krq"/>
                                 <exclude reference="qhG-tc-byZ"/>
-                                <exclude reference="Xoi-Dt-yhm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -62,10 +62,10 @@
                                 <include reference="ihN-dt-4iR"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Xoi-Dt-yhm"/>
                                 <include reference="JX5-Gl-o2w"/>
                                 <include reference="PNR-df-krq"/>
                                 <include reference="qhG-tc-byZ"/>
-                                <include reference="Xoi-Dt-yhm"/>
                             </mask>
                         </variation>
                     </view>
@@ -200,7 +200,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="137" y="298" width="127" height="21"/>
+                                    <rect key="frame" x="137" y="345" width="127" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I dont't want to choose a initial date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3G-Sg-3PK">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="82" y="289" width="275" height="21"/>
                                 </variation>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IKu-Zc-Pus">
@@ -212,7 +221,7 @@
                                     <!--2037-12-31 11:00:00 +0000-->
                                 </date>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="25" y="334" width="350" height="162"/>
+                                    <rect key="frame" x="25" y="374" width="350" height="162"/>
                                 </variation>
                             </datePicker>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial date can't occur before conclusion date." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGa-Ri-Ncf">
@@ -221,9 +230,38 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="23" y="527" width="355" height="21"/>
+                                    <rect key="frame" x="25" y="595" width="355" height="21"/>
                                 </variation>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AdR-eh-DnQ">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="23" y="556" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="switchConclusionClicked:" destination="HGT-fb-m1e" eventType="valueChanged" id="1a1-Qc-FYz"/>
+                                    <action selector="switchConclusionClicked:" destination="BMm-9O-VaX" eventType="valueChanged" id="x6T-a8-wKj"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I dont't want to choose a conclusion date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zh5-eo-9aG">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="561" width="318" height="21"/>
+                                </variation>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UGd-WJ-Lel">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="25" y="284" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="switchInitialClicked:" destination="HGT-fb-m1e" eventType="valueChanged" id="CBf-oS-fdO"/>
+                                    <action selector="switchInitialClicked:" destination="BMm-9O-VaX" eventType="valueChanged" id="gN3-qR-azp"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -231,8 +269,12 @@
                                 <exclude reference="Jm5-jw-cjQ"/>
                                 <exclude reference="i5d-jR-wks"/>
                                 <exclude reference="7Zf-DP-hG1"/>
+                                <exclude reference="x3G-Sg-3PK"/>
                                 <exclude reference="IKu-Zc-Pus"/>
                                 <exclude reference="CGa-Ri-Ncf"/>
+                                <exclude reference="AdR-eh-DnQ"/>
+                                <exclude reference="zh5-eo-9aG"/>
+                                <exclude reference="UGd-WJ-Lel"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -240,8 +282,12 @@
                                 <include reference="Jm5-jw-cjQ"/>
                                 <include reference="i5d-jR-wks"/>
                                 <include reference="7Zf-DP-hG1"/>
+                                <include reference="x3G-Sg-3PK"/>
                                 <include reference="IKu-Zc-Pus"/>
                                 <include reference="CGa-Ri-Ncf"/>
+                                <include reference="AdR-eh-DnQ"/>
+                                <include reference="zh5-eo-9aG"/>
+                                <include reference="UGd-WJ-Lel"/>
                             </mask>
                         </variation>
                     </view>
@@ -255,6 +301,8 @@
                     <connections>
                         <outlet property="conclusionDate" destination="IKu-Zc-Pus" id="GsC-pm-3hZ"/>
                         <outlet property="initialDate" destination="i5d-jR-wks" id="q3P-Ea-vOL"/>
+                        <outlet property="switchConclusion" destination="AdR-eh-DnQ" id="Z81-Nk-AON"/>
+                        <outlet property="switchInitial" destination="UGd-WJ-Lel" id="3yI-PM-S4G"/>
                         <outlet property="warningDateMessage" destination="CGa-Ri-Ncf" id="Khw-81-dK6"/>
                         <segue destination="daX-eS-4BG" kind="push" identifier="toEditParam" id="7rb-wb-suY"/>
                     </connections>
@@ -547,7 +595,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="97" y="72" width="182" height="21"/>
+                                    <rect key="frame" x="109" y="80" width="182" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a date for conclusion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5I-ov-caW">
@@ -556,7 +604,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="109" y="303" width="199" height="21"/>
+                                    <rect key="frame" x="109" y="344" width="199" height="21"/>
                                 </variation>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zbE-eI-6Lq">
@@ -583,13 +631,49 @@
                                     <rect key="frame" x="0.0" y="366" width="400" height="162"/>
                                 </variation>
                             </datePicker>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sSg-Tw-aNL">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="538" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="switchConclusionClicked:" destination="HGT-fb-m1e" eventType="valueChanged" id="gFl-jO-kMQ"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I dont't want to choose a initial date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7t-II-vrK">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="73" y="276" width="275" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I dont't want to choose a conclusion date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIW-lE-e0O">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="73" y="543" width="318" height="21"/>
+                                </variation>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1C8-ha-AOV">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="271" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="switchInitialClicked:" destination="HGT-fb-m1e" eventType="valueChanged" id="wTN-bM-S4T"/>
+                                </connections>
+                            </switch>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial date can't occur before conclusion date." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcP-RX-POh">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="31" y="577" width="355" height="21"/>
+                                    <rect key="frame" x="23" y="577" width="355" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -600,6 +684,10 @@
                                 <exclude reference="a5I-ov-caW"/>
                                 <exclude reference="zbE-eI-6Lq"/>
                                 <exclude reference="9ez-rx-zd3"/>
+                                <exclude reference="sSg-Tw-aNL"/>
+                                <exclude reference="t7t-II-vrK"/>
+                                <exclude reference="kIW-lE-e0O"/>
+                                <exclude reference="1C8-ha-AOV"/>
                                 <exclude reference="OcP-RX-POh"/>
                             </mask>
                         </variation>
@@ -609,6 +697,10 @@
                                 <include reference="a5I-ov-caW"/>
                                 <include reference="zbE-eI-6Lq"/>
                                 <include reference="9ez-rx-zd3"/>
+                                <include reference="sSg-Tw-aNL"/>
+                                <include reference="t7t-II-vrK"/>
+                                <include reference="kIW-lE-e0O"/>
+                                <include reference="1C8-ha-AOV"/>
                                 <include reference="OcP-RX-POh"/>
                             </mask>
                         </variation>
@@ -625,6 +717,8 @@
                     <connections>
                         <outlet property="conclusionDate" destination="9ez-rx-zd3" id="Jid-Xz-gke"/>
                         <outlet property="initialDate" destination="zbE-eI-6Lq" id="eeJ-IN-jJE"/>
+                        <outlet property="switchConclusion" destination="sSg-Tw-aNL" id="8qX-i1-XS8"/>
+                        <outlet property="switchInitial" destination="1C8-ha-AOV" id="LKN-nQ-YwA"/>
                         <outlet property="warningDateMessage" destination="OcP-RX-POh" id="lSJ-ec-XJP"/>
                         <segue destination="MLX-5w-hnp" kind="push" identifier="toGetParam" id="IVw-WY-JgB"/>
                     </connections>
