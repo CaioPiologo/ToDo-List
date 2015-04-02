@@ -45,4 +45,16 @@
  @param task task pointer of task to be erased
  */
 -(void)deleteTask:(Task*) task;
+
+/**
+ Create a task object that is not conected to the save context. Any saving, will not affect this new task.
+ @return the new task object created and initialized.
+ */
+-(Task*)newEmptyTask;
+
+/**
+ Adds a task object to the context for further saving.
+ @param task the object to be added to the context.
+ */
+-(void)addTaskObjectToContext:(Task*)task;
 @end

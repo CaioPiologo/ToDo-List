@@ -97,7 +97,30 @@
     [self.managedObjectContext deleteObject:task];
 }
 
+/**
+ Create a task object that is not conected to the save context. Any saving, will not affect this new task.
+ @return the new task object created and initialized.
+ */
+-(Task*)newEmptyTask
+{
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:self.managedObjectContext];
+    Task * newTask = [[Task alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:nil];
+    newTask.name = nil;
+    newTask.difficulty = nil;
+    newTask.fun = nil;
+    newTask.initialDate = nil;
+    newTask.conclusionDate = nil;
+    newTask.continuous = nil;
+    newTask.repeatTime = nil;
+    newTask.urgent = @0;
+    newTask.finished = @0;
+    return newTask;
+}
 
+-(void)addTaskObjectToContext:(Task*)task
+{
+    [self.managedObjectContext insertObject:task];
+}
 #pragma mark - Core Data stack
 
 @synthesize managedObjectContext = _managedObjectContext;
