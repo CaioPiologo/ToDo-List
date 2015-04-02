@@ -96,26 +96,65 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    if (indexPath.section==0) {
+    if (indexPath.section==0&& [self.organizer getTodayTasks]!= nil) {
         Task *theCellData = [[self.organizer getTodayTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name ;
         cell.textLabel.text = cellValue;
     }
-    else if (indexPath.section==1) {
+    else if (indexPath.section==1&& [self.organizer getTomorrowTasks]!= nil) {
         Task *theCellData = [[self.organizer getTomorrowTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
     }
-    else if (indexPath.section==2) {
+    else if (indexPath.section==2 && [self.organizer getAfterTomorrowTasks]!= nil) {
         Task *theCellData = [[self.organizer getAfterTomorrowTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
     }
     else if(indexPath.section==3){
-        Task *theCellData = [[self.organizer getLaterTasks] objectAtIndex:indexPath.row];
+        NSArray * array =[self.organizer getLaterTasks];
+        if(!array)
+            return cell;
+        Task *theCellData = [array objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
     }
     return cell;
 }
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [_organizer removeTask:[[data objectAtIndex:indexPath.row] objectID]];
+    self.data = [self.organizer updateTasksByDate];
+    [self.tableView reloadData];
+    return UITableViewCellEditingStyleDelete;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 50.0f;
+    
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    Task *task = [data objectAtIndex: indexPath.row];
+    
+    if([task.priority isEqualToNumber:@0])
+        
+        cell.backgroundColor = [UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1];
+    
+    else if([task.priority isEqualToNumber:@1])
+        
+        cell.backgroundColor = [UIColor colorWithRed:190/255.0 green:235/255.0 blue:159/255.0 alpha:1];
+    
+    else if([task.priority isEqualToNumber:@2])
+        
+        cell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:157/255.0 alpha:1];
+    
+    else
+        
+        cell.backgroundColor = [UIColor colorWithRed:1 green:97/255.0 blue:56/255.0 alpha:1];
+    
+}
+
 @end
