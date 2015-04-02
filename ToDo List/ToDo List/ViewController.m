@@ -36,6 +36,8 @@
 -(void)viewWillAppear:(BOOL)animated{
     self.organizer = [Organizer getInstace];
     self.data = [self.organizer updateTasksByDate];
+    
+    [self reloadInputViews];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView

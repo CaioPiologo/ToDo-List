@@ -19,6 +19,8 @@
 		1CEED43D1ACC1D7100A705D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEED4331ACC1D7100A705D1 /* Main.storyboard */; };
 		1CEED43F1ACC1D7100A705D1 /* Organizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED4371ACC1D7100A705D1 /* Organizer.m */; };
 		1CEED4401ACC1D7100A705D1 /* TaskWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED4391ACC1D7100A705D1 /* TaskWizard.m */; };
+		1CF8AEF01ACD6DEE0015C7A9 /* EditDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF8AEEF1ACD6DEE0015C7A9 /* EditDateViewController.m */; };
+		1CF8AEF31ACD6E930015C7A9 /* EditParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF8AEF21ACD6E930015C7A9 /* EditParamViewController.m */; };
 		25E012451AC9CF01004370E1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		25E2E0301ACC1B9E00220124 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		2974DB02776E61BBE6240EF4 /* libPods-ToDo ListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B4F7A0251AE05CA6CF8A /* libPods-ToDo ListTests.a */; };
@@ -64,6 +66,10 @@
 		1CEED4371ACC1D7100A705D1 /* Organizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organizer.m; sourceTree = "<group>"; };
 		1CEED4381ACC1D7100A705D1 /* TaskWizard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskWizard.h; sourceTree = "<group>"; };
 		1CEED4391ACC1D7100A705D1 /* TaskWizard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskWizard.m; sourceTree = "<group>"; };
+		1CF8AEEE1ACD6DC90015C7A9 /* EditDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditDateViewController.h; sourceTree = "<group>"; };
+		1CF8AEEF1ACD6DEE0015C7A9 /* EditDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDateViewController.m; sourceTree = "<group>"; };
+		1CF8AEF11ACD6E350015C7A9 /* EditParamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditParamViewController.h; sourceTree = "<group>"; };
+		1CF8AEF21ACD6E930015C7A9 /* EditParamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditParamViewController.m; sourceTree = "<group>"; };
 		25D362591AC3255B00DEF6E8 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		25D3625A1AC3255B00DEF6E8 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		2ABA61AC30BD6171421D6F6D /* Pods-ToDo ListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo ListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo ListTests/Pods-ToDo ListTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +183,10 @@
 				8C34545F1AC3204B0053766D /* ViewController.h */,
 				8C3454601AC3204B0053766D /* ViewController.m */,
 				8C3454621AC3204B0053766D /* Main.storyboard */,
+				1CF8AEEE1ACD6DC90015C7A9 /* EditDateViewController.h */,
+				1CF8AEEF1ACD6DEE0015C7A9 /* EditDateViewController.m */,
+				1CF8AEF11ACD6E350015C7A9 /* EditParamViewController.h */,
+				1CF8AEF21ACD6E930015C7A9 /* EditParamViewController.m */,
 				1CBEE15A1ACC4C6000F6BB28 /* EditViewController.h */,
 				1CBEE15B1ACC4CA300F6BB28 /* EditViewController.m */,
 				1CAB490E1AC9D1570040E8D8 /* ListByDateViewController.h */,
@@ -406,9 +416,11 @@
 				1CEED4401ACC1D7100A705D1 /* TaskWizard.m in Sources */,
 				8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */,
 				1CBEE15C1ACC4CA300F6BB28 /* EditViewController.m in Sources */,
+				1CF8AEF01ACD6DEE0015C7A9 /* EditDateViewController.m in Sources */,
 				8C34545B1AC3204B0053766D /* main.m in Sources */,
 				1CEED43F1ACC1D7100A705D1 /* Organizer.m in Sources */,
 				1CEED43A1ACC1D7100A705D1 /* AddDateViewController.m in Sources */,
+				1CF8AEF31ACD6E930015C7A9 /* EditParamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,12 +14,9 @@
 
 @interface EditViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (weak, nonatomic) IBOutlet UIDatePicker *initialDate;
-@property (weak, nonatomic) IBOutlet UIDatePicker *conclusionDate;
-@property (weak, nonatomic) IBOutlet UISlider *difficult;
-@property (weak, nonatomic) IBOutlet UISlider *funny;
 
 @property (nonatomic) Organizer *organizer;
+@property (weak, nonatomic) IBOutlet UILabel *warningMessage;
 
 @end
 
@@ -29,14 +26,8 @@
 {
     [super viewDidLoad];
     
-    [self.scrollView setScrollEnabled:YES];
-    
     self.organizer = [Organizer getInstace];
     self.textField.text = self.organizer.taskWizard.newtask.name;
-    //self.initialDate.date = self.organizer.taskWizard.newtask.initialDate;
-    //self.conclusionDate.date = self.organizer.taskWizard.newtask.conclusionDate;
-    self.difficult.value = [self.organizer.taskWizard.newtask.difficulty floatValue];
-    self.funny.value = [self.organizer.taskWizard.newtask.fun floatValue];
     
 }
 
@@ -45,24 +36,18 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)saveButton:(id)sender{
+-(IBAction)toEditDate:(id)sender{
     
-    Task *task;
-    
-    [self.organizer.taskWizard giveName: self.textField.text];
-    [self.organizer.taskWizard giveInitialDate:self.initialDate.date];
-    [self.organizer.taskWizard giveConclusionDate:self.conclusionDate.date];
-    [self.organizer.taskWizard giveDifficulty: [NSNumber numberWithFloat: self.difficult.value]];
-    [self.organizer.taskWizard giveFun: [NSNumber numberWithFloat: self.funny.value ]];
-    
-    task = [_organizer.taskWizard finish];
-
-    [_organizer saveEnviroment];
-    
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    if([self.textField.text isEqualToString:@""]) {
+        [self.warningMessage setHidden:NO];
+    }else{
+        [self.organizer.taskWizard giveName: self.textField.text];
+        [self performSegueWithIdentifier:@"toEditDate" sender:self];
+    }
 }
 
 -(IBAction)cancelButton:(id)sender{
+    [self.organizer.taskWizard cancel];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

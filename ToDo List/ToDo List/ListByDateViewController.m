@@ -33,6 +33,8 @@
     _organizer = [Organizer getInstace];
     
     data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
+    
+    [self reloadInputViews];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,8 +65,13 @@
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+-(IBAction)backToPriority:(id)sender{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}*/
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     Task *task = [data objectAtIndex:indexPath.row];
     
     [self.organizer.taskWizard beginWithTask:task];
@@ -73,9 +80,6 @@
     
 }
 
--(IBAction)backToPriority:(id)sender{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}*/
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 4 ;
 }
