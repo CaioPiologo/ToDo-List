@@ -47,7 +47,7 @@
 -(IBAction)cancelButton:(id)sender
 {
     [_organizer.taskWizard cancel];
-    [self performSegueWithIdentifier:@"cancelCreation" sender:self];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

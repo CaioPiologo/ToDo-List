@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--To Do List-->
@@ -27,20 +27,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="To Do List" id="WRs-fO-wHs">
-                        <barButtonItem key="leftBarButtonItem" title="Priorities" id="l69-sS-4Xh">
+                        <barButtonItem key="leftBarButtonItem" title="To Date" id="l69-sS-4Xh">
                             <connections>
                                 <segue destination="d6l-lt-4bI" kind="push" id="mGX-jp-KWH"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ptK-9v-DB8">
                             <connections>
-                                <segue destination="h0F-XJ-rv5" kind="modal" id="bPy-xa-Bdy"/>
+                                <segue destination="nVW-4Y-Gls" kind="push" id="UNd-8b-bk1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="EKV-JR-uAx" id="p7E-cI-1fd"/>
-                        <segue destination="rJa-0Y-uz6" kind="modal" identifier="priorityToEdit" id="6Jt-Cq-X8J"/>
+                        <segue destination="rJa-0Y-uz6" kind="push" identifier="priorityToEdit" id="6Jt-Cq-X8J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -56,6 +56,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YWw-z6-NUH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dqh-fQ-Xge">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nv-ae-H0l">
@@ -247,7 +248,6 @@
                         <outlet property="initialDate" destination="i5d-jR-wks" id="ndO-mi-MgW"/>
                         <outlet property="scrollView" destination="Th6-y7-zGE" id="W1E-Nr-16s"/>
                         <outlet property="textField" destination="C4n-4u-k65" id="vNF-vi-dwp"/>
-                        <segue destination="Rb3-DV-MtK" kind="modal" identifier="toTableView" id="ePp-5i-jQy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9R-Gl-QMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -268,9 +268,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-CW-095">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" id="ucl-n0-wth">
+                                    <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" id="ucl-n0-wth">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ucl-n0-wth" id="EiS-3X-vjS">
@@ -278,8 +277,8 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="800"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="d6l-lt-4bI" id="sIc-TI-iT4"/>
@@ -288,32 +287,50 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Bb-CW-095" firstAttribute="leading" secondItem="95P-4y-xIQ" secondAttribute="leading" id="HZu-f2-Cse"/>
+                            <constraint firstAttribute="trailing" secondItem="6Bb-CW-095" secondAttribute="trailing" id="apA-ti-xXd"/>
+                            <constraint firstItem="Qr5-4F-Uas" firstAttribute="top" secondItem="6Bb-CW-095" secondAttribute="bottom" id="cC0-9f-8cI"/>
+                            <constraint firstItem="6Bb-CW-095" firstAttribute="top" secondItem="Yb3-Wo-jOg" secondAttribute="bottom" id="fPn-hf-hjC"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="6Bb-CW-095"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="HZu-f2-Cse"/>
+                                <exclude reference="apA-ti-xXd"/>
+                                <exclude reference="fPn-hf-hjC"/>
+                                <exclude reference="cC0-9f-8cI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="6Bb-CW-095"/>
                             </mask>
+                            <mask key="constraints">
+                                <include reference="HZu-f2-Cse"/>
+                                <include reference="apA-ti-xXd"/>
+                                <include reference="fPn-hf-hjC"/>
+                                <include reference="cC0-9f-8cI"/>
+                            </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="To Do List" id="kBQ-xP-UXS">
-                        <barButtonItem key="leftBarButtonItem" title="Date" id="mD6-dd-t1a">
+                        <barButtonItem key="leftBarButtonItem" title="To Priorirty" id="mD6-dd-t1a">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="push" id="2i2-Er-Vab"/>
+                                <action selector="backToPriority:" destination="d6l-lt-4bI" id="fQM-vg-dcd"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PX9-72-EQp">
                             <connections>
-                                <segue destination="h0F-XJ-rv5" kind="modal" id="sDX-bB-CMo"/>
+                                <segue destination="nVW-4Y-Gls" kind="push" id="UM6-yD-pFh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="6Bb-CW-095" id="jrx-RL-qMU"/>
-                        <segue destination="rJa-0Y-uz6" kind="modal" identifier="dateToEdit" id="AQw-Aw-TPn"/>
+                        <segue destination="rJa-0Y-uz6" kind="push" identifier="dateToEdit" id="AQw-Aw-TPn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WQ-Wh-b5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -337,25 +354,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDs-OT-meg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="447" y="288.75"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="HRQ-zy-JXu">
-            <objects>
-                <navigationController id="h0F-XJ-rv5" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1NT-r0-uBy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="xty-r1-A5C">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="nVW-4Y-Gls" kind="relationship" relationship="rootViewController" id="5Uw-ZR-CR8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K1d-oQ-KVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1380" y="1458.75"/>
         </scene>
         <!--AddTask-->
         <scene sceneID="9JR-0v-Plt">
@@ -414,9 +412,9 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="AddTask" id="H1T-28-ILC">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="clJ-Ob-A5F">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PWq-zw-rbq">
                             <connections>
-                                <action selector="cancelButton:" destination="nVW-4Y-Gls" id="a7G-8V-eQ4"/>
+                                <action selector="cancelButton:" destination="nVW-4Y-Gls" id="gSZ-Km-m3K"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="lEt-CC-ew0">
@@ -429,8 +427,7 @@
                     <connections>
                         <outlet property="textField" destination="q5a-94-iDZ" id="zEb-uC-e7d"/>
                         <outlet property="warningMessage" destination="eMb-6i-5yR" id="cxk-Xq-cBz"/>
-                        <segue destination="HGT-fb-m1e" kind="push" identifier="toGetDate" id="hqe-1Y-h0S"/>
-                        <segue destination="Rb3-DV-MtK" kind="modal" identifier="cancelCreation" id="6F3-46-1aZ"/>
+                        <segue destination="HGT-fb-m1e" kind="push" identifier="toGetDate" id="NdA-BO-Tco"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ilc-Ya-g7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -543,7 +540,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fK2-jn-fFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <barButtonItem title="Item" id="hOY-kK-JHV"/>
             </objects>
-            <point key="canvasLocation" x="2928" y="1454.25"/>
+            <point key="canvasLocation" x="2931" y="1458.75"/>
         </scene>
         <!--AddTask3-->
         <scene sceneID="Z2f-te-KJN">
@@ -639,7 +636,6 @@
                         <outlet property="difficult" destination="qIt-sc-rb4" id="Ywq-1D-wvO"/>
                         <outlet property="doneButton" destination="95t-Nv-tGt" id="zqR-6S-ait"/>
                         <outlet property="funny" destination="c0Z-ng-8Ch" id="17S-AN-KRa"/>
-                        <segue destination="Rb3-DV-MtK" kind="modal" identifier="createTask" id="8I8-MK-2EY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usk-QI-5Rv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -648,9 +644,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2i2-Er-Vab"/>
-        <segue reference="bPy-xa-Bdy"/>
-        <segue reference="6Jt-Cq-X8J"/>
-        <segue reference="ePp-5i-jQy"/>
+        <segue reference="AQw-Aw-TPn"/>
+        <segue reference="UM6-yD-pFh"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -45,7 +45,8 @@
     [_organizer addTaskToList: task];
     [_organizer saveEnviroment];
 
-    [self performSegueWithIdentifier:@"createTask" sender:self];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    //[self performSegueWithIdentifier:@"createTask" sender:self];
 }
 
 @end

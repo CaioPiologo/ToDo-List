@@ -60,10 +60,10 @@
 
     [_organizer saveEnviroment];
     
-    [self performSegueWithIdentifier: @"toTableView" sender: self];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(IBAction)cancelButton:(id)sender{
-    [self performSegueWithIdentifier:@"toTableView" sender:self];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

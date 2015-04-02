@@ -56,4 +56,8 @@
         
     }
 }
+
+- (IBAction)backToName:(id)sender{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end

@@ -28,9 +28,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
     self.organizer = [Organizer getInstace];
-    
-    
+    self.data = [self.organizer updateTasksByDate];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    self.organizer = [Organizer getInstace];
     self.data = [self.organizer updateTasksByDate];
 }
 

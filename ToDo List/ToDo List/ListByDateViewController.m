@@ -29,6 +29,12 @@
     data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    _organizer = [Organizer getInstace];
+    
+    data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -65,5 +71,9 @@
     
     [self performSegueWithIdentifier:@"dateToEdit" sender:self];
     
+}
+
+-(IBAction)backToPriority:(id)sender{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end
