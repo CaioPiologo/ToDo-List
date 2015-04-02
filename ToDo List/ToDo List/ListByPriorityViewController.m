@@ -85,7 +85,7 @@
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [_organizer removeTask:[[data objectAtIndex:indexPath.row] objectID]];
-    NSLog(@"%@", [[data objectAtIndex:indexPath.row] name]);
+    self.data = [self.organizer updateTasksByPriority];
     [self.tableView reloadData];
     return UITableViewCellEditingStyleDelete;
 }

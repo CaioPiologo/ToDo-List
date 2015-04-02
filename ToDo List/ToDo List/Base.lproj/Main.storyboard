@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -38,20 +37,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ihN-dt-4iR" firstAttribute="leading" secondItem="T7A-gc-95F" secondAttribute="leading" id="1cA-Av-30F"/>
-                            <constraint firstItem="pe9-q8-jFW" firstAttribute="top" secondItem="ihN-dt-4iR" secondAttribute="bottom" id="F58-kj-NuB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ihN-dt-4iR" secondAttribute="trailing" id="bbG-Zc-zEn"/>
-                            <constraint firstItem="ihN-dt-4iR" firstAttribute="top" secondItem="LcB-Yk-Thc" secondAttribute="bottom" id="geW-HQ-mll"/>
+                            <constraint firstItem="ihN-dt-4iR" firstAttribute="top" secondItem="LcB-Yk-Thc" secondAttribute="bottom" id="JX5-Gl-o2w"/>
+                            <constraint firstItem="ihN-dt-4iR" firstAttribute="leading" secondItem="T7A-gc-95F" secondAttribute="leadingMargin" id="PNR-df-krq">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-16"/>
+                            </constraint>
+                            <constraint firstItem="pe9-q8-jFW" firstAttribute="top" secondItem="ihN-dt-4iR" secondAttribute="bottom" id="Xoi-Dt-yhm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ihN-dt-4iR" secondAttribute="trailing" id="qhG-tc-byZ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-16"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ihN-dt-4iR"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="F58-kj-NuB"/>
-                                <exclude reference="1cA-Av-30F"/>
-                                <exclude reference="bbG-Zc-zEn"/>
-                                <exclude reference="geW-HQ-mll"/>
+                                <exclude reference="JX5-Gl-o2w"/>
+                                <exclude reference="PNR-df-krq"/>
+                                <exclude reference="qhG-tc-byZ"/>
+                                <exclude reference="Xoi-Dt-yhm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -59,10 +62,10 @@
                                 <include reference="ihN-dt-4iR"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="F58-kj-NuB"/>
-                                <include reference="1cA-Av-30F"/>
-                                <include reference="bbG-Zc-zEn"/>
-                                <include reference="geW-HQ-mll"/>
+                                <include reference="JX5-Gl-o2w"/>
+                                <include reference="PNR-df-krq"/>
+                                <include reference="qhG-tc-byZ"/>
+                                <include reference="Xoi-Dt-yhm"/>
                             </mask>
                         </variation>
                     </view>
@@ -763,6 +766,6 @@
         <image name="Todo List-26" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AQw-Aw-TPn"/>
+        <segue reference="6Jt-Cq-X8J"/>
     </inferredMetricsTieBreakers>
 </document>
