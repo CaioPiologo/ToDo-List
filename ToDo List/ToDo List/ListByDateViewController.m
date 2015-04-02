@@ -30,11 +30,9 @@
 }
 
 -(void) viewWillAppear:(BOOL)animated{
-    _organizer = [Organizer getInstace];
-    
-    data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
-    
-    [self reloadInputViews];
+    self.organizer = [Organizer getInstace];
+    self.data = [self.organizer updateTasksByDate];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

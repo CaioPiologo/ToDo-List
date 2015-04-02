@@ -126,6 +126,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YFH-cH-K3M"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gL1-et-kI0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm5-jw-cjQ">
@@ -227,6 +228,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wQ6-PE-vb9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rkA-QD-Tm5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsf-R1-PkW">
@@ -375,7 +377,8 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="By Date" id="Qqs-MP-ycH"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Tasks By Date" id="Qqs-MP-ycH"/>
                     <connections>
                         <outlet property="tableView" destination="6Bb-CW-095" id="NJA-zQ-ZxV"/>
                         <segue destination="rJa-0Y-uz6" kind="push" identifier="dateToEdit" id="AQw-Aw-TPn"/>

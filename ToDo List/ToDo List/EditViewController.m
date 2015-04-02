@@ -47,7 +47,6 @@
 }
 
 -(IBAction)cancelButton:(id)sender{
-    [self.organizer.taskWizard cancel];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

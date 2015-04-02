@@ -29,6 +29,14 @@
     [super viewDidLoad];
     
     self.organizer = [Organizer getInstace];
+    
+    if(self.organizer.taskWizard.newtask.initialDate != nil){
+            self.initialDate.date = [self.organizer.taskWizard.newtask.initialDate copy];
+    }
+    
+    if(self.organizer.taskWizard.newtask.conclusionDate != nil){
+        self.conclusionDate.date = [self.organizer.taskWizard.newtask.conclusionDate copy];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
