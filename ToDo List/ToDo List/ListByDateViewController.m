@@ -26,12 +26,13 @@
     [super viewDidLoad];
     _organizer = [Organizer getInstace];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor colorWithRed:44/250.0 green:62/255.0 blue:80/250.0 alpha:1];
     data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
     self.organizer = [Organizer getInstace];
-    self.data = [self.organizer updateTasksByDate];
+    data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
     [self.tableView reloadData];
 }
 
@@ -86,6 +87,16 @@
     return @"";
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    // Background color
+    view.tintColor = [UIColor whiteColor];
+    
+    // Text Color
+    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
+    [header.textLabel setTextColor:[UIColor blackColor]];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -119,5 +130,39 @@
     return cell;
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [_organizer removeTask:[[data objectAtIndex:indexPath.row] objectID]];
+    self.data = [self.organizer updateTasksByPriority];
+    [self.tableView reloadData];
+    return UITableViewCellEditingStyleDelete;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 50.0f;
+    
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    Task *task = [data objectAtIndex: indexPath.row];
+    
+    if([task.priority isEqualToNumber:@0])
+        
+        cell.backgroundColor = [UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1];
+    
+    else if([task.priority isEqualToNumber:@1])
+        
+        cell.backgroundColor = [UIColor colorWithRed:190/255.0 green:235/255.0 blue:159/255.0 alpha:1];
+    
+    else if([task.priority isEqualToNumber:@2])
+        
+        cell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:157/255.0 alpha:1];
+    
+    else
+        
+        cell.backgroundColor = [UIColor colorWithRed:1 green:97/255.0 blue:56/255.0 alpha:1];
+    
+}
 
 @end

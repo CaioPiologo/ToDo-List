@@ -28,17 +28,15 @@
 {
     [super viewDidLoad];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.backgroundColor = [UIColor blackColor];
+    self.tableView.backgroundColor = [UIColor colorWithRed:44/250.0 green:62/255.0 blue:80/250.0 alpha:1];
     self.organizer = [Organizer getInstace];
-    self.data = [self.organizer updateTasksByPriority];
-    
-    
+    data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByPriority]];
     
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     self.organizer = [Organizer getInstace];
-    self.data = [self.organizer updateTasksByPriority];
+    data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByPriority]];
     [self.tableView reloadData];
 }
 
@@ -115,5 +113,4 @@
         cell.backgroundColor = [UIColor colorWithRed:1 green:97/255.0 blue:56/255.0 alpha:1];
     
 }
-
 @end
