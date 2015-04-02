@@ -54,6 +54,7 @@
             [self removeTask:[task objectID]];
     }
     //returns the list organized by priorities or dates
+    [self.loader saveTasksStates];
     return self.getListByPriority;
 }
 /**
@@ -63,12 +64,13 @@
     //updates each task priority and urgency if it has passed its conclusion date
     for (Task *task in _taskList){
         [task updatePriority];
-        if([task.conclusionDate compare:[NSDate date]] == NSOrderedDescending)
+        if([task.conclusionDate compare:[NSDate date]] == NSOrderedAscending)
             task.urgent = @1;
         if([task.finished  isEqual: @1])
             [self removeTask:[task objectID]];
     }
     //returns the list organized by priorities or dates
+    [self.loader saveTasksStates];
     return self.getListByDate;
 }
 
@@ -137,30 +139,64 @@
 -(NSArray*)getTodayTasks
 {
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    NSDateComponents* comp1;
+    NSDateComponents* comp2;
+    
     for (Task *t in self.taskList) {
-        if ([t.conclusionDate compare:[NSDate date]]==NSOrderedSame) {
+        comp1 = [calendar components:unitFlags fromDate:t.conclusionDate];
+        comp2 = [calendar components:unitFlags fromDate:[NSDate date]];
+
+        if ([comp1 day]   == [comp2 day] && [comp1 month] == [comp2 month] && [comp1 year]  == [comp2 year])
+        {
+            NSString *nome = t.name;
             [auxiliaryArray addObject:t];
         }
     }
+    auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
     return auxiliaryArray;
 }
 
 -(NSArray*)getTomorrowTasks
 {
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    NSDateComponents* comp1;
+    NSDateComponents* comp2;
+    
     for (Task *t in self.taskList) {
-        if ([t.conclusionDate compare:[NSDate dateWithTimeInterval:24*3600 sinceDate:[NSDate date]]]==NSOrderedSame) {
+        comp1 = [calendar components:unitFlags fromDate:t.conclusionDate];
+        comp2 = [calendar components:unitFlags fromDate:[NSDate date]];
+        
+        if ([comp1 day]   == ([comp2 day]+1) && [comp1 month] == [comp2 month] && [comp1 year]  == [comp2 year])
+        {
+            NSString * nome = t.name;
             [auxiliaryArray addObject:t];
         }
     }
+    auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
     return auxiliaryArray;
 }
 
 -(NSArray*)getAfterTomorrowTasks
 {
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    NSDateComponents* comp1;
+    NSDateComponents* comp2;
+    
     for (Task *t in self.taskList) {
-        if ([t.conclusionDate compare:[NSDate dateWithTimeInterval:2*24*3600 sinceDate:[NSDate date]]]==NSOrderedSame) {
+        comp1 = [calendar components:unitFlags fromDate:t.conclusionDate];
+        comp2 = [calendar components:unitFlags fromDate:[NSDate date]];
+        
+        if ([comp1 day]   == ([comp2 day]+2) && [comp1 month] == [comp2 month] && [comp1 year]  == [comp2 year])
+        {
             [auxiliaryArray addObject:t];
         }
     }
@@ -170,8 +206,18 @@
 -(NSArray*)getLaterTasks
 {
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    NSDateComponents* comp1;
+    NSDateComponents* comp2;
+    
     for (Task *t in self.taskList) {
-        if ([t.conclusionDate compare:[NSDate dateWithTimeInterval:2*24*3600 sinceDate:[NSDate date]]]==NSOrderedDescending) {
+        comp1 = [calendar components:unitFlags fromDate:t.conclusionDate];
+        comp2 = [calendar components:unitFlags fromDate:[NSDate date]];
+        
+        if ([comp1 day]   > ([comp2 day]+2) && [comp1 month] >= [comp2 month] && [comp1 year]  >= [comp2 year])
+        {
             [auxiliaryArray addObject:t];
         }
     }

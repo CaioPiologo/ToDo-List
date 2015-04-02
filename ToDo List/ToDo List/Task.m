@@ -50,8 +50,6 @@
     NSTimeInterval highPriority = (dueTime/2)*([self.difficulty intValue])/10;
     NSTimeInterval midPriority = (dueTime)*([self.difficulty intValue])/10;
     /*Algorithm calculates priority by days missing to conclusion date, with a difficulty percentage*/
-    NSDate * data = self.conclusionDate;
-    NSDate * data2 = [today dateByAddingTimeInterval:midPriority];
     if([self.conclusionDate compare:[today dateByAddingTimeInterval:topPriority]]== NSOrderedAscending)
         self.priority = [[NSNumber alloc] initWithInt:3];
     else if([self.conclusionDate compare:[today dateByAddingTimeInterval:highPriority]] == NSOrderedAscending)
