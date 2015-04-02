@@ -26,6 +26,7 @@
     [super viewDidLoad];
     _organizer = [Organizer getInstace];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor colorWithRed:44/250.0 green:62/255.0 blue:80/250.0 alpha:1];
     data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
 }
 
@@ -94,6 +95,16 @@
     return @"";
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    // Background color
+    view.tintColor = [UIColor whiteColor];
+    
+    // Text Color
+    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
+    [header.textLabel setTextColor:[UIColor blackColor]];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -132,16 +143,8 @@
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    int index = 0;
-    
-    for(int i = 0; i < indexPath.section; i++){
-        index = index + (int)[self.tableView numberOfRowsInSection:i];
-    }
-    
-    index = index + (int)indexPath.row;
-    
-    [_organizer removeTask:[[data objectAtIndex:index] objectID]];
-    self.data = [self.organizer updateTasksByDate];
+    [_organizer removeTask:[[data objectAtIndex:indexPath.row] objectID]];
+    self.data = [self.organizer updateTasksByPriority];
     [self.tableView reloadData];
     return UITableViewCellEditingStyleDelete;
 }
@@ -153,15 +156,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    int index = 0;
-    
-    for(int i = 0; i < indexPath.section; i++){
-        index = index + (int)[self.tableView numberOfRowsInSection:i];
-    }
-    
-    index = index + (int)indexPath.row;
-    
-    Task *task = [data objectAtIndex: index];
+    Task *task = [data objectAtIndex: indexPath.row];
     
     if([task.priority isEqualToNumber:@0])
         

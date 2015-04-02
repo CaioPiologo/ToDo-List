@@ -51,7 +51,7 @@
         if([task.conclusionDate compare:[NSDate date]] == NSOrderedDescending)
             task.urgent = @1;
         if([task.finished  isEqual: @1])
-            [self removeTask:[task objectID]];
+            [self.taskList removeObject:task];
     }
     //returns the list organized by priorities or dates
     [self.loader saveTasksStates];
@@ -67,7 +67,7 @@
         if([task.conclusionDate compare:[NSDate date]] == NSOrderedAscending)
             task.urgent = @1;
         if([task.finished  isEqual: @1])
-            [self removeTask:[task objectID]];
+            [self.taskList removeObject:task];
     }
     //returns the list organized by priorities or dates
     [self.loader saveTasksStates];
@@ -143,7 +143,7 @@
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
     NSCalendar* calendar = [NSCalendar currentCalendar];
     
-    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
     NSDateComponents* comp1;
     NSDateComponents* comp2;
     
@@ -153,7 +153,7 @@
 
         if ([comp1 day]   == [comp2 day] && [comp1 month] == [comp2 month] && [comp1 year]  == [comp2 year])
         {
-            NSString *nome = t.name;
+//            NSString *nome = t.name;
             [auxiliaryArray addObject:t];
         }
     }
@@ -166,7 +166,7 @@
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
     NSCalendar* calendar = [NSCalendar currentCalendar];
     
-    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
     NSDateComponents* comp1;
     NSDateComponents* comp2;
     
@@ -176,7 +176,7 @@
         
         if ([comp1 day]   == ([comp2 day]+1) && [comp1 month] == [comp2 month] && [comp1 year]  == [comp2 year])
         {
-            NSString * nome = t.name;
+ //           NSString * nome = t.name;
             [auxiliaryArray addObject:t];
         }
     }
@@ -189,7 +189,7 @@
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
     NSCalendar* calendar = [NSCalendar currentCalendar];
     
-    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
     NSDateComponents* comp1;
     NSDateComponents* comp2;
     
@@ -210,7 +210,7 @@
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
     NSCalendar* calendar = [NSCalendar currentCalendar];
     
-    unsigned unitFlags = NSCalendarUnitDay | NSCalendarUnitMonth |  NSCalendarUnitYear;
+    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
     NSDateComponents* comp1;
     NSDateComponents* comp2;
     
