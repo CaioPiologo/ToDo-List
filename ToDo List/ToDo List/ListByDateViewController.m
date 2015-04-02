@@ -25,7 +25,7 @@
 {
     [super viewDidLoad];
     _organizer = [Organizer getInstace];
-    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
 }
 
@@ -40,42 +40,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*-(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
-{
-    return 1;
-}
-
--(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSIndexPath *)indexPath
-{
-    return [data count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*) indexPath
-{
-    static NSString *CellIdentifier = @"DateCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath:indexPath];
-    
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: CellIdentifier];
-    }
-    
-    cell.textLabel.text = [[data objectAtIndex: indexPath.row] name];
-    return cell;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    Task *task = [data objectAtIndex:indexPath.row];
-    
-    [self.organizer.taskWizard beginWithTask:task];
-    
-    [self performSegueWithIdentifier:@"dateToEdit" sender:self];
-    
-}
-
--(IBAction)backToPriority:(id)sender{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}*/
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 4 ;
 }

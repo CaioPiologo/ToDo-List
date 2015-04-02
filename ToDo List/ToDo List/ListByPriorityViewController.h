@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
 #import "AddParamViewController.h"
 #import "AddName.h"
 
-@interface ViewController : UIViewController
+@interface ListByPriorityViewController : UIViewController
 
 @property(strong, nonatomic) NSArray *data;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;

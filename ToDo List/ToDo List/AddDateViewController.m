@@ -27,8 +27,8 @@
 {
     [super viewDidLoad];
     self.organizer = [Organizer getInstace];
-    self.initialDate.minimumDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
-    self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
+    //self.initialDate.minimumDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
+    //self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
 
 }
 
