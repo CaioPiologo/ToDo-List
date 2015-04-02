@@ -32,11 +32,7 @@
                                 <segue destination="d6l-lt-4bI" kind="push" id="mGX-jp-KWH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ptK-9v-DB8">
-                            <connections>
-                                <segue destination="h0F-XJ-rv5" kind="modal" id="bPy-xa-Bdy"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ptK-9v-DB8"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="EKV-JR-uAx" id="p7E-cI-1fd"/>
@@ -350,7 +346,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="nVW-4Y-Gls" kind="relationship" relationship="rootViewController" id="5Uw-ZR-CR8"/>
+                        <segue destination="nVW-4Y-Gls" kind="relationship" relationship="rootViewController" id="bta-r2-cfa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1d-oQ-KVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -528,14 +524,14 @@
                     <navigationItem key="navigationItem" title="AddTask2" id="zpZ-bY-uZY">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="k87-mk-mmQ">
                             <connections>
-                                <action selector="nextButton:" destination="HGT-fb-m1e" id="1eh-j7-6iX"/>
+                                <action selector="nextButton:" destination="HGT-fb-m1e" id="w9T-gd-wVl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="conclusionDate" destination="9ez-rx-zd3" id="Jid-Xz-gke"/>
-                        <outlet property="initialDate" destination="zbE-eI-6Lq" id="eeJ-IN-jJE"/>
+                        <outlet property="conclusionDate" destination="9ez-rx-zd3" id="Sf0-wB-Aug"/>
+                        <outlet property="initialDate" destination="zbE-eI-6Lq" id="yfZ-Nf-tkJ"/>
                         <outlet property="warningDateMessage" destination="OcP-RX-POh" id="lSJ-ec-XJP"/>
                         <segue destination="MLX-5w-hnp" kind="push" identifier="toGetParam" id="IVw-WY-JgB"/>
                     </connections>
@@ -648,9 +644,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2i2-Er-Vab"/>
-        <segue reference="bPy-xa-Bdy"/>
         <segue reference="6Jt-Cq-X8J"/>
+        <segue reference="jKN-QF-0RS"/>
         <segue reference="ePp-5i-jQy"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -101,9 +101,13 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
     if(section == 0)
-        return @"Section 1";
+        return @"Today";
     if(section == 1)
-        return @"Section 2";
+        return @"Tomorrow";
+    if(section == 2)
+        return @"After Tomorrow";
+    if(section == 3)
+        return @"Later";
     return @"";
 }
 

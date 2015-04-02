@@ -35,8 +35,8 @@
     
     if(self){
         self.lastDateOrganized = [[NSDate alloc] init];
-        self.taskList = [[NSMutableArray alloc] init];
         self.loader = [[Loader alloc] init];
+        self.taskList = [self.loader loadTasksFromDataBase];
         self.taskWizard = [[TaskWizard alloc] init:self.loader];
     }
     return self;
