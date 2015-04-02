@@ -18,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *conclusionDate;
 @property (weak, nonatomic) IBOutlet UISlider *difficult;
 @property (weak, nonatomic) IBOutlet UISlider *funny;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (nonatomic) Organizer *organizer;
 

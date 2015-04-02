@@ -59,27 +59,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nv-ae-H0l">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="KAL-Ka-LFf">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FKN-xw-kOi">
-                                            <connections>
-                                                <action selector="cancelButton:" destination="rJa-0Y-uz6" id="s8I-tP-0XD"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9YJ-U7-RlF">
-                                            <inset key="imageInsets" minX="100" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                            <connections>
-                                                <action selector="saveButton:" destination="rJa-0Y-uz6" id="5vy-ld-FKU"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
-                                </variation>
-                            </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Th6-y7-zGE">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
@@ -208,7 +187,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="44" width="400" height="888"/>
+                                    <rect key="frame" x="0.0" y="64" width="400" height="888"/>
                                     <mask key="subviews">
                                         <include reference="1Fa-mR-zRv"/>
                                         <include reference="i5d-jR-wks"/>
@@ -229,18 +208,27 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="1Nv-ae-H0l"/>
                                 <exclude reference="Th6-y7-zGE"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="1Nv-ae-H0l"/>
                                 <include reference="Th6-y7-zGE"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Ehy-yK-NWB"/>
+                    <navigationItem key="navigationItem" id="Ehy-yK-NWB">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DJO-m4-uBQ">
+                            <connections>
+                                <action selector="cancelButton:" destination="rJa-0Y-uz6" id="rEm-AE-shH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="hAg-vC-6Ma">
+                            <connections>
+                                <action selector="saveButton:" destination="rJa-0Y-uz6" id="LIy-4U-KHH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="conclusionDate" destination="IKu-Zc-Pus" id="nu4-ul-Uxs"/>
                         <outlet property="difficult" destination="LbY-Mq-Muh" id="lXW-W4-V0U"/>
@@ -257,7 +245,7 @@
         <!--To Do List-->
         <scene sceneID="tN1-kn-9px">
             <objects>
-                <viewController id="d6l-lt-4bI" customClass="ListByDateViewController" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" id="d6l-lt-4bI" customClass="ListByDateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yb3-Wo-jOg"/>
                         <viewControllerLayoutGuide type="bottom" id="Qr5-4F-Uas"/>
@@ -277,9 +265,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="d6l-lt-4bI" id="sIc-TI-iT4"/>
                                     <outlet property="delegate" destination="d6l-lt-4bI" id="8VF-0d-CCO"/>
@@ -298,10 +283,10 @@
                                 <exclude reference="6Bb-CW-095"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="cC0-9f-8cI"/>
                                 <exclude reference="HZu-f2-Cse"/>
                                 <exclude reference="apA-ti-xXd"/>
                                 <exclude reference="fPn-hf-hjC"/>
-                                <exclude reference="cC0-9f-8cI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -309,13 +294,14 @@
                                 <include reference="6Bb-CW-095"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="cC0-9f-8cI"/>
                                 <include reference="HZu-f2-Cse"/>
                                 <include reference="apA-ti-xXd"/>
                                 <include reference="fPn-hf-hjC"/>
-                                <include reference="cC0-9f-8cI"/>
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="To Do List" id="kBQ-xP-UXS">
                         <barButtonItem key="leftBarButtonItem" title="To Priorirty" id="mD6-dd-t1a">
                             <connections>
@@ -525,14 +511,14 @@
                     <navigationItem key="navigationItem" title="AddTask2" id="zpZ-bY-uZY">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="k87-mk-mmQ">
                             <connections>
-                                <action selector="nextButton:" destination="HGT-fb-m1e" id="w9T-gd-wVl"/>
+                                <action selector="nextButton:" destination="HGT-fb-m1e" id="1eh-j7-6iX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="conclusionDate" destination="9ez-rx-zd3" id="Sf0-wB-Aug"/>
-                        <outlet property="initialDate" destination="zbE-eI-6Lq" id="yfZ-Nf-tkJ"/>
+                        <outlet property="conclusionDate" destination="9ez-rx-zd3" id="Jid-Xz-gke"/>
+                        <outlet property="initialDate" destination="zbE-eI-6Lq" id="eeJ-IN-jJE"/>
                         <outlet property="warningDateMessage" destination="OcP-RX-POh" id="lSJ-ec-XJP"/>
                         <segue destination="MLX-5w-hnp" kind="push" identifier="toGetParam" id="IVw-WY-JgB"/>
                     </connections>

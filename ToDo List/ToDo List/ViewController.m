@@ -38,7 +38,7 @@
     self.data = [self.organizer updateTasksByDate];
 }
 
-/*-(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
+-(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
 {
     return 1;
 }
@@ -78,9 +78,9 @@
     
     [self performSegueWithIdentifier:@"priorityToEdit" sender:self];
 
-}*/
+}
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 4 ;
 }
 
@@ -136,6 +136,6 @@
         cell.textLabel.text = cellValue;
     }
     return cell;
-}
+}*/
 
 @end
