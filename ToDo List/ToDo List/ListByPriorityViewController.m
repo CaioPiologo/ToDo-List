@@ -28,8 +28,7 @@
 {
     [super viewDidLoad];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    // Do any additional setup after loading the view, typically from a nib.
-    
+    self.tableView.backgroundColor = [UIColor blackColor];
     self.organizer = [Organizer getInstace];
     self.data = [self.organizer updateTasksByPriority];
     
@@ -62,9 +61,7 @@
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: CellIdentifier];
     }
     
-    Task * t = [data objectAtIndex: indexPath.row];
-    NSNumber * pry = t.priority;
-    cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@ Priority - %@", t.name, pry];
+    cell.textLabel.text = [[data objectAtIndex: indexPath.row] name];
     return cell;
 }
 
@@ -85,72 +82,39 @@
 
 }
 
-/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4 ;
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [_organizer removeTask:[[data objectAtIndex:indexPath.row] objectID]];
+    NSLog(@"%@", [[data objectAtIndex:indexPath.row] name]);
+    [self.tableView reloadData];
+    return UITableViewCellEditingStyleDelete;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    switch (section) {
-        case 0:
-            return [[self.organizer getTodayTasks] count];
-            break;
-        case 1:
-            return [[self.organizer getTomorrowTasks] count];
-            break;
-        case 2:
-            return [[self.organizer getAfterTomorrowTasks] count];
-            break;
-        case 3:
-            return [[self.organizer getLaterTasks] count];
-            break;
-    }
-    return 0;
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 50.0f;
+    
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    Task *task = [data objectAtIndex: indexPath.row];
     
-    if(section == 0)
-        return @"Today";
-    if(section == 1)
-        return @"Tomorrow";
-    if(section == 2)
-        return @"After Tomorrow";
-    if(section == 3)
-        return @"Later";
-    return @"";
+    if([task.priority isEqualToNumber:@0])
+        
+        cell.backgroundColor = [UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1];
+    
+    else if([task.priority isEqualToNumber:@1])
+        
+        cell.backgroundColor = [UIColor colorWithRed:190/255.0 green:235/255.0 blue:159/255.0 alpha:1];
+    
+    else if([task.priority isEqualToNumber:@2])
+        
+        cell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:157/255.0 alpha:1];
+    
+    else
+        
+        cell.backgroundColor = [UIColor colorWithRed:1 green:97/255.0 blue:56/255.0 alpha:1];
+    
 }
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    static NSString *CellIdentifier = @"Cell";
-
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    
-    if (indexPath.section==0) {
-        Task *theCellData = [[self.organizer getTodayTasks] objectAtIndex:indexPath.row];
-        NSString *cellValue =theCellData.name ;
-        cell.textLabel.text = cellValue;
-    }
-    else if (indexPath.section==1) {
-        Task *theCellData = [[self.organizer getTomorrowTasks] objectAtIndex:indexPath.row];
-        NSString *cellValue =theCellData.name;
-        cell.textLabel.text = cellValue;
-    }
-    else if (indexPath.section==2) {
-        Task *theCellData = [[self.organizer getAfterTomorrowTasks] objectAtIndex:indexPath.row];
-        NSString *cellValue =theCellData.name;
-        cell.textLabel.text = cellValue;
-    }
-    else if(indexPath.section==3){
-        Task *theCellData = [[self.organizer getLaterTasks] objectAtIndex:indexPath.row];
-        NSString *cellValue =theCellData.name;
-        cell.textLabel.text = cellValue;
-    }
-    return cell;
-}*/
 
 @end
