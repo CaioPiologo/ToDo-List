@@ -44,7 +44,15 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    Task *task = [data objectAtIndex:indexPath.row];
+    int index = 0;
+    
+    for(int i = 0; i < indexPath.section; i++){
+        index = index + (int)[self.tableView numberOfRowsInSection:i];
+    }
+    
+    index = index + (int)indexPath.row;
+    
+    Task *task = [data objectAtIndex:index];
     
     [self.organizer.taskWizard beginWithTask:task];
     
@@ -107,23 +115,26 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    if (indexPath.section==0) {
+    if (indexPath.section==0&& [self.organizer getTodayTasks]!= nil) {
         Task *theCellData = [[self.organizer getTodayTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name ;
         cell.textLabel.text = cellValue;
     }
-    else if (indexPath.section==1) {
+    else if (indexPath.section==1&& [self.organizer getTomorrowTasks]!= nil) {
         Task *theCellData = [[self.organizer getTomorrowTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
     }
-    else if (indexPath.section==2) {
+    else if (indexPath.section==2 && [self.organizer getAfterTomorrowTasks]!= nil) {
         Task *theCellData = [[self.organizer getAfterTomorrowTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
     }
     else if(indexPath.section==3){
-        Task *theCellData = [[self.organizer getLaterTasks] objectAtIndex:indexPath.row];
+        NSArray * array =[self.organizer getLaterTasks];
+        if(!array)
+            return cell;
+        Task *theCellData = [array objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
     }

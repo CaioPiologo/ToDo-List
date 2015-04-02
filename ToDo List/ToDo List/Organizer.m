@@ -215,11 +215,16 @@
     NSDateComponents* comp2;
     
     for (Task *t in self.taskList) {
+        if([t.finished isEqualToNumber:@1])
+        {
+            continue;
+        }
         comp1 = [calendar components:unitFlags fromDate:t.conclusionDate];
         comp2 = [calendar components:unitFlags fromDate:[NSDate date]];
         
         if ([comp1 day]   > ([comp2 day]+2) && [comp1 month] >= [comp2 month] && [comp1 year]  >= [comp2 year])
         {
+            NSString * t2 = [t name];
             [auxiliaryArray addObject:t];
         }
     }
