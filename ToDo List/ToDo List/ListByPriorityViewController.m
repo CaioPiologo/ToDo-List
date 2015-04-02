@@ -30,13 +30,13 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor colorWithRed:44/250.0 green:62/255.0 blue:80/250.0 alpha:1];
     self.organizer = [Organizer getInstace];
-    data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByPriority]];
+    self.data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByPriority]];
     
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     self.organizer = [Organizer getInstace];
-    data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByPriority]];
+    self.data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByPriority]];
     [self.tableView reloadData];
 }
 

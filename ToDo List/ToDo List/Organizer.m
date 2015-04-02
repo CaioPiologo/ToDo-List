@@ -210,7 +210,7 @@
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
     NSCalendar* calendar = [NSCalendar currentCalendar];
     
-    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
+    unsigned unitFlags = NSCalendarUnitDay | NSCalendarUnitMonth |  NSCalendarUnitYear;
     NSDateComponents* comp1;
     NSDateComponents* comp2;
     
