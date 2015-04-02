@@ -32,7 +32,7 @@
  Begins wizard with a task (edit mode)
  */
 -(void) beginWithTask:(Task *)task{
-    _newtask = task;
+    self.newtask = task;
 }
 /**
  Cancels task creation
@@ -49,13 +49,13 @@
  */
 -(Task *) finish{
     //[self setNotification];
-    return _newtask;
+    return self.newtask;
 }
 /**
  Adds name to task
  */
 -(void) giveName:(NSString *)name{
-    [_newtask setName:name];
+    [self.newtask setName:[name copy]];
 }
 /**
  Adds initial date to task
@@ -71,6 +71,7 @@
  Adds conclusion date to task
  */
 -(void) giveConclusionDate:(NSDate *)time{
+    
     if(time == nil)
         [_newtask setConclusionDate:[NSDate date]];
     else
@@ -80,13 +81,13 @@
  Adds difficulty to task
  */
 -(void) giveDifficulty:(NSNumber *)difficulty{
-    [_newtask setDifficulty:difficulty];
+    [_newtask setDifficulty:[difficulty copy]];
 }
 /**
  Adds fun to task
  */
 -(void) giveFun:(NSNumber *)fun{
-    [_newtask setFun:fun];
+    [_newtask setFun:[fun copy]];
 }
 /**
  Determines wether a task is being created or not

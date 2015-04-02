@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.organizer = [Organizer getInstace];
     self.initialDate.minimumDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
     self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
 
@@ -49,9 +50,9 @@
         [self.warningDateMessage setHidden:NO];
     }else{
     
-        [self.organizer.taskWizard giveInitialDate: self.initialDate.date];
-        [self.organizer.taskWizard giveConclusionDate:self.conclusionDate.date];
-    
+        [self.organizer.taskWizard giveInitialDate: [self.initialDate.date copy]];
+        [self.organizer.taskWizard giveConclusionDate:[self.conclusionDate.date copy]];
+        
         [self performSegueWithIdentifier:@"toGetParam" sender:self];
         
     }

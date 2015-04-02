@@ -525,14 +525,14 @@
                     <navigationItem key="navigationItem" title="AddTask2" id="zpZ-bY-uZY">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="k87-mk-mmQ">
                             <connections>
-                                <action selector="nextButton:" destination="HGT-fb-m1e" id="1eh-j7-6iX"/>
+                                <action selector="nextButton:" destination="HGT-fb-m1e" id="w9T-gd-wVl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="conclusionDate" destination="9ez-rx-zd3" id="Jid-Xz-gke"/>
-                        <outlet property="initialDate" destination="zbE-eI-6Lq" id="eeJ-IN-jJE"/>
+                        <outlet property="conclusionDate" destination="9ez-rx-zd3" id="Sf0-wB-Aug"/>
+                        <outlet property="initialDate" destination="zbE-eI-6Lq" id="yfZ-Nf-tkJ"/>
                         <outlet property="warningDateMessage" destination="OcP-RX-POh" id="lSJ-ec-XJP"/>
                         <segue destination="MLX-5w-hnp" kind="push" identifier="toGetParam" id="IVw-WY-JgB"/>
                     </connections>

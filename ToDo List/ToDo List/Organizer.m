@@ -35,8 +35,8 @@
     
     if(self){
         self.lastDateOrganized = [[NSDate alloc] init];
-        self.taskList = [[NSMutableArray alloc] init];
         self.loader = [[Loader alloc] init];
+        self.taskList = [self.loader loadTasksFromDataBase];
         self.taskWizard = [[TaskWizard alloc] init:self.loader];
     }
     return self;
@@ -132,6 +132,50 @@
 -(void) saveEnviroment
 {
     [self.loader saveTasksStates];
+}
+
+-(NSArray*)getTodayTasks
+{
+    NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
+    for (Task *t in self.taskList) {
+        if ([t.conclusionDate compare:[NSDate date]]==NSOrderedSame) {
+            [auxiliaryArray addObject:t];
+        }
+    }
+    return auxiliaryArray;
+}
+
+-(NSArray*)getTomorrowTasks
+{
+    NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
+    for (Task *t in self.taskList) {
+        if ([t.conclusionDate compare:[NSDate dateWithTimeInterval:24*3600 sinceDate:[NSDate date]]]==NSOrderedSame) {
+            [auxiliaryArray addObject:t];
+        }
+    }
+    return auxiliaryArray;
+}
+
+-(NSArray*)getAfterTomorrowTasks
+{
+    NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
+    for (Task *t in self.taskList) {
+        if ([t.conclusionDate compare:[NSDate dateWithTimeInterval:2*24*3600 sinceDate:[NSDate date]]]==NSOrderedSame) {
+            [auxiliaryArray addObject:t];
+        }
+    }
+    return auxiliaryArray;
+}
+
+-(NSArray*)getLaterTasks
+{
+    NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
+    for (Task *t in self.taskList) {
+        if ([t.conclusionDate compare:[NSDate dateWithTimeInterval:2*24*3600 sinceDate:[NSDate date]]]==NSOrderedDescending) {
+            [auxiliaryArray addObject:t];
+        }
+    }
+    return auxiliaryArray;
 }
 
 

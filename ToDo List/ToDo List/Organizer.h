@@ -37,4 +37,12 @@
 
 -(Task *)getTask:(NSManagedObjectID *)identification;
 
+-(NSArray*)getTodayTasks;
+
+-(NSArray*)getTomorrowTasks;
+
+-(NSArray*)getAfterTomorrowTasks;
+
+-(NSArray*)getLaterTasks;
+
 @end
