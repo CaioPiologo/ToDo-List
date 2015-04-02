@@ -126,12 +126,22 @@
     }
     
     if (indexPath.section==0) {
-        Task *theCellData = [[self.organizer getListByDate] objectAtIndex:indexPath.row];
+        Task *theCellData = [[self.organizer getTodayTasks] objectAtIndex:indexPath.row];
+        NSString *cellValue =theCellData.name ;
+        cell.textLabel.text = cellValue;
+    }
+    else if (indexPath.section==1) {
+        Task *theCellData = [[self.organizer getTomorrowTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
     }
-    else {
-        Task *theCellData = [[self.organizer getListByDate] objectAtIndex:indexPath.row];
+    else if (indexPath.section==2) {
+        Task *theCellData = [[self.organizer getAfterTomorrowTasks] objectAtIndex:indexPath.row];
+        NSString *cellValue =theCellData.name;
+        cell.textLabel.text = cellValue;
+    }
+    else if(indexPath.section==3){
+        Task *theCellData = [[self.organizer getLaterTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
     }
