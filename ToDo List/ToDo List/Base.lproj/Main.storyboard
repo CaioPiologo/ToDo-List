@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tasks By Priority-->
@@ -13,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="pe9-q8-jFW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="T7A-gc-95F">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ihN-dt-4iR">
@@ -28,9 +29,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="687"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="eX8-Ko-hRQ"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="4Pq-ac-1wo"/>
@@ -39,20 +37,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ihN-dt-4iR" firstAttribute="leading" secondItem="T7A-gc-95F" secondAttribute="leading" id="1cA-Av-30F"/>
-                            <constraint firstItem="pe9-q8-jFW" firstAttribute="top" secondItem="ihN-dt-4iR" secondAttribute="bottom" id="F58-kj-NuB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ihN-dt-4iR" secondAttribute="trailing" id="bbG-Zc-zEn"/>
-                            <constraint firstItem="ihN-dt-4iR" firstAttribute="top" secondItem="LcB-Yk-Thc" secondAttribute="bottom" id="geW-HQ-mll"/>
+                            <constraint firstItem="ihN-dt-4iR" firstAttribute="top" secondItem="LcB-Yk-Thc" secondAttribute="bottom" id="JX5-Gl-o2w"/>
+                            <constraint firstItem="ihN-dt-4iR" firstAttribute="leading" secondItem="T7A-gc-95F" secondAttribute="leadingMargin" id="PNR-df-krq">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-16"/>
+                            </constraint>
+                            <constraint firstItem="pe9-q8-jFW" firstAttribute="top" secondItem="ihN-dt-4iR" secondAttribute="bottom" id="Xoi-Dt-yhm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ihN-dt-4iR" secondAttribute="trailing" id="qhG-tc-byZ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-16"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ihN-dt-4iR"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1cA-Av-30F"/>
-                                <exclude reference="bbG-Zc-zEn"/>
-                                <exclude reference="geW-HQ-mll"/>
-                                <exclude reference="F58-kj-NuB"/>
+                                <exclude reference="JX5-Gl-o2w"/>
+                                <exclude reference="PNR-df-krq"/>
+                                <exclude reference="qhG-tc-byZ"/>
+                                <exclude reference="Xoi-Dt-yhm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -60,15 +62,15 @@
                                 <include reference="ihN-dt-4iR"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1cA-Av-30F"/>
-                                <include reference="bbG-Zc-zEn"/>
-                                <include reference="geW-HQ-mll"/>
-                                <include reference="F58-kj-NuB"/>
+                                <include reference="JX5-Gl-o2w"/>
+                                <include reference="PNR-df-krq"/>
+                                <include reference="qhG-tc-byZ"/>
+                                <include reference="Xoi-Dt-yhm"/>
                             </mask>
                         </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Tasks By Priority" id="bGY-Dh-7Am"/>
+                    <tabBarItem key="tabBarItem" title="Tasks By Priority" image="Todo List-26" id="bGY-Dh-7Am"/>
                     <connections>
                         <outlet property="tableView" destination="ihN-dt-4iR" id="U4y-R9-HWi"/>
                         <segue destination="rJa-0Y-uz6" kind="push" identifier="priorityToEdit" id="6Jt-Cq-X8J"/>
@@ -420,7 +422,7 @@
                         </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Tasks By Date" id="Qqs-MP-ycH"/>
+                    <tabBarItem key="tabBarItem" title="Tasks By Date" image="Today-25" id="Qqs-MP-ycH"/>
                     <connections>
                         <outlet property="tableView" destination="6Bb-CW-095" id="NJA-zQ-ZxV"/>
                         <segue destination="rJa-0Y-uz6" kind="push" identifier="dateToEdit" id="AQw-Aw-TPn"/>
@@ -759,7 +761,11 @@
             <point key="canvasLocation" x="1566" y="248.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Today-25" width="25" height="25"/>
+        <image name="Todo List-26" width="26" height="26"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AQw-Aw-TPn"/>
+        <segue reference="6Jt-Cq-X8J"/>
     </inferredMetricsTieBreakers>
 </document>

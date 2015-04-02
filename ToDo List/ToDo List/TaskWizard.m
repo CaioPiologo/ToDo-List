@@ -12,6 +12,7 @@
 
 @interface TaskWizard()
 @property (nonatomic) Loader *loader;
+@property (nonatomic) NSString *name;
 @end
 @implementation TaskWizard
 
