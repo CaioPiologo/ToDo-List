@@ -29,8 +29,11 @@
 
 -(UILocalNotification*) getNotification
 {
-    UILocalNotification *notification=[NSKeyedUnarchiver unarchiveObjectWithData:self.notification];
-    return notification;
+    if (self.notification != nil) {
+        UILocalNotification *notification=[NSKeyedUnarchiver unarchiveObjectWithData:self.notification];
+        return notification;
+    }
+    return nil;
 }
 
 -(void) setNewNotification:(UILocalNotification*)notification

@@ -68,24 +68,24 @@
         [self.warningDateMessage setHidden:NO];
     
     }else{
-        if(self.switchInitial.isEnabled && self.switchConclusion.isEnabled){
+        if(self.switchInitial.isOn && self.switchConclusion.isOn){
             [self.organizer.taskWizard giveInitialDate:[NSDate dateWithTimeIntervalSince1970:0]];
             [self.organizer.taskWizard giveConclusionDate:[NSDate dateWithTimeIntervalSince1970:0]];
             
         }else{
-            if(self.switchInitial.isEnabled){
+            if(self.switchInitial.isOn){
                 [self.organizer.taskWizard giveInitialDate:nil];
         
             }else{
                 [self.organizer.taskWizard giveInitialDate: [self.initialDate.date copy]];
             }
-            if(self.switchConclusion.isEnabled){
+            if(self.switchConclusion.isOn){
                 [self.organizer.taskWizard giveConclusionDate:nil];
             }else{
                 [self.organizer.taskWizard giveConclusionDate:[self.conclusionDate.date copy]];
             }
         }
-        
+        [self.warningDateMessage setHidden:YES];
         [self performSegueWithIdentifier:@"toGetParam" sender:self];
         
     }

@@ -27,12 +27,24 @@
     _organizer = [Organizer getInstace];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor colorWithRed:44/250.0 green:62/255.0 blue:80/250.0 alpha:1];
-    data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
+    data = [[NSMutableArray alloc] init];
+    [data addObjectsFromArray:[self.organizer getTodayTasks]];
+    [data addObjectsFromArray:[self.organizer getTomorrowTasks]];
+    [data addObjectsFromArray:[self.organizer getAfterTomorrowTasks]];
+    [data addObjectsFromArray:[self.organizer getLaterTasks]];
+    [self.organizer updateTasksByPriority];
+    [self.tableView reloadData];
+
 }
 
 -(void) viewWillAppear:(BOOL)animated{
     self.organizer = [Organizer getInstace];
-    data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
+    [self.organizer updateTasksByPriority];
+    data = [[NSMutableArray alloc] init];
+    [data addObjectsFromArray:[self.organizer getTodayTasks]];
+    [data addObjectsFromArray:[self.organizer getTomorrowTasks]];
+    [data addObjectsFromArray:[self.organizer getAfterTomorrowTasks]];
+    [data addObjectsFromArray:[self.organizer getLaterTasks]];
     [self.tableView reloadData];
 }
 
@@ -115,17 +127,17 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    if (indexPath.section==0&& [self.organizer getTodayTasks]!= nil) {
+    if (indexPath.section==0) {
         Task *theCellData = [[self.organizer getTodayTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name ;
         cell.textLabel.text = cellValue;
     }
-    else if (indexPath.section==1&& [self.organizer getTomorrowTasks]!= nil) {
+    else if (indexPath.section==1) {
         Task *theCellData = [[self.organizer getTomorrowTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
     }
-    else if (indexPath.section==2 && [self.organizer getAfterTomorrowTasks]!= nil) {
+    else if (indexPath.section==2 ) {
         Task *theCellData = [[self.organizer getAfterTomorrowTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
@@ -143,16 +155,15 @@
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    int index = 0;
-    
+    int index=0;
     for(int i = 0; i < indexPath.section; i++){
         index = index + (int)[self.tableView numberOfRowsInSection:i];
     }
     
     index = index + (int)indexPath.row;
     
-    [_organizer removeTask:[[data objectAtIndex:index] objectID]];
-    self.data = [self.organizer updateTasksByDate];
+    Task *task = [data objectAtIndex: index];
+    [_organizer removeTask:[task objectID]];
     [self.tableView reloadData];
     return UITableViewCellEditingStyleDelete;
 }

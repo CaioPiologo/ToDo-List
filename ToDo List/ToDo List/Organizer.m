@@ -124,7 +124,9 @@
 -(void) removeTask:(NSManagedObjectID *) identification{
     Task *taskToBeRemoved = [self getTask:identification];
     if([taskToBeRemoved.urgent isEqual:@0])
-    [[UIApplication sharedApplication] cancelLocalNotification:[taskToBeRemoved getNotification]];
+        if ([taskToBeRemoved getNotification]!=nil) {
+            [[UIApplication sharedApplication] cancelLocalNotification:[taskToBeRemoved getNotification]];
+        }
     [_taskList removeObject:taskToBeRemoved];
     [self.loader deleteTask:taskToBeRemoved];
     [self saveEnviroment];
@@ -151,7 +153,7 @@
         comp1 = [calendar components:unitFlags fromDate:t.conclusionDate];
         comp2 = [calendar components:unitFlags fromDate:[NSDate date]];
 
-        if ([comp1 day]   == [comp2 day] && [comp1 month] == [comp2 month] && [comp1 year]  == [comp2 year])
+        if ([comp1 day]   <= [comp2 day] && [comp1 month] <= [comp2 month] && [comp1 year]  <= [comp2 year])
         {
 //            NSString *nome = t.name;
             [auxiliaryArray addObject:t];
@@ -202,6 +204,7 @@
             [auxiliaryArray addObject:t];
         }
     }
+    auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
     return auxiliaryArray;
 }
 
@@ -228,6 +231,25 @@
             [auxiliaryArray addObject:t];
         }
     }
+    auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
+    return auxiliaryArray;
+}
+
+-(NSArray*)getPendingTasks
+{
+    NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    
+    unsigned unitFlags = NSCalendarUnitDay | NSCalendarUnitMonth |  NSCalendarUnitYear;
+    NSDateComponents* comp1;
+    NSDateComponents* comp2;
+    
+    for (Task *t in self.taskList) {
+            [auxiliaryArray addObject:t];
+        
+    }
+    
+    auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
     return auxiliaryArray;
 }
 
