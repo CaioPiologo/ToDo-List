@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--To Do List-->
+        <!--By Priority-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -26,18 +26,7 @@
                             <outlet property="delegate" destination="vXZ-lx-hvc" id="3Yz-F8-bHF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="To Do List" id="WRs-fO-wHs">
-                        <barButtonItem key="leftBarButtonItem" title="To Date" id="l69-sS-4Xh">
-                            <connections>
-                                <segue destination="d6l-lt-4bI" kind="push" id="mGX-jp-KWH"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ptK-9v-DB8">
-                            <connections>
-                                <segue destination="nVW-4Y-Gls" kind="push" id="UNd-8b-bk1"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="By Priority" id="bGY-Dh-7Am"/>
                     <connections>
                         <outlet property="tableView" destination="EKV-JR-uAx" id="p7E-cI-1fd"/>
                         <segue destination="rJa-0Y-uz6" kind="push" identifier="priorityToEdit" id="6Jt-Cq-X8J"/>
@@ -45,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312.5" y="288.75"/>
+            <point key="canvasLocation" x="2925" y="504.75"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="eh5-mw-LQb">
@@ -243,9 +232,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9R-Gl-QMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312.5" y="-568.5"/>
+            <point key="canvasLocation" x="4282.5" y="175.5"/>
         </scene>
-        <!--To Do List-->
+        <!--By Date-->
         <scene sceneID="tN1-kn-9px">
             <objects>
                 <viewController autoresizesArchivedViewToFullSize="NO" id="d6l-lt-4bI" customClass="ListByDateViewController" sceneMemberID="viewController">
@@ -268,6 +257,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="736"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="d6l-lt-4bI" id="sIc-TI-iT4"/>
                                     <outlet property="delegate" destination="d6l-lt-4bI" id="8VF-0d-CCO"/>
@@ -305,18 +297,7 @@
                         </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="To Do List" id="kBQ-xP-UXS">
-                        <barButtonItem key="leftBarButtonItem" title="To Priorirty" id="mD6-dd-t1a">
-                            <connections>
-                                <action selector="backToPriority:" destination="d6l-lt-4bI" id="fQM-vg-dcd"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PX9-72-EQp">
-                            <connections>
-                                <segue destination="nVW-4Y-Gls" kind="push" id="UM6-yD-pFh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="By Date" id="Qqs-MP-ycH"/>
                     <connections>
                         <outlet property="tableView" destination="6Bb-CW-095" id="jrx-RL-qMU"/>
                         <segue destination="rJa-0Y-uz6" kind="push" identifier="dateToEdit" id="AQw-Aw-TPn"/>
@@ -324,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WQ-Wh-b5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2280" y="288.75"/>
+            <point key="canvasLocation" x="2925" y="-269.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Z4x-Rb-Kwi">
@@ -337,12 +318,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="jKN-QF-0RS"/>
+                        <segue destination="c7d-p2-diL" kind="relationship" relationship="rootViewController" id="aQr-dY-DPt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDs-OT-meg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="447" y="288.75"/>
+            <point key="canvasLocation" x="708" y="248.25"/>
         </scene>
         <!--AddTask-->
         <scene sceneID="9JR-0v-Plt">
@@ -421,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ilc-Ya-g7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="1459"/>
+            <point key="canvasLocation" x="2712" y="1413.75"/>
         </scene>
         <!--AddTask2-->
         <scene sceneID="sM5-uF-vwg">
@@ -529,7 +510,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fK2-jn-fFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <barButtonItem title="Item" id="hOY-kK-JHV"/>
             </objects>
-            <point key="canvasLocation" x="2931" y="1458.75"/>
+            <point key="canvasLocation" x="3504" y="1413.75"/>
         </scene>
         <!--AddTask3-->
         <scene sceneID="Z2f-te-KJN">
@@ -629,11 +610,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usk-QI-5Rv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3814.5" y="1463.25"/>
+            <point key="canvasLocation" x="4387.5" y="1418.25"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="U64-ug-3SQ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="c7d-p2-diL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="cfE-dc-ihQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ptK-9v-DB8">
+                            <connections>
+                                <segue destination="nVW-4Y-Gls" kind="push" id="UNd-8b-bk1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Esp-co-oBj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="0bf-lm-42f"/>
+                        <segue destination="d6l-lt-4bI" kind="relationship" relationship="viewControllers" id="GhI-En-5UD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="62H-5N-teu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566" y="248.25"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AQw-Aw-TPn"/>
-        <segue reference="UM6-yD-pFh"/>
+        <segue reference="6Jt-Cq-X8J"/>
     </inferredMetricsTieBreakers>
 </document>
