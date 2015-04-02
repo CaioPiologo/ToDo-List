@@ -31,7 +31,7 @@
 
 -(void) viewWillAppear:(BOOL)animated{
     self.organizer = [Organizer getInstace];
-    self.data = [self.organizer updateTasksByDate];
+    data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
     [self.tableView reloadData];
 }
 
@@ -43,7 +43,15 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    Task *task = [data objectAtIndex:indexPath.row];
+    int index = 0;
+    
+    for(int i = 0; i < indexPath.section; i++){
+        index = index + (int)[self.tableView numberOfRowsInSection:i];
+    }
+    
+    index = index + (int)indexPath.row;
+    
+    Task *task = [data objectAtIndex:index];
     
     [self.organizer.taskWizard beginWithTask:task];
     
