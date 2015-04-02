@@ -97,7 +97,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="45" y="228" width="311" height="30"/>
+                                    <rect key="frame" x="37" y="229" width="311" height="30"/>
                                 </variation>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You must enter a name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nu-eS-Rwv">
@@ -106,7 +106,7 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="300" width="177" height="21"/>
+                                    <rect key="frame" x="104" y="302" width="177" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rename your task, lazy human!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0E-kQ-W7T">
@@ -115,7 +115,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="62" y="177" width="276" height="24"/>
+                                    <rect key="frame" x="54" y="177" width="276" height="24"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -173,15 +173,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When should you have started the task?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm5-jw-cjQ">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="41" y="84" width="309" height="21"/>
-                                </variation>
-                            </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="i5d-jR-wks">
                                 <rect key="frame" x="-160" y="-81" width="320" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="449604372.08976603">
@@ -191,7 +182,7 @@
                                     <!--2037-12-31 11:00:00 +0000-->
                                 </date>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="25" y="113" width="350" height="162"/>
+                                    <rect key="frame" x="7" y="113" width="350" height="162"/>
                                 </variation>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conclusion Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-DP-hG1">
@@ -200,7 +191,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="137" y="345" width="127" height="21"/>
+                                    <rect key="frame" x="130" y="345" width="127" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I dont't want to choose a initial date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3G-Sg-3PK">
@@ -221,7 +212,7 @@
                                     <!--2037-12-31 11:00:00 +0000-->
                                 </date>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="25" y="374" width="350" height="162"/>
+                                    <rect key="frame" x="7" y="374" width="350" height="162"/>
                                 </variation>
                             </datePicker>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial date can't occur before conclusion date." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGa-Ri-Ncf">
@@ -230,7 +221,7 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="25" y="595" width="355" height="21"/>
+                                    <rect key="frame" x="16" y="609" width="355" height="21"/>
                                 </variation>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AdR-eh-DnQ">
@@ -262,11 +253,19 @@
                                     <action selector="switchInitialClicked:" destination="BMm-9O-VaX" eventType="valueChanged" id="gN3-qR-azp"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When should you have started the task?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm5-jw-cjQ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="84" width="309" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Jm5-jw-cjQ"/>
                                 <exclude reference="i5d-jR-wks"/>
                                 <exclude reference="7Zf-DP-hG1"/>
                                 <exclude reference="x3G-Sg-3PK"/>
@@ -275,11 +274,11 @@
                                 <exclude reference="AdR-eh-DnQ"/>
                                 <exclude reference="zh5-eo-9aG"/>
                                 <exclude reference="UGd-WJ-Lel"/>
+                                <exclude reference="Jm5-jw-cjQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Jm5-jw-cjQ"/>
                                 <include reference="i5d-jR-wks"/>
                                 <include reference="7Zf-DP-hG1"/>
                                 <include reference="x3G-Sg-3PK"/>
@@ -288,6 +287,7 @@
                                 <include reference="AdR-eh-DnQ"/>
                                 <include reference="zh5-eo-9aG"/>
                                 <include reference="UGd-WJ-Lel"/>
+                                <include reference="Jm5-jw-cjQ"/>
                             </mask>
                         </variation>
                     </view>
@@ -338,13 +338,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="296" y="150" width="98" height="21"/>
+                                    <rect key="frame" x="257" y="150" width="98" height="21"/>
                                 </variation>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="LbY-Mq-Muh">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="73" y="177" width="259" height="31"/>
+                                    <rect key="frame" x="58" y="179" width="259" height="31"/>
                                 </variation>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So Boring..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fa-mR-zRv">
@@ -359,25 +359,16 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="abJ-R8-kZn">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="73" y="369" width="259" height="31"/>
+                                    <rect key="frame" x="58" y="368" width="259" height="31"/>
                                 </variation>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Choose difficulty:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpW-hJ-aAs">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="126" y="98" width="177" height="23"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Choose its fun:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOt-MP-BRM">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="132" y="291" width="158" height="23"/>
+                                    <rect key="frame" x="108" y="288" width="158" height="23"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Much Fun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzw-E6-lKU">
@@ -386,7 +377,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="307" y="339" width="77" height="21"/>
+                                    <rect key="frame" x="268" y="340" width="77" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Choose difficulty:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpW-hJ-aAs">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="99" y="97" width="177" height="23"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -398,9 +398,9 @@
                                 <exclude reference="LbY-Mq-Muh"/>
                                 <exclude reference="1Fa-mR-zRv"/>
                                 <exclude reference="abJ-R8-kZn"/>
-                                <exclude reference="MpW-hJ-aAs"/>
                                 <exclude reference="nOt-MP-BRM"/>
                                 <exclude reference="Gzw-E6-lKU"/>
+                                <exclude reference="MpW-hJ-aAs"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -410,9 +410,9 @@
                                 <include reference="LbY-Mq-Muh"/>
                                 <include reference="1Fa-mR-zRv"/>
                                 <include reference="abJ-R8-kZn"/>
-                                <include reference="MpW-hJ-aAs"/>
                                 <include reference="nOt-MP-BRM"/>
                                 <include reference="Gzw-E6-lKU"/>
+                                <include reference="MpW-hJ-aAs"/>
                             </mask>
                         </variation>
                     </view>
@@ -537,25 +537,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="256" width="368" height="30"/>
+                                    <rect key="frame" x="27" y="258" width="323" height="30"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name your new task, lazy human!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4L-aU-UdP">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="67" y="194" width="317" height="24"/>
-                                </variation>
-                            </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You must enter a name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMb-6i-5yR">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="326" width="177" height="21"/>
+                                    <rect key="frame" x="100" y="320" width="177" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name your new task, lazy human!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4L-aU-UdP">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="42" y="205" width="317" height="24"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -563,15 +563,15 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="q5a-94-iDZ"/>
-                                <exclude reference="t4L-aU-UdP"/>
                                 <exclude reference="eMb-6i-5yR"/>
+                                <exclude reference="t4L-aU-UdP"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="q5a-94-iDZ"/>
-                                <include reference="t4L-aU-UdP"/>
                                 <include reference="eMb-6i-5yR"/>
+                                <include reference="t4L-aU-UdP"/>
                             </mask>
                         </variation>
                     </view>
@@ -611,22 +611,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a date for begining" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upH-fL-G9j">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="109" y="80" width="182" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a date for conclusion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5I-ov-caW">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="109" y="344" width="199" height="21"/>
+                                    <rect key="frame" x="101" y="318" width="199" height="21"/>
                                 </variation>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zbE-eI-6Lq">
@@ -638,7 +629,7 @@
                                     <!--2037-12-31 11:00:00 +0000-->
                                 </date>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="101" width="400" height="162"/>
+                                    <rect key="frame" x="-9" y="101" width="400" height="162"/>
                                 </variation>
                             </datePicker>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9ez-rx-zd3">
@@ -650,13 +641,13 @@
                                     <!--2037-12-31 11:00:00 +0000-->
                                 </date>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="334" width="400" height="162"/>
+                                    <rect key="frame" x="-9" y="347" width="400" height="162"/>
                                 </variation>
                             </datePicker>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sSg-Tw-aNL">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="538" width="51" height="31"/>
+                                    <rect key="frame" x="16" y="527" width="51" height="31"/>
                                 </variation>
                                 <connections>
                                     <action selector="switchConclusionClicked:" destination="HGT-fb-m1e" eventType="valueChanged" id="gFl-jO-kMQ"/>
@@ -671,15 +662,6 @@
                                     <rect key="frame" x="73" y="276" width="275" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I dont't want to choose a conclusion date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIW-lE-e0O">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="73" y="543" width="318" height="21"/>
-                                </variation>
-                            </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1C8-ha-AOV">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -691,20 +673,29 @@
                             </switch>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial date can't occur before conclusion date." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcP-RX-POh">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="54" y="79" width="309" height="21"/>
+                                    <rect key="frame" x="32" y="594" width="368" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When should it be finished?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTe-C4-PhQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I dont't want to choose a conclusion date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIW-lE-e0O">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="23" y="577" width="355" height="21"/>
+                                    <rect key="frame" x="73" y="532" width="318" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a date for begining" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upH-fL-G9j">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="100" y="80" width="182" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -715,9 +706,9 @@
                                 <exclude reference="9ez-rx-zd3"/>
                                 <exclude reference="sSg-Tw-aNL"/>
                                 <exclude reference="t7t-II-vrK"/>
-                                <exclude reference="kIW-lE-e0O"/>
                                 <exclude reference="1C8-ha-AOV"/>
                                 <exclude reference="OcP-RX-POh"/>
+                                <exclude reference="kIW-lE-e0O"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -726,9 +717,9 @@
                                 <include reference="9ez-rx-zd3"/>
                                 <include reference="sSg-Tw-aNL"/>
                                 <include reference="t7t-II-vrK"/>
-                                <include reference="kIW-lE-e0O"/>
                                 <include reference="1C8-ha-AOV"/>
                                 <include reference="OcP-RX-POh"/>
+                                <include reference="kIW-lE-e0O"/>
                             </mask>
                         </variation>
                     </view>
@@ -770,7 +761,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="c0Z-ng-8Ch">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="56" y="421" width="290" height="31"/>
+                                    <rect key="frame" x="67" y="421" width="247" height="31"/>
                                 </variation>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Piece of cake" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeZ-E6-ZOn">
@@ -788,7 +779,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="294" y="193" width="98" height="21"/>
+                                    <rect key="frame" x="261" y="193" width="98" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So boring..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXE-Pg-oWh">
@@ -806,22 +797,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="311" y="392" width="73" height="21"/>
+                                    <rect key="frame" x="286" y="392" width="73" height="21"/>
                                 </variation>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qIt-sc-rb4">
-                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="56" y="222" width="290" height="31"/>
-                                </variation>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose difficulty:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhG-GP-5zY">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="132" y="137" width="138" height="23"/>
+                                    <rect key="frame" x="120" y="137" width="160" height="23"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose its fun:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wn-cb-Jck">
@@ -830,9 +815,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="362" width="121" height="23"/>
+                                    <rect key="frame" x="132" y="362" width="139" height="23"/>
                                 </variation>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qIt-sc-rb4">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="222" width="247" height="31"/>
+                                </variation>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -842,9 +833,9 @@
                                 <exclude reference="oAl-Fu-HQZ"/>
                                 <exclude reference="HXE-Pg-oWh"/>
                                 <exclude reference="cNR-cg-4LU"/>
-                                <exclude reference="qIt-sc-rb4"/>
                                 <exclude reference="yhG-GP-5zY"/>
                                 <exclude reference="2Wn-cb-Jck"/>
+                                <exclude reference="qIt-sc-rb4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -854,9 +845,9 @@
                                 <include reference="oAl-Fu-HQZ"/>
                                 <include reference="HXE-Pg-oWh"/>
                                 <include reference="cNR-cg-4LU"/>
-                                <include reference="qIt-sc-rb4"/>
                                 <include reference="yhG-GP-5zY"/>
                                 <include reference="2Wn-cb-Jck"/>
+                                <include reference="qIt-sc-rb4"/>
                             </mask>
                         </variation>
                     </view>
