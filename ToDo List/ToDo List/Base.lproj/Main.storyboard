@@ -7,34 +7,76 @@
         <!--Tasks By Priority-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EKV-JR-uAx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <viewController autoresizesArchivedViewToFullSize="NO" id="vXZ-lx-hvc" customClass="ListByPriorityViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LcB-Yk-Thc"/>
+                        <viewControllerLayoutGuide type="bottom" id="pe9-q8-jFW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T7A-gc-95F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PriorityCell" id="XHk-Dk-fCi">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XHk-Dk-fCi" id="Ebu-t7-xF0">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="vXZ-lx-hvc" id="yIS-jm-RYq"/>
-                            <outlet property="delegate" destination="vXZ-lx-hvc" id="3Yz-F8-bHF"/>
-                        </connections>
-                    </tableView>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ihN-dt-4iR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PriorityCell" id="RYd-7h-pec">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RYd-7h-pec" id="lmZ-Mc-aNQ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="687"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="eX8-Ko-hRQ"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="4Pq-ac-1wo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ihN-dt-4iR" firstAttribute="leading" secondItem="T7A-gc-95F" secondAttribute="leading" id="1cA-Av-30F"/>
+                            <constraint firstItem="pe9-q8-jFW" firstAttribute="top" secondItem="ihN-dt-4iR" secondAttribute="bottom" id="F58-kj-NuB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ihN-dt-4iR" secondAttribute="trailing" id="bbG-Zc-zEn"/>
+                            <constraint firstItem="ihN-dt-4iR" firstAttribute="top" secondItem="LcB-Yk-Thc" secondAttribute="bottom" id="geW-HQ-mll"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ihN-dt-4iR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1cA-Av-30F"/>
+                                <exclude reference="bbG-Zc-zEn"/>
+                                <exclude reference="geW-HQ-mll"/>
+                                <exclude reference="F58-kj-NuB"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ihN-dt-4iR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1cA-Av-30F"/>
+                                <include reference="bbG-Zc-zEn"/>
+                                <include reference="geW-HQ-mll"/>
+                                <include reference="F58-kj-NuB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Tasks By Priority" id="bGY-Dh-7Am"/>
                     <connections>
-                        <outlet property="tableView" destination="EKV-JR-uAx" id="p7E-cI-1fd"/>
+                        <outlet property="tableView" destination="ihN-dt-4iR" id="U4y-R9-HWi"/>
                         <segue destination="rJa-0Y-uz6" kind="push" identifier="priorityToEdit" id="6Jt-Cq-X8J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2925" y="504.75"/>
+            <point key="canvasLocation" x="2925" y="507"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="eh5-mw-LQb">
@@ -520,9 +562,6 @@
                                 <date key="date" timeIntervalSinceReferenceDate="449601968.52402103">
                                     <!--2015-04-01 17:26:08 +0000-->
                                 </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
-                                    <!--1970-01-01 11:00:00 +0000-->
-                                </date>
                                 <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
                                     <!--2037-12-31 11:00:00 +0000-->
                                 </date>
@@ -693,12 +732,12 @@
             </objects>
             <point key="canvasLocation" x="4387.5" y="1418.25"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Frobenious ToDo-->
         <scene sceneID="U64-ug-3SQ">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="c7d-p2-diL" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="cfE-dc-ihQ">
+                    <navigationItem key="navigationItem" title="Frobenious ToDo" id="cfE-dc-ihQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ptK-9v-DB8">
                             <connections>
                                 <segue destination="nVW-4Y-Gls" kind="push" id="UNd-8b-bk1"/>
@@ -711,8 +750,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="0bf-lm-42f"/>
                         <segue destination="d6l-lt-4bI" kind="relationship" relationship="viewControllers" id="GhI-En-5UD"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="Gvn-my-eCt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62H-5N-teu" userLabel="First Responder" sceneMemberID="firstResponder"/>

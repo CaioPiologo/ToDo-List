@@ -6,20 +6,20 @@
 //  Copyright (c) 2015 Ricardo Z Charf. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ListByPriorityViewController.h"
 #import "Loader.h"
 #import "Task.h"
 #import "Foundation/Foundation.h"
 #import "Organizer.h"
 #import "TaskWizard.h"
 
-@interface ViewController ()
+@interface ListByPriorityViewController ()
 
 @property (nonatomic) Organizer *organizer;
 
 @end
 
-@implementation ViewController
+@implementation ListByPriorityViewController
 
 @synthesize data;
 
@@ -27,15 +27,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // Do any additional setup after loading the view, typically from a nib.
     
     self.organizer = [Organizer getInstace];
-    self.data = [self.organizer updateTasksByDate];
+    self.data = [self.organizer updateTasksByPriority];
+    
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     self.organizer = [Organizer getInstace];
-    self.data = [self.organizer updateTasksByDate];
+    self.data = [self.organizer updateTasksByPriority];
     [self.tableView reloadData];
 }
 

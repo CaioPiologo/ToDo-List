@@ -25,7 +25,7 @@
 {
     [super viewDidLoad];
     _organizer = [Organizer getInstace];
-    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
 }
 
