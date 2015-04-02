@@ -63,18 +63,27 @@
 - (IBAction)nextButton: (id)sender
 {
     if((![self.initialDate isHidden])&&(![self.conclusionDate isHidden])&&([self.initialDate.date compare: self.conclusionDate.date] == NSOrderedDescending)){
+        
         self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeInterval:0 sinceDate:self.initialDate.date];
         [self.warningDateMessage setHidden:NO];
+    
     }else{
-        if(self.switchInitial.isEnabled){
-            [self.organizer.taskWizard giveInitialDate:nil];
+        if(self.switchInitial.isEnabled && self.switchConclusion.isEnabled){
+            [self.organizer.taskWizard giveInitialDate:[NSDate dateWithTimeIntervalSince1970:0]];
+            [self.organizer.taskWizard giveConclusionDate:[NSDate dateWithTimeIntervalSince1970:0]];
+            
         }else{
-            [self.organizer.taskWizard giveInitialDate: [self.initialDate.date copy]];
-        }
-        if(self.switchConclusion.isEnabled){
-            [self.organizer.taskWizard giveConclusionDate:nil];
-        }else{
-            [self.organizer.taskWizard giveConclusionDate:[self.conclusionDate.date copy]];
+            if(self.switchInitial.isEnabled){
+                [self.organizer.taskWizard giveInitialDate:nil];
+        
+            }else{
+                [self.organizer.taskWizard giveInitialDate: [self.initialDate.date copy]];
+            }
+            if(self.switchConclusion.isEnabled){
+                [self.organizer.taskWizard giveConclusionDate:nil];
+            }else{
+                [self.organizer.taskWizard giveConclusionDate:[self.conclusionDate.date copy]];
+            }
         }
         
         [self performSegueWithIdentifier:@"toGetParam" sender:self];
