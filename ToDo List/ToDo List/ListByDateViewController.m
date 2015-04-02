@@ -166,8 +166,6 @@
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     int index = 0;
     
-    int index = 0;
-    
     for(int i = 0; i < indexPath.section; i++){
         index = index + (int)[self.tableView numberOfRowsInSection:i];
     }
