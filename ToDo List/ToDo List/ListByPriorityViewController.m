@@ -73,7 +73,6 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //check if your cell is pressed
-    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     Task *task = [data objectAtIndex:indexPath.row];
     
     [self.organizer.taskWizard beginWithTask:task];
@@ -85,7 +84,7 @@
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [_organizer removeTask:[[data objectAtIndex:indexPath.row] objectID]];
-    NSLog(@"%@", [[data objectAtIndex:indexPath.row] name]);
+    self.data = [self.organizer updateTasksByPriority];
     [self.tableView reloadData];
     return UITableViewCellEditingStyleDelete;
 }
