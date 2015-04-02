@@ -31,7 +31,7 @@
 
 -(void) viewWillAppear:(BOOL)animated{
     self.organizer = [Organizer getInstace];
-    self.data = [self.organizer updateTasksByDate];
+    data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByDate]];
     [self.tableView reloadData];
 }
 
