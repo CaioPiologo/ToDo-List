@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--By Priority-->
+        <!--Tasks By Priority-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                             <outlet property="delegate" destination="vXZ-lx-hvc" id="3Yz-F8-bHF"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="By Priority" id="bGY-Dh-7Am"/>
+                    <tabBarItem key="tabBarItem" title="Tasks By Priority" id="bGY-Dh-7Am"/>
                     <connections>
                         <outlet property="tableView" destination="EKV-JR-uAx" id="p7E-cI-1fd"/>
                         <segue destination="rJa-0Y-uz6" kind="push" identifier="priorityToEdit" id="6Jt-Cq-X8J"/>
@@ -316,7 +316,7 @@
             </objects>
             <point key="canvasLocation" x="6099" y="175.5"/>
         </scene>
-        <!--By Date-->
+        <!--Tasks By Date-->
         <scene sceneID="tN1-kn-9px">
             <objects>
                 <viewController id="d6l-lt-4bI" customClass="ListByDateViewController" sceneMemberID="viewController">
@@ -377,13 +377,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="By Date" id="Qqs-MP-ycH"/>
                     <connections>
-                        <outlet property="tableView" destination="6Bb-CW-095" id="jrx-RL-qMU"/>
+                        <outlet property="tableView" destination="6Bb-CW-095" id="NJA-zQ-ZxV"/>
                         <segue destination="rJa-0Y-uz6" kind="push" identifier="dateToEdit" id="AQw-Aw-TPn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WQ-Wh-b5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2925" y="-269.25"/>
+            <point key="canvasLocation" x="2925" y="-267"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Z4x-Rb-Kwi">

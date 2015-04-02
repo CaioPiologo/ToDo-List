@@ -8,6 +8,8 @@
 
 #import "TaskWizard.h"
 #import "Loader.h"
+#import "Task.h"
+
 @interface TaskWizard()
 @property (nonatomic) Loader *loader;
 @end
@@ -26,7 +28,9 @@
 /**
  Begins wizard by initializing the new task*/
 -(void) begin{
-    self.newtask = [self.loader createTaskWithName:nil withInitialDate:nil withConclusionDate:nil withDifficulty:nil withFun:nil isContinuous:nil withRepeatTime:nil isUrgent:@0];
+    
+    //self.newtask = [self.loader createTaskWithName:nil withInitialDate:nil withConclusionDate:nil withDifficulty:nil withFun:nil isContinuous:nil withRepeatTime:nil isUrgent:@0];
+    self.newtask = [self.loader newEmptyTask];
 }
 /**
  Begins wizard with a task (edit mode)
@@ -49,6 +53,7 @@
  */
 -(Task *) finish{
     //[self setNotification];
+    [self.loader addTaskObjectToContext:self.newtask];
     return self.newtask;
 }
 /**
