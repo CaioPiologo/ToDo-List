@@ -31,11 +31,6 @@
     
 }
 
--(void)viewDidUnload
-{
-    [self.organizer.taskWizard giveName: self.textField.text];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -46,6 +41,7 @@
     if([self.textField.text isEqualToString:@""]) {
         [self.warningMessage setHidden:NO];
     }else{
+        [self.organizer.taskWizard giveName: self.textField.text];
         [self performSegueWithIdentifier:@"toEditDate" sender:self];
     }
 }
