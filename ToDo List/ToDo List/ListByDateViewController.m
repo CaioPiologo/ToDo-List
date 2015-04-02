@@ -132,7 +132,15 @@
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [_organizer removeTask:[[data objectAtIndex:indexPath.row] objectID]];
+    int index = 0;
+    
+    for(int i = 0; i < indexPath.section; i++){
+        index = index + (int)[self.tableView numberOfRowsInSection:i];
+    }
+    
+    index = index + (int)indexPath.row;
+    
+    [_organizer removeTask:[[data objectAtIndex:index] objectID]];
     self.data = [self.organizer updateTasksByDate];
     [self.tableView reloadData];
     return UITableViewCellEditingStyleDelete;
@@ -145,7 +153,15 @@
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    Task *task = [data objectAtIndex: indexPath.row];
+    int index = 0;
+    
+    for(int i = 0; i < indexPath.section; i++){
+        index = index + (int)[self.tableView numberOfRowsInSection:i];
+    }
+    
+    index = index + (int)indexPath.row;
+    
+    Task *task = [data objectAtIndex: index];
     
     if([task.priority isEqualToNumber:@0])
         
