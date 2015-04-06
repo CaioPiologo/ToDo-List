@@ -37,4 +37,6 @@
 
 -(void) setNotification;
 
+-(void) createUrgentNotification;
+
 @end

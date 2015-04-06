@@ -33,7 +33,7 @@
     [data addObjectsFromArray:[self.organizer getAfterTomorrowTasks]];
     [data addObjectsFromArray:[self.organizer getLaterTasks]];
     [self.organizer updateTasksByPriority];
-    [self.tableView reloadData];
+    [self autoUpdate];
 
 }
 
@@ -46,11 +46,18 @@
     [data addObjectsFromArray:[self.organizer getAfterTomorrowTasks]];
     [data addObjectsFromArray:[self.organizer getLaterTasks]];
     [self.tableView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) autoUpdate{
+    [self.tableView reloadData];
+    [self.organizer updateTasksByPriority];
+    [self performSelector:@selector(autoUpdate) withObject:self afterDelay:10];
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -205,7 +212,13 @@
         Task *theCellData = [[self.organizer getTodayTasks] objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
-        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+        NSString *cellDetailValue = @"";
+        if ([theCellData.conclusionDate earlierDate:[NSDate date]]==theCellData.conclusionDate) {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Task not completed on %02ld/%@/%ld",comp.day,monthNameFromDate(comp.month),comp.year ];
+        }else
+        {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+        }
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
@@ -229,7 +242,13 @@
         Task *theCellData = [[self.organizer getTomorrowTasks] objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
-        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+        NSString *cellDetailValue = @"";
+        if ([theCellData.conclusionDate earlierDate:[NSDate date]]==theCellData.conclusionDate) {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Task not completed on %02ld/%@/%ld",comp.day,monthNameFromDate(comp.month),comp.year ];
+        }else
+        {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+        }
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
@@ -253,7 +272,13 @@
         Task *theCellData = [[self.organizer getAfterTomorrowTasks] objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
-        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+        NSString *cellDetailValue = @"";
+        if ([theCellData.conclusionDate earlierDate:[NSDate date]]==theCellData.conclusionDate) {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Task not completed on %02ld/%@/%ld",comp.day,monthNameFromDate(comp.month),comp.year ];
+        }else
+        {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+        }
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
@@ -280,7 +305,13 @@
         Task *theCellData = [array objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
-        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+        NSString *cellDetailValue = @"";
+        if ([theCellData.conclusionDate earlierDate:[NSDate date]]==theCellData.conclusionDate) {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Task not completed on %02ld/%@/%ld",comp.day,monthNameFromDate(comp.month),comp.year ];
+        }else
+        {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld, %02ld/%@/%ld", comp.hour, comp.minute,comp.day,monthNameFromDate(comp.month),comp.year ];
+        }
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
@@ -333,6 +364,7 @@
 {
     if ([[tableView cellForRowAtIndexPath:indexPath] tag] == -1)
     {
+        NSLog(@"%ld",[[tableView cellForRowAtIndexPath:indexPath] tag]);
         return NO;
     }
     return YES;

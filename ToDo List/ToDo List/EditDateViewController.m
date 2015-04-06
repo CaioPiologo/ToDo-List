@@ -81,7 +81,6 @@
                 [[UIApplication sharedApplication] cancelLocalNotification:[self.organizer.taskWizard.newtask getNotification]];
             if([self.organizer.taskWizard.newtask getUrgentNotification] != nil)
                 [[UIApplication sharedApplication] cancelLocalNotification:[self.organizer.taskWizard.newtask getUrgentNotification]];
-            [self.organizer.taskWizard setNotification];
         }
         
         [self performSegueWithIdentifier:@"toEditParam" sender:self];
