@@ -29,8 +29,6 @@
 /**
  Begins wizard by initializing the new task*/
 -(void) begin{
-    
-    //self.newtask = [self.loader createTaskWithName:nil withInitialDate:nil withConclusionDate:nil withDifficulty:nil withFun:nil isContinuous:nil withRepeatTime:nil isUrgent:@0];
     self.newtask = [self.loader newEmptyTask];
 }
 /**
@@ -53,7 +51,7 @@
  Finish creating task
  */
 -(Task *) finish{
-    //[self setNotification];
+    [self setNotification];
     [self.loader addTaskObjectToContext:self.newtask];
     return self.newtask;
 }
@@ -111,9 +109,9 @@
  */
 -(void) setNotification{
     UILocalNotification* not = [[UILocalNotification alloc] init];
-    not = [[UILocalNotification alloc] init];
     not.fireDate = self.newtask.conclusionDate;
-    not.alertBody = @"Forgot about me?";
+    not.alertBody = @"Forgot about me?\n";
+    not.alertBody = [not.alertBody stringByAppendingString:self.newtask.name];
     not.alertAction = @"Hell no";
     not.timeZone = [NSTimeZone defaultTimeZone];
     not.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
