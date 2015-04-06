@@ -64,6 +64,7 @@
     
     if ( [data count]==0) {
         cell.textLabel.text = @"There are no tasks.";
+        cell.textLabel.textColor = [UIColor whiteColor];
     }else{
         cell.textLabel.textColor = [UIColor blackColor];
         cell.textLabel.text = [[data objectAtIndex: indexPath.row] name];
@@ -117,7 +118,7 @@
     if([data count]==0)
     {
         cell.backgroundColor = [UIColor colorWithRed:44/255.0 green:62/255.0 blue:80/255.0 alpha:1];
-        cell.textLabel.textColor = [UIColor whiteColor];
+        //cell.textLabel.textColor = [UIColor whiteColor];
         return;
     }
     Task *task = [data objectAtIndex: indexPath.row];

@@ -26,7 +26,7 @@
 @dynamic urgentNotification;
 
 
-#pragma mark notifiction Get and Set
+#pragma mark notification Get and Set
 
 -(UILocalNotification*) getNotification
 {
@@ -70,13 +70,27 @@
     /*Algorithm calculates priority by days missing to conclusion date, with a difficulty percentage*/
     if([self.conclusionDate compare:[today dateByAddingTimeInterval:topPriority]]== NSOrderedAscending)
         self.priority = [[NSNumber alloc] initWithInt:3];
-    else if([self.conclusionDate compare:[today dateByAddingTimeInterval:highPriority]] == NSOrderedAscending)
+    else if([self.conclusionDate compare:[today dateByAddingTimeInterval:highPriority]] == NSOrderedAscending){
         self.priority = [[NSNumber alloc] initWithInt:2];
-    else if([self.conclusionDate compare:[today dateByAddingTimeInterval:midPriority]] == NSOrderedAscending)
+        [self createUrgentNotification:(topPriority-highPriority)];
+    } else if([self.conclusionDate compare:[today dateByAddingTimeInterval:midPriority]] == NSOrderedAscending)
         self.priority = [[NSNumber alloc] initWithInt:1];
     else
         self.priority = [[NSNumber alloc] initWithInt:0];
     
+}
+
+-(void) createUrgentNotification: (NSTimeInterval) timeFromToday{
+    UILocalNotification* not = [[UILocalNotification alloc] init];
+    not.fireDate = [NSDate dateWithTimeInterval:timeFromToday sinceDate:[NSDate date]];
+    not.alertBody = @"Forgot about me?\n";
+    not.alertBody = [not.alertBody stringByAppendingString:self.name];
+    not.alertAction = @"Hell no";
+    not.timeZone = [NSTimeZone defaultTimeZone];
+    not.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:not];
+    [self setNewUrgentNotification:not];
 }
 /**
  Representation of class in string format

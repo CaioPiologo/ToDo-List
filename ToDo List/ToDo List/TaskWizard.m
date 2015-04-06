@@ -110,9 +110,9 @@
 -(void) setNotification{
     UILocalNotification* not = [[UILocalNotification alloc] init];
     not.fireDate = self.newtask.conclusionDate;
-    not.alertBody = @"Forgot about me?\n";
+    not.alertBody = @"You forgot about me..\n";
     not.alertBody = [not.alertBody stringByAppendingString:self.newtask.name];
-    not.alertAction = @"Hell no";
+    not.alertAction = @"Damn, sorry";
     not.timeZone = [NSTimeZone defaultTimeZone];
     not.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     
