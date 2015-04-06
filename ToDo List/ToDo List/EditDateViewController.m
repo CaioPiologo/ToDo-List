@@ -68,12 +68,13 @@
         [self.warningDateMessage setHidden:NO];
     }else{
         
-        if(self.switchInitial.isEnabled){
+        if(self.switchInitial.isOn){
             [self.organizer.taskWizard giveInitialDate:nil];
         }else{
             [self.organizer.taskWizard giveInitialDate: [self.initialDate.date copy]];
         }
-        if(self.switchConclusion.isEnabled){
+        if(self.switchConclusion.isOn
+           ){
             [self.organizer.taskWizard giveConclusionDate:nil];
         }else{
             [self.organizer.taskWizard giveConclusionDate:[self.conclusionDate.date copy]];
