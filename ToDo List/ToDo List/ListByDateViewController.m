@@ -144,7 +144,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    unsigned unitFlags = NSCalendarUnitHour | NSCalendarUnitMinute;
+    unsigned unitFlags = NSCalendarUnitDay | NSCalendarUnitMonth |  NSCalendarUnitYear| NSCalendarUnitHour | NSCalendarUnitMinute;
     NSDateComponents *comp;
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
@@ -154,6 +154,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
+    cell.detailTextLabel.text = @"";
     cell.tag = 0;
     switch (indexPath.section) {
         case 0:
@@ -199,6 +200,7 @@
             break;
     }
      cell.textLabel.textColor = [UIColor blackColor];
+    
     if (indexPath.section==0) {
         Task *theCellData = [[self.organizer getTodayTasks] objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
@@ -340,6 +342,16 @@
     
     return 50.0f;
     
+}
+
+NSString * monthNameFromDate(long monthNumber) {
+    NSDateFormatter *formate = [NSDateFormatter new];
+    
+    NSArray *monthNames = [formate standaloneMonthSymbols];
+    
+    NSString *monthName = [monthNames objectAtIndex:(monthNumber - 1)];
+    
+    return monthName;
 }
 
 
