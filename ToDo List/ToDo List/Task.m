@@ -25,7 +25,7 @@
 @dynamic priority;
 
 
-#pragma mark notifiction Get and Set
+#pragma mark notification Get and Set
 
 -(UILocalNotification*) getNotification
 {
@@ -41,6 +41,19 @@
    self.notification=[NSKeyedArchiver archivedDataWithRootObject:notification];
 }
 
+-(UILocalNotification*) getUrgentNotification
+{
+    if (self.notification != nil) {
+        UILocalNotification *notification=[NSKeyedUnarchiver unarchiveObjectWithData:self.urgentNotification];
+        return notification;
+    }
+    return nil;
+}
+
+-(void) setNewUrgentNotification:(UILocalNotification*)notification
+{
+    self.urgentNotification=[NSKeyedArchiver archivedDataWithRootObject:notification];
+}
 
 /**
  Updates priority through an algorithm
