@@ -47,7 +47,10 @@
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSIndexPath *)indexPath
 {
-    return [data count];
+    if ( [data count]==0) {
+        return 1;
+    }
+    return  [data count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*) indexPath
@@ -58,8 +61,11 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: CellIdentifier];
     }
-    
-    cell.textLabel.text = [[data objectAtIndex: indexPath.row] name];
+    if ( [data count]==0) {
+        cell.textLabel.text = @"There is no tasks.";
+    }else{
+        cell.textLabel.text = [[data objectAtIndex: indexPath.row] name];
+    }
     return cell;
 }
 
@@ -94,6 +100,12 @@
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if([data count]==0)
+    {
+        cell.backgroundColor = [UIColor colorWithRed:44/255.0 green:62/255.0 blue:80/255.0 alpha:1];
+        cell.textLabel.textColor = [UIColor whiteColor];
+        return;
+    }
     Task *task = [data objectAtIndex: indexPath.row];
     
     if([task.priority isEqualToNumber:@0])
