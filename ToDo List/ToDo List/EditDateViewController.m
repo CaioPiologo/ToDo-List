@@ -77,6 +77,11 @@
             [self.organizer.taskWizard giveConclusionDate:nil];
         }else{
             [self.organizer.taskWizard giveConclusionDate:[self.conclusionDate.date copy]];
+            if([self.organizer.taskWizard.newtask getNotification] != nil)
+                [[UIApplication sharedApplication] cancelLocalNotification:[self.organizer.taskWizard.newtask getNotification]];
+            if([self.organizer.taskWizard.newtask getUrgentNotification] != nil)
+                [[UIApplication sharedApplication] cancelLocalNotification:[self.organizer.taskWizard.newtask getUrgentNotification]];
+            [self.organizer.taskWizard setNotification];
         }
         
         [self performSegueWithIdentifier:@"toEditParam" sender:self];

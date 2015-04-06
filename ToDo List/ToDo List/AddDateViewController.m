@@ -69,8 +69,8 @@
     
     }else{
         if(self.switchInitial.isOn && self.switchConclusion.isOn){
-            [self.organizer.taskWizard giveInitialDate:[NSDate dateWithTimeIntervalSince1970:0]];
-            [self.organizer.taskWizard giveConclusionDate:[NSDate dateWithTimeIntervalSince1970:0]];
+            [self.organizer.taskWizard giveInitialDate:[NSDate date]];
+            [self.organizer.taskWizard giveConclusionDate:[NSDate date]];
             
         }else{
             if(self.switchInitial.isOn){

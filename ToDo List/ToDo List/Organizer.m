@@ -127,6 +127,10 @@
         if ([taskToBeRemoved getNotification]!=nil) {
             [[UIApplication sharedApplication] cancelLocalNotification:[taskToBeRemoved getNotification]];
         }
+    
+    if ([taskToBeRemoved getUrgentNotification]!=nil) {
+        [[UIApplication sharedApplication] cancelLocalNotification:[taskToBeRemoved getUrgentNotification]];
+    }
     [_taskList removeObject:taskToBeRemoved];
     [self.loader deleteTask:taskToBeRemoved];
     [self saveEnviroment];
