@@ -42,7 +42,7 @@
    self.notification=[NSKeyedArchiver archivedDataWithRootObject:notification];
 }
 
--(UILocalNotification*) geturgentNotification
+-(UILocalNotification*) getUrgentNotification
 {
     if (self.urgentNotification != nil) {
         UILocalNotification *notification=[NSKeyedUnarchiver unarchiveObjectWithData:self.urgentNotification];
@@ -51,7 +51,7 @@
     return nil;
 }
 
--(void) setNewurgentNotification:(UILocalNotification*)notification
+-(void) setNewUrgentNotification:(UILocalNotification*)notification
 {
     self.urgentNotification=[NSKeyedArchiver archivedDataWithRootObject:notification];
 }

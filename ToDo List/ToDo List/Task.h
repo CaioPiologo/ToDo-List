@@ -40,8 +40,8 @@
 
 -(void) setNewNotification:(UILocalNotification*)notification;
 
--(UILocalNotification*) geturgentNotification;
+-(UILocalNotification*) getUrgentNotification;
 
--(void) setNewurgentNotification:(UILocalNotification*)notification;
+-(void) setNewUrgentNotification:(UILocalNotification*)notification;
 
 @end
