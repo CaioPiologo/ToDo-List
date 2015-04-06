@@ -144,6 +144,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    unsigned unitFlags = NSCalendarUnitHour | NSCalendarUnitMinute;
+    NSDateComponents *comp;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -196,8 +200,11 @@
      cell.textLabel.textColor = [UIColor blackColor];
     if (indexPath.section==0) {
         Task *theCellData = [[self.organizer getTodayTasks] objectAtIndex:indexPath.row];
-        NSString *cellValue =theCellData.name ;
+        comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
+        NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
+        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %ld:%ld", comp.hour, comp.minute ];
         cell.textLabel.text = cellValue;
+        cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
         {
             cell.backgroundColor = [UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1];
@@ -217,8 +224,11 @@
     }
     else if (indexPath.section==1) {
         Task *theCellData = [[self.organizer getTomorrowTasks] objectAtIndex:indexPath.row];
-        NSString *cellValue =theCellData.name;
+        comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
+        NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
+        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %ld:%ld", comp.hour, comp.minute ];
         cell.textLabel.text = cellValue;
+        cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
         {
             cell.backgroundColor = [UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1];
@@ -238,8 +248,11 @@
     }
     else if (indexPath.section==2 ) {
         Task *theCellData = [[self.organizer getAfterTomorrowTasks] objectAtIndex:indexPath.row];
-        NSString *cellValue =theCellData.name;
+        comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
+        NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
+        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %ld:%ld", comp.hour, comp.minute ];
         cell.textLabel.text = cellValue;
+        cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
         {
             cell.backgroundColor = [UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1];
@@ -262,8 +275,11 @@
         if(!array)
             return cell;
         Task *theCellData = [array objectAtIndex:indexPath.row];
-        NSString *cellValue =theCellData.name;
+        comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
+        NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
+        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %ld:%ld", comp.hour, comp.minute ];
         cell.textLabel.text = cellValue;
+        cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
         {
             cell.backgroundColor = [UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1];
