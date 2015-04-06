@@ -55,13 +55,22 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    int index = 0;
-    
-    for(int i = 0; i < indexPath.section; i++){
-        index = index + (int)[self.tableView numberOfRowsInSection:i];
+    if ([[tableView cellForRowAtIndexPath:indexPath] tag] == -1)
+    {
+        return;
     }
     
-    index = index + (int)indexPath.row;
+    int index=0;
+    
+    NSArray * allIndexPaths=[tableView indexPathsForVisibleRows];
+    
+    for (int i=0; allIndexPaths[i]!=indexPath; i++) {
+        if ([[tableView cellForRowAtIndexPath:allIndexPaths[i]] tag] != -1)
+        {
+            index++;
+        }
+        
+    }
     
     Task *task = [data objectAtIndex:index];
     
@@ -78,15 +87,31 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case 0:
+            if([[_organizer getTodayTasks]count]==0)
+            {
+                return 1;
+            }
             return [[self.organizer getTodayTasks] count];
             break;
         case 1:
+            if([[_organizer getTomorrowTasks]count]==0)
+            {
+                return 1;
+            }
             return [[self.organizer getTomorrowTasks] count];
             break;
         case 2:
+            if([[_organizer getAfterTomorrowTasks]count]==0)
+            {
+                return 1;
+            }
             return [[self.organizer getAfterTomorrowTasks] count];
             break;
         case 3:
+            if([[_organizer getLaterTasks]count]==0)
+            {
+                return 1;
+            }
             return [[self.organizer getLaterTasks] count];
             break;
     }
@@ -126,20 +151,111 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
+    switch (indexPath.section) {
+        case 0:
+            if([[_organizer getTodayTasks]count]==0)
+            {
+                cell.textLabel.textColor = [UIColor whiteColor];
+                cell.textLabel.text = @"There are no tasks today.";
+                cell.backgroundColor = [UIColor colorWithRed:44/255.0 green:62/255.0 blue:80/255.0 alpha:1];
+                cell.tag = -1;
+                return cell;
+            }
+            break;
+        case 1:
+            if([[_organizer getTomorrowTasks]count]==0)
+            {
+                cell.textLabel.textColor = [UIColor whiteColor];
+                cell.textLabel.text = @"There are no tasks tomorrow.";
+                cell.backgroundColor = [UIColor colorWithRed:44/255.0 green:62/255.0 blue:80/255.0 alpha:1];
+                cell.tag = -1;
+                return cell;
+            }
+            break;
+        case 2:
+            if([[_organizer getAfterTomorrowTasks]count]==0)
+            {
+                cell.textLabel.textColor = [UIColor whiteColor];
+                cell.textLabel.text = @"There are no tasks after tomorrow.";
+                cell.backgroundColor = [UIColor colorWithRed:44/255.0 green:62/255.0 blue:80/255.0 alpha:1];
+                cell.tag = -1;
+                return cell;
+            }
+            break;
+        case 3:
+            if([[_organizer getLaterTasks]count]==0)
+            {
+                cell.textLabel.textColor = [UIColor whiteColor];
+                cell.textLabel.text = @"There are no tasks for later.";
+                cell.backgroundColor = [UIColor colorWithRed:44/255.0 green:62/255.0 blue:80/255.0 alpha:1];
+                cell.tag = -1;
+                return cell;
+            }
+            break;
+    }
+     cell.textLabel.textColor = [UIColor blackColor];
     if (indexPath.section==0) {
         Task *theCellData = [[self.organizer getTodayTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name ;
         cell.textLabel.text = cellValue;
+        if([theCellData.priority isEqualToNumber:@0])
+        {
+            cell.backgroundColor = [UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1];
+        }
+        else if([theCellData.priority isEqualToNumber:@1])
+        {
+            cell.backgroundColor = [UIColor colorWithRed:190/255.0 green:235/255.0 blue:159/255.0 alpha:1];
+        }
+        else if([theCellData.priority isEqualToNumber:@2])
+        {
+            cell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:157/255.0 alpha:1];
+        }
+        else
+        {
+            cell.backgroundColor = [UIColor colorWithRed:1 green:97/255.0 blue:56/255.0 alpha:1];
+        }
     }
     else if (indexPath.section==1) {
         Task *theCellData = [[self.organizer getTomorrowTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
+        if([theCellData.priority isEqualToNumber:@0])
+        {
+            cell.backgroundColor = [UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1];
+        }
+        else if([theCellData.priority isEqualToNumber:@1])
+        {
+            cell.backgroundColor = [UIColor colorWithRed:190/255.0 green:235/255.0 blue:159/255.0 alpha:1];
+        }
+        else if([theCellData.priority isEqualToNumber:@2])
+        {
+            cell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:157/255.0 alpha:1];
+        }
+        else
+        {
+            cell.backgroundColor = [UIColor colorWithRed:1 green:97/255.0 blue:56/255.0 alpha:1];
+        }
     }
     else if (indexPath.section==2 ) {
         Task *theCellData = [[self.organizer getAfterTomorrowTasks] objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
+        if([theCellData.priority isEqualToNumber:@0])
+        {
+            cell.backgroundColor = [UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1];
+        }
+        else if([theCellData.priority isEqualToNumber:@1])
+        {
+            cell.backgroundColor = [UIColor colorWithRed:190/255.0 green:235/255.0 blue:159/255.0 alpha:1];
+        }
+        else if([theCellData.priority isEqualToNumber:@2])
+        {
+            cell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:157/255.0 alpha:1];
+        }
+        else
+        {
+            cell.backgroundColor = [UIColor colorWithRed:1 green:97/255.0 blue:56/255.0 alpha:1];
+        }
     }
     else if(indexPath.section==3){
         NSArray * array =[self.organizer getLaterTasks];
@@ -148,6 +264,23 @@
         Task *theCellData = [array objectAtIndex:indexPath.row];
         NSString *cellValue =theCellData.name;
         cell.textLabel.text = cellValue;
+        if([theCellData.priority isEqualToNumber:@0])
+        {
+            cell.backgroundColor = [UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1];
+            
+        }
+        else if([theCellData.priority isEqualToNumber:@1])
+        {
+            cell.backgroundColor = [UIColor colorWithRed:190/255.0 green:235/255.0 blue:159/255.0 alpha:1];
+        }
+        else if([theCellData.priority isEqualToNumber:@2])
+        {
+            cell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:157/255.0 alpha:1];
+        }
+        else
+        {
+            cell.backgroundColor = [UIColor colorWithRed:1 green:97/255.0 blue:56/255.0 alpha:1];
+        }
     }
     return cell;
 }
@@ -155,16 +288,35 @@
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     int index=0;
-    for(int i = 0; i < indexPath.section; i++){
-        index = index + (int)[self.tableView numberOfRowsInSection:i];
-    }
     
-    index = index + (int)indexPath.row;
+    NSArray * allIndexPaths=[tableView indexPathsForVisibleRows];
+    
+    for (int i=0; allIndexPaths[i]!=indexPath; i++) {
+        if ([[tableView cellForRowAtIndexPath:allIndexPaths[i]] tag] != -1)
+        {
+            index++;
+        }
+        
+    }
     
     Task *task = [data objectAtIndex: index];
     [_organizer removeTask:[task objectID]];
     [self.tableView reloadData];
+    data = [[NSMutableArray alloc] init];
+    [data addObjectsFromArray:[self.organizer getTodayTasks]];
+    [data addObjectsFromArray:[self.organizer getTomorrowTasks]];
+    [data addObjectsFromArray:[self.organizer getAfterTomorrowTasks]];
+    [data addObjectsFromArray:[self.organizer getLaterTasks]];
     return UITableViewCellEditingStyleDelete;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([[tableView cellForRowAtIndexPath:indexPath] tag] == -1)
+    {
+        return NO;
+    }
+    return YES;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -173,33 +325,5 @@
     
 }
 
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    int index = 0;
-    
-    for(int i = 0; i < indexPath.section; i++){
-        index = index + (int)[self.tableView numberOfRowsInSection:i];
-    }
-    
-    index = index + (int)indexPath.row;
-    
-    Task *task = [data objectAtIndex: index];
-    
-    if([task.priority isEqualToNumber:@0])
-        
-        cell.backgroundColor = [UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1];
-    
-    else if([task.priority isEqualToNumber:@1])
-        
-        cell.backgroundColor = [UIColor colorWithRed:190/255.0 green:235/255.0 blue:159/255.0 alpha:1];
-    
-    else if([task.priority isEqualToNumber:@2])
-        
-        cell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:157/255.0 alpha:1];
-    
-    else
-        
-        cell.backgroundColor = [UIColor colorWithRed:1 green:97/255.0 blue:56/255.0 alpha:1];
-    
-}
 
 @end
