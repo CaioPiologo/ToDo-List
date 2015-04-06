@@ -23,6 +23,7 @@
 @dynamic repeatTime;
 @dynamic urgent;
 @dynamic priority;
+@dynamic urgentNotification;
 
 
 #pragma mark notification Get and Set
