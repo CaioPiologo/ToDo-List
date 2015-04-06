@@ -203,7 +203,7 @@
         Task *theCellData = [[self.organizer getTodayTasks] objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
-        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %ld:%ld", comp.hour, comp.minute ];
+        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
@@ -227,7 +227,7 @@
         Task *theCellData = [[self.organizer getTomorrowTasks] objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
-        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %ld:%ld", comp.hour, comp.minute ];
+        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
@@ -251,7 +251,7 @@
         Task *theCellData = [[self.organizer getAfterTomorrowTasks] objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
-        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %ld:%ld", comp.hour, comp.minute ];
+        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
@@ -278,7 +278,7 @@
         Task *theCellData = [array objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
-        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %ld:%ld", comp.hour, comp.minute ];
+        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
@@ -331,7 +331,6 @@
 {
     if ([[tableView cellForRowAtIndexPath:indexPath] tag] == -1)
     {
-        NSLog(@"%d",[[tableView cellForRowAtIndexPath:indexPath] tag]);
         return NO;
     }
     return YES;
