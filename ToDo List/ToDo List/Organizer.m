@@ -157,9 +157,12 @@
         comp1 = [calendar components:unitFlags fromDate:t.conclusionDate];
         comp2 = [calendar components:unitFlags fromDate:[NSDate date]];
 
-        if ([comp1 day]   <= [comp2 day] && [comp1 month] <= [comp2 month] && [comp1 year]  <= [comp2 year])
+        if ([comp1 day]   == [comp2 day] && [comp1 month] == [comp2 month] && [comp1 year]  == [comp2 year])
         {
 //            NSString *nome = t.name;
+            [auxiliaryArray addObject:t];
+        }else if([t.conclusionDate earlierDate:[NSDate date]] == t.conclusionDate)
+        {
             [auxiliaryArray addObject:t];
         }
     }
