@@ -61,9 +61,11 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: CellIdentifier];
     }
+    
     if ( [data count]==0) {
-        cell.textLabel.text = @"There is no tasks.";
+        cell.textLabel.text = @"There are no tasks.";
     }else{
+        cell.textLabel.textColor = [UIColor blackColor];
         cell.textLabel.text = [[data objectAtIndex: indexPath.row] name];
     }
     return cell;
@@ -77,6 +79,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //check if your cell is pressed
+    if ([data count]==0) {
+        return;
+    }
     Task *task = [data objectAtIndex:indexPath.row];
     
     [self.organizer.taskWizard beginWithTask:task];
@@ -91,6 +96,15 @@
     self.data = [self.organizer updateTasksByPriority];
     [self.tableView reloadData];
     return UITableViewCellEditingStyleDelete;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if([data count]>0)
+    {
+        return YES;
+    }
+    return NO;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
