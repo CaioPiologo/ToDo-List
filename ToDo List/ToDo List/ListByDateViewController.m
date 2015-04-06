@@ -144,7 +144,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    unsigned unitFlags = NSCalendarUnitHour | NSCalendarUnitMinute;
+    unsigned unitFlags = NSCalendarUnitDay | NSCalendarUnitMonth |  NSCalendarUnitYear| NSCalendarUnitHour | NSCalendarUnitMinute;
     NSDateComponents *comp;
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
@@ -154,6 +154,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
+    cell.detailTextLabel.text = @"";
     cell.tag = 0;
     switch (indexPath.section) {
         case 0:
@@ -199,11 +200,18 @@
             break;
     }
      cell.textLabel.textColor = [UIColor blackColor];
+    
     if (indexPath.section==0) {
         Task *theCellData = [[self.organizer getTodayTasks] objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
-        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %ld:%ld", comp.hour, comp.minute ];
+        NSString *cellDetailValue = @"";
+        if ([theCellData.conclusionDate earlierDate:[NSDate date]]==theCellData.conclusionDate) {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Task not completed on %02ld/%@/%ld",comp.day,monthNameFromDate(comp.month),comp.year ];
+        }else
+        {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+        }
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
@@ -227,7 +235,13 @@
         Task *theCellData = [[self.organizer getTomorrowTasks] objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
-        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %ld:%ld", comp.hour, comp.minute ];
+        NSString *cellDetailValue = @"";
+        if ([theCellData.conclusionDate earlierDate:[NSDate date]]==theCellData.conclusionDate) {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Task not completed on %02ld/%@/%ld",comp.day,monthNameFromDate(comp.month),comp.year ];
+        }else
+        {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+        }
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
@@ -251,7 +265,13 @@
         Task *theCellData = [[self.organizer getAfterTomorrowTasks] objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
-        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %ld:%ld", comp.hour, comp.minute ];
+        NSString *cellDetailValue = @"";
+        if ([theCellData.conclusionDate earlierDate:[NSDate date]]==theCellData.conclusionDate) {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Task not completed on %02ld/%@/%ld",comp.day,monthNameFromDate(comp.month),comp.year ];
+        }else
+        {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+        }
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
@@ -278,7 +298,13 @@
         Task *theCellData = [array objectAtIndex:indexPath.row];
         comp = [calendar components:unitFlags fromDate:theCellData.conclusionDate];
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
-        NSString *cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %ld:%ld", comp.hour, comp.minute ];
+        NSString *cellDetailValue = @"";
+        if ([theCellData.conclusionDate earlierDate:[NSDate date]]==theCellData.conclusionDate) {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Task not completed on %02ld/%@/%ld",comp.day,monthNameFromDate(comp.month),comp.year ];
+        }else
+        {
+            cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld, %02ld/%@/%ld", comp.hour, comp.minute,comp.day,monthNameFromDate(comp.month),comp.year ];
+        }
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
         if([theCellData.priority isEqualToNumber:@0])
@@ -331,7 +357,7 @@
 {
     if ([[tableView cellForRowAtIndexPath:indexPath] tag] == -1)
     {
-        NSLog(@"%d",[[tableView cellForRowAtIndexPath:indexPath] tag]);
+        NSLog(@"%ld",[[tableView cellForRowAtIndexPath:indexPath] tag]);
         return NO;
     }
     return YES;
@@ -341,6 +367,16 @@
     
     return 50.0f;
     
+}
+
+NSString * monthNameFromDate(long monthNumber) {
+    NSDateFormatter *formate = [NSDateFormatter new];
+    
+    NSArray *monthNames = [formate standaloneMonthSymbols];
+    
+    NSString *monthName = [monthNames objectAtIndex:(monthNumber - 1)];
+    
+    return monthName;
 }
 
 
