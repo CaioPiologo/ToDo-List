@@ -45,4 +45,6 @@
 
 -(NSArray*)getLaterTasks;
 
+-(NSArray*)getPendingTasks;
+
 @end
