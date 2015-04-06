@@ -154,7 +154,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    
+    cell.tag = 0;
     switch (indexPath.section) {
         case 0:
             if([[_organizer getTodayTasks]count]==0)
@@ -169,6 +169,7 @@
         case 1:
             if([[_organizer getTomorrowTasks]count]==0)
             {
+                
                 cell.textLabel.textColor = [UIColor whiteColor];
                 cell.textLabel.text = @"There are no tasks tomorrow.";
                 cell.backgroundColor = [UIColor colorWithRed:44/255.0 green:62/255.0 blue:80/255.0 alpha:1];
@@ -330,6 +331,7 @@
 {
     if ([[tableView cellForRowAtIndexPath:indexPath] tag] == -1)
     {
+        NSLog(@"%d",[[tableView cellForRowAtIndexPath:indexPath] tag]);
         return NO;
     }
     return YES;

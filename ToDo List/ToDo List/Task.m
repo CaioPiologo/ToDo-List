@@ -23,6 +23,7 @@
 @dynamic repeatTime;
 @dynamic urgent;
 @dynamic priority;
+@dynamic urgentNotification;
 
 
 #pragma mark notifiction Get and Set
@@ -39,6 +40,20 @@
 -(void) setNewNotification:(UILocalNotification*)notification
 {
    self.notification=[NSKeyedArchiver archivedDataWithRootObject:notification];
+}
+
+-(UILocalNotification*) geturgentNotification
+{
+    if (self.urgentNotification != nil) {
+        UILocalNotification *notification=[NSKeyedUnarchiver unarchiveObjectWithData:self.urgentNotification];
+        return notification;
+    }
+    return nil;
+}
+
+-(void) setNewurgentNotification:(UILocalNotification*)notification
+{
+    self.urgentNotification=[NSKeyedArchiver archivedDataWithRootObject:notification];
 }
 
 
