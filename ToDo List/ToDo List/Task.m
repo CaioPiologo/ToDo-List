@@ -45,7 +45,7 @@
 -(UILocalNotification*) geturgentNotification
 {
     if (self.urgentNotification != nil) {
-        UILocalNotification *notification=[NSKeyedUnarchiver unarchiveObjectWithData:self.notification];
+        UILocalNotification *notification=[NSKeyedUnarchiver unarchiveObjectWithData:self.urgentNotification];
         return notification;
     }
     return nil;
