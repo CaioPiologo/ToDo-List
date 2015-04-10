@@ -1,0 +1,34 @@
+/*
+  Localizable.strings
+  ToDo List
+
+  Created by Caio Vinícius Piologo Véras Fernandes on 4/10/15.
+  Copyright (c) 2015 Ricardo Z Charf. All rights reserved.
+*/
+
+"There are no tasks today." = "There are no tasks today.";
+
+"Today" = "Today";
+
+"Tomorrow" = "Tomorrow";
+
+"After Tomorrow" = "After Tomorrow";
+
+"Later" = "Later";
+
+"There are no tasks tomorrow." ="There are no tasks tomorrow.";
+
+"There are no tasks after tomorrow."="There are no tasks after tomorrow.";
+
+"There are no tasks for later." = "There are no tasks for later.";
+
+"Task not completed on %02ld/%@/%ld"="Task not completed on %02ld/%@/%ld";
+
+"Conclusion until %02ld:%02ld"="Conclusion until %02ld:%02ld";
+
+"You forgot about me...\n"="You forgot about me...\n";
+
+"Damn, sorry"="Damn, sorry";
+
+"Hell no!"="Hell no!";
+

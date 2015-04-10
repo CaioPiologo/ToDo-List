@@ -129,9 +129,9 @@
 -(void) setNotification{
     UILocalNotification* not = [[UILocalNotification alloc] init];
     not.fireDate = self.newtask.conclusionDate;
-    not.alertBody = @"You forgot about me...\n";
+    not.alertBody = NSLocalizedString(@"You forgot about me...\n", nil);
     not.alertBody = [not.alertBody stringByAppendingString:self.newtask.name];
-    not.alertAction = @"Damn, sorry";
+    not.alertAction = NSLocalizedString(@"Damn, sorry", nil);
     not.timeZone = [NSTimeZone defaultTimeZone];
     not.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     
@@ -147,9 +147,9 @@
     
     UILocalNotification* not = [[UILocalNotification alloc] init];
     not.fireDate = [NSDate dateWithTimeInterval:timeFromToday sinceDate:[NSDate date]];
-    not.alertBody = @"Forgot about me?\n";
+    not.alertBody = NSLocalizedString(@"You forgot about me...\n", nil);
     not.alertBody = [not.alertBody stringByAppendingString:self.newtask.name];
-    not.alertAction = @"Hell no";
+    not.alertAction = NSLocalizedString(@"Hell no!", nil);
     not.timeZone = [NSTimeZone defaultTimeZone];
     not.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     
