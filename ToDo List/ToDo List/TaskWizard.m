@@ -51,6 +51,7 @@
  Finish creating task
  */
 -(Task *) finish{
+    [self.newtask updatePriority];
     [self setNotification];
     [self createUrgentNotification];
     [self.loader addTaskObjectToContext:self.newtask];
@@ -135,7 +136,11 @@
     not.timeZone = [NSTimeZone defaultTimeZone];
     not.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     
-    [[UIApplication sharedApplication] scheduleLocalNotification:not];
-    [self.newtask setNewUrgentNotification:not];
+    if(![self.newtask.priority isEqualToNumber:@3]){
+        [[UIApplication sharedApplication] scheduleLocalNotification:not];
+        [self.newtask setNewUrgentNotification:not];
+    }
+    else
+        [self.newtask setNewUrgentNotification:nil];
 }
 @end

@@ -44,6 +44,11 @@
     
     [self.organizer.taskWizard giveFun:[NSNumber numberWithFloat:self.funny.value]];
     
+    if([self.organizer.taskWizard.newtask getNotification] != nil)
+        [[UIApplication sharedApplication] cancelLocalNotification:[self.organizer.taskWizard.newtask getNotification]];
+    if([self.organizer.taskWizard.newtask getUrgentNotification] != nil)
+        [[UIApplication sharedApplication] cancelLocalNotification:[self.organizer.taskWizard.newtask getUrgentNotification]];
+
     task = [self.organizer.taskWizard finish];
     
     [self.organizer saveEnviroment];
