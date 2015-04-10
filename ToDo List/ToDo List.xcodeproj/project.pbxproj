@@ -169,11 +169,11 @@
 		8C3454571AC3204B0053766D /* ToDo List */ = {
 			isa = PBXGroup;
 			children = (
+				1CEED4301ACC1D7100A705D1 /* Base.lproj */,
 				1CEED42C1ACC1D7100A705D1 /* AddDateViewController.h */,
 				1CEED42D1ACC1D7100A705D1 /* AddDateViewController.m */,
 				1CEED42E1ACC1D7100A705D1 /* AddName.h */,
 				1CEED42F1ACC1D7100A705D1 /* AddName.m */,
-				1CEED4301ACC1D7100A705D1 /* Base.lproj */,
 				1CEED4361ACC1D7100A705D1 /* Organizer.h */,
 				1CEED4371ACC1D7100A705D1 /* Organizer.m */,
 				1CEED4381ACC1D7100A705D1 /* TaskWizard.h */,

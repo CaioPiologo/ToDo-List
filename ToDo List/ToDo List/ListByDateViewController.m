@@ -33,7 +33,7 @@
     [data addObjectsFromArray:[self.organizer getAfterTomorrowTasks]];
     [data addObjectsFromArray:[self.organizer getLaterTasks]];
     [self.organizer updateTasksByPriority];
-    [self.tableView reloadData];
+    [self autoUpdate];
 
 }
 
@@ -46,11 +46,18 @@
     [data addObjectsFromArray:[self.organizer getAfterTomorrowTasks]];
     [data addObjectsFromArray:[self.organizer getLaterTasks]];
     [self.tableView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) autoUpdate{
+    [self.tableView reloadData];
+    [self.organizer updateTasksByPriority];
+    [self performSelector:@selector(autoUpdate) withObject:self afterDelay:10];
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -344,12 +351,12 @@
     
     Task *task = [data objectAtIndex: index];
     [_organizer removeTask:[task objectID]];
-    [self.tableView reloadData];
     data = [[NSMutableArray alloc] init];
     [data addObjectsFromArray:[self.organizer getTodayTasks]];
     [data addObjectsFromArray:[self.organizer getTomorrowTasks]];
     [data addObjectsFromArray:[self.organizer getAfterTomorrowTasks]];
     [data addObjectsFromArray:[self.organizer getLaterTasks]];
+    [self.tableView reloadData];
     return UITableViewCellEditingStyleDelete;
 }
 

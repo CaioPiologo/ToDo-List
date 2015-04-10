@@ -129,7 +129,7 @@
 -(void) setNotification{
     UILocalNotification* not = [[UILocalNotification alloc] init];
     not.fireDate = self.newtask.conclusionDate;
-    not.alertBody = @"You forgot about me..\n";
+    not.alertBody = @"You forgot about me...\n";
     not.alertBody = [not.alertBody stringByAppendingString:self.newtask.name];
     not.alertAction = @"Damn, sorry";
     not.timeZone = [NSTimeZone defaultTimeZone];
@@ -140,4 +140,24 @@
     
 }
 
+-(void) createUrgentNotification{
+    NSTimeInterval dueTime = [self.newtask.conclusionDate timeIntervalSinceDate:self.newtask.initialDate];
+    NSTimeInterval topPriority = (dueTime/3)*([self.newtask.difficulty intValue])/10;
+    NSTimeInterval timeFromToday = [self.newtask.conclusionDate timeIntervalSinceDate:[NSDate date]] - topPriority;
+    
+    UILocalNotification* not = [[UILocalNotification alloc] init];
+    not.fireDate = [NSDate dateWithTimeInterval:timeFromToday sinceDate:[NSDate date]];
+    not.alertBody = @"Forgot about me?\n";
+    not.alertBody = [not.alertBody stringByAppendingString:self.newtask.name];
+    not.alertAction = @"Hell no";
+    not.timeZone = [NSTimeZone defaultTimeZone];
+    not.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+    
+    if(![self.newtask.priority isEqualToNumber:@3]){
+        [[UIApplication sharedApplication] scheduleLocalNotification:not];
+        [self.newtask setNewUrgentNotification:not];
+    }
+    else
+        [self.newtask setNewUrgentNotification:nil];
+}
 @end

@@ -31,6 +31,7 @@
     self.tableView.backgroundColor = [UIColor colorWithRed:44/250.0 green:62/255.0 blue:80/250.0 alpha:1];
     self.organizer = [Organizer getInstace];
     self.data = [[NSArray alloc] initWithArray: [self.organizer updateTasksByPriority]];
+    [self autoUpdate];
     
 }
 
@@ -40,6 +41,11 @@
     [self.tableView reloadData];
 }
 
+-(void) autoUpdate{
+    [self.tableView reloadData];
+    [self.organizer updateTasksByPriority];
+    [self performSelector:@selector(autoUpdate) withObject:self afterDelay:10];
+}
 -(NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
 {
     return 1;

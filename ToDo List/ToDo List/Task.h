@@ -36,7 +36,6 @@
 
 -(void) updatePriority;
 
--(void) createUrgentNotification:(NSTimeInterval) timeFromToday;
 
 -(UILocalNotification*) getNotification;
 
