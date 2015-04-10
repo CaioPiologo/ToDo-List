@@ -12,7 +12,7 @@
 
 @interface TaskWizard()
 @property (nonatomic) Loader *loader;
-@property (nonatomic) NSString *name;
+@property (nonatomic) Task * editingTask;
 @end
 @implementation TaskWizard
 
@@ -35,7 +35,13 @@
  Begins wizard with a task (edit mode)
  */
 -(void) beginWithTask:(Task *)task{
-    self.newtask = task;
+    self.editingTask = task;
+    self.newtask = [self.loader newEmptyTask];
+    self.newtask.initialDate = [self.editingTask.initialDate copy];
+    self.newtask.conclusionDate = [self.editingTask.conclusionDate copy];
+    self.newtask.name = [self.editingTask.name copy];
+    self.newtask.difficulty = [self.editingTask.difficulty copy];
+    self.newtask.fun = [self.editingTask.fun copy];
 }
 /**
  Cancels task creation
@@ -46,14 +52,27 @@
         [self.loader deleteTask:self.newtask];
     }
     self.newtask = nil;
+    self.editingTask = nil;
 }
 /**
  Finish creating task
  */
 -(Task *) finish{
-    [self setNotification];
-    [self.loader addTaskObjectToContext:self.newtask];
-    return self.newtask;
+    if (self.editingTask==nil) {
+        [self setNotification];
+        [self.loader addTaskObjectToContext:self.newtask];
+        return self.newtask;
+    }else
+    {
+        self.editingTask.initialDate = self.newtask.initialDate;
+        self.editingTask.conclusionDate = self.newtask.conclusionDate;
+        self.editingTask.name = self.newtask.name;
+        self.editingTask.difficulty = self.newtask.difficulty;
+        self.editingTask.fun = self.newtask.fun;
+        self.newtask = self.editingTask;
+        self.editingTask=nil;
+        return self.editingTask;
+    }
 }
 /**
  Adds name to task
