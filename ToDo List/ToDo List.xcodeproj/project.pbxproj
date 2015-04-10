@@ -21,6 +21,7 @@
 		1CEED4401ACC1D7100A705D1 /* TaskWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED4391ACC1D7100A705D1 /* TaskWizard.m */; };
 		1CF8AEF01ACD6DEE0015C7A9 /* EditDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF8AEEF1ACD6DEE0015C7A9 /* EditDateViewController.m */; };
 		1CF8AEF31ACD6E930015C7A9 /* EditParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF8AEF21ACD6E930015C7A9 /* EditParamViewController.m */; };
+		256A0F411AD85370009D956C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 256A0F431AD85370009D956C /* Localizable.strings */; };
 		25E012451AC9CF01004370E1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		25E2E0301ACC1B9E00220124 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		2974DB02776E61BBE6240EF4 /* libPods-ToDo ListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B4F7A0251AE05CA6CF8A /* libPods-ToDo ListTests.a */; };
@@ -70,6 +71,10 @@
 		1CF8AEEF1ACD6DEE0015C7A9 /* EditDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDateViewController.m; sourceTree = "<group>"; };
 		1CF8AEF11ACD6E350015C7A9 /* EditParamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditParamViewController.h; sourceTree = "<group>"; };
 		1CF8AEF21ACD6E930015C7A9 /* EditParamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditParamViewController.m; sourceTree = "<group>"; };
+		256A0F441AD8547F009D956C /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		256A0F451AD8549D009D956C /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
+		256A0F461AD8549D009D956C /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		256A0F471AD855E6009D956C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		25D362591AC3255B00DEF6E8 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		25D3625A1AC3255B00DEF6E8 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		2ABA61AC30BD6171421D6F6D /* Pods-ToDo ListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo ListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo ListTests/Pods-ToDo ListTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +206,7 @@
 				8C3454821AC32A2F0053766D /* Loader.m */,
 				8C3454841AC34B300053766D /* Task.xcdatamodeld */,
 				8C3454581AC3204B0053766D /* Supporting Files */,
+				256A0F431AD85370009D956C /* Localizable.strings */,
 			);
 			path = "ToDo List";
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pt,
 			);
 			mainGroup = 8C34544C1AC3204B0053766D;
 			productRefGroup = 8C3454561AC3204B0053766D /* Products */;
@@ -318,6 +325,7 @@
 			files = (
 				25E012451AC9CF01004370E1 /* (null) in Resources */,
 				25E2E0301ACC1B9E00220124 /* (null) in Resources */,
+				256A0F411AD85370009D956C /* Localizable.strings in Resources */,
 				8C2B93F31AC9CD3700D3AE64 /* Podfile in Resources */,
 				1CEED43D1ACC1D7100A705D1 /* Main.storyboard in Resources */,
 				8CF1892D1AC5E7FE0027EB72 /* Info.plist in Resources */,
@@ -459,10 +467,20 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+		256A0F431AD85370009D956C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				256A0F441AD8547F009D956C /* pt */,
+				256A0F471AD855E6009D956C /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		8C3454621AC3204B0053766D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8C3454631AC3204B0053766D /* Base */,
+				256A0F451AD8549D009D956C /* pt */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -471,6 +489,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8C3454681AC3204B0053766D /* Base */,
+				256A0F461AD8549D009D956C /* pt */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

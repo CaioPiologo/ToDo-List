@@ -168,7 +168,7 @@
             if([[_organizer getTodayTasks]count]==0)
             {
                 cell.textLabel.textColor = [UIColor whiteColor];
-                cell.textLabel.text = @"There are no tasks today.";
+                cell.textLabel.text = NSLocalizedString(@"There are no tasks today.", nil);
                 cell.backgroundColor = [UIColor colorWithRed:44/255.0 green:62/255.0 blue:80/255.0 alpha:1];
                 cell.tag = -1;
                 return cell;
@@ -179,7 +179,7 @@
             {
                 
                 cell.textLabel.textColor = [UIColor whiteColor];
-                cell.textLabel.text = @"There are no tasks tomorrow.";
+                cell.textLabel.text = NSLocalizedString(@"There are no tasks tomorrow.", nil);
                 cell.backgroundColor = [UIColor colorWithRed:44/255.0 green:62/255.0 blue:80/255.0 alpha:1];
                 cell.tag = -1;
                 return cell;
@@ -189,7 +189,7 @@
             if([[_organizer getAfterTomorrowTasks]count]==0)
             {
                 cell.textLabel.textColor = [UIColor whiteColor];
-                cell.textLabel.text = @"There are no tasks after tomorrow.";
+                cell.textLabel.text = NSLocalizedString(@"There are no tasks after tomorrow.", nil);
                 cell.backgroundColor = [UIColor colorWithRed:44/255.0 green:62/255.0 blue:80/255.0 alpha:1];
                 cell.tag = -1;
                 return cell;
@@ -199,7 +199,7 @@
             if([[_organizer getLaterTasks]count]==0)
             {
                 cell.textLabel.textColor = [UIColor whiteColor];
-                cell.textLabel.text = @"There are no tasks for later.";
+                cell.textLabel.text = NSLocalizedString(@"There are no tasks for later.", nil);
                 cell.backgroundColor = [UIColor colorWithRed:44/255.0 green:62/255.0 blue:80/255.0 alpha:1];
                 cell.tag = -1;
                 return cell;
@@ -214,10 +214,10 @@
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
         NSString *cellDetailValue = @"";
         if ([theCellData.conclusionDate earlierDate:[NSDate date]]==theCellData.conclusionDate) {
-            cellDetailValue = [[NSString alloc] initWithFormat:@"Task not completed on %02ld/%@/%ld",comp.day,monthNameFromDate(comp.month),comp.year ];
+            cellDetailValue = [[NSString alloc] initWithFormat:NSLocalizedString(@"Task not completed on %02ld/%@/%ld",nil),comp.day,monthNameFromDate(comp.month),comp.year ];
         }else
         {
-            cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+            cellDetailValue = [[NSString alloc] initWithFormat:NSLocalizedString(@"Conclusion until %02ld:%02ld", nil), comp.hour, comp.minute ];
         }
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
@@ -244,10 +244,10 @@
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
         NSString *cellDetailValue = @"";
         if ([theCellData.conclusionDate earlierDate:[NSDate date]]==theCellData.conclusionDate) {
-            cellDetailValue = [[NSString alloc] initWithFormat:@"Task not completed on %02ld/%@/%ld",comp.day,monthNameFromDate(comp.month),comp.year ];
+            cellDetailValue = [[NSString alloc] initWithFormat:NSLocalizedString(@"Task not completed on %02ld/%@/%ld", nil),comp.day,monthNameFromDate(comp.month),comp.year ];
         }else
         {
-            cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+            cellDetailValue = [[NSString alloc] initWithFormat:NSLocalizedString(@"Conclusion until %02ld:%02ld", nil), comp.hour, comp.minute ];
         }
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
@@ -274,10 +274,10 @@
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
         NSString *cellDetailValue = @"";
         if ([theCellData.conclusionDate earlierDate:[NSDate date]]==theCellData.conclusionDate) {
-            cellDetailValue = [[NSString alloc] initWithFormat:@"Task not completed on %02ld/%@/%ld",comp.day,monthNameFromDate(comp.month),comp.year ];
+            cellDetailValue = [[NSString alloc] initWithFormat:NSLocalizedString(@"Task not completed on %02ld/%@/%ld", nil),comp.day,monthNameFromDate(comp.month),comp.year ];
         }else
         {
-            cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld", comp.hour, comp.minute ];
+            cellDetailValue = [[NSString alloc] initWithFormat:NSLocalizedString(@"Conclusion until %02ld:%02ld", nil), comp.hour, comp.minute ];
         }
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
@@ -307,10 +307,10 @@
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@", theCellData.name];
         NSString *cellDetailValue = @"";
         if ([theCellData.conclusionDate earlierDate:[NSDate date]]==theCellData.conclusionDate) {
-            cellDetailValue = [[NSString alloc] initWithFormat:@"Task not completed on %02ld/%@/%ld",comp.day,monthNameFromDate(comp.month),comp.year ];
+            cellDetailValue = [[NSString alloc] initWithFormat:NSLocalizedString(@"Task not completed on %02ld/%@/%ld",nil),comp.day,monthNameFromDate(comp.month),comp.year ];
         }else
         {
-            cellDetailValue = [[NSString alloc] initWithFormat:@"Conclusion until %02ld:%02ld, %02ld/%@/%ld", comp.hour, comp.minute,comp.day,monthNameFromDate(comp.month),comp.year ];
+            cellDetailValue = [[NSString alloc] initWithFormat:NSLocalizedString(@"Conclusion until %02ld:%02ld, %02ld/%@/%ld", nil), comp.hour, comp.minute,comp.day,monthNameFromDate(comp.month),comp.year ];
         }
         cell.textLabel.text = cellValue;
         cell.detailTextLabel.text = cellDetailValue;
@@ -364,7 +364,6 @@
 {
     if ([[tableView cellForRowAtIndexPath:indexPath] tag] == -1)
     {
-        NSLog(@"%ld",[[tableView cellForRowAtIndexPath:indexPath] tag]);
         return NO;
     }
     return YES;

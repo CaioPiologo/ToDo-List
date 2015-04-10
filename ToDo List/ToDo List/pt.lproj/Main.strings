@@ -1,0 +1,126 @@
+
+/* Class = "IBUILabel"; text = "Hell on earth"; ObjectID = "02u-zO-06b"; */
+"02u-zO-06b.text" = "Hell on earth";
+
+/* Class = "IBUILabel"; text = "You must enter a name"; ObjectID = "0nu-eS-Rwv"; */
+"0nu-eS-Rwv.text" = "You must enter a name";
+
+/* Class = "IBUILabel"; text = "So Boring..."; ObjectID = "1Fa-mR-zRv"; */
+"1Fa-mR-zRv.text" = "So Boring...";
+
+/* Class = "IBUILabel"; text = "Choose its fun:"; ObjectID = "2Wn-cb-Jck"; */
+"2Wn-cb-Jck.text" = "Choose its fun:";
+
+/* Class = "IBUINavigationItem"; title = "Task Creator Wizard"; ObjectID = "6j7-Rr-YLl"; */
+"6j7-Rr-YLl.title" = "Task Creator Wizard";
+
+/* Class = "IBUILabel"; text = "Conclusion Date"; ObjectID = "7Zf-DP-hG1"; */
+"7Zf-DP-hG1.text" = "Conclusion Date";
+
+/* Class = "IBUIBarButtonItem"; title = "Create Task"; ObjectID = "95t-Nv-tGt"; */
+"95t-Nv-tGt.title" = "Create Task";
+
+/* Class = "IBUILabel"; text = "Piece of cake"; ObjectID = "Bsf-R1-PkW"; */
+"Bsf-R1-PkW.text" = "Piece of cake";
+
+/* Class = "IBUILabel"; text = "Initial date can't occur before conclusion date."; ObjectID = "CGa-Ri-Ncf"; */
+"CGa-Ri-Ncf.text" = "Initial date can't occur before conclusion date.";
+
+/* Class = "IBUINavigationItem"; title = "Task Editor Wizard"; ObjectID = "Ehy-yK-NWB"; */
+"Ehy-yK-NWB.title" = "Task Editor Wizard";
+
+/* Class = "IBUINavigationItem"; title = "Task Editor Wizard"; ObjectID = "FxG-LV-QgO"; */
+"FxG-LV-QgO.title" = "Task Editor Wizard";
+
+/* Class = "IBUILabel"; text = "Much Fun"; ObjectID = "Gzw-E6-lKU"; */
+"Gzw-E6-lKU.text" = "Much Fun";
+
+/* Class = "IBUINavigationItem"; title = "Task Creator Wizard"; ObjectID = "H1T-28-ILC"; */
+"H1T-28-ILC.title" = "Task Creator Wizard";
+
+/* Class = "IBUILabel"; text = "So boring..."; ObjectID = "HXE-Pg-oWh"; */
+"HXE-Pg-oWh.text" = "So boring...";
+
+/* Class = "IBUILabel"; text = "Piece of cake"; ObjectID = "HeZ-E6-ZOn"; */
+"HeZ-E6-ZOn.text" = "Piece of cake";
+
+/* Class = "IBUILabel"; text = "When should you have started the task?"; ObjectID = "Jm5-jw-cjQ"; */
+"Jm5-jw-cjQ.text" = "When should you have started the task?";
+
+/* Class = "IBUILabel"; text = "Re-Choose difficulty:"; ObjectID = "MpW-hJ-aAs"; */
+"MpW-hJ-aAs.text" = "Re-Choose difficulty:";
+
+/* Class = "IBUILabel"; text = "Initial date can't occur before conclusion date."; ObjectID = "OcP-RX-POh"; */
+"OcP-RX-POh.text" = "Initial date can't occur before conclusion date.";
+
+/* Class = "IBUILabel"; text = "Rename your task, lazy human!"; ObjectID = "Q0E-kQ-W7T"; */
+"Q0E-kQ-W7T.text" = "Rename your task, lazy human!";
+
+/* Class = "IBUITabBarItem"; title = "Tasks By Date"; ObjectID = "Qqs-MP-ycH"; */
+"Qqs-MP-ycH.title" = "Tasks By Date";
+
+/* Class = "IBUINavigationItem"; title = "Task Editor Wizard"; ObjectID = "VZA-OK-FXA"; */
+"VZA-OK-FXA.title" = "Task Editor Wizard";
+
+/* Class = "IBUIBarButtonItem"; title = "Next"; ObjectID = "ZTU-cp-Gsg"; */
+"ZTU-cp-Gsg.title" = "Next";
+
+/* Class = "IBUILabel"; text = "Pick a date for conclusion"; ObjectID = "a5I-ov-caW"; */
+"a5I-ov-caW.text" = "Pick a date for conclusion";
+
+/* Class = "IBUITabBarItem"; title = "Tasks By Priority"; ObjectID = "bGY-Dh-7Am"; */
+"bGY-Dh-7Am.title" = "Tasks By Priority";
+
+/* Class = "IBUILabel"; text = "Much fun"; ObjectID = "cNR-cg-4LU"; */
+"cNR-cg-4LU.text" = "Much fun";
+
+/* Class = "IBUINavigationItem"; title = "Frobenious Smart List"; ObjectID = "cfE-dc-ihQ"; */
+"cfE-dc-ihQ.title" = "Frobenious Smart List";
+
+/* Class = "IBUILabel"; text = "You must enter a name"; ObjectID = "eMb-6i-5yR"; */
+"eMb-6i-5yR.text" = "You must enter a name";
+
+/* Class = "IBUIBarButtonItem"; title = "Edit Task"; ObjectID = "h8P-di-zRN"; */
+"h8P-di-zRN.title" = "Edit Task";
+
+/* Class = "IBUIBarButtonItem"; title = "Next"; ObjectID = "hAg-vC-6Ma"; */
+"hAg-vC-6Ma.title" = "Next";
+
+/* Class = "IBUIBarButtonItem"; title = "Item"; ObjectID = "hOY-kK-JHV"; */
+"hOY-kK-JHV.title" = "Item";
+
+/* Class = "IBUIBarButtonItem"; title = "Next"; ObjectID = "k87-mk-mmQ"; */
+"k87-mk-mmQ.title" = "Next";
+
+/* Class = "IBUILabel"; text = "I dont't want to choose a conclusion date"; ObjectID = "kIW-lE-e0O"; */
+"kIW-lE-e0O.text" = "I dont't want to choose a conclusion date";
+
+/* Class = "IBUIBarButtonItem"; title = "Next"; ObjectID = "lEt-CC-ew0"; */
+"lEt-CC-ew0.title" = "Next";
+
+/* Class = "IBUILabel"; text = "Re-Choose its fun:"; ObjectID = "nOt-MP-BRM"; */
+"nOt-MP-BRM.text" = "Re-Choose its fun:";
+
+/* Class = "IBUILabel"; text = "Hell on earth"; ObjectID = "oAl-Fu-HQZ"; */
+"oAl-Fu-HQZ.text" = "Hell on earth";
+
+/* Class = "IBUILabel"; text = "Name your new task, lazy human!"; ObjectID = "t4L-aU-UdP"; */
+"t4L-aU-UdP.text" = "Name your new task, lazy human!";
+
+/* Class = "IBUILabel"; text = "I dont't want to choose a initial date"; ObjectID = "t7t-II-vrK"; */
+"t7t-II-vrK.text" = "I dont't want to choose a initial date";
+
+/* Class = "IBUILabel"; text = "Pick a date for begining"; ObjectID = "upH-fL-G9j"; */
+"upH-fL-G9j.text" = "Pick a date for begining";
+
+/* Class = "IBUILabel"; text = "I dont't want to choose a initial date"; ObjectID = "x3G-Sg-3PK"; */
+"x3G-Sg-3PK.text" = "I dont't want to choose a initial date";
+
+/* Class = "IBUILabel"; text = "Choose difficulty:"; ObjectID = "yhG-GP-5zY"; */
+"yhG-GP-5zY.text" = "Choose difficulty:";
+
+/* Class = "IBUILabel"; text = "I dont't want to choose a conclusion date"; ObjectID = "zh5-eo-9aG"; */
+"zh5-eo-9aG.text" = "I dont't want to choose a conclusion date";
+
+/* Class = "IBUINavigationItem"; title = "Task Creator Wizard"; ObjectID = "zpZ-bY-uZY"; */
+"zpZ-bY-uZY.title" = "Task Creator Wizard";
