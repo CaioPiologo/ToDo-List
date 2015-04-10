@@ -351,12 +351,12 @@
     
     Task *task = [data objectAtIndex: index];
     [_organizer removeTask:[task objectID]];
-    [self.tableView reloadData];
     data = [[NSMutableArray alloc] init];
     [data addObjectsFromArray:[self.organizer getTodayTasks]];
     [data addObjectsFromArray:[self.organizer getTomorrowTasks]];
     [data addObjectsFromArray:[self.organizer getAfterTomorrowTasks]];
     [data addObjectsFromArray:[self.organizer getLaterTasks]];
+    [self.tableView reloadData];
     return UITableViewCellEditingStyleDelete;
 }
 

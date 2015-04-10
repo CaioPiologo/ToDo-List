@@ -234,40 +234,17 @@
         
         if ([comp1 day]   > ([comp2 day]+2) && [comp1 month] >= [comp2 month] && [comp1 year]  >= [comp2 year])
         {
-            NSString * t2 = [t name];
             [auxiliaryArray addObject:t];
         }else if ([comp1 day]   == ([comp2 day]+2) && [comp1 month] > [comp2 month] && [comp1 year]  >= [comp2 year])
         {
-            NSString * t2 = [t name];
             [auxiliaryArray addObject:t];
         }else if ([comp1 day]   < ([comp2 day]+2) && [comp1 month] > [comp2 month] && [comp1 year]  >= [comp2 year])
         {
-            NSString * t2 = [t name];
             [auxiliaryArray addObject:t];
         }
     }
     auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
     return auxiliaryArray;
 }
-
--(NSArray*)getPendingTasks
-{
-    NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
-    NSCalendar* calendar = [NSCalendar currentCalendar];
-    
-    unsigned unitFlags = NSCalendarUnitDay | NSCalendarUnitMonth |  NSCalendarUnitYear;
-    NSDateComponents* comp1;
-    NSDateComponents* comp2;
-    
-    for (Task *t in self.taskList) {
-            [auxiliaryArray addObject:t];
-        
-    }
-    
-    auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
-    return auxiliaryArray;
-}
-
-
 
 @end
