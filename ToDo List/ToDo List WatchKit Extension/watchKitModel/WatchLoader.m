@@ -6,25 +6,24 @@
 //  Copyright (c) 2015 Ricardo Z Charf. All rights reserved.
 //
 
-#import "Loader.h"
-#import <UIKit/UIKit.h>
+
 #import <CoreData/CoreData.h>
+#import "WatchLoader.h"
 #import "Task.h"
 #import "SharedLoader.h"
 
-#pragma mark DEFINES 
-#define ONGOINGKEY @"ongoing"
-#define FINISHEDKEY @"finished"
-
-@interface Loader()
+@interface WatchLoader()
 #pragma mark properties
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic) SharedLoader * sharedLoader;
+@property (nonatomic) NSMutableArray* tasksArray;
+
 @end
-@implementation Loader
-#pragma mark init
+@implementation WatchLoader
+
+#pragma mark Methods
 -(id) init
 {
     self = [super init];
@@ -34,87 +33,43 @@
         self.managedObjectContext = self.sharedLoader.managedObjectContext;
         self.managedObjectModel = self.sharedLoader.managedObjectModel;
         self.persistentStoreCoordinator = self.sharedLoader.persistentStoreCoordinator;
+        self.tasksArray = [self loadTasksFromDataBase];
     }
     return self;
 }
 
-
-
-#pragma mark Methods
 -(NSMutableArray*)loadTasksFromDataBase
 {
-    NSMutableArray * result = [self.sharedLoader loadTasksFromDataBase];
+    NSMutableArray * result = [self.sharedLoader loadTasksFromDataBase ];
     return result;
 }
 
-
--(Task*)createTaskWithName:(NSString*)name  withInitialDate:(NSDate*)initialDate withConclusionDate:(NSDate*) conlusionDate withDifficulty:(NSNumber*)difficulty withFun:(NSNumber*) fun isContinuous:(NSNumber*) continuous withRepeatTime:(NSDate*) repeatTime isUrgent:(NSNumber*)urgent
+-(NSMutableArray*)todayTasks
 {
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:self.managedObjectContext];
-    Task * newTask = [[Task alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:self.managedObjectContext];
-    newTask.name = name;
-    newTask.difficulty = difficulty;
-    newTask.fun = fun;
-    newTask.initialDate = initialDate;
-    newTask.conclusionDate = conlusionDate;
-    newTask.continuous = continuous;
-    newTask.repeatTime = repeatTime;
-    newTask.urgent = urgent;
-    newTask.finished = @0;
-    [self saveTasksStates];
-    return newTask;
-}
-
-
--(void)destroyTask:(Task*)task
-{
-    [self.managedObjectContext deleteObject:task];
-    [self saveTasksStates];
-}
-
-/**
- Saves the context, wich means to save all tasks.
- **/
--(void)saveTasksStates
-{
-    NSError * error;
-    [self.managedObjectContext save:&error];
-    if (error) {
-        NSLog(@"Unable to execute fetch request.");
-        NSLog(@"%@, %@", error, error.localizedDescription);
-        
+    NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    
+    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
+    NSDateComponents* comp1;
+    NSDateComponents* comp2;
+    self.tasksArray = [self loadTasksFromDataBase];
+    for (Task *t in self.tasksArray) {
+        comp1 = [calendar components:unitFlags fromDate:t.conclusionDate];
+        comp2 = [calendar components:unitFlags fromDate:[NSDate date]];
+        //NSLog(@"prioridade: %@",t.priority);
+        if ([comp1 day]   == [comp2 day] && [comp1 month] == [comp2 month] && [comp1 year]  == [comp2 year])
+        {
+            //            NSString *nome = t.name;
+            [auxiliaryArray addObject:t];
+        }else if([t.conclusionDate earlierDate:[NSDate date]] == t.conclusionDate)
+        {
+            [auxiliaryArray addObject:t];
+        }
     }
+    auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
+    return auxiliaryArray;
 }
 
--(void)deleteTask:(Task*) task
-{
-    [self.managedObjectContext deleteObject:task];
-}
-
-/**
- Create a task object that is not conected to the save context. Any saving, will not affect this new task.
- @return the new task object created and initialized.
- */
--(Task*)newEmptyTask
-{
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:self.managedObjectContext];
-    Task * newTask = [[Task alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:nil];
-    newTask.name = nil;
-    newTask.difficulty = nil;
-    newTask.fun = nil;
-    newTask.initialDate = nil;
-    newTask.conclusionDate = nil;
-    newTask.continuous = nil;
-    newTask.repeatTime = nil;
-    newTask.urgent = @0;
-    newTask.finished = @0;
-    return newTask;
-}
-
--(void)addTaskObjectToContext:(Task*)task
-{
-    [self.managedObjectContext insertObject:task];
-}
 #pragma mark - Core Data stack
 
 @synthesize managedObjectContext = _managedObjectContext;

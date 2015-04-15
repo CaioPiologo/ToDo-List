@@ -7,3 +7,27 @@
 */
 
 "There are no tasks today." = "Não há tarefas para hoje.";
+
+"Today" = "Hoje";
+
+"Tomorrow" = "Amanhã";
+
+"After Tomorrow" = "Depois de amanhã";
+
+"Later" = "Later";
+
+"There are no tasks tomorrow." ="Não há tarefas pra amanhã.";
+
+"There are no tasks after tomorrow."="Não há tarefas pra depois de amanhã.";
+
+"There are no tasks for later." = "Não há tarefas para depois.";
+
+"Task not completed on %02ld/%@/%ld"="Tarefa não completada em %02ld/%@/%ld";
+
+"Conclusion until %02ld:%02ld"="Concluir até %02ld:%02ld";
+
+"You forgot about me...\n"="Você esqueceu de mim...\n";
+
+"Damn, sorry"="Puxa, desculpe.";
+
+"Hell no!"="Nunca!";
