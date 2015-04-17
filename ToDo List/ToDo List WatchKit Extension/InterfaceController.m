@@ -81,6 +81,8 @@ int i=0;
         
         // Assign the text to the row's label.
         MyRow* row = [self.Table rowControllerAtIndex:i];
+        
+        
         [row.label setText:task[0]];
         switch ([task[1] integerValue]) {
             case 0:

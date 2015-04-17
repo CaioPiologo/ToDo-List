@@ -51,8 +51,18 @@
             <objects>
                 <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController">
                     <items>
-                        <group alignment="left" id="gv7-I2-MZq"/>
-                        <group alignment="left" id="eew-Gs-W6Y"/>
+                        <group alignment="left" id="gv7-I2-MZq">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Smart List" textAlignment="center" id="xZ2-0o-l9k"/>
+                            </items>
+                        </group>
+                        <group alignment="left" layout="vertical" id="eew-Gs-W6Y">
+                            <items>
+                                <label alignment="left" text="0 Tasks Left" id="3ju-Mu-HZh"/>
+                                <label alignment="center" text="For Today" id="oXE-lg-EzN"/>
+                            </items>
+                            <edgeInsets key="margins" left="15" right="0.0" top="0.0" bottom="0.0"/>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
