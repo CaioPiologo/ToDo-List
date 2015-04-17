@@ -18,10 +18,12 @@
 #pragma mark Singleton Method(Static)
 + (id)getInstace {
     static Organizer *_organizerInstance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    //static dispatch_once_t onceToken;
+    //dispatch_once(&onceToken, ^{
+    if (!_organizerInstance) {
         _organizerInstance = [[self alloc] init];
-    });
+    }
+    //});
     return _organizerInstance;
 }
 

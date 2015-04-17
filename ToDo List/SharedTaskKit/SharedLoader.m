@@ -39,7 +39,7 @@
         NSLog(@"%@, %@", error, error.localizedDescription);
         
     }
-    NSLog(@"%@",[result[0] name]);
+    //NSLog(@"%@",[result[0] name]);
     return [result mutableCopy];
 }
 
