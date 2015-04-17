@@ -47,4 +47,6 @@
 
 -(NSArray*)getPendingTasks;
 
+-(NSMutableArray*) getArrayForWatch;
+
 @end

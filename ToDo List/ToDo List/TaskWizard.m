@@ -58,6 +58,7 @@
  Finish creating task
  */
 -(Task *) finish{
+    [self.loader saveTasksStates];
     if (self.editingTask==nil) {
         [self setNotification];
         [self.loader addTaskObjectToContext:self.newtask];
@@ -73,6 +74,7 @@
         self.editingTask=nil;
         return self.editingTask;
     }
+    
 }
 /**
  Adds name to task

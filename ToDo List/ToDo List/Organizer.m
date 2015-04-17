@@ -148,7 +148,7 @@
 {
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
     NSCalendar* calendar = [NSCalendar currentCalendar];
-    
+    //self.taskList =[self.loader loadTasksFromDataBase];
     unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
     NSDateComponents* comp1;
     NSDateComponents* comp2;
@@ -167,14 +167,14 @@
         }
     }
     auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
-    return auxiliaryArray;
+    return [auxiliaryArray copy];
 }
 
 -(NSArray*)getTomorrowTasks
 {
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
     NSCalendar* calendar = [NSCalendar currentCalendar];
-    
+    self.taskList =[self.loader loadTasksFromDataBase];
     unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
     NSDateComponents* comp1;
     NSDateComponents* comp2;
@@ -197,7 +197,7 @@
 {
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
     NSCalendar* calendar = [NSCalendar currentCalendar];
-    
+    self.taskList =[self.loader loadTasksFromDataBase];
     unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
     NSDateComponents* comp1;
     NSDateComponents* comp2;
@@ -219,7 +219,7 @@
 {
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
     NSCalendar* calendar = [NSCalendar currentCalendar];
-    
+    self.taskList =[self.loader loadTasksFromDataBase];
     unsigned unitFlags = NSCalendarUnitDay | NSCalendarUnitMonth |  NSCalendarUnitYear ;
     NSDateComponents* comp1;
     NSDateComponents* comp2;
@@ -245,6 +245,20 @@
     }
     auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
     return auxiliaryArray;
+}
+
+-(NSMutableArray*) getArrayForWatch
+{
+    NSMutableArray * tasks = [self getTodayTasks];
+    
+    NSMutableArray *taskNames = [[NSMutableArray alloc] init];
+    
+    for (Task *task in tasks) {
+        [taskNames addObject:@[task.name,task.priority]];
+    }
+    
+    
+    return taskNames;
 }
 
 @end

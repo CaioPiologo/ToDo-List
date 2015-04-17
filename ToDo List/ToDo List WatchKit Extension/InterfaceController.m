@@ -12,7 +12,6 @@
 #import "WatchLoader.h"
 #import "watchKitModel/Task.h"
 
-
 @interface InterfaceController()
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *Table;
 @property (nonatomic) NSMutableArray * arrayOfTasks;
@@ -30,15 +29,25 @@ int i=0;
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
-    self.loader = [[WatchLoader alloc] init];
-    self.arrayOfTasks = [self.loader todayTasks];
+    [WKInterfaceController openParentApplication:@{} reply:^(NSDictionary *replyInfo, NSError *error) {
+        
+        self.arrayOfTasks = replyInfo[@"tasksArray"];
+        NSLog(@"%@", replyInfo[@"tasksArray"][0]);
+        [self loadTodoItems];//load info into table.
+        
+    }];
     [self loadTodoItems];//load info into table.
     [self autoUpdate];
 }
 
 -(void) autoUpdate{
-       self.arrayOfTasks = [self.loader todayTasks];
-    [self loadTodoItems];//load info into table.
+    [WKInterfaceController openParentApplication:@{} reply:^(NSDictionary *replyInfo, NSError *error) {
+
+            self.arrayOfTasks = replyInfo[@"tasksArray"];
+        NSLog(@"%@", replyInfo[@"tasksArray"][0]);
+        [self loadTodoItems];//load info into table.
+        
+    }];
     [self performSelector:@selector(autoUpdate) withObject:self afterDelay:1];
 }
 
@@ -50,20 +59,30 @@ int i=0;
 - (void)loadTodoItems {
     // Fetch the to-do items
     NSArray* items = self.arrayOfTasks;
-    
+
     // Configure the table object (self.todoItems) and get the row controllers.
-    [self.Table setNumberOfRows:items.count withRowType:@"default"];
-    NSInteger rowCount = self.Table.numberOfRows;
+    if (items.count > 0 ) {
+        [self.Table setNumberOfRows:items.count withRowType:@"default"];
+    }
+    else
+    {
+        [self.Table setNumberOfRows:1 withRowType:@"default"];
+        MyRow* row = [self.Table rowControllerAtIndex:0];
+        [row.label setText:@"No tasks today."];
+        return;
+    }
+   // NSLog(@"%@",[items[0] name]);
+    NSInteger rowCount = [items count];
     
     // Iterate over the rows and set the label for each one.
     for (NSInteger i = 0; i < rowCount; i++) {
         // Get the to-do item data.
-        Task* task = items[i];
+        NSArray* task = items[i];
         
         // Assign the text to the row's label.
         MyRow* row = [self.Table rowControllerAtIndex:i];
-        [row.label setText:task.name];
-        switch ([task.priority integerValue]) {
+        [row.label setText:task[0]];
+        switch ([task[1] integerValue]) {
             case 0:
                 [row.group setBackgroundColor:[UIColor colorWithRed:121/255.0 green:189/255.0 blue:143/255.0 alpha:1]];
                 break;

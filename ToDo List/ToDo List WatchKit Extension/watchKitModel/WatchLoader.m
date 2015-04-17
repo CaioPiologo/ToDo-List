@@ -46,6 +46,7 @@
 
 -(NSMutableArray*)todayTasks
 {
+    
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
     NSCalendar* calendar = [NSCalendar currentCalendar];
     
@@ -56,7 +57,7 @@
     for (Task *t in self.tasksArray) {
         comp1 = [calendar components:unitFlags fromDate:t.conclusionDate];
         comp2 = [calendar components:unitFlags fromDate:[NSDate date]];
-        //NSLog(@"prioridade: %@",t.priority);
+       // NSLog(@"nome: %@",t.name);
         if ([comp1 day]   == [comp2 day] && [comp1 month] == [comp2 month] && [comp1 year]  == [comp2 year])
         {
             //            NSString *nome = t.name;
@@ -66,7 +67,7 @@
             [auxiliaryArray addObject:t];
         }
     }
-    auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
+    auxiliaryArray = [[auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)] mutableCopy];
     return auxiliaryArray;
 }
 

@@ -1,10 +1,15 @@
 PODS:
   - JTCalendar (1.0.11)
+  - MMWormhole (1.1.1):
+    - MMWormhole/Core (= 1.1.1)
+  - MMWormhole/Core (1.1.1)
 
 DEPENDENCIES:
   - JTCalendar (~> 1.0.0)
+  - MMWormhole (~> 1.1.1)
 
 SPEC CHECKSUMS:
   JTCalendar: ca96ea52237c0371a86f4884b885e02682d6fed4
+  MMWormhole: 941cd168b4afd6073f883b82944d6eded4e00203
 
 COCOAPODS: 0.36.1

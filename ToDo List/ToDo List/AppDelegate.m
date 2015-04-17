@@ -52,5 +52,14 @@
     [self.organizer saveEnviroment];
 }
 
+- (void)application:(UIApplication *)application
+handleWatchKitExtensionRequest:(NSDictionary *)userInfo
+              reply:(void (^)(NSDictionary *replyInfo))reply
+{
+    self.organizer = [Organizer getInstace];
+    NSMutableArray * arr = [self.organizer getArrayForWatch];
+    reply(@{@"tasksArray":arr});
+}
+
 
 @end

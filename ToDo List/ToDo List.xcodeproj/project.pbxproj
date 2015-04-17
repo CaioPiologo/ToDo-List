@@ -54,6 +54,7 @@
 		8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454841AC34B300053766D /* Task.xcdatamodeld */; };
 		8CF1892D1AC5E7FE0027EB72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454731AC3204B0053766D /* Info.plist */; };
 		8CF1892F1AC5E9110027EB72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CF1892E1AC5E9110027EB72 /* Info.plist */; };
+		BC4EC05652146C6DE4C36FB6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B501C58271A4EB19883633 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		25D362591AC3255B00DEF6E8 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		25D3625A1AC3255B00DEF6E8 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		2ABA61AC30BD6171421D6F6D /* Pods-ToDo ListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo ListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo ListTests/Pods-ToDo ListTests.release.xcconfig"; sourceTree = "<group>"; };
+		66B501C58271A4EB19883633 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		818E6EF70CAFFD380223E560 /* libPods-ToDo List.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDo List.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C098D591ADE9EF7009FCDA4 /* ToDo List WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ToDo List WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C098D5C1ADE9EF7009FCDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			files = (
 				1A0FD3A06B4DB48A61783AEB /* libPods-ToDo List.a in Frameworks */,
 				8C098DA51ADEF05C009FCDA4 /* SharedTaskKit.framework in Frameworks */,
+				BC4EC05652146C6DE4C36FB6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +258,7 @@
 				8C2B93F41AC9DCEA00D3AE64 /* CoreData.framework */,
 				818E6EF70CAFFD380223E560 /* libPods-ToDo List.a */,
 				E2F3B4F7A0251AE05CA6CF8A /* libPods-ToDo ListTests.a */,
+				66B501C58271A4EB19883633 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1258,6 +1262,7 @@
 				8C098DA81ADEF05C009FCDA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C098DAD1ADEF05C009FCDA4 /* Build configuration list for PBXNativeTarget "SharedTaskKitTests" */ = {
 			isa = XCConfigurationList;
@@ -1266,6 +1271,7 @@
 				8C098DAA1ADEF05C009FCDA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C3454501AC3204B0053766D /* Build configuration list for PBXProject "ToDo List" */ = {
 			isa = XCConfigurationList;

@@ -10,16 +10,25 @@
             <objects>
                 <controller title="Smart List" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <label width="136" alignment="left" text="Today Tasks:" id="tE2-Cn-Ls2">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </label>
+                        <group width="1" alignment="left" radius="0.0" id="hBc-f9-jV0">
+                            <items>
+                                <label width="136" alignment="left" text="Today Tasks" textAlignment="center" id="tE2-Cn-Ls2">
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        </group>
                         <table alignment="left" id="Huw-cF-YP7">
                             <items>
                                 <tableRow id="26e-1w-R4D" customClass="MyRow">
-                                    <group key="rootItem" width="1" alignment="left" radius="0.0" id="gBF-sf-0Ha">
+                                    <group key="rootItem" width="1" alignment="left" layout="vertical" radius="0.0" id="gBF-sf-0Ha">
                                         <items>
-                                            <label alignment="left" verticalAlignment="center" text="Label" id="b3J-hI-w2Q"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="7" id="b3J-hI-w2Q">
+                                                <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
                                         </items>
+                                        <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </group>
                                     <connections>
                                         <outlet property="group" destination="gBF-sf-0Ha" id="I3G-zI-Hpb"/>

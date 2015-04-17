@@ -27,7 +27,6 @@
 {
     NSError * error;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
@@ -40,6 +39,7 @@
         NSLog(@"%@, %@", error, error.localizedDescription);
         
     }
+    NSLog(@"%@",[result[0] name]);
     return [result mutableCopy];
 }
 
