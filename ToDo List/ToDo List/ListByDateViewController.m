@@ -128,13 +128,13 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
     if(section == 0)
-        return @"Today";
+        return NSLocalizedString(@"Today", nil);
     if(section == 1)
-        return @"Tomorrow";
+        return NSLocalizedString(@"Tomorrow", nil);
     if(section == 2)
-        return @"After Tomorrow";
+        return NSLocalizedString(@"After Tomorrow", nil);
     if(section == 3)
-        return @"Later";
+        return NSLocalizedString(@"Later", nil);
     return @"";
 }
 

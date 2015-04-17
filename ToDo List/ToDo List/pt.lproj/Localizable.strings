@@ -14,7 +14,7 @@
 
 "After Tomorrow" = "Depois de amanhã";
 
-"Later" = "Later";
+"Later" = "Para Depois";
 
 "There are no tasks tomorrow." ="Não há tarefas pra amanhã.";
 
@@ -27,6 +27,8 @@
 "Conclusion until %02ld:%02ld"="Concluir até %02ld:%02ld";
 
 "You forgot about me...\n"="Você esqueceu de mim...\n";
+
+"Did you forget me?\n"="Esqueceu de mim?\n";
 
 "Damn, sorry"="Puxa, desculpe.";
 

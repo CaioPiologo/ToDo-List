@@ -42,6 +42,8 @@
     self.newtask.name = [self.editingTask.name copy];
     self.newtask.difficulty = [self.editingTask.difficulty copy];
     self.newtask.fun = [self.editingTask.fun copy];
+    self.newtask.notification = self.editingTask.notification;
+    self.newtask.urgentNotification = self.editingTask.urgentNotification;
 }
 /**
  Cancels task creation
@@ -58,9 +60,10 @@
  Finish creating task
  */
 -(Task *) finish{
-    [self.loader saveTasksStates];
+    [self.newtask updatePriority];
     if (self.editingTask==nil) {
         [self setNotification];
+        [self createUrgentNotification];
         [self.loader addTaskObjectToContext:self.newtask];
         return self.newtask;
     }else
@@ -70,9 +73,12 @@
         self.editingTask.name = self.newtask.name;
         self.editingTask.difficulty = self.newtask.difficulty;
         self.editingTask.fun = self.newtask.fun;
+        self.editingTask.notification = self.newtask.notification;
+        self.editingTask.urgentNotification = self.newtask.urgentNotification;
         self.newtask = self.editingTask;
+        Task*t = self.editingTask;
         self.editingTask=nil;
-        return self.editingTask;
+        return t;
     }
     
 }
@@ -149,17 +155,17 @@
     
     UILocalNotification* not = [[UILocalNotification alloc] init];
     not.fireDate = [NSDate dateWithTimeInterval:timeFromToday sinceDate:[NSDate date]];
-    not.alertBody = NSLocalizedString(@"You forgot about me...\n", nil);
+    not.alertBody = NSLocalizedString(@"Did you forget me?\n", nil);
     not.alertBody = [not.alertBody stringByAppendingString:self.newtask.name];
     not.alertAction = NSLocalizedString(@"Hell no!", nil);
     not.timeZone = [NSTimeZone defaultTimeZone];
     not.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     
-    if(![self.newtask.priority isEqualToNumber:@3]){
+    if([self.newtask.priority isEqualToNumber:@3])
+        [self.newtask setNewUrgentNotification:nil];
+    else{
         [[UIApplication sharedApplication] scheduleLocalNotification:not];
         [self.newtask setNewUrgentNotification:not];
     }
-    else
-        [self.newtask setNewUrgentNotification:nil];
 }
 @end
