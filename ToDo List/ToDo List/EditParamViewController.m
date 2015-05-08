@@ -17,6 +17,7 @@
 @property (nonatomic) Organizer *organizer;
 @property (weak, nonatomic) IBOutlet UISlider *difficult;
 @property (weak, nonatomic) IBOutlet UISlider *funny;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 
 @end
 
@@ -31,6 +32,7 @@
     self.funny.value = [self.organizer.taskWizard.newtask.fun floatValue];
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -38,6 +40,7 @@
 
 -(IBAction)saveButton:(id)sender
 {
+    self.nextButton.enabled = NO;
     Task *task;
     
     [self.organizer.taskWizard giveDifficulty:[NSNumber numberWithFloat:self.difficult.value]];
@@ -54,7 +57,6 @@
     }
     task = [self.organizer.taskWizard finish];
     
-    [self.organizer saveEnviroment];
     
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

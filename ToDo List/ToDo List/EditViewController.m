@@ -14,6 +14,7 @@
 
 @interface EditViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 
 @property (nonatomic) Organizer *organizer;
 @property (weak, nonatomic) IBOutlet UILabel *warningMessage;
@@ -31,6 +32,12 @@
     
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.nextButton.enabled = YES;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -38,8 +45,10 @@
 
 -(IBAction)toEditDate:(id)sender{
     
+    self.nextButton.enabled = NO;
     if([self.textField.text isEqualToString:@""]) {
         [self.warningMessage setHidden:NO];
+        self.nextButton.enabled = YES;
     }else{
         [self.organizer.taskWizard giveName: self.textField.text];
         [self performSegueWithIdentifier:@"toEditDate" sender:self];

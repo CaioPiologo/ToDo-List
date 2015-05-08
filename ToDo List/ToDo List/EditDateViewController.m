@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *warningDateMessage;
 @property (weak, nonatomic) IBOutlet UISwitch *switchInitial;
 @property (weak, nonatomic) IBOutlet UISwitch *switchConclusion;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 
 @property (nonatomic) Organizer *organizer;
 
@@ -39,6 +40,12 @@
     if(self.organizer.taskWizard.newtask.conclusionDate != nil){
         self.conclusionDate.date = [self.organizer.taskWizard.newtask.conclusionDate copy];
     }
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.nextButton.enabled = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,6 +70,7 @@
 }
 
 -(IBAction)toEditParam:(id)sender{
+    self.nextButton.enabled = NO;
     if((![self.initialDate isHidden])&&(![self.conclusionDate isHidden])&&([self.initialDate.date compare: self.conclusionDate.date] == NSOrderedDescending)){
         self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeInterval:0 sinceDate:self.initialDate.date];
         [self.warningDateMessage setHidden:NO];

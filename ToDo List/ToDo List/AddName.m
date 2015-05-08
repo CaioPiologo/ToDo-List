@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *warningMessage;
 @property (nonatomic) Organizer *organizer;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 
 @end
 
@@ -28,6 +29,12 @@
     [self.organizer.taskWizard begin];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.nextButton.enabled = YES;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -35,9 +42,11 @@
 
 - (IBAction)nextButton: (id)sender
 {
-    
+    UIBarButtonItem *button = (UIBarButtonItem *)sender;
+    button.enabled = NO;
     if([_textField.text isEqualToString:@""]) {
         [_warningMessage setHidden:NO];
+        self.nextButton.enabled = YES;
     }else{
         [_organizer.taskWizard giveName: _textField.text];
         [self performSegueWithIdentifier:@"toGetDate" sender:self];

@@ -9,6 +9,7 @@
 #import "TaskWizard.h"
 #import "Loader.h"
 #import "Task.h"
+#import "Organizer.h"
 
 @interface TaskWizard()
 @property (nonatomic) Loader *loader;
@@ -66,6 +67,7 @@
         [self setNotification];
         [self createUrgentNotification];
         [self.loader addTaskObjectToContext:self.newtask];
+        [[Organizer getInstace] saveEnviroment];
         return self.newtask;
     }else
     {
@@ -79,9 +81,9 @@
         self.newtask = self.editingTask;
         Task*t = self.editingTask;
         self.editingTask=nil;
+        [[Organizer getInstace] saveEnviroment];
         return t;
     }
-    
 }
 /**
  Adds name to task

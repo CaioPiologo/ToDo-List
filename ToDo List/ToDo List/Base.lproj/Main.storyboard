@@ -106,7 +106,7 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="104" y="302" width="177" height="21"/>
+                                    <rect key="frame" x="37" y="302" width="311" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rename your task, lazy human!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0E-kQ-W7T">
@@ -152,6 +152,7 @@
                         <outlet property="difficult" destination="LbY-Mq-Muh" id="lXW-W4-V0U"/>
                         <outlet property="funny" destination="abJ-R8-kZn" id="ZJS-Oz-zdK"/>
                         <outlet property="initialDate" destination="i5d-jR-wks" id="ndO-mi-MgW"/>
+                        <outlet property="nextButton" destination="hAg-vC-6Ma" id="IVP-KA-oqM"/>
                         <outlet property="textField" destination="C4n-4u-k65" id="vNF-vi-dwp"/>
                         <outlet property="warningMessage" destination="0nu-eS-Rwv" id="opa-9W-ZW8"/>
                         <segue destination="BMm-9O-VaX" kind="push" identifier="toEditDate" id="to0-c3-iDW"/>
@@ -301,6 +302,7 @@
                     <connections>
                         <outlet property="conclusionDate" destination="IKu-Zc-Pus" id="GsC-pm-3hZ"/>
                         <outlet property="initialDate" destination="i5d-jR-wks" id="q3P-Ea-vOL"/>
+                        <outlet property="nextButton" destination="ZTU-cp-Gsg" id="1SU-ch-0Bw"/>
                         <outlet property="switchConclusion" destination="AdR-eh-DnQ" id="Z81-Nk-AON"/>
                         <outlet property="switchInitial" destination="UGd-WJ-Lel" id="3yI-PM-S4G"/>
                         <outlet property="warningDateMessage" destination="CGa-Ri-Ncf" id="Khw-81-dK6"/>
@@ -426,6 +428,7 @@
                     <connections>
                         <outlet property="difficult" destination="LbY-Mq-Muh" id="6ut-bc-olP"/>
                         <outlet property="funny" destination="abJ-R8-kZn" id="LF1-e5-Sat"/>
+                        <outlet property="nextButton" destination="h8P-di-zRN" id="KLV-Eh-yt7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcj-8R-hwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -546,7 +549,7 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="100" y="320" width="177" height="21"/>
+                                    <rect key="frame" x="27" y="320" width="323" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name your new task, lazy human!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4L-aU-UdP">
@@ -590,6 +593,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="nextButton" destination="lEt-CC-ew0" id="YTO-Oc-Ctl"/>
                         <outlet property="textField" destination="q5a-94-iDZ" id="zEb-uC-e7d"/>
                         <outlet property="warningMessage" destination="eMb-6i-5yR" id="cxk-Xq-cBz"/>
                         <segue destination="HGT-fb-m1e" kind="push" identifier="toGetDate" id="NdA-BO-Tco"/>
@@ -735,6 +739,7 @@
                     <connections>
                         <outlet property="conclusionDate" destination="9ez-rx-zd3" id="Jid-Xz-gke"/>
                         <outlet property="initialDate" destination="zbE-eI-6Lq" id="eeJ-IN-jJE"/>
+                        <outlet property="nextButton" destination="k87-mk-mmQ" id="6zt-3e-Ade"/>
                         <outlet property="switchConclusion" destination="sSg-Tw-aNL" id="8qX-i1-XS8"/>
                         <outlet property="switchInitial" destination="1C8-ha-AOV" id="LKN-nQ-YwA"/>
                         <outlet property="warningDateMessage" destination="OcP-RX-POh" id="lSJ-ec-XJP"/>
@@ -862,6 +867,7 @@
                         <outlet property="difficult" destination="qIt-sc-rb4" id="Ywq-1D-wvO"/>
                         <outlet property="doneButton" destination="95t-Nv-tGt" id="zqR-6S-ait"/>
                         <outlet property="funny" destination="c0Z-ng-8Ch" id="17S-AN-KRa"/>
+                        <outlet property="nextButton" destination="95t-Nv-tGt" id="M1B-Nm-vtK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usk-QI-5Rv" userLabel="First Responder" sceneMemberID="firstResponder"/>

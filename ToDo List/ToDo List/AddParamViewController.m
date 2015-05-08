@@ -16,7 +16,8 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic) Organizer *organizer;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
+@property BOOL flag;
 @end
 
 @implementation AddParamViewController
@@ -25,6 +26,13 @@
 {
     [super viewDidLoad];
     _organizer = [Organizer getInstace];
+    self.flag=NO;
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.nextButton.enabled = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,19 +42,24 @@
 
 -(IBAction)doneButton:(id)sender
 {
-    Task *task;
-    
-    [_organizer.taskWizard giveDifficulty:[NSNumber numberWithFloat:self.difficult.value]];
-
-    [_organizer.taskWizard giveFun:[NSNumber numberWithFloat:self.funny.value]];
-
-    task = [_organizer.taskWizard finish];
-
-    [_organizer addTaskToList: task];
-    [_organizer saveEnviroment];
-
-    [self.navigationController popToRootViewControllerAnimated:YES];
-    //[self performSegueWithIdentifier:@"createTask" sender:self];
+    //if(self.flag==NO)
+    UIBarButtonItem *button = (UIBarButtonItem *)sender;
+    button.enabled = NO;
+    //{
+        self.flag=YES;
+        Task *task;
+        NSLog(@"lalalala");
+        [_organizer.taskWizard giveDifficulty:[NSNumber numberWithFloat:self.difficult.value]];
+        
+        [_organizer.taskWizard giveFun:[NSNumber numberWithFloat:self.funny.value]];
+        
+        task = [_organizer.taskWizard finish];
+        
+        [_organizer addTaskToList: task];
+        
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        //[self performSegueWithIdentifier:@"createTask" sender:self];
+    //}
 }
 
 @end

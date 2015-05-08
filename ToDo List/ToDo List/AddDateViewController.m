@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *warningDateMessage;
 @property (weak, nonatomic) IBOutlet UISwitch *switchInitial;
 @property (weak, nonatomic) IBOutlet UISwitch *switchConclusion;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 
 @end
 
@@ -34,9 +35,10 @@
 
 }
 
-- (void)viewDidAppear:(BOOL)animated
+-(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    self.nextButton.enabled = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,6 +64,9 @@
 
 - (IBAction)nextButton: (id)sender
 {
+    UIBarButtonItem *button = (UIBarButtonItem *)sender;
+    button.enabled = NO;
+    
     if((![self.initialDate isHidden])&&(![self.conclusionDate isHidden])&&([self.initialDate.date compare: self.conclusionDate.date] == NSOrderedDescending)){
         
         self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeInterval:0 sinceDate:self.initialDate.date];
