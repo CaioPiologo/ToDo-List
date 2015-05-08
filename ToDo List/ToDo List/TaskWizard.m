@@ -27,7 +27,8 @@
 }
 
 /**
- Begins wizard by initializing the new task*/
+ Begins wizard by initializing the new task
+ */
 -(void) begin{
     self.newtask = [self.loader newEmptyTask];
 }

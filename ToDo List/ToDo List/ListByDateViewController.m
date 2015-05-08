@@ -24,7 +24,72 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     _organizer = [Organizer getInstace];
+    
+    //see if it is the first time
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    int first = (int)[userDefaults integerForKey:@"firstTime"];
+    //Case it's the first time of use of the app
+    if(first == 0)
+    {
+        Task * task;
+        //We have to create 5 tasks: one for each priority level and one for teaching how to remove tasks
+        //first one: TopPriority
+        [self.organizer.taskWizard begin];
+        [self.organizer.taskWizard giveName:NSLocalizedString(@"This Task has top priority",nil)];
+        [self.organizer.taskWizard giveDifficulty:@10];
+        [self.organizer.taskWizard giveFun:@1];
+        [self.organizer.taskWizard giveInitialDate:[NSDate date] ];
+        [self.organizer.taskWizard giveConclusionDate:[NSDate dateWithTimeInterval:0 sinceDate:[NSDate date]]];
+        task = [_organizer.taskWizard finish];
+        [self.organizer addTaskToList: task];
+        
+        //first one: HighPriority
+        [self.organizer.taskWizard begin];
+        [self.organizer.taskWizard giveName:NSLocalizedString(@"This Task has a high priority",nil)];
+        [self.organizer.taskWizard giveDifficulty:@10];
+        [self.organizer.taskWizard giveFun:@1];
+        [self.organizer.taskWizard giveInitialDate:[NSDate dateWithTimeIntervalSinceNow:-(60*60*24)] ];
+        [self.organizer.taskWizard giveConclusionDate:[NSDate dateWithTimeInterval:(60*60*24) sinceDate:[NSDate date]]];
+        task = [_organizer.taskWizard finish];
+        [self.organizer addTaskToList: task];
+        
+        //first one: SomePriority
+        [self.organizer.taskWizard begin];
+        [self.organizer.taskWizard giveName:NSLocalizedString(@"This Task has some priority",nil)];
+        [self.organizer.taskWizard giveDifficulty:@10];
+        [self.organizer.taskWizard giveFun:@1];
+        [self.organizer.taskWizard giveInitialDate:[NSDate dateWithTimeIntervalSinceNow:-(60*60*24)] ];
+        [self.organizer.taskWizard giveConclusionDate:[NSDate dateWithTimeInterval:(2*60*60*24) sinceDate:[NSDate date]]];
+        task = [_organizer.taskWizard finish];
+        [self.organizer addTaskToList: task];
+        
+        //first one: NoPriority
+        [self.organizer.taskWizard begin];
+        [self.organizer.taskWizard giveName:NSLocalizedString(@"This Task has no priority",nil)];
+        [self.organizer.taskWizard giveDifficulty:@00];
+        [self.organizer.taskWizard giveFun:@1];
+        [self.organizer.taskWizard giveInitialDate:[NSDate dateWithTimeIntervalSinceNow:-(60*60*24)] ];
+        [self.organizer.taskWizard giveConclusionDate:[NSDate dateWithTimeInterval:(10*60*60*24) sinceDate:[NSDate date]]];
+        task = [_organizer.taskWizard finish];
+        [self.organizer addTaskToList: task];
+        
+        //first one: Swipe to delete
+        [self.organizer.taskWizard begin];
+        [self.organizer.taskWizard giveName:NSLocalizedString(@"Swipe the task left to remove. Try it in me!",nil)];
+        [self.organizer.taskWizard giveDifficulty:@00];
+        [self.organizer.taskWizard giveFun:@1];
+        [self.organizer.taskWizard giveInitialDate:[NSDate dateWithTimeIntervalSinceNow:-(60*60*24)] ];
+        [self.organizer.taskWizard giveConclusionDate:[NSDate dateWithTimeInterval:(50*60*60*24) sinceDate:[NSDate date]]];
+        task = [_organizer.taskWizard finish];
+        [self.organizer addTaskToList: task];
+        
+        
+        [self.organizer saveEnviroment];
+        [userDefaults setInteger:1 forKey:@"firstTime"];
+    }
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor colorWithRed:44/250.0 green:62/255.0 blue:80/250.0 alpha:1];
     data = [[NSMutableArray alloc] init];

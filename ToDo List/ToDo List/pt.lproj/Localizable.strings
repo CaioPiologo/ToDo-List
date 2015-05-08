@@ -33,3 +33,15 @@
 "Damn, sorry"="Puxa, desculpe.";
 
 "Hell no!"="Nunca!";
+
+"There are no tasks."="Não há tarefas.";
+
+"This Task has top priority"="Essa tarefa tem a maior prioridade";
+
+"This Task has a high priority"="Essa tarefa tem alta prioridade";
+
+"This Task has some priority"="Essa tarefa tem alguma prioridade";
+
+"This Task has no priority"="Essa tarefa não tem prioridade";
+
+"Swipe the task left to remove. Try it in me!" = "Delize as tarefas para removê-las!";

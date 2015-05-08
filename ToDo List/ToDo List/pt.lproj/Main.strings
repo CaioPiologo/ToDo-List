@@ -21,7 +21,7 @@
 "95t-Nv-tGt.title" = "Criar tarefa";
 
 /* Class = "IBUILabel"; text = "Piece of cake"; ObjectID = "Bsf-R1-PkW"; */
-"Bsf-R1-PkW.text" = "Faço de olhos fechados";
+"Bsf-R1-PkW.text" = "Muito fácil";
 
 /* Class = "IBUILabel"; text = "Initial date can't occur before conclusion date."; ObjectID = "CGa-Ri-Ncf"; */
 "CGa-Ri-Ncf.text" = "Data inicial não pode ser depois da final.";
@@ -42,7 +42,7 @@
 "HXE-Pg-oWh.text" = "Tão chato...";
 
 /* Class = "IBUILabel"; text = "Piece of cake"; ObjectID = "HeZ-E6-ZOn"; */
-"HeZ-E6-ZOn.text" = "Faço de olhos fechados";
+"HeZ-E6-ZOn.text" = "Muito fácil";
 
 /* Class = "IBUILabel"; text = "When should you have started the task?"; ObjectID = "Jm5-jw-cjQ"; */
 "Jm5-jw-cjQ.text" = "Quando você deveria ter iniciado a tarefa?";

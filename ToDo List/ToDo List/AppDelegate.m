@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Organizer.h"
+#import "Task.h"
 
 @interface AppDelegate ()
 @property (nonatomic) Organizer * organizer;
@@ -18,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [Organizer getInstace];
+    self.organizer = [Organizer getInstace];
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }
