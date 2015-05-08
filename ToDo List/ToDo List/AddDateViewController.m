@@ -40,6 +40,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
+    self.nextButton.enabled = YES;
     self.initialDate.backgroundColor = [UIColor clearColor];
     self.conclusionDate.backgroundColor = [UIColor clearColor];
 }
@@ -74,7 +75,7 @@
         
         self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeInterval:0 sinceDate:self.initialDate.date];
         [self.warningDateMessage setHidden:NO];
-    
+        self.nextButton.enabled = YES;
     }else{
         if(self.switchInitial.isOn && self.switchConclusion.isOn){
             [self.organizer.taskWizard giveInitialDate:[NSDate date]];

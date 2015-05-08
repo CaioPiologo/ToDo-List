@@ -51,6 +51,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    self.nextButton.enabled = YES;
     self.initialDate.backgroundColor = [UIColor clearColor];
     self.conclusionDate.backgroundColor = [UIColor clearColor];
 }
@@ -81,6 +82,7 @@
     if((![self.initialDate isHidden])&&(![self.conclusionDate isHidden])&&([self.initialDate.date compare: self.conclusionDate.date] == NSOrderedDescending)){
         self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeInterval:0 sinceDate:self.initialDate.date];
         [self.warningDateMessage setHidden:NO];
+        self.nextButton.enabled = YES;
     }else{
         
         if(self.switchInitial.isOn){
