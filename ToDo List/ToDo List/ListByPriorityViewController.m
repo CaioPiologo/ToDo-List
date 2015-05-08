@@ -124,7 +124,6 @@
     if([data count]==0)
     {
         cell.backgroundColor = [UIColor colorWithRed:44/255.0 green:62/255.0 blue:80/255.0 alpha:1];
-        //cell.textLabel.textColor = [UIColor whiteColor];
         return;
     }
     Task *task = [data objectAtIndex: indexPath.row];

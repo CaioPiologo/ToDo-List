@@ -42,24 +42,20 @@
 
 -(IBAction)doneButton:(id)sender
 {
-    //if(self.flag==NO)
     UIBarButtonItem *button = (UIBarButtonItem *)sender;
     button.enabled = NO;
-    //{
-        self.flag=YES;
-        Task *task;
+    self.flag=YES;
+    Task *task;
         
-        [_organizer.taskWizard giveDifficulty:[NSNumber numberWithFloat:self.difficult.value]];
+    [_organizer.taskWizard giveDifficulty:[NSNumber numberWithFloat:self.difficult.value]];
         
-        [_organizer.taskWizard giveFun:[NSNumber numberWithFloat:self.funny.value]];
+    [_organizer.taskWizard giveFun:[NSNumber numberWithFloat:self.funny.value]];
         
-        task = [_organizer.taskWizard finish];
+    task = [_organizer.taskWizard finish];
         
-        [_organizer addTaskToList: task];
+    [_organizer addTaskToList: task];
         
-        [self.navigationController popToRootViewControllerAnimated:YES];
-        //[self performSegueWithIdentifier:@"createTask" sender:self];
-    //}
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

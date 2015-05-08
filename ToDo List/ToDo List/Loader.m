@@ -198,33 +198,3 @@
 
 @end
 
-/**
- Transforms object Task ina TaskModel object
- @param task Object to transform
- @return Return a TaskMOdel Object
- **/
-/*-(TaskModel *) taskToTaskModel: (Task*)task
- {
- NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:self.managedObjectContext];
- TaskModel * newTaskModel = [[TaskModel alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:self.managedObjectContext];
- [newTaskModel setConclusionDate:task.conclusionDate];
- [newTaskModel setContinuous:[NSNumber numberWithBool:task.continuous]];
- [newTaskModel setDifficulty:task.difficulty];
- [newTaskModel setFinished:[NSNumber numberWithBool:task.finished]];
- [newTaskModel setIdentification:task.identification];
- [newTaskModel setInitialDate:task.initialDate];
- [newTaskModel setName:task.name];
- [newTaskModel setRepeatTime:task.repeatTime];
- [newTaskModel setFun:task.fun];
- [newTaskModel setUrgent:[NSNumber numberWithBool:task.urgent]];
- return newTaskModel;
- 
- }
- 
- -(Task *) taskModelToTask: (TaskModel*)taskModel
- {
- Task* t =  [[Task alloc] init:[taskModel identification] withName:[taskModel name] withDifficulty:[taskModel difficulty] withFun:[taskModel fun] withInitialDate:[taskModel initialDate] withConclusionDate:[taskModel conclusionDate] withContinuous:[[taskModel continuous] boolValue] withRepeat:[taskModel repeatTime] withUrgency:[[taskModel urgent] boolValue] finish:[[taskModel finished] boolValue]];
- return t;
- 
- }*/
-

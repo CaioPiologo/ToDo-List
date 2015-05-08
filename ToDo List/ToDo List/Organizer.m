@@ -18,8 +18,6 @@
 #pragma mark Singleton Method(Static)
 + (id)getInstace {
     static Organizer *_organizerInstance = nil;
-    //static dispatch_once_t onceToken;
-    //dispatch_once(&onceToken, ^{
     if (!_organizerInstance) {
         _organizerInstance = [[self alloc] init];
     }
@@ -125,10 +123,9 @@
  */
 -(void) removeTask:(NSManagedObjectID *) identification{
     Task *taskToBeRemoved = [self getTask:identification];
-//    if([taskToBeRemoved.urgent isEqual:@0])
-        if ([taskToBeRemoved getNotification]!=nil) {
-            [[UIApplication sharedApplication] cancelLocalNotification:[taskToBeRemoved getNotification]];
-        }
+    if ([taskToBeRemoved getNotification]!=nil) {
+        [[UIApplication sharedApplication] cancelLocalNotification:[taskToBeRemoved getNotification]];
+    }
     
     if ([taskToBeRemoved getUrgentNotification]!=nil) {
         [[UIApplication sharedApplication] cancelLocalNotification:[taskToBeRemoved getUrgentNotification]];
@@ -150,7 +147,6 @@
 {
     NSMutableArray * auxiliaryArray = [[NSMutableArray alloc]init];
     NSCalendar* calendar = [NSCalendar currentCalendar];
-    //self.taskList =[self.loader loadTasksFromDataBase];
     unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
     NSDateComponents* comp1;
     NSDateComponents* comp2;
@@ -161,7 +157,6 @@
 
         if ([comp1 day]   == [comp2 day] && [comp1 month] == [comp2 month] && [comp1 year]  == [comp2 year])
         {
-//            NSString *nome = t.name;
             [auxiliaryArray addObject:t];
         }else if([t.conclusionDate earlierDate:[NSDate date]] == t.conclusionDate)
         {
@@ -187,7 +182,6 @@
         
         if ([comp1 day]   == ([comp2 day]+1) && [comp1 month] == [comp2 month] && [comp1 year]  == [comp2 year])
         {
- //           NSString * nome = t.name;
             [auxiliaryArray addObject:t];
         }
     }
