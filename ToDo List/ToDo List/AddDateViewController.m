@@ -40,6 +40,11 @@
     [super viewDidAppear:animated];
     self.nextButton.enabled = YES;
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.initialDate.backgroundColor = [UIColor clearColor];
+    self.conclusionDate.backgroundColor = [UIColor clearColor];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -40,12 +40,19 @@
     if(self.organizer.taskWizard.newtask.conclusionDate != nil){
         self.conclusionDate.date = [self.organizer.taskWizard.newtask.conclusionDate copy];
     }
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     self.nextButton.enabled = YES;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.initialDate.backgroundColor = [UIColor clearColor];
+    self.conclusionDate.backgroundColor = [UIColor clearColor];
 }
 
 - (void)didReceiveMemoryWarning {

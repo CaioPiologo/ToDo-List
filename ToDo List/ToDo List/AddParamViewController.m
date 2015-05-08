@@ -48,7 +48,7 @@
     //{
         self.flag=YES;
         Task *task;
-        NSLog(@"lalalala");
+        
         [_organizer.taskWizard giveDifficulty:[NSNumber numberWithFloat:self.difficult.value]];
         
         [_organizer.taskWizard giveFun:[NSNumber numberWithFloat:self.funny.value]];
