@@ -95,7 +95,7 @@
         }else{
             [self.organizer.taskWizard giveConclusionDate:[self.conclusionDate.date copy]];
         }
-        
+        [self.warningDateMessage setHidden:YES];
         [self performSegueWithIdentifier:@"toEditParam" sender:self];
         
     }

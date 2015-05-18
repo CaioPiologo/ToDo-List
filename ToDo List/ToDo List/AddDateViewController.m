@@ -71,7 +71,7 @@
     UIBarButtonItem *button = (UIBarButtonItem *)sender;
     button.enabled = NO;
     
-    if((![self.initialDate isHidden])&&(![self.conclusionDate isHidden])&&([self.initialDate.date compare: self.conclusionDate.date] == NSOrderedDescending)){
+    if((![self.initialDate isHidden])&&(![self.conclusionDate isHidden])&&([self.initialDate.date compare: self.conclusionDate.date] == NSOrderedAscending)){
         
         self.conclusionDate.minimumDate = [[NSDate alloc] initWithTimeInterval:0 sinceDate:self.initialDate.date];
         [self.warningDateMessage setHidden:NO];
