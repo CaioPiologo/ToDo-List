@@ -93,7 +93,7 @@
 "k87-mk-mmQ.title" = "Próximo";
 
 /* Class = "IBUILabel"; text = "I dont't want to choose a conclusion date"; ObjectID = "kIW-lE-e0O"; */
-"kIW-lE-e0O.text" = "Não quero escolher uma data de conclusão";
+"kIW-lE-e0O.text" = "Escolher 'agora' como data conclusão";
 
 /* Class = "IBUIBarButtonItem"; title = "Next"; ObjectID = "lEt-CC-ew0"; */
 "lEt-CC-ew0.title" = "Próximo";
@@ -108,19 +108,19 @@
 "t4L-aU-UdP.text" = "Nomeie sua task, humano!";
 
 /* Class = "IBUILabel"; text = "I dont't want to choose a initial date"; ObjectID = "t7t-II-vrK"; */
-"t7t-II-vrK.text" = "Não quero escolher uma data inicial";
+"t7t-II-vrK.text" = "Esoclher 'agora' como data final";
 
 /* Class = "IBUILabel"; text = "Pick a date for begining"; ObjectID = "upH-fL-G9j"; */
 "upH-fL-G9j.text" = "Escolha uma data para o início";
 
 /* Class = "IBUILabel"; text = "I dont't want to choose a initial date"; ObjectID = "x3G-Sg-3PK"; */
-"x3G-Sg-3PK.text" = "Não quero escolher uma data inicial";
+"x3G-Sg-3PK.text" = "Esoclher 'agora' como data final";
 
 /* Class = "IBUILabel"; text = "Choose difficulty:"; ObjectID = "yhG-GP-5zY"; */
 "yhG-GP-5zY.text" = "Escolha a dificuldade:";
 
 /* Class = "IBUILabel"; text = "I dont't want to choose a conclusion date"; ObjectID = "zh5-eo-9aG"; */
-"zh5-eo-9aG.text" = "Não quero escolher uma data de conclusão";
+"zh5-eo-9aG.text" = "Escolher 'agora' como data conclusão";
 
 /* Class = "IBUINavigationItem"; title = "Task Creator Wizard"; ObjectID = "zpZ-bY-uZY"; */
 "zpZ-bY-uZY.title" = "Criador de tarefas";
