@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rb3-DV-MtK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -95,18 +95,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C4n-4u-k65">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <rect key="frame" x="75" y="161" width="450" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You must enter a name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nu-eS-Rwv">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You must enter a name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nu-eS-Rwv">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rename your task, lazy human!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0E-kQ-W7T">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="52" y="25" width="480" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.96878475799999997" green="0.95666428579999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -131,21 +131,10 @@
                             </constraint>
                         </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="C4n-4u-k65"/>
-                                <exclude reference="0nu-eS-Rwv"/>
-                                <exclude reference="Q0E-kQ-W7T"/>
-                            </mask>
                             <mask key="constraints">
                                 <exclude reference="NTR-7f-DhO"/>
                                 <exclude reference="hhk-lf-ONl"/>
                                 <exclude reference="qwO-xg-pRt"/>
-                                <exclude reference="0zr-qL-hzY"/>
-                                <exclude reference="FlP-56-4Cs"/>
-                                <exclude reference="XB8-nN-wzg"/>
-                                <exclude reference="4ps-jB-e8d"/>
-                                <exclude reference="QmM-BK-jI8"/>
-                                <exclude reference="uPw-Nh-9z4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -205,48 +194,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose 'now' as initial date." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3G-Sg-3PK">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="92" y="223" width="465" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.96878475799999997" green="0.95666428579999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial date can't occur before conclusion date." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGa-Ri-Ncf">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="30" y="457" width="540" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AdR-eh-DnQ">
-                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <rect key="frame" x="33" y="413" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchConclusionClicked:" destination="HGT-fb-m1e" eventType="valueChanged" id="1a1-Qc-FYz"/>
                                     <action selector="switchConclusionClicked:" destination="BMm-9O-VaX" eventType="valueChanged" id="x6T-a8-wKj"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UGd-WJ-Lel">
-                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <rect key="frame" x="35" y="215" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchInitialClicked:" destination="HGT-fb-m1e" eventType="valueChanged" id="CBf-oS-fdO"/>
                                     <action selector="switchInitialClicked:" destination="BMm-9O-VaX" eventType="valueChanged" id="gN3-qR-azp"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When should you have started the task?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm5-jw-cjQ">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="0.0" y="56" width="600" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.96878475799999997" green="0.95666428579999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conclusion Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-DP-hG1">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="60" y="257" width="480" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.96878475799999997" green="0.95666428579999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yW2-uc-JSd" userLabel="viewForBG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="30" y="90" width="540" height="120"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oK4-re-Uec">
-                                        <rect key="frame" x="-160" y="-81" width="320" height="162"/>
+                                        <rect key="frame" x="0.0" y="-21" width="540" height="162"/>
                                         <color key="backgroundColor" red="0.96878475799999997" green="0.95666428579999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <date key="date" timeIntervalSinceReferenceDate="449602286.48409802">
                                             <!--2015-04-01 17:31:26 +0000-->
@@ -268,17 +257,6 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="oK4-re-Uec"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="7Af-9y-5Rh"/>
-                                        <exclude reference="Fjq-YU-Xdf"/>
-                                        <exclude reference="YtA-wV-23L"/>
-                                        <exclude reference="nsI-wq-SDr"/>
-                                    </mask>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="oK4-re-Uec"/>
@@ -292,10 +270,10 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4u-2F-enR" userLabel="viewForBG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="30" y="285" width="540" height="120"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kce-5E-SEq">
-                                        <rect key="frame" x="-160" y="-81" width="320" height="162"/>
+                                        <rect key="frame" x="0.0" y="-21" width="540" height="162"/>
                                         <color key="backgroundColor" red="0.96878475799999997" green="0.95666428579999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <date key="date" timeIntervalSinceReferenceDate="449601968.52402103">
                                             <!--2015-04-01 17:26:08 +0000-->
@@ -317,17 +295,6 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="Kce-5E-SEq"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="5f2-yG-HC3"/>
-                                        <exclude reference="Mbe-qd-TbT"/>
-                                        <exclude reference="dVl-Kz-bbt"/>
-                                        <exclude reference="zPH-77-J0D"/>
-                                    </mask>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="Kce-5E-SEq"/>
@@ -341,7 +308,7 @@
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose 'now' as conclusion date." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zh5-eo-9aG">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="93" y="420" width="472" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.96878475799999997" green="0.95666428579999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -349,7 +316,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zh5-eo-9aG" firstAttribute="centerY" secondItem="AdR-eh-DnQ" secondAttribute="centerY" constant="0.5" id="2Mr-bd-kcC"/>
+                            <constraint firstItem="zh5-eo-9aG" firstAttribute="centerY" secondItem="AdR-eh-DnQ" secondAttribute="centerY" constant="0.5" id="2Mr-bd-kcC">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstAttribute="centerY" secondItem="CGa-Ri-Ncf" secondAttribute="centerY" multiplier="0.642" id="4OX-nV-Uax"/>
                             <constraint firstAttribute="centerY" secondItem="7Zf-DP-hG1" secondAttribute="centerY" multiplier="1.123" id="5OT-QU-XxQ"/>
                             <constraint firstAttribute="centerX" secondItem="Jm5-jw-cjQ" secondAttribute="centerX" id="6BL-bV-cLk"/>
@@ -373,7 +342,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="10"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="7Zf-DP-hG1" secondAttribute="centerX" id="YsT-od-ZfT"/>
-                            <constraint firstItem="x3G-Sg-3PK" firstAttribute="centerY" secondItem="UGd-WJ-Lel" secondAttribute="centerY" constant="1" id="boZ-3Z-EwT"/>
+                            <constraint firstItem="x3G-Sg-3PK" firstAttribute="centerY" secondItem="UGd-WJ-Lel" secondAttribute="centerY" constant="1" id="boZ-3Z-EwT">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="J4u-2F-enR" firstAttribute="height" secondItem="gL1-et-kI0" secondAttribute="height" multiplier="0.2" id="dO1-As-U0z"/>
                             <constraint firstAttribute="centerX" secondItem="CGa-Ri-Ncf" secondAttribute="centerX" id="h8U-um-LBJ"/>
                             <constraint firstItem="yW2-uc-JSd" firstAttribute="height" secondItem="gL1-et-kI0" secondAttribute="height" multiplier="0.2" id="hPP-r9-OfE"/>
@@ -389,48 +360,6 @@
                             <constraint firstAttribute="centerY" secondItem="Jm5-jw-cjQ" secondAttribute="centerY" multiplier="4.5" id="sP1-YN-cVU"/>
                             <constraint firstAttribute="centerX" secondItem="yW2-uc-JSd" secondAttribute="centerX" id="xnb-4o-n7I"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="x3G-Sg-3PK"/>
-                                <exclude reference="CGa-Ri-Ncf"/>
-                                <exclude reference="AdR-eh-DnQ"/>
-                                <exclude reference="UGd-WJ-Lel"/>
-                                <exclude reference="Jm5-jw-cjQ"/>
-                                <exclude reference="7Zf-DP-hG1"/>
-                                <exclude reference="yW2-uc-JSd"/>
-                                <exclude reference="J4u-2F-enR"/>
-                                <exclude reference="zh5-eo-9aG"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="5OT-QU-XxQ"/>
-                                <exclude reference="YsT-od-ZfT"/>
-                                <exclude reference="mL1-CT-gKg"/>
-                                <exclude reference="4OX-nV-Uax"/>
-                                <exclude reference="h8U-um-LBJ"/>
-                                <exclude reference="r9p-tO-qG4"/>
-                                <exclude reference="6BL-bV-cLk"/>
-                                <exclude reference="GGr-fg-FXo"/>
-                                <exclude reference="sP1-YN-cVU"/>
-                                <exclude reference="Q42-wn-daq"/>
-                                <exclude reference="boZ-3Z-EwT"/>
-                                <exclude reference="iZp-ph-lhi"/>
-                                <exclude reference="2Mr-bd-kcC"/>
-                                <exclude reference="NRV-Le-hy3"/>
-                                <exclude reference="mse-EM-Law"/>
-                                <exclude reference="9qD-Oe-c7G"/>
-                                <exclude reference="PFW-m0-40a"/>
-                                <exclude reference="PQy-k5-48N"/>
-                                <exclude reference="6ku-Jp-Oos"/>
-                                <exclude reference="GIS-Py-TMi"/>
-                                <exclude reference="INg-U8-Www"/>
-                                <exclude reference="KJO-He-PdR"/>
-                                <exclude reference="dO1-As-U0z"/>
-                                <exclude reference="O83-Zf-x5t"/>
-                                <exclude reference="hPP-r9-OfE"/>
-                                <exclude reference="igb-8W-ufx"/>
-                                <exclude reference="xnb-4o-n7I"/>
-                            </mask>
-                        </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="x3G-Sg-3PK"/>
@@ -508,19 +437,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="LbY-Mq-Muh">
-                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <rect key="frame" x="103" y="131" width="394" height="31"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="abJ-R8-kZn">
-                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <rect key="frame" x="103" y="271" width="394" height="31"/>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Choose difficulty:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpW-hJ-aAs">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.96878475799999997" green="0.95666428579999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Choose its fun:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOt-MP-BRM">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="0.0" y="211" width="600" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.96878475799999997" green="0.95666428579999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -531,7 +460,7 @@
                                     <rect key="frame" x="26" y="131" width="88" height="70"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vermelho2" translatesAutoresizingMaskIntoConstraints="NO" id="icV-eq-qz1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vermelho2" translatesAutoresizingMaskIntoConstraints="NO" id="icV-eq-qz1">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="286" y="131" width="88" height="70"/>
