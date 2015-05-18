@@ -45,3 +45,8 @@
 "This Task has no priority"="Essa tarefa não tem prioridade";
 
 "Swipe the task left to remove. Try it in me!" = "Delize as tarefas para removê-las!";
+
+"Tap me to edit me" = "Clique-me para me editar.";
+
+"Conclusion until %02ld:%02ld, %02ld/%@/%ld"="Concluir até %02ld:%02ld, %02ld/%@/%ld";
+

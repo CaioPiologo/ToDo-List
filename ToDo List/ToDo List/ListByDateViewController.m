@@ -85,6 +85,15 @@
         task = [_organizer.taskWizard finish];
         [self.organizer addTaskToList: task];
         
+        [self.organizer.taskWizard begin];
+        [self.organizer.taskWizard giveName:NSLocalizedString(@"Tap me to edit me",nil)];
+        [self.organizer.taskWizard giveDifficulty:@00];
+        [self.organizer.taskWizard giveFun:@1];
+        [self.organizer.taskWizard giveInitialDate:[NSDate dateWithTimeIntervalSinceNow:-(60*60*24)] ];
+        [self.organizer.taskWizard giveConclusionDate:[NSDate dateWithTimeInterval:(50*60*60*24) sinceDate:[NSDate date]]];
+        task = [_organizer.taskWizard finish];
+        [self.organizer addTaskToList: task];
+        
         
         [self.organizer saveEnviroment];
         [userDefaults setInteger:1 forKey:@"firstTime"];
