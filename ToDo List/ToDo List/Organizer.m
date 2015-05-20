@@ -163,7 +163,8 @@
             [auxiliaryArray addObject:t];
         }
     }
-    auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
+    auxiliaryArray = [[auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)] mutableCopy
+    ];
     return [auxiliaryArray copy];
 }
 
@@ -185,7 +186,7 @@
             [auxiliaryArray addObject:t];
         }
     }
-    auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
+    auxiliaryArray = [[auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)] mutableCopy];
     return auxiliaryArray;
 }
 
@@ -207,7 +208,7 @@
             [auxiliaryArray addObject:t];
         }
     }
-    auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
+    auxiliaryArray = [[auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)] mutableCopy];
     return auxiliaryArray;
 }
 
@@ -239,13 +240,13 @@
             [auxiliaryArray addObject:t];
         }
     }
-    auxiliaryArray = [auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)];
+    auxiliaryArray = [[auxiliaryArray sortedArrayUsingSelector:@selector(compareByPriority:)] mutableCopy];
     return auxiliaryArray;
 }
 
 -(NSMutableArray*) getArrayForWatch
 {
-    NSMutableArray * tasks = [self getTodayTasks];
+    NSMutableArray * tasks = [[self getTodayTasks] mutableCopy];
     
     NSMutableArray *taskNames = [[NSMutableArray alloc] init];
     

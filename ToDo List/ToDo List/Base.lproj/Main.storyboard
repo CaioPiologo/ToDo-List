@@ -66,7 +66,7 @@
                     <tabBarItem key="tabBarItem" title="Tasks By Priority" image="Todo List-26" id="bGY-Dh-7Am"/>
                     <connections>
                         <outlet property="tableView" destination="ihN-dt-4iR" id="U4y-R9-HWi"/>
-                        <segue destination="rJa-0Y-uz6" kind="push" identifier="priorityToEdit" id="6Jt-Cq-X8J"/>
+                        <segue destination="rJa-0Y-uz6" kind="show" identifier="priorityToEdit" id="6Jt-Cq-X8J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -139,7 +139,7 @@
                         <outlet property="nextButton" destination="hAg-vC-6Ma" id="IVP-KA-oqM"/>
                         <outlet property="textField" destination="C4n-4u-k65" id="vNF-vi-dwp"/>
                         <outlet property="warningMessage" destination="0nu-eS-Rwv" id="opa-9W-ZW8"/>
-                        <segue destination="BMm-9O-VaX" kind="push" identifier="toEditDate" id="to0-c3-iDW"/>
+                        <segue destination="BMm-9O-VaX" kind="show" identifier="toEditDate" id="to0-c3-iDW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9R-Gl-QMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -358,7 +358,7 @@
                         <outlet property="switchConclusion" destination="AdR-eh-DnQ" id="Z81-Nk-AON"/>
                         <outlet property="switchInitial" destination="UGd-WJ-Lel" id="3yI-PM-S4G"/>
                         <outlet property="warningDateMessage" destination="CGa-Ri-Ncf" id="Khw-81-dK6"/>
-                        <segue destination="daX-eS-4BG" kind="push" identifier="toEditParam" id="7rb-wb-suY"/>
+                        <segue destination="daX-eS-4BG" kind="show" identifier="toEditParam" id="7rb-wb-suY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KA1-tZ-P3J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -570,7 +570,7 @@
                     <tabBarItem key="tabBarItem" title="Tasks By Date" image="Today-25" id="Qqs-MP-ycH"/>
                     <connections>
                         <outlet property="tableView" destination="6Bb-CW-095" id="NJA-zQ-ZxV"/>
-                        <segue destination="rJa-0Y-uz6" kind="push" identifier="dateToEdit" id="AQw-Aw-TPn"/>
+                        <segue destination="rJa-0Y-uz6" kind="show" identifier="dateToEdit" id="AQw-Aw-TPn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WQ-Wh-b5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -661,7 +661,7 @@
                         <outlet property="nextButton" destination="lEt-CC-ew0" id="YTO-Oc-Ctl"/>
                         <outlet property="textField" destination="q5a-94-iDZ" id="zEb-uC-e7d"/>
                         <outlet property="warningMessage" destination="eMb-6i-5yR" id="cxk-Xq-cBz"/>
-                        <segue destination="HGT-fb-m1e" kind="push" identifier="toGetDate" id="NdA-BO-Tco"/>
+                        <segue destination="HGT-fb-m1e" kind="show" identifier="toGetDate" id="NdA-BO-Tco"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ilc-Ya-g7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -850,7 +850,7 @@
                         <outlet property="switchConclusion" destination="sSg-Tw-aNL" id="8qX-i1-XS8"/>
                         <outlet property="switchInitial" destination="1C8-ha-AOV" id="LKN-nQ-YwA"/>
                         <outlet property="warningDateMessage" destination="OcP-RX-POh" id="lSJ-ec-XJP"/>
-                        <segue destination="MLX-5w-hnp" kind="push" identifier="toGetParam" id="IVw-WY-JgB"/>
+                        <segue destination="MLX-5w-hnp" kind="show" identifier="toGetParam" id="IVw-WY-JgB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fK2-jn-fFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1000,7 +1000,7 @@
                     <navigationItem key="navigationItem" title="Smart List - Frobenius " id="cfE-dc-ihQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ptK-9v-DB8">
                             <connections>
-                                <segue destination="nVW-4Y-Gls" kind="push" id="UNd-8b-bk1"/>
+                                <segue destination="nVW-4Y-Gls" kind="show" id="UNd-8b-bk1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

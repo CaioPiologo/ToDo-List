@@ -14,15 +14,11 @@
 		1CBEE15C1ACC4CA300F6BB28 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEE15B1ACC4CA300F6BB28 /* EditViewController.m */; };
 		1CEED43A1ACC1D7100A705D1 /* AddDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED42D1ACC1D7100A705D1 /* AddDateViewController.m */; };
 		1CEED43B1ACC1D7100A705D1 /* AddName.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED42F1ACC1D7100A705D1 /* AddName.m */; };
-		1CEED43C1ACC1D7100A705D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CEED4311ACC1D7100A705D1 /* LaunchScreen.xib */; };
-		1CEED43D1ACC1D7100A705D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEED4331ACC1D7100A705D1 /* Main.storyboard */; };
 		1CEED43F1ACC1D7100A705D1 /* Organizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED4371ACC1D7100A705D1 /* Organizer.m */; };
 		1CEED4401ACC1D7100A705D1 /* TaskWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEED4391ACC1D7100A705D1 /* TaskWizard.m */; };
 		1CF8AEF01ACD6DEE0015C7A9 /* EditDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF8AEEF1ACD6DEE0015C7A9 /* EditDateViewController.m */; };
 		1CF8AEF31ACD6E930015C7A9 /* EditParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF8AEF21ACD6E930015C7A9 /* EditParamViewController.m */; };
 		256A0F411AD85370009D956C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 256A0F431AD85370009D956C /* Localizable.strings */; };
-		25E012451AC9CF01004370E1 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		25E2E0301ACC1B9E00220124 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		8C098D931ADEF05B009FCDA4 /* SharedTaskKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C098D921ADEF05B009FCDA4 /* SharedTaskKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C098D991ADEF05C009FCDA4 /* SharedTaskKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C098D8E1ADEF05B009FCDA4 /* SharedTaskKit.framework */; };
 		8C098DA21ADEF05C009FCDA4 /* SharedTaskKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C098DA11ADEF05C009FCDA4 /* SharedTaskKitTests.m */; };
@@ -33,12 +29,12 @@
 		8C34545B1AC3204B0053766D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34545A1AC3204B0053766D /* main.m */; };
 		8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C34545D1AC3204B0053766D /* AppDelegate.m */; };
 		8C3454611AC3204B0053766D /* ListByPriorityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454601AC3204B0053766D /* ListByPriorityViewController.m */; };
-		8C3454641AC3204B0053766D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454621AC3204B0053766D /* Main.storyboard */; };
-		8C3454661AC3204B0053766D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454651AC3204B0053766D /* Images.xcassets */; };
-		8C3454691AC3204B0053766D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454671AC3204B0053766D /* LaunchScreen.xib */; };
 		8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C3454841AC34B300053766D /* Task.xcdatamodeld */; };
+		8C5024EE1B0CA6E400F3928E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454671AC3204B0053766D /* LaunchScreen.xib */; };
+		8C5024EF1B0CA73A00F3928E /* SharedLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C098DAF1ADEF079009FCDA4 /* SharedLoader.m */; };
+		8C5024F01B0CA74B00F3928E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C098D911ADEF05B009FCDA4 /* Info.plist */; };
+		8C5024F11B0CA8E200F3928E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454621AC3204B0053766D /* Main.storyboard */; };
 		8CF1892D1AC5E7FE0027EB72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C3454731AC3204B0053766D /* Info.plist */; };
-		8CF1892F1AC5E9110027EB72 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CF1892E1AC5E9110027EB72 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,8 +115,6 @@
 		25D362591AC3255B00DEF6E8 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		25D3625A1AC3255B00DEF6E8 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		2ABA61AC30BD6171421D6F6D /* Pods-ToDo ListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo ListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo ListTests/Pods-ToDo ListTests.release.xcconfig"; sourceTree = "<group>"; };
-		66B501C58271A4EB19883633 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		818E6EF70CAFFD380223E560 /* libPods-ToDo List.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDo List.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C098D871ADEAF24009FCDA4 /* ToDo List.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ToDo List.entitlements"; sourceTree = "<group>"; };
 		8C098D8E1ADEF05B009FCDA4 /* SharedTaskKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedTaskKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C098D911ADEF05B009FCDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,7 +142,6 @@
 		8C3454851AC34B300053766D /* Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task.xcdatamodel; sourceTree = "<group>"; };
 		8CF1892E1AC5E9110027EB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8F7E87EA587E5BD0126D2FD8 /* Pods-ToDo List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo List.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo List/Pods-ToDo List.debug.xcconfig"; sourceTree = "<group>"; };
-		E2F3B4F7A0251AE05CA6CF8A /* libPods-ToDo ListTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDo ListTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,9 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				8C2B93F41AC9DCEA00D3AE64 /* CoreData.framework */,
-				818E6EF70CAFFD380223E560 /* libPods-ToDo List.a */,
-				E2F3B4F7A0251AE05CA6CF8A /* libPods-ToDo ListTests.a */,
-				66B501C58271A4EB19883633 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -415,7 +405,7 @@
 		8C34544D1AC3204B0053766D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Ricardo Z Charf";
 				TargetAttributes = {
 					8C098D8D1ADEF05B009FCDA4 = {
@@ -477,16 +467,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25E012451AC9CF01004370E1 /* (null) in Resources */,
-				25E2E0301ACC1B9E00220124 /* (null) in Resources */,
+				8C5024F11B0CA8E200F3928E /* Main.storyboard in Resources */,
+				8C5024EE1B0CA6E400F3928E /* LaunchScreen.xib in Resources */,
 				256A0F411AD85370009D956C /* Localizable.strings in Resources */,
-				1CEED43D1ACC1D7100A705D1 /* Main.storyboard in Resources */,
 				8CF1892D1AC5E7FE0027EB72 /* Info.plist in Resources */,
-				8C3454641AC3204B0053766D /* Main.storyboard in Resources */,
-				8C3454691AC3204B0053766D /* LaunchScreen.xib in Resources */,
-				8CF1892F1AC5E9110027EB72 /* Info.plist in Resources */,
-				1CEED43C1ACC1D7100A705D1 /* LaunchScreen.xib in Resources */,
-				8C3454661AC3204B0053766D /* Images.xcassets in Resources */,
+				8C5024F01B0CA74B00F3928E /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +523,7 @@
 				1CEED43B1ACC1D7100A705D1 /* AddName.m in Sources */,
 				8C3454611AC3204B0053766D /* ListByPriorityViewController.m in Sources */,
 				8C34545E1AC3204B0053766D /* AppDelegate.m in Sources */,
+				8C5024EF1B0CA73A00F3928E /* SharedLoader.m in Sources */,
 				1CEED4401ACC1D7100A705D1 /* TaskWizard.m in Sources */,
 				8C3454861AC34B300053766D /* Task.xcdatamodeld in Sources */,
 				1CBEE15C1ACC4CA300F6BB28 /* EditViewController.m in Sources */,
